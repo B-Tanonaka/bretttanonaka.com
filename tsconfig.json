@@ -6,7 +6,7 @@
     "allowJs": true,
     "sourceMap": true,
     "esModuleInterop": true,
-    "outDir": "./client/dist",
+    "outDir": "./client/build",
     "jsx": "react",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
