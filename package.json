@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "npx tsc"
+    "start": "npx tsc -w"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
