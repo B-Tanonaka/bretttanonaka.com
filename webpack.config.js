@@ -1,12 +1,16 @@
 const path = require('path');
 
 module.exports = {
-  entry: './client/src/index.tsx',
+  entry: path.join(__dirname, './client/src/index.tsx'),
+  output: {
+    path: path.join(__dirname, '/client/dist'),
+    filename: 'bundle.min.js',
+  },
   devtool: 'inline-source-map',
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(ts|tsx?)$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
@@ -15,8 +19,9 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, '/client/src/index.html'),
+    }),
+  ],
 };

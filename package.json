@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "npx tsc -w"
+    "start": "nodemon server/index.ts",
+    "ts": "npx tsc -w"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
