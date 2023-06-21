@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function App() {
   return (
-    <div>hello</div>
+    <div>Hello world</div>
   );
 }
