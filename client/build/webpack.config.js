@@ -1,12 +1,18 @@
 "use strict";
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-    entry: './src/index.tsx',
+    mode: 'development',
+    entry: path.join(__dirname, './client/src/index.tsx'),
+    output: {
+        path: path.join(__dirname, '/client/dist'),
+        filename: 'bundle.min.js',
+    },
     devtool: 'inline-source-map',
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
+                test: /\.(ts|tsx?)$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
@@ -15,9 +21,10 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '/client/dist/index.html'),
+        }),
+    ],
 };
 //# sourceMappingURL=webpack.config.js.map
