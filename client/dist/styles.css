@@ -54,3 +54,25 @@ table {
 	border-spacing: 0;
 }
 
+/**** Home ****/
+
+.home-container {
+	position: relative;
+  width: 100vw;
+	height: 100vh;
+}
+
+.home-wrapper {
+	position: absolute;
+	margin: 0;
+	width: 75%;
+	height: 30%;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -55%);
+}
+
+.home-subtext {
+	margin-left: 1%;
+}
+

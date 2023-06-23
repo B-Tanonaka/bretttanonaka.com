@@ -4,10 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
-const Home_1 = __importDefault(require("./Home"));
 function App() {
     return (react_1.default.createElement("div", null,
-        react_1.default.createElement(Home_1.default, null)));
+        react_1.default.createElement("p", null, "Aloha \uD83E\uDD19 I\u2019m a full stack developer with experience in UX/UI design, system design, and video production.")));
 }
 exports.default = App;
-//# sourceMappingURL=App.js.map
+//# sourceMappingURL=App%20copy.js.map
