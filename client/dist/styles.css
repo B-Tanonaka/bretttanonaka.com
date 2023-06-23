@@ -76,3 +76,18 @@ table {
 	margin-left: 1%;
 }
 
+/**** Navbar ****/
+
+.navbar-container {
+	display: flex;
+	height: 15%;
+	width: 100vw;
+	position: fixed;
+	align-items: center;
+}
+
+.navbar-name {
+	font-size: 16px;
+	position: absolute;
+	left: 5%;
+}
