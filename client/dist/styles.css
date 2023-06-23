@@ -54,6 +54,31 @@ table {
 	border-spacing: 0;
 }
 
+:root {
+
+	/* Text hues */
+  --main-text: #3A3640;
+  --sec-text: #7F768F;
+
+  /* Primary grays */
+  --gray3-color: #525252;
+  --gray2-color: #C2C2C2;
+  --gray1-color: #EBEBEB;
+  --white-color: #FCFCFC;
+
+  /* Purple hues */
+  --purple1-color: #CAAEF9;
+
+	/* Drop shadow */
+	--shadow-color: hsl(0deg 0% 0% / 26%);
+}
+
+/**** App ****/
+
+.app {
+  background-color: yellow;
+}
+
 /**** Home ****/
 
 .home-container {
@@ -67,9 +92,9 @@ table {
 	margin: 0;
 	width: 75%;
 	height: 30%;
-	top: 55%;
+	top: 56%;
 	left: 50%;
-	transform: translate(-50%, -55%);
+	transform: translate(-50%, -56%);
 }
 
 .home-subtext {
@@ -90,4 +115,25 @@ table {
 	font-size: 16px;
 	position: absolute;
 	left: 5%;
+}
+
+.navbar-base {
+	background: var(--white-color);
+	box-shadow: 1px 1px 10px -5px var(--shadow-color);
+	border-radius: 25px;
+	width: 20%;
+	height: 40%;
+	max-width: 400px;
+	min-width: 200px;
+	position: absolute;
+	right: 5%;
+}
+
+.navbar-sections {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar-text {
+	font-size: 12px;
 }
