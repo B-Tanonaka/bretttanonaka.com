@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 function App() {
     return (react_1.default.createElement("div", null,
-        react_1.default.createElement("p", null, "Hello world!")));
+        react_1.default.createElement("p", null, "Aloha \uD83E\uDD19 I\u2019m a full stack developer with experience in UX/UI design, system design, and video production.")));
 }
 exports.default = App;
 //# sourceMappingURL=App.js.map

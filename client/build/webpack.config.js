@@ -6,7 +6,7 @@ module.exports = {
     entry: path.join(__dirname, './client/src/index.tsx'),
     output: {
         path: path.join(__dirname, '/client/dist'),
-        filename: 'bundle.min.js',
+        filename: 'bundle.js',
     },
     devtool: 'inline-source-map',
     module: {
@@ -24,6 +24,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '/client/dist/index.html'),
+            inject: false,
         }),
     ],
 };
