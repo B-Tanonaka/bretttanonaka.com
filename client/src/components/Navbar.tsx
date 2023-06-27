@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Navbar() {
+  const selectedColor = () => {
+
+  };
+
   return (
     <div className="navbar-container">
       <p className="navbar-name">Brett Tanonaka</p>
