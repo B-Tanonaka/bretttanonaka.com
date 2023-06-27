@@ -5,8 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 function Navbar() {
-    const selectedColor = () => {
-    };
     return (react_1.default.createElement("div", { className: "navbar-container" },
         react_1.default.createElement("p", { className: "navbar-name" }, "Brett Tanonaka"),
         react_1.default.createElement("div", { className: "navbar-base" },

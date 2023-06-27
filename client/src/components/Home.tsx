@@ -1,9 +1,10 @@
 import React from 'react';
 
-export default function Home() {
+export default function Home({ text }) {
   return (
     <div className="home-container">
       <div className="home-wrapper">
+        <div>{text}</div>
         <p>
           <span style={{ fontSize: '32px' }}>Aloha 🤙 I’m a full stack developer with experience in UX/UI design, system design, and video production.</span>
           <span style={{ fontSize: '16px', marginLeft: '1%' }}>Yes, you read that correctly.</span>
