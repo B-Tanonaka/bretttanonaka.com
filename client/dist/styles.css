@@ -141,3 +141,13 @@ table {
 .navbar-text {
 	font-size: 12px;
 }
+
+.navbar-switch {
+
+}
+
+.navbar-checkbox {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}

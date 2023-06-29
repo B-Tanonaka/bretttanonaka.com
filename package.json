@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "nodemon server/index.ts",
-    "client": "webpack --mode development --watch",
+    "client": "webpack --config ./webpack.config.js  -w",
     "ts": "npx tsc -w"
   },
   "devDependencies": {
