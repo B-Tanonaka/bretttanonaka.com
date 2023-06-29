@@ -29,18 +29,18 @@ function Navbar() {
     const handleClick = (e, page) => {
         e.preventDefault();
         setNavbarToggle(page);
-        console.log(navbarToggle);
+        console.log('navbarToggleInside: ', navbarToggle);
     };
+    console.log('navbarToggleOutside: ', navbarToggle);
     return (react_1.default.createElement("div", { className: "navbar-container" },
         react_1.default.createElement("p", { className: "navbar-name" }, "Brett Tanonaka"),
         react_1.default.createElement("div", { className: "navbar-base" },
             react_1.default.createElement("div", { className: "navbar-sections" },
-                react_1.default.createElement("p", { className: "navbar-text", onClick: handleClick }, "Home"),
-                react_1.default.createElement("p", { className: "navbar-text", onClick: handleClick }, "Projects"),
+                react_1.default.createElement("input", { type: "button", value: "Home", className: "navbar-text", onClick: (e) => handleClick(e, 0) }),
+                react_1.default.createElement("p", { className: "navbar-text" }, "Projects"),
                 react_1.default.createElement("p", { className: "navbar-text" }, "About"),
                 react_1.default.createElement("p", { className: "navbar-text" }, "Contact")),
             react_1.default.createElement("label", { className: "navbar-switch" },
-                react_1.default.createElement("input", { type: "navbar-checkbox" }),
                 react_1.default.createElement("span", { className: "navbar-slider" })))));
 }
 exports.default = Navbar;
