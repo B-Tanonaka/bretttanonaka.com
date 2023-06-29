@@ -11,10 +11,8 @@ export default function Navbar() {
     console.log('navbarToggleInside: ', navbarToggle);
   };
 
-  console.log('navbarToggleOutside: ', navbarToggle);
-
   return (
-    <div className="navbar-container">
+    <nav className="navbar-container">
       <p className="navbar-name">Brett Tanonaka</p>
       <div className="navbar-base">
         <div className="navbar-sections">
@@ -27,6 +25,6 @@ export default function Navbar() {
           <span className="navbar-slider" />
         </label>
       </div>
-    </div>
+    </nav>
   );
 }
