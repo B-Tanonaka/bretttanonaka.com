@@ -136,9 +136,14 @@ table {
 	width: 80%;
 	justify-content: space-between;
 	align-items: center;
+	font-size: 1rem;
 }
 
-.navbar-text {
+.navbar-sections  {
+	display: flex;
+	width: 80%;
+	justify-content: space-between;
+	align-items: center;
 	font-size: 12px;
 }
 

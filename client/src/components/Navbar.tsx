@@ -13,17 +13,15 @@ export default function Navbar() {
 
   return (
     <nav className="navbar-container">
-      <p className="navbar-name">Brett Tanonaka</p>
+      <a href="/" className="navbar-name">Brett Tanonaka</a>
       <div className="navbar-base">
-        <div className="navbar-sections">
-          <input type="button" value="Home" className="navbar-text" onClick={(e: Event) => handleClick(e, 0)} />
-          <p className="navbar-text">Projects</p>
-          <p className="navbar-text">About</p>
-          <p className="navbar-text">Contact</p>
-        </div>
-        <label className="navbar-switch">
-          <span className="navbar-slider" />
-        </label>
+        <ul className="navbar-sections">
+          {/* <input type="button" value="Home" className="navbar-text" onClick={(e: Event) => handleClick(e, 0)} /> */}
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
       </div>
     </nav>
   );
