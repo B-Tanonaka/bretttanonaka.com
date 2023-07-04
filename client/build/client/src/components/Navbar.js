@@ -31,17 +31,16 @@ function Navbar() {
         setNavbarToggle(page);
         console.log('navbarToggleInside: ', navbarToggle);
     };
-    console.log('navbarToggleOutside: ', navbarToggle);
     return (react_1.default.createElement("div", { className: "navbar-container" },
-        react_1.default.createElement("p", { className: "navbar-name" }, "Brett Tanonaka"),
-        react_1.default.createElement("div", { className: "navbar-base" },
-            react_1.default.createElement("div", { className: "navbar-sections" },
-                react_1.default.createElement("input", { type: "button", value: "Home", className: "navbar-text", onClick: (e) => handleClick(e, 0) }),
-                react_1.default.createElement("p", { className: "navbar-text" }, "Projects"),
-                react_1.default.createElement("p", { className: "navbar-text" }, "About"),
-                react_1.default.createElement("p", { className: "navbar-text" }, "Contact")),
-            react_1.default.createElement("label", { className: "navbar-switch" },
-                react_1.default.createElement("span", { className: "navbar-slider" })))));
+        react_1.default.createElement("a", { href: "/", className: "navbar-name" }, "Brett Tanonaka"),
+        react_1.default.createElement("nav", { className: "navbar-base" },
+            react_1.default.createElement("ul", { className: "navbar-sections" },
+                react_1.default.createElement("li", null,
+                    react_1.default.createElement("a", { href: "/projects" }, "Projects")),
+                react_1.default.createElement("li", null,
+                    react_1.default.createElement("a", { href: "/about" }, "About")),
+                react_1.default.createElement("li", null,
+                    react_1.default.createElement("a", { href: "/contact" }, "Contact"))))));
 }
 exports.default = Navbar;
 //# sourceMappingURL=Navbar.js.map

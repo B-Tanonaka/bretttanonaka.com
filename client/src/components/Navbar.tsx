@@ -12,9 +12,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar-container">
+    <div className="navbar-container">
       <a href="/" className="navbar-name">Brett Tanonaka</a>
-      <div className="navbar-base">
+      <nav className="navbar-base">
         <ul className="navbar-sections">
           {/* <input type="button" value="Home" className="navbar-text" onClick={(e: Event) => handleClick(e, 0)} /> */}
           <li><a href="/">Home</a></li>
@@ -22,7 +22,7 @@ export default function Navbar() {
           <li><a href="/about">About</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
