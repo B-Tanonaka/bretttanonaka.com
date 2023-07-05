@@ -153,3 +153,32 @@ table {
 	color: var(--sec-text);
 	cursor: pointer;
 }
+
+/**** Projects ****/
+
+.project-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.project-single {
+  display: flex;
+	text-decoration: none;
+}
+
+.project-name {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.project-role {
+	font-size: 1rem;
+}
+
+.project-list {
+	grid-column: 1;
+}
+
+.project-image {
+	grid-column: 2;
+}
