@@ -10,9 +10,14 @@ export default function Projects() {
     techStack: string[];
     ref: string;
   }
+
   const renderList = (project: Project, index: number) => (
     <div className="project-single">
-      <hr style={{ border: '1px dashed black' }} />
+      <hr style={{
+        border: '0.03em dashed black',
+        boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
+      }}
+      />
       <a href={project.ref} className="project-title" key={index}>
         <span className="project-text">
           <p className="project-name">{project.name}</p>
