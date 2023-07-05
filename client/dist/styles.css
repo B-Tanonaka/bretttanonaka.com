@@ -156,19 +156,41 @@ table {
 
 /**** Projects ****/
 
-.project-list {
+.projects {
 	display: grid;
+	margin-left: 7%;
 	grid-template-columns: 1fr 1fr;
 }
 
+.projects h1 {
+	font-size: 3rem;
+	font-weight: 400;
+	margin-bottom: 3%;
+}
+
 .project-single {
-  display: flex;
+	margin-right: 7%;
+}
+
+.project-list {
+
+}
+
+.project-title {
 	text-decoration: none;
+	color: var(--main-text);
+}
+
+.project-text {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1em 0;
 }
 
 .project-name {
 	font-size: 1.5rem;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 .project-role {
@@ -177,8 +199,14 @@ table {
 
 .project-list {
 	grid-column: 1;
+	width: 100%;
+	margin-right: 7%;
 }
 
 .project-image {
 	grid-column: 2;
+}
+
+.border {
+	border-top: 1px dotted;
 }
