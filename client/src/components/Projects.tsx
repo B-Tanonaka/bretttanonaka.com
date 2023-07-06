@@ -29,11 +29,15 @@ export default function Projects() {
 
   return (
     <div className="projects">
-      <h1>Projects</h1>
-      <div className="project-list">
-        { projectData.map((project: Project, index: number) => renderList(project, index))}
+      <div>
+        <h1>Projects</h1>
+        <div className="project-list">
+          { projectData.map((project: Project, index: number) => renderList(project, index))}
+        </div>
       </div>
-      <img className="project-image" src="https://picsum.photos/200" alt="placeholder" />
+      <div className="image-container">
+        <img className="project-image" src="https://picsum.photos/200" alt="placeholder" />
+      </div>
     </div>
   );
 }

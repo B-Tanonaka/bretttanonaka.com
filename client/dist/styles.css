@@ -162,7 +162,8 @@ table {
 	display: grid;
 	margin-left: 7%;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 4em 1fr;
+	grid-template-rows: auto;
+	align-content: center;
 	z-index: 0;
 }
 
@@ -201,8 +202,13 @@ table {
 	grid-row-start: 2;
 }
 
+.image-container {
+	grid-column-start: 2;
+	grid-row: 1 / 2;
+}
+
 .project-image {
-	grid-column: 2;
+
 }
 
 .border {
