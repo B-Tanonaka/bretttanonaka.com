@@ -3,15 +3,6 @@ import projectData from '../projectData';
 import type { Project } from '../../../interfaces';
 
 export default function Projects() {
-  // interface Project {
-  //   name: string;
-  //   role: string[];
-  //   year: number;
-  //   description: string;
-  //   techStack: string[];
-  //   ref: string;
-  // }
-
   const renderList = (project: Project, index: number) => (
     <div className="project-single">
       <hr style={{

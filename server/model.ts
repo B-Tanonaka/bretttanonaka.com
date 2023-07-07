@@ -1,6 +1,6 @@
 const db = require('./database');
 
 module.exports = {
-  getAll: () => (db.find({})),
+  getAllTitles: () => (db.find({})),
   getProjectDetails: () => (db.find({})),
 };
