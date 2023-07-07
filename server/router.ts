@@ -1,3 +1,4 @@
+const route = require('express').Router();
 const controller = require('./controller');
 
-router.get('/', controller.get);
+route.get('/', controller.get);
