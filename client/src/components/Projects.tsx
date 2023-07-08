@@ -1,5 +1,5 @@
 import React from 'react';
-import projectData from '../projectData';
+import data from '../projectData';
 import type { Project } from '../../../interfaces';
 
 export default function Projects() {
@@ -24,7 +24,7 @@ export default function Projects() {
       <div>
         <h1>Projects</h1>
         <div className="project-list">
-          { projectData.map((project: Project, index: number) => renderList(project, index))}
+          { data.projectData.map((project: Project, index: number) => renderList(project, index))}
         </div>
       </div>
       <div className="image-container">

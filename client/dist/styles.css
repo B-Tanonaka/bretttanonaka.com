@@ -73,6 +73,11 @@ table {
 	--shadow-color: hsl(0deg 0% 0% / 26%);
 }
 
+h1 {
+	font-size: 3rem;
+	margin-bottom: 3%;
+}
+
 /**** App ****/
 
 .app {
@@ -165,11 +170,6 @@ table {
 	grid-template-rows: auto;
 	align-content: center;
 	z-index: 0;
-}
-
-.projects h1 {
-	font-size: 3rem;
-	margin-bottom: 3%;
 }
 
 .project-single {
