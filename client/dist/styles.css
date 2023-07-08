@@ -220,3 +220,30 @@ h1 {
 .border {
 	border-top: 1px dotted;
 }
+
+/**** About ****/
+
+.about {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.about-wrapper {
+	width: 60%;
+}
+
+.about h1 {
+	text-align: right;
+}
+
+.about hr {
+	margin-bottom: 3%;
+}
+
+.about p {
+	line-height: 1.5;
+	font-size: 1.1rem;
+}
