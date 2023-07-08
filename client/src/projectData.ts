@@ -15,6 +15,14 @@ const projectData = [
     techStack: ['JavaScript', 'Node.js', 'PostgreSQL', 'K6', 'Loader', 'AWS', 'Nginx'],
     ref: 'mevify',
   },
+  {
+    name: 'Wired Wardrobe',
+    year: 2023,
+    role: ['Design Lead, Front-End Engineer'],
+    description: 'A single page item description page for an e-commerce brand.',
+    techStack: ['JavaScript', 'React', 'HTML5/CSS3', 'Redux', 'AWS', 'Jest', 'Node.js'],
+    ref: 'wired-wardrobe',
+  },
 ];
 
 export default projectData;
