@@ -33,3 +33,6 @@ jspm_packages/
 # Bundle
 client/dist/*bundle.js*
 client/dist/*bundle.min.js*
+
+# Project Data
+projectData.ts
