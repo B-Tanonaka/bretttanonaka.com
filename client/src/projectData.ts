@@ -1,5 +1,13 @@
 const projectData = [
   {
+    name: 'bretttanonaka.com',
+    year: 2023,
+    role: ['Design', 'Engineering'],
+    description: 'Portfolio to present my work as a full stack engineer and soon to feature my work as a video producer',
+    techStack: ['TypeScript', 'React', 'Redux', 'AWS', 'Node.js'],
+    ref: 'portfolio',
+  },
+  {
     name: 'Fitbook',
     year: 2023,
     role: ['UI Lead', 'Front-End Engineer'],
