@@ -16,7 +16,13 @@ export default function SingleProject() {
           boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
         }}
         />
-        { data.projectData[0].role.map((role: string) => (<div>{role}</div>))}
+        { data.projectData[0].role.map((role: string) => (<p>{role}</p>))}
+        <hr style={{
+          border: '0.03em dashed black',
+          boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
+        }}
+        />
+        { data.projectData[0].techStack.map((framework: string) => (<p>{framework}</p>))}
       </div>
     </div>
   );
