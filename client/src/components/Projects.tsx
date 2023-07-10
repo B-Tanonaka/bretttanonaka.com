@@ -21,7 +21,7 @@ export default function Projects() {
 
   return (
     <div className="projects">
-      <div>
+      <div className="project-left-side">
         <h1>Projects</h1>
         <div className="project-list">
           { data.projectData.map((project: Project, index: number) => renderList(project, index))}

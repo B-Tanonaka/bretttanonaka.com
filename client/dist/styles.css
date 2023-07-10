@@ -142,15 +142,20 @@ h1 {
 	max-height: 100%;
 	width: 100vw;
 	max-width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto;
+	display: flex;
 	align-content: center;
+	align-items: center;
+	justify-content: space-between;
 	z-index: 0;
 }
 
+.project-left-side {
+	margin-left: 10%;
+	width: 40vw;
+}
+
 .project-single {
-	margin-right: 15%;
+	margin-right: 10%;
 }
 
 .project-title {
@@ -174,14 +179,7 @@ h1 {
 	font-size: 1rem;
 }
 
-.project-list {
-	grid-column-start: 1;
-	grid-row-start: 2;
-}
-
 .image-container {
-	grid-column-start: 2;
-	grid-row: 1 / 2;
 	display: flex;
 	align-items: center;
 }
@@ -189,8 +187,6 @@ h1 {
 .project-image {
   height: 60vh;
 	width: 40vw;
-	position: absolute;
-	right: 0;
 	border-radius: 50px 0 0 50px;
 }
 
