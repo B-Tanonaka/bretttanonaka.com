@@ -64,22 +64,18 @@ h1 {
 /**** Home ****/
 
 .home-container {
-	position: relative;
 	height: 100vh;
 	max-height: 100%;
   width: 100vw;
 	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	z-index: 0;
 }
 
 .home-wrapper {
-	position: absolute;
-	margin: 0;
-	width: 75%;
-	height: 30%;
-	top: 56%;
-	left: 50%;
-	transform: translate(-50%, -56%);
+	width: 60%;
 }
 
 /**** Navbar ****/
