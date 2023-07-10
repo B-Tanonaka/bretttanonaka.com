@@ -227,9 +227,9 @@ h1 {
 	font-size: 1.1rem;
 }
 
-/**** Single Project ****/
+/**** Project Details ****/
 
-.single-project {
+.project-details {
 	height: 100vh;
 	width: 100vw;
 	max-width: 100%;
@@ -237,7 +237,7 @@ h1 {
 	justify-content: center;
 }
 
-.single-project p {
+.project-details p {
 	width: 30%;
 }
 

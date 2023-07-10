@@ -2,9 +2,9 @@ import React from 'react';
 import type { Project } from '../../../interfaces';
 import data from '../projectData';
 
-export default function SingleProject() {
+export default function ProjectDetails() {
   return (
-    <div className="single-project">
+    <div className="project-details">
       <p>{data.projectData[0].description}</p>
       <div className="right-side">
         <h2>{data.projectData[0].name}</h2>
