@@ -1,11 +1,4 @@
-/* GREEN https://coolors.co/ffcb47-666b6a-081e00-7fb685-ff5c5c */
-
-/* http://meyerweb.com/eric/tools/css/reset/
-  v2.0 | 20110126
-  License: none (public domain)
-
-  Reset so all styles can be modified from the same base
-*/
+/* http://meyerweb.com/eric/tools/css/reset/ */
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap');
 
@@ -27,31 +20,15 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
 body {
 	line-height: 1;
 	font-family: 'Outfit', 'serif'
 }
 ol, ul {
 	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
 }
 
 :root {
@@ -88,8 +65,10 @@ h1 {
 
 .home-container {
 	position: relative;
-  width: 100vw;
 	height: 100vh;
+	max-height: 100%;
+  width: 100vw;
+	max-width: 100%;
 	z-index: 0;
 }
 
@@ -103,16 +82,13 @@ h1 {
 	transform: translate(-50%, -56%);
 }
 
-.home-subtext {
-	margin-left: 1%;
-}
-
 /**** Navbar ****/
 
 .navbar-container {
 	display: flex;
 	height: 15%;
 	width: 100vw;
+	max-width: 100%;
 	position: fixed;
 	align-items: center;
 	justify-content: space-between;
@@ -163,9 +139,10 @@ h1 {
 
 .projects {
 	height: 100vh;
+	max-height: 100%;
 	width: 100vw;
+	max-width: 100%;
 	display: grid;
-	margin-left: 7%;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
 	align-content: center;
@@ -224,8 +201,10 @@ h1 {
 /**** About ****/
 
 .about {
-	width: 100vw;
 	height: 100vh;
+	max-height: 100%;
+	width: 100vw;
+	max-width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -246,4 +225,22 @@ h1 {
 .about p {
 	line-height: 1.5;
 	font-size: 1.1rem;
+}
+
+/**** Single Project ****/
+
+.single-project {
+	height: 100vh;
+	width: 100vw;
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.single-project p {
+	width: 30%;
+}
+
+.right-side {
+	width: 25%;
 }
