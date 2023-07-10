@@ -55,6 +55,10 @@ h1 {
 	margin-bottom: 3%;
 }
 
+h2 {
+	font-size: 2.5rem;
+}
+
 /**** App ****/
 
 .app {
@@ -226,13 +230,22 @@ h1 {
 	width: 100vw;
 	max-width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .project-details p {
 	width: 30%;
+	margin-left: 10%;
+	font-size: 1.2rem;
+	font-weight: 500;
 }
 
 .right-side {
-	width: 25%;
+	text-align: right;
+	margin-right: 10%;
+}
+
+.list-items {
+	line-height: 1.2rem;
 }
