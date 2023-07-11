@@ -304,8 +304,9 @@ h2 {
 
 .contact textarea {
 	box-sizing: border-box;
+	max-width: 100%;
 	min-width: 100%;
-	font-family: 'Outfit', san-serif;
+	font-family: 'Outfit', sans-serif;
 	background-color: rgba(0, 0, 0, 0.1);
 	border-color: var(--gray3-color);
 	padding: 0.5rem;
