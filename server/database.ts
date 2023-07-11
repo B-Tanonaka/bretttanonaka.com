@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 mongoose.connect('mongodb://localhost/portfolio');
 
-const projectSchema = mongoose.Schema({
+const projectSchema = new mongoose.Schema({
   name: String,
   year: Number,
   role: [],
@@ -11,4 +11,4 @@ const projectSchema = mongoose.Schema({
   ref: String,
 });
 
-module.exports = mongoose.model('projects', projectSchema);
+export default mongoose.model('projects', projectSchema);

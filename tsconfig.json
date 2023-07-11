@@ -9,6 +9,7 @@
     "outDir": "./client/build",
     "jsx": "react",
     "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
     "strict": true,
     "skipLibCheck": true,
     "noEmit": false,

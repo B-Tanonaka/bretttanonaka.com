@@ -1,6 +1,4 @@
-const db = require('./database');
+import db from './database';
 
-module.exports = {
-  getAllTitles: () => (db.find({})),
-  getProjectDetails: () => (db.find({})),
-};
+export const getAllTitles = () => (db.find({}));
+export const getProjectDetails = () => (db.find({}));

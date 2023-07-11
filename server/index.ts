@@ -1,9 +1,10 @@
+import morgan from 'morgan';
+import express from 'express';
+import path from 'path';
+import cors from 'cors';
+import router from './router';
+
 require('dotenv').config();
-const morgan = require('morgan');
-const express = require('express');
-const path = require('path');
-const cors = require('cors');
-const router = require('./router');
 
 const app = express();
 const PORT = process.env.PORT || 3131;
@@ -15,6 +16,6 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.use('/', router.get);
+app.use('/', router);
 
 app.listen(PORT, () => { console.log(`Server listenting on port ${PORT}`); });

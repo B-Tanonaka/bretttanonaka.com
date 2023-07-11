@@ -1,6 +1,7 @@
-const route = require('express').Router();
-const { getTitles } = require('./controller');
+import { getTitles } from './controller';
 
-route.get('/', getTitles);
+const router = require('express').Router();
 
-module.exports = route;
+router.get('/', getTitles);
+
+export default router;
