@@ -292,20 +292,22 @@ h2 {
 }
 
 .contact input[type="text"] {
+	box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.1);
 	border-color: var(--gray3-color);
 	border-width: 0.05rem;
 	border-radius: 0.1rem;
-	padding: 0;
+	padding: 0.5rem;
 	margin-top: 0.3rem;
 }
 
 .contact textarea {
+	box-sizing: border-box;
 	min-width: 100%;
 	font-family: 'Outfit', san-serif;
 	background-color: rgba(0, 0, 0, 0.1);
 	border-color: var(--gray3-color);
-	padding: 0;
+	padding: 0.5rem;
 	margin-top: 0.3rem;
 }
 
