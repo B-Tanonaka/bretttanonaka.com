@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import type { Project } from '../../../interfaces';
 import data from '../projectData';
 
@@ -6,6 +7,8 @@ export default function ProjectDetails() {
   const renderList = (text: string, index: number) => (
     <div className="list-items" key={index}>{text}</div>
   );
+
+  axios.get()
 
   return (
     <div className="project-details">
