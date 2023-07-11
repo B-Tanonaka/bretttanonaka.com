@@ -3,8 +3,8 @@ import type { Project } from '../../../interfaces';
 import data from '../projectData';
 
 export default function ProjectDetails() {
-  const renderList = (text: String) => (
-    <div className="list-items">{text}</div>
+  const renderList = (text: string, index: number) => (
+    <div className="list-items" key={index}>{text}</div>
   );
 
   return (
@@ -19,14 +19,14 @@ export default function ProjectDetails() {
           margin: '7% auto',
         }}
         />
-        { data.projectData[0].role.map((role: string) => renderList(role))}
+        { data.projectData[0].role.map((role, index) => renderList(role, index))}
         <hr style={{
           border: '0.03em dashed black',
           boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
           margin: '7% auto',
         }}
         />
-        { data.projectData[0].techStack.map((framework: string) => renderList(framework))}
+        { data.projectData[0].techStack.map((framework, index) => renderList(framework, index))}
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import type { Project } from '../../../interfaces';
 
 export default function Projects() {
   const renderList = (project: Project, index: number) => (
-    <div className="project-single">
+    <div className="project-single" key={index}>
       <hr style={{
         border: '0.03em dashed black',
         boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
@@ -24,7 +24,7 @@ export default function Projects() {
       <div className="project-left-side">
         <h1>Projects</h1>
         <div className="project-list">
-          { data.projectData.map((project: Project, index: number) => renderList(project, index))}
+          { data.projectData.map((project, index) => renderList(project, index))}
         </div>
       </div>
       <div className="image-container">

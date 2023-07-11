@@ -14,11 +14,6 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(form);
-  };
-
   return (
     <div className="contact">
       <div className="contact-container">
@@ -68,7 +63,12 @@ export default function Contact() {
               />
             </label>
           </div>
-          <input type="button" name="message" value="Submit" onClick={handleSubmit} />
+          <input
+            type="button"
+            name="message"
+            value="Submit"
+            onClick={(e) => { console.log(form); }}
+          />
         </form>
       </div>
     </div>
