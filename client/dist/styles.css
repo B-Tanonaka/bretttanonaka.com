@@ -1,4 +1,7 @@
-/* http://meyerweb.com/eric/tools/css/reset/ */
+/* http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+*/
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap');
 
@@ -20,15 +23,31 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
 	line-height: 1;
-	font-family: 'Outfit', 'serif'
+	font-family: 'Outfit', sans-serif;
 }
 ol, ul {
 	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 :root {
@@ -189,6 +208,7 @@ h2 {
 
 .project-role {
 	font-size: 1rem;
+	text-align: right;
 }
 
 .image-container {
@@ -233,6 +253,64 @@ h2 {
 .about p {
 	line-height: 1.5;
 	font-size: 1.1rem;
+}
+
+/**** Contact ****/
+
+.contact {
+	height: 100vh;
+	max-height: 100%;
+	width: 100vw;
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact-container {
+	width: 30%;
+}
+
+.top-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.name-email {
+	margin-bottom: 0.5rem;
+	width: 45%;
+}
+
+.contact input[type="text"] {
+  background-color: rgba(0, 0, 0, 0.1);
+	border-color: var(--gray3-color);
+	border-width: 0.05rem;
+	border-radius: 0.1rem;
+	padding: 0;
+	margin-top: 0.7rem;
+}
+
+.input-box-top {
+	height: 2rem;
+	width: 100%;
+}
+
+.input-box-bottom {
+  height: 10rem;
+	width: 100%;
+}
+
+.contact input[type="button"] {
+	height: 2rem;
+	width: 20%;
+	min-width: 4rem;
+	border-radius: 50rem;
+	border: none;
+  background-color: var(--gray3-color);
+	color: var(--white-color);
+	margin-top: 3%;
+	font-size: 0.7rem;
+	float: right;
 }
 
 /**** Project Details ****/
