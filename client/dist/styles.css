@@ -281,15 +281,6 @@ h2 {
 	width: 45%;
 }
 
-.contact input[type="text"] {
-  background-color: rgba(0, 0, 0, 0.1);
-	border-color: var(--gray3-color);
-	border-width: 0.05rem;
-	border-radius: 0.1rem;
-	padding: 0;
-	margin-top: 0.7rem;
-}
-
 .input-box-top {
 	height: 2rem;
 	width: 100%;
@@ -298,6 +289,24 @@ h2 {
 .input-box-bottom {
   height: 10rem;
 	width: 100%;
+}
+
+.contact input[type="text"] {
+  background-color: rgba(0, 0, 0, 0.1);
+	border-color: var(--gray3-color);
+	border-width: 0.05rem;
+	border-radius: 0.1rem;
+	padding: 0;
+	margin-top: 0.3rem;
+}
+
+.contact textarea {
+	min-width: 100%;
+	font-family: 'Outfit', san-serif;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-color: var(--gray3-color);
+	padding: 0;
+	margin-top: 0.3rem;
 }
 
 .contact input[type="button"] {

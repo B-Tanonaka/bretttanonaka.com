@@ -40,8 +40,10 @@ export default function Contact() {
             </div>
           </div>
           <div className="form-message">
-            <label className="form-title">Message</label>
-            {/* <input type="textarea" name="message" value={form.message} onChange={handleChange} className="input-box-bottom" /> */}
+            <label htmlFor="input-message">
+              Message
+              <textarea name="message" value={form.message} rows={10} cols={40} onChange={handleChange} />
+            </label>
           </div>
           <input type="button" name="submit" value="Submit" />
         </form>
