@@ -3,7 +3,7 @@ import data from '../projectData';
 
 export default function About() {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="about-wrapper">
         <h1>About</h1>
         <hr style={{

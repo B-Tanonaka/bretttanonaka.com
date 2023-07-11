@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 
 export default function Navbar() {
   type Toggle = number;
@@ -17,10 +18,18 @@ export default function Navbar() {
         <a href="/" className="navbar-name">Brett Tanonaka</a>
         <nav className="navbar-base">
           <ul className="navbar-sections">
-            <li><a href="/">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li>
+              <Link to="home" smooth offset={50} duration={500}>Home</Link>
+            </li>
+            <li>
+              <Link to="projects" smooth offset={50} duration={500}>Projects</Link>
+            </li>
+            <li>
+              <Link to="about" smooth offset={50} duration={500}>About</Link>
+            </li>
+            <li>
+              <Link to="contact" smooth offset={50} duration={500}>Contact</Link>
+            </li>
           </ul>
         </nav>
       </div>

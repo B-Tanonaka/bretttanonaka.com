@@ -33,6 +33,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Outfit', sans-serif;
+	color: var(--main-text)
 }
 ol, ul {
 	list-style: none;
@@ -322,6 +323,7 @@ h2 {
 	margin-top: 3%;
 	font-size: 0.7rem;
 	float: right;
+	cursor: pointer;
 }
 
 /**** Project Details ****/
