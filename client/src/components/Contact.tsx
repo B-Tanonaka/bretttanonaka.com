@@ -14,6 +14,11 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(form);
+  };
+
   return (
     <div className="contact">
       <div className="contact-container">
@@ -29,23 +34,41 @@ export default function Contact() {
             <div className="name-email">
               <label htmlFor="input-name">
                 Name
-                <input type="text" name="name" value={form.name} onChange={handleChange} className="input-box-top" />
+                <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  className="input-box-top"
+                />
               </label>
             </div>
             <div className="name-email">
               <label htmlFor="input-email">
                 Email
-                <input type="text" name="email" value={form.email} onChange={handleChange} className="input-box-top" />
+                <input
+                  type="text"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  className="input-box-top"
+                />
               </label>
             </div>
           </div>
           <div className="form-message">
             <label htmlFor="input-message">
               Message
-              <textarea name="message" value={form.message} rows={10} cols={40} onChange={handleChange} />
+              <textarea
+                name="message"
+                value={form.message}
+                rows={10}
+                cols={40}
+                onChange={(e) => { setForm({ ...form, [e.target.name]: e.target.value }); }}
+              />
             </label>
           </div>
-          <input type="button" name="submit" value="Submit" />
+          <input type="button" name="message" value="Submit" onClick={handleSubmit} />
         </form>
       </div>
     </div>
