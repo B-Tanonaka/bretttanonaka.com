@@ -6,3 +6,9 @@ export type Project = {
   techStack: string[];
   ref: string;
 };
+
+export type Form = {
+  name: string;
+  email: string;
+  message: string;
+};
