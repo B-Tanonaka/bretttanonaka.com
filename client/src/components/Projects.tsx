@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import type { Project, DataProp } from '../../../interfaces';
 
 export default function Projects({ data }: DataProp) {
@@ -9,12 +10,12 @@ export default function Projects({ data }: DataProp) {
         boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
       }}
       />
-      <a href={project.ref} className="project-title" key={index}>
+      <Link to={`/projects/${project.ref}`} className="project-title" key={index}>
         <span className="project-text">
           <p className="project-name">{project.name}</p>
           <p className="project-role">{project.role.join(' & ')}</p>
         </span>
-      </a>
+      </Link>
     </div>
   );
 

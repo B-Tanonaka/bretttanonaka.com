@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 import Home from './Home';
 import Navbar from './Navbar';
@@ -20,8 +21,10 @@ export default function App() {
   return (
     <div className="app">
       <Navbar />
-      <ProjectDetails data={data} />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/:id" element={<ProjectDetails data={data} />} />
+      </Routes>
       <Projects data={data} />
       <About />
       <Contact />
