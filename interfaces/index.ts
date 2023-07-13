@@ -1,4 +1,5 @@
 export type Project = {
+  _id: string;
   name: string;
   role: string[];
   year: number;

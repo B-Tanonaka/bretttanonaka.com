@@ -2,6 +2,6 @@ import { getTitles } from './controller';
 
 const router = require('express').Router();
 
-router.get('/', getTitles);
+router.get('/projects', getTitles);
 
 export default router;
