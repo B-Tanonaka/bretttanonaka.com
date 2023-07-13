@@ -8,6 +8,10 @@ export type Project = {
   ref: string;
 };
 
+export type DataProp = {
+  data: Project[];
+};
+
 export type Form = {
   name: string;
   email: string;

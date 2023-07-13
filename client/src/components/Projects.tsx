@@ -1,8 +1,7 @@
 import React from 'react';
-import data from '../projectData';
-import type { Project } from '../../../interfaces';
+import type { Project, DataProp } from '../../../interfaces';
 
-export default function Projects() {
+export default function Projects({ data }: DataProp) {
   const renderList = (project: Project, index: number) => (
     <div className="project-single" key={index}>
       <hr style={{
@@ -24,7 +23,7 @@ export default function Projects() {
       <div className="project-left-side">
         <h1>Projects</h1>
         <div className="project-list">
-          { data.projectData.map((project, index) => renderList(project, index))}
+          { data.map((project: Project, index: number) => renderList(project, index))}
         </div>
       </div>
       <div className="image-container">
