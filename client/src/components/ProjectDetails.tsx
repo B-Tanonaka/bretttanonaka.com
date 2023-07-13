@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import type { Project } from '../../../interfaces';
+import axios from 'axios';
+import type { Project, DataProp } from '../../../interfaces';
 
-export default function ProjectDetails({ project }: Project) {
+export default function ProjectDetails({ data }: DataProp) {
+  const [project, setProject] = useState<Project>(data[0]);
   const { id } = useParams();
+
+  useEffect(() => {
+    axios.get<Project>(`/project-data/${id}`)
+      .then((response) => { setProject(response.data); })
+      .catch((err) => { throw err; });
+  }, []);
 
   const dividerLine = (
     <hr style={{

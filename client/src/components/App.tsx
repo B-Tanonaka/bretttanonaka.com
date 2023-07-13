@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Projects from './Projects';
 import About from './About';
 import Contact from './Contact';
+import Error from './Error';
 import ProjectDetails from './ProjectDetails';
 import type { Project } from '../../../interfaces';
 
@@ -13,21 +14,29 @@ export default function App() {
   const [data, setData] = useState<Project[]>([]);
 
   useEffect(() => {
-    axios.get<Project[]>('/projects')
+    axios.get<Project[]>('/project-data')
       .then((response) => { setData(response.data); })
       .catch((err) => { throw err; });
   }, []);
 
   return (
     <div className="app">
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={(
+            <div>
+              <Navbar />
+              <Home />
+              <Projects data={data} />
+              <About />
+              <Contact />
+            </div>
+            )}
+        />
         <Route path="/projects/:id" element={<ProjectDetails data={data} />} />
+        <Route path="*" element={<Error />} />
       </Routes>
-      <Projects data={data} />
-      <About />
-      <Contact />
     </div>
   );
 }
