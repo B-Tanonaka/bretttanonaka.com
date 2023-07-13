@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import Home from './Home';
 import Navbar from './Navbar';
 import Projects from './Projects';
@@ -20,7 +20,7 @@ export default function App() {
   return (
     <div className="app">
       <Navbar />
-      <ProjectDetails />
+      <ProjectDetails data={data} />
       <Home />
       <Projects data={data} />
       <About />
