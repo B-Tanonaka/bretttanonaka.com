@@ -1,7 +1,10 @@
 import React from 'react';
-import type { Project, DataProp } from '../../../interfaces';
+import { useParams } from 'react-router-dom';
+import type { Project } from '../../../interfaces';
 
-export default function ProjectDetails({ data }: DataProp) {
+export default function ProjectDetails({ project }: Project) {
+  const { id } = useParams();
+
   const dividerLine = (
     <hr style={{
       border: '0.03em dashed black',
@@ -14,23 +17,17 @@ export default function ProjectDetails({ data }: DataProp) {
     <div className="list-items" key={index}>{text}</div>
   );
 
-  const renderPage = (project: Project, index: number) => (
-    <div className="project-details" key={index}>
+  return (
+    <div className="project-details">
       <p>{project.description}</p>
       <div className="right-side">
         <h2>{project.name}</h2>
         <div className="project-year">{project.year}</div>
         { dividerLine }
-        { project.role.map((role, key) => renderList(role, key))}
+        { project.role.map((role: string, key: number) => renderList(role, key))}
         { dividerLine }
-        { project.techStack.map((framework, key) => renderList(framework, key))}
+        { project.techStack.map((framework: string, key: number) => renderList(framework, key))}
       </div>
-    </div>
-  );
-
-  return (
-    <div>
-      { data.map((project: Project, index: number) => renderPage(project, index)) }
     </div>
   );
 }
