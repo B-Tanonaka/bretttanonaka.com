@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import type { Project, DataProp } from '../../../interfaces';
+import type { Project } from '../../../interfaces';
 
-export default function ProjectDetails({ data }: DataProp) {
+export default function ProjectDetails() {
   const [project, setProject] = useState<Project>({
     _id: '',
     name: '',

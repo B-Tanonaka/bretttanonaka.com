@@ -34,7 +34,7 @@ export default function App() {
             </div>
             )}
         />
-        <Route path="/projects/:id" element={<ProjectDetails data={data} />} />
+        <Route path="/projects/:id" element={<ProjectDetails />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>
