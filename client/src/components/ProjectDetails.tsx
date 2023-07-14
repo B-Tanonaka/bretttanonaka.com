@@ -4,7 +4,15 @@ import axios from 'axios';
 import type { Project, DataProp } from '../../../interfaces';
 
 export default function ProjectDetails({ data }: DataProp) {
-  const [project, setProject] = useState<Project>(data[0]);
+  const [project, setProject] = useState<Project>({
+    _id: '',
+    name: '',
+    role: [],
+    year: 0,
+    description: '',
+    techStack: [],
+    ref: '',
+  });
   const { id } = useParams();
 
   useEffect(() => {
