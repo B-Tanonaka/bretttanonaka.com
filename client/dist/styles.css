@@ -357,3 +357,18 @@ h2 {
 .list-items {
 	line-height: 1.2rem;
 }
+
+.back {
+	width: 5rem;
+	height: 2rem;
+	position: fixed;
+	left: 5%;
+	top: 5%;
+  background-color: var(--white-color);
+	color: var(--main-text);
+	font-size: 0.8rem;
+	box-shadow: 0.25em 0.25em .75em -.5em var(--shadow-color);
+	border: none;
+	border-radius: 50rem;
+	cursor: pointer;
+}
