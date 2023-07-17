@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { Project } from '../interfaces';
+import { Project, Form } from '../interfaces';
 
 mongoose.connect('mongodb://localhost/portfolio');
 
@@ -15,6 +15,11 @@ const projectSchema = new mongoose.Schema<Project>({
   ref: String,
 });
 
-const ProjectModel = mongoose.model('portfolio', projectSchema);
+const formSchema = new mongoose.Schema<Form>({
+  name: String,
+  email: String,
+  message: String,
+});
 
-export default ProjectModel;
+export const ProjectModel = mongoose.model('portfolio', projectSchema);
+export const FormModel = mongoose.model('contact', formSchema);
