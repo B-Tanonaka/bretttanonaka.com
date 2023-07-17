@@ -313,7 +313,7 @@ h2 {
 	margin-top: 0.3rem;
 }
 
-.contact input[type="button"] {
+.contact button[type="submit"] {
 	height: 2rem;
 	width: 20%;
 	min-width: 4rem;

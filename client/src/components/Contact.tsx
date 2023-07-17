@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
+import axios from 'axios';
 import type { Form } from '../../../interfaces';
 
 export default function Contact() {
@@ -9,9 +10,16 @@ export default function Contact() {
   };
   const [form, setForm] = useState(formStructure);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    axios.post('/contact-data', form)
+      .then((res) => { console.log(res); })
+      .catch((err: unknown) => { console.log(err); });
   };
 
   return (
@@ -24,7 +32,7 @@ export default function Contact() {
           marginBottom: '5%',
         }}
         />
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
           <div className="top-row">
             <div className="name-email">
               <label htmlFor="input-name">
@@ -63,12 +71,7 @@ export default function Contact() {
               />
             </label>
           </div>
-          <input
-            type="button"
-            name="message"
-            value="Submit"
-            onClick={(e) => { console.log(form); }}
-          />
+          <button type="submit" name="message">Submit</button>
         </form>
       </div>
     </div>
