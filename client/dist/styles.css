@@ -366,7 +366,7 @@ h2 {
 	border-radius: 50rem;
 	font-size: 0.7rem;
 	font-weight: 500;
-	background-color: var(--green1-color);
+	cursor: pointer;
 }
 
 /**** Project Details ****/

@@ -36,7 +36,7 @@ export default function Contact() {
 
   return (
     <div className="contact" id="contact">
-      <Modal success />
+      <Modal success={false} />
       <div className="contact-container">
         <h1>Contact</h1>
         <hr style={{

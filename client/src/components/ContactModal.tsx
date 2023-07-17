@@ -14,10 +14,18 @@ export default function Modal({ success }: { success: boolean }) {
           {success ? 'Thank you!' : 'Sorry!'}
         </span>
         <span style={{ fontSize: '0.7rem' }}>
-          Your message has been received.
+          { success
+            ? 'Your message has been received.'
+            : 'An error has occurred, please try again.'}
         </span>
       </p>
-      <button type="button" className="ok-button">OK</button>
+      <button
+        type="button"
+        className="ok-button"
+        style={success ? { backgroundColor: '#309D51' } : { backgroundColor: '#CD4631' }}
+      >
+        OK
+      </button>
     </div>
   );
 }
