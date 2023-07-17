@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 
-export default function Modal({ success }: { success: boolean }) {
+export default function Modal(
+  { success, setModalOpen }:
+  { success: boolean, setModalOpen: Dispatch<SetStateAction<any>> },
+) {
   const icon = success ? 'fa-solid fa-circle-check' : 'fa-solid fa-circle-xmark';
   return (
     <div className="contact-message">
@@ -23,6 +26,7 @@ export default function Modal({ success }: { success: boolean }) {
         type="button"
         className="ok-button"
         style={success ? { backgroundColor: '#309D51' } : { backgroundColor: '#CD4631' }}
+        onClick={setModalOpen(false)}
       >
         OK
       </button>

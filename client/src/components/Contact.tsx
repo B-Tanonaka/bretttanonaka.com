@@ -1,4 +1,9 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import React, {
+  ChangeEvent,
+  FormEvent,
+  useState,
+  useEffect,
+} from 'react';
 import axios from 'axios';
 import Modal from './ContactModal';
 import type { Form } from '../../../interfaces';
@@ -10,6 +15,8 @@ export default function Contact() {
     message: '',
   };
   const [form, setForm] = useState(blankForm);
+  const [modalOpen, setModalOpen] = useState(true);
+  const [modalState, setModalState] = useState(true);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -21,75 +28,84 @@ export default function Contact() {
     axios.post('/contact-data', form)
       .then(() => {
         setForm(blankForm);
-        return (
-          <div className="contact-message success">
-            <p>Your message has been received and I will back to you as soon as possible</p>
-          </div>
-        );
+        setModalOpen(true);
+        setModalState(true);
       })
-      .catch(() => (
-        <div className="contact-message fail">
-          <p>An error has occurred, please try again.</p>
-        </div>
-      ));
+      .catch(() => {
+        setModalOpen(true);
+        setModalState(false);
+      });
   };
 
+  useEffect(() => {
+    document.body.style.overflowY = modalOpen ? 'hidden' : 'unset';
+  }, [modalOpen]);
+
   return (
-    <div className="contact" id="contact">
-      <Modal success={false} />
-      <div className="contact-container">
-        <h1>Contact</h1>
-        <hr style={{
-          border: '0.03em dashed black',
-          boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
-          marginBottom: '5%',
-        }}
-        />
-        <form className="form" onSubmit={handleSubmit}>
-          <div className="top-row">
-            <div className="name-email">
-              <label htmlFor="input-name">
-                Name*
-                <input
-                  required
-                  type="text"
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  className="input-box-top"
-                />
-              </label>
-            </div>
-            <div className="name-email">
-              <label htmlFor="input-email">
-                Email*
-                <input
-                  required
-                  type="email"
-                  name="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  className="input-box-top"
-                />
-              </label>
-            </div>
-          </div>
-          <div className="form-message">
-            <label htmlFor="input-message">
-              Message*
-              <textarea
-                required
-                name="message"
-                value={form.message}
-                rows={10}
-                cols={40}
-                onChange={(e) => { setForm({ ...form, [e.target.name]: e.target.value }); }}
-              />
-            </label>
-          </div>
-          <button type="submit" name="message">Submit</button>
-        </form>
+    <>
+      {modalOpen
+      && (
+      <div className="submit-overlay">
+        {modalState
+          ? <Modal success setModalOpen={setModalOpen} />
+          : <Modal success={false} setModalOpen={setModalOpen} />}
       </div>
-    </div>
+      )}
+      <div className="contact" id="contact">
+        <div className="contact-container">
+          <h1>Contact</h1>
+          <hr style={{
+            border: '0.03em dashed black',
+            boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
+            marginBottom: '5%',
+          }}
+          />
+          <form className="form" onSubmit={handleSubmit}>
+            <div className="top-row">
+              <div className="name-email">
+                <label htmlFor="input-name">
+                  Name*
+                  <input
+                    required
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    className="input-box-top"
+                  />
+                </label>
+              </div>
+              <div className="name-email">
+                <label htmlFor="input-email">
+                  Email*
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    className="input-box-top"
+                  />
+                </label>
+              </div>
+            </div>
+            <div className="form-message">
+              <label htmlFor="input-message">
+                Message*
+                <textarea
+                  required
+                  name="message"
+                  value={form.message}
+                  rows={10}
+                  cols={40}
+                  onChange={(e) => { setForm({ ...form, [e.target.name]: e.target.value }); }}
+                />
+              </label>
+            </div>
+            <button type="submit" name="message">Submit</button>
+          </form>
+        </div>
+      </div>
+    </>
   );
 }
