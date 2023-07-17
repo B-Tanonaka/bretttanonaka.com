@@ -8,10 +8,13 @@ import About from './About';
 import Contact from './Contact';
 import Error from './Error';
 import ProjectDetails from './ProjectDetails';
+import Modal from './ContactModal';
 import type { Project } from '../../../interfaces';
 
 export default function App() {
   const [data, setData] = useState<Project[]>([]);
+  const [modalOpen, setModalOpen] = useState(true);
+  const [modalState, setModalState] = useState(true);
 
   useEffect(() => {
     axios.get<Project[]>('/project-data')
@@ -26,11 +29,22 @@ export default function App() {
           path="/"
           element={(
             <div>
+              {modalOpen
+                && (
+                  <div className="submit-overlay">
+                    {modalState
+                      ? <Modal success setModalOpen={setModalOpen} />
+                      : <Modal success={false} setModalOpen={setModalOpen} />}
+                  </div>
+                )}
               <Navbar />
               <Home />
               <Projects data={data} />
               <About />
-              <Contact />
+              <Contact
+                setModalOpen={setModalOpen}
+                setModalState={setModalState}
+              />
             </div>
             )}
         />

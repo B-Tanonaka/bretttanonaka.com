@@ -89,6 +89,7 @@ h2 {
 
 .app {
   background-color: yellow;
+	overflow-y: overlay;
 }
 
 /**** Home ****/
