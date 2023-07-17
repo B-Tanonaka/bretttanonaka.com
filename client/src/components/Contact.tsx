@@ -1,5 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import axios from 'axios';
+import Modal from './ContactModal';
 import type { Form } from '../../../interfaces';
 
 export default function Contact() {
@@ -35,6 +36,7 @@ export default function Contact() {
 
   return (
     <div className="contact" id="contact">
+      <Modal success />
       <div className="contact-container">
         <h1>Contact</h1>
         <hr style={{

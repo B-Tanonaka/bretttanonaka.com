@@ -348,11 +348,16 @@ h2 {
 	z-index: 1;
 }
 
-.thank-you {
+.title-text {
 	font-size: 1.5rem;
 	font-weight: 600;
 	display: block;
 	line-height: 2rem;
+}
+
+.contact-icon {
+	font-size: 2.5rem;
+	margin-top: 1rem;
 }
 
 .ok-button {
