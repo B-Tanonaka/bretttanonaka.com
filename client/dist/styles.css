@@ -327,6 +327,20 @@ h2 {
 	cursor: pointer;
 }
 
+.contact-message {
+	height: 10rem;
+	width: 10rem;
+	display: flex;
+	align-items: center;
+	background-color: white;
+	border-radius: 1rem;
+	box-shadow: 0.25em 0.25em .75em -.5em var(--shadow-color);
+	font-size: 0.8rem;
+	text-align: center;
+	padding: 1.5rem;
+	z-index: 1;
+}
+
 /**** Project Details ****/
 
 .project-details {

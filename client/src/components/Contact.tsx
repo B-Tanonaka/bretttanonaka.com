@@ -3,12 +3,12 @@ import axios from 'axios';
 import type { Form } from '../../../interfaces';
 
 export default function Contact() {
-  const formStructure: Form = {
+  const blankForm: Form = {
     name: '',
     email: '',
     message: '',
   };
-  const [form, setForm] = useState(formStructure);
+  const [form, setForm] = useState(blankForm);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -18,8 +18,19 @@ export default function Contact() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     axios.post('/contact-data', form)
-      .then((res) => { console.log(res); })
-      .catch((err: unknown) => { console.log(err); });
+      .then(() => {
+        setForm(blankForm);
+        return (
+          <div className="contact-message success">
+            <p>Your message has been received and I will back to you as soon as possible</p>
+          </div>
+        );
+      })
+      .catch(() => (
+        <div className="contact-message fail">
+          <p>An error has occurred, please try again.</p>
+        </div>
+      ));
   };
 
   return (
@@ -76,6 +87,14 @@ export default function Contact() {
           </div>
           <button type="submit" name="message">Submit</button>
         </form>
+        <div className="contact-message success">
+          <span>
+            Thank you!
+          </span>
+          <span>
+            Your message has been received and I will get back to you as soon as possible.
+          </span>
+        </div>
       </div>
     </div>
   );
