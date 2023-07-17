@@ -87,14 +87,6 @@ export default function Contact() {
           </div>
           <button type="submit" name="message">Submit</button>
         </form>
-        <div className="contact-message success">
-          <span>
-            Thank you!
-          </span>
-          <span>
-            Your message has been received and I will get back to you as soon as possible.
-          </span>
-        </div>
       </div>
     </div>
   );
