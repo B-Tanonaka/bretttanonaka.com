@@ -292,7 +292,7 @@ h2 {
 	width: 100%;
 }
 
-.contact input[type="text"] {
+.contact input {
 	box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.1);
 	border-color: var(--gray3-color);

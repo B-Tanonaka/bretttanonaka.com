@@ -36,8 +36,9 @@ export default function Contact() {
           <div className="top-row">
             <div className="name-email">
               <label htmlFor="input-name">
-                Name
+                Name*
                 <input
+                  required
                   type="text"
                   name="name"
                   value={form.name}
@@ -48,9 +49,10 @@ export default function Contact() {
             </div>
             <div className="name-email">
               <label htmlFor="input-email">
-                Email
+                Email*
                 <input
-                  type="text"
+                  required
+                  type="email"
                   name="email"
                   value={form.email}
                   onChange={handleChange}
@@ -61,8 +63,9 @@ export default function Contact() {
           </div>
           <div className="form-message">
             <label htmlFor="input-message">
-              Message
+              Message*
               <textarea
+                required
                 name="message"
                 value={form.message}
                 rows={10}
