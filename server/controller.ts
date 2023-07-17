@@ -14,7 +14,7 @@ export const getSingleProject: RequestHandler = (req, res) => {
 };
 
 export const writeContact: RequestHandler = (req, res) => {
-  saveContact(req.query)
-    .then(() => { res.status(201).send('Contact created'); })
+  saveContact(req.body)
+    .then(() => { console.log(req.body); res.status(201).send('Contact created'); })
     .catch((err: unknown) => { res.status(422).send(err); });
 };
