@@ -25,7 +25,9 @@ export default function Modal(
       <button
         type="button"
         className="ok-button"
-        style={success ? { backgroundColor: '#309D51' } : { backgroundColor: '#CD4631' }}
+        style={success
+          ? { backgroundColor: '#309D51', color: 'white' }
+          : { backgroundColor: '#CD4631', color: 'white' }}
         onClick={() => setModalOpen(false)}
       >
         OK

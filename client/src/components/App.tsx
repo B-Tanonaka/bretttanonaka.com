@@ -9,6 +9,7 @@ import Contact from './Contact';
 import Error from './Error';
 import ProjectDetails from './ProjectDetails';
 import Modal from './ContactModal';
+import Background from './Background';
 import type { Project } from '../../../interfaces';
 
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
           path="/"
           element={(
             <div>
+              <Background />
               {modalOpen
                 && (
                   <div className="submit-overlay">
