@@ -13,7 +13,7 @@ import type { Project } from '../../../interfaces';
 
 export default function App() {
   const [data, setData] = useState<Project[]>([]);
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
   const [modalState, setModalState] = useState(true);
 
   useEffect(() => {
