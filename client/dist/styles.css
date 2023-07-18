@@ -97,7 +97,7 @@ h2 {
 .background {
   height: 100vh;
 	width: 100%;
-	background-image: conic-gradient(from 45deg at var(--xPos, 50%) var(--yPos, 50%), #EF7EF9, #D682D2, #E7EE9D, #C53D2B),
+	/* background: conic-gradient(from 45deg at 50% 50%, #EF7EF9, #D682D2, #E7EE9D, #C53D2B); */
 }
 
 /**** Home ****/
