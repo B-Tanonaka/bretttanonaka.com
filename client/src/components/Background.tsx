@@ -26,15 +26,9 @@ export default function Background() {
       style={{
         height: '100vh',
         width: '100%',
-        background: `conic-gradient(from 45deg at ${xPos}px ${yPos}px, #EF7EF9, #D682D2, #E7EE9D, #C53D2B, transparent 100%)`,
+        backgroundImage: `radial-gradient(49% 81% at 45% 47%, #FFE20345 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #CF00FF30 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #FAFF0094 30%, #FF000000 99%),radial-gradient(142% 91% at -6% 74%, #FF00E169 1%, #FF000000 99%),radial-gradient(75% 75% at ${xPos}px ${yPos}px, #FAFF003D 0%, #FF07F94D 100%)`,
         zIndex: '10',
       }}
-      // style={{
-      //   height: '100vh',
-      //   width: '100%',
-      //   backgroundImage: `radial-gradient(49% 81% at ${xPos} ${yPos}, #FFE20345 0%, #073AFF00 100%), radial-gradient(113% 91% at ${xPos} ${yPos}, #FF5A00FF 1%, #FF000000 99%),radial-gradient(142% 91% at ${xPos} ${yPos}, #FFDB00FF 1%, #FF000000 99%),radial-gradient(142% 91% at ${xPos} ${yPos}, #FF0049FF 1%, #FF000000 99%),radial-gradient(142% 91% at ${xPos} ${yPos}, #FF7000FF 0%, #FF0000FF 100%);`,
-      //   zIndex: '10',
-      // }}
     />
   );
 }
