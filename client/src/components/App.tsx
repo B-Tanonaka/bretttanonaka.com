@@ -29,7 +29,7 @@ export default function App() {
         <Route
           path="/"
           element={(
-            <div>
+            <>
               <Background />
               {modalOpen
                 && (
@@ -47,7 +47,7 @@ export default function App() {
                 setModalOpen={setModalOpen}
                 setModalState={setModalState}
               />
-            </div>
+            </>
             )}
         />
         <Route path="/projects/:id" element={<ProjectDetails />} />
