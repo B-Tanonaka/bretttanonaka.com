@@ -5,7 +5,7 @@ const data = {
       year: 2023,
       role: ['Design', 'Engineering'],
       description: 'Portfolio to present my work as a full stack engineer and soon to feature my work as a video producer.',
-      techStack: ['TypeScript', 'React', 'Redux', 'AWS', 'Node.js'],
+      techStack: ['TypeScript', 'React', 'AWS', 'Node.js'],
       ref: 'portfolio',
     },
     {
