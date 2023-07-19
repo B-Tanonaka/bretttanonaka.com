@@ -47,6 +47,7 @@ export default function ProjectDetails() {
           { dividerLine }
           { project.techStack.map((framework: string, key: number) => renderList(framework, key))}
         </div>
+        <div className="project-background" />
       </div>
     </>
   );
