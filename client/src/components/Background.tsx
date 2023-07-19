@@ -7,8 +7,8 @@ export default function Background() {
   useEffect(() => {
     const trackMouse = (e: MouseEvent) => {
       const { clientX, clientY } = e;
-      setTimeout(() => { setXPos(clientX); }, 1000);
-      setTimeout(() => { setYPos(clientY); }, 1000);
+      setTimeout(() => { setXPos(clientX); }, 300);
+      setTimeout(() => { setYPos(clientY); }, 300);
     };
     window.addEventListener('mousemove', trackMouse);
 
