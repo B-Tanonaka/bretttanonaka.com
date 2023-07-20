@@ -115,7 +115,7 @@ h4 {
 }
 
 .home-main-text {
-	font-size: 2rem;
+	font-size: 2.2rem;
 }
 
 .home-sec-text {
@@ -471,6 +471,15 @@ h4 {
 
 	.home-sec-text {
 		font-size: 0.9rem;
+	}
+
+	.about-wrapper {
+		width: 80%;
+	}
+
+	.about p {
+		line-height: 1.5;
+    font-size: 0.8rem;
 	}
 
 	.project-image {
