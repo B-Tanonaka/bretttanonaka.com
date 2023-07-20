@@ -473,6 +473,11 @@ h4 {
 		font-size: 0.9rem;
 	}
 
+	.project-image {
+		height: 0;
+		width: 0;
+	}
+
 	.about-wrapper {
 		width: 80%;
 	}
@@ -482,8 +487,11 @@ h4 {
     font-size: 0.8rem;
 	}
 
-	.project-image {
-		height: 0;
-		width: 0;
+	.contact-container {
+		width: 80%;
+	}
+
+	.form {
+		font-size: 0.8rem;
 	}
 }
