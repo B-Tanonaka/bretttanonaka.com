@@ -12,8 +12,8 @@ export default function Projects({ data }: DataProp) {
       />
       <Link to={`/projects/${project.ref}`} className="project-title" key={index}>
         <span className="project-text">
-          <p className="project-name">{project.name}</p>
-          <p className="project-role">{project.role.join(' & ')}</p>
+          <h2>{project.name}</h2>
+          <h4 className="project-role">{project.role.join(' & ')}</h4>
         </span>
       </Link>
     </div>
