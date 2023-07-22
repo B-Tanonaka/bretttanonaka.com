@@ -234,6 +234,7 @@ h4 {
 .project-image {
   height: 60vh;
 	width: 40vw;
+	object-fit: cover;
 	border-radius: 50px 0 0 50px;
 }
 
@@ -473,9 +474,18 @@ h4 {
 		font-size: 0.9rem;
 	}
 
-	.project-image {
-		height: 0;
-		width: 0;
+	.projects {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.project-left-side {
+		width: 100vw;
+		max-width: 100%;
+	}
+
+	.image-container {
+		display: none;
 	}
 
 	.about-wrapper {
