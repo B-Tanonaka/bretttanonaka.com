@@ -505,3 +505,99 @@ h4 {
 		font-size: 0.8rem;
 	}
 }
+
+@media (min-width: 40rem) and (max-width: 48rem) {
+	h1 {
+		font-size: 2.5rem;
+	}
+	h2 {
+		font-size: 1rem;
+	}
+	h4 {
+		font-size: 0.7rem;
+	}
+
+	.home-wrapper {
+		width: 85%;
+	}
+
+	.home-main-text {
+		font-size: 2rem;
+	}
+
+	.project-left-side {
+		width: 60vw;
+		max-width: 100%;
+	}
+
+	.about-wrapper {
+		width: 80%;
+	}
+
+	.about p {
+		font-size: 0.9rem;
+	}
+
+	.contact-container {
+		width: 50%;
+	}
+
+	.form {
+		font-size: 0.8rem;
+	}
+}
+
+	@media (max-width: 40rem) {
+	h1 {
+		font-size: 2rem;
+	}
+	h2 {
+		font-size: 1rem;
+	}
+	h4 {
+		font-size: 0.7rem;
+	}
+
+	.home-wrapper {
+		width: 85%;
+	}
+
+	.home-main-text {
+		font-size: 1.6rem;
+		line-height: 1.75rem;
+	}
+
+	.home-sec-text {
+		font-size: 0.9rem;
+	}
+
+	.projects {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.project-left-side {
+		width: 100vw;
+		max-width: 100%;
+	}
+
+	.image-container {
+		display: none;
+	}
+
+	.about-wrapper {
+		width: 80%;
+	}
+
+	.about p {
+    font-size: 0.8rem;
+	}
+
+	.contact-container {
+		width: 80%;
+	}
+
+	.form {
+		font-size: 0.8rem;
+	}
+}
