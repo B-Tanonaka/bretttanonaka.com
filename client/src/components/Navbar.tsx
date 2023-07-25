@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 
 export default function Navbar() {
-  type Toggle = number;
   type Event = React.MouseEvent;
-  const [navbarToggle, setNavbarToggle] = useState<Toggle>(0);
+  const [navbarToggle, setNavbarToggle] = useState<number>(0);
 
   // const handleClick = (e: Event, page: number) => {
   //   e.preventDefault();
