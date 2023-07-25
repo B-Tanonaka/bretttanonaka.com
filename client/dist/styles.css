@@ -488,6 +488,18 @@ h4 {
 		display: none;
 	}
 
+	.project-background {
+		height: 125vh;
+		border-radius: 0 75% 75% 0;
+		width: 70%;
+	}
+
+	.project-details p {
+		width: 40%;
+		font-size: 0.9rem;
+		line-height: 1rem;
+	}
+
 	.about-wrapper {
 		width: 80%;
 	}
@@ -547,7 +559,7 @@ h4 {
 	}
 }
 
-	@media (max-width: 40rem) {
+	/* @media (max-width: 40rem) {
 	h1 {
 		font-size: 2rem;
 	}
@@ -600,4 +612,4 @@ h4 {
 	.form {
 		font-size: 0.8rem;
 	}
-}
+} */
