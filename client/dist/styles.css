@@ -500,6 +500,15 @@ h4 {
 		line-height: 1rem;
 	}
 
+	.project-year {
+		font-size: 0.8rem;
+	}
+
+	.list-items {
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+
 	.about-wrapper {
 		width: 80%;
 	}
