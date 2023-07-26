@@ -217,16 +217,16 @@ h4 {
 	text-decoration: none;
 }
 
-.project-name {
+.project-name, .project-role {
 	position: relative;
 	padding: 0.4rem;
 }
 
-.project-name:hover {
+.project-name:hover, .project-role:hover {
 	color: var(--main-text);
 }
 
-.project-name::before {
+.project-name::before, .project-role::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -239,7 +239,11 @@ h4 {
   transition: transform 0.3s ease;
 }
 
-.project-name:hover::before {
+.project-role::before {
+	transform-origin: top right;
+}
+
+.project-name:hover::before, .project-role:hover::before {
   transform: scaleX(1);
 }
 
