@@ -8,8 +8,6 @@ module.exports = {
         'airbnb',
         'airbnb-typescript',
     ],
-    "overrides": [
-    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -20,6 +18,7 @@ module.exports = {
         "react",
         "@typescript-eslint"
     ],
-    "rules": {
-    }
+    "ignorePatterns": [
+        ".eslintrc.js"
+    ]
 }

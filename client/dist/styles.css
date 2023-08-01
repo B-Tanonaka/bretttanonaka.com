@@ -93,7 +93,6 @@ h4 {
 /**** App ****/
 
 .app {
-  /* background-color: yellow; */
 	overflow-y: overlay;
 }
 
@@ -230,7 +229,7 @@ h4 {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 1.5px;
   bottom: 0;
   left: 0;
   background-color: var(--main-text);
@@ -435,17 +434,59 @@ h4 {
 	align-items: center;
 }
 
-.project-details p {
-	width: 30%;
+.project-details a {
+	text-decoration: none;
+	color: var(--main-text);
+	font-size: 1rem;
+	margin-top: 0.6rem;
+}
+
+.project-details i {
+	font-size: 0.7rem;
+}
+
+.repo-link {
+	position: relative;
+	padding-bottom: 0.4rem;
+}
+
+.repo-link:hover {
+	color: var(--main-text);
+}
+
+.repo-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-text);
+  transform: scaleX(0);
+	transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+
+
+.repo-link:hover::before {
+  transform: scaleX(1);
+}
+
+.left-side {
+	width: 35%;
 	margin-left: 10%;
+	display: flex;
+	flex-direction: column;
 	font-size: 1.2rem;
-	font-weight: 500;
-	line-height: 1.5rem;
 }
 
 .right-side {
 	text-align: right;
 	margin-right: 10%;
+}
+
+.right-side h2 {
+	font-size: 2.5rem;
 }
 
 .project-year {

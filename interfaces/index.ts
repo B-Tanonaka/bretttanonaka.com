@@ -6,6 +6,7 @@ export type Project = {
   description: string;
   techStack: string[];
   ref: string;
+  repo: string;
 };
 
 export type DataProp = {

@@ -12,6 +12,7 @@ export default function ProjectDetails() {
     description: '',
     techStack: [],
     ref: '',
+    repo: '',
   });
   const { id } = useParams();
   const navigate = useNavigate();
@@ -38,7 +39,13 @@ export default function ProjectDetails() {
     <>
       <input type="button" value="Back" className="back" onClick={() => { navigate(-1); }} />
       <div className="project-details">
-        <p>{project.description}</p>
+        <div className="left-side">
+          <p>{project.description}</p>
+          <a href={project.repo} target="_blank" rel="noopener noreferrer">
+            <span className="repo-link">repo  </span>
+            <i className="fa-solid fa-arrows-turn-right" />
+          </a>
+        </div>
         <div className="right-side">
           <h2>{project.name}</h2>
           <div className="project-year">{project.year}</div>

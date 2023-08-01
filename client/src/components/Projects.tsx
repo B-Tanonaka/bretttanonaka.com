@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { Project, DataProp } from '../../../interfaces';
 
 export default function Projects({ data }: DataProp) {
+  const [activeImage, setActiveImage] = useState<string>('');
   const renderList = (project: Project, index: number) => (
-    <div className="project-single" key={index}>
+    <div
+      className="project-single"
+      key={index}
+      onMouseEnter={() => { setActiveImage('https://picsum.photos/200'); }}
+      onMouseLeave={() => { setActiveImage('https://picsum.photos/300'); }}
+    >
       <hr style={{
         border: '0.03em dashed black',
         boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
@@ -28,7 +34,7 @@ export default function Projects({ data }: DataProp) {
         </div>
       </div>
       <div className="image-container">
-        <img className="project-image" src="https://picsum.photos/200" alt="placeholder" />
+        <img className="project-image" src={activeImage} alt="placeholder" />
       </div>
     </div>
   );
