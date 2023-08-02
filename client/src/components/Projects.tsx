@@ -26,21 +26,26 @@ export default function Projects({ data }: DataProp) {
     </div>
   );
 
+  const renderImages = (project: Project, index: number) => (
+    <img
+      className="project-image"
+      key={index}
+      src={project.img}
+      alt="placeholder"
+      style={{ opacity: showImage ? 1 : 0 }}
+    />
+  );
+
   return (
     <div className="projects" id="projects">
       <div className="project-left-side">
         <h1>Projects</h1>
         <div className="project-list">
-          { data.map((project: Project, index: number) => renderList(project, index))}
+          {data.map((project: Project, index: number) => renderList(project, index))}
         </div>
       </div>
       <div className="image-container">
-        <img
-          className="project-image"
-          src={activeImage}
-          alt="placeholder"
-          style={{ opacity: showImage ? 1 : 0 }}
-        />
+        {data.map((project: Project, index: number) => renderImages(project, index))}
       </div>
     </div>
   );

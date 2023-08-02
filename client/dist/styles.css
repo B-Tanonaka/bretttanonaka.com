@@ -258,15 +258,17 @@ h4 {
 }
 
 .image-container {
-	display: flex;
-	align-items: center;
-	width: 40vw;
 	height: 65vh;
+	width: 40vw;
+	display: flex;
+	position: relative;
+	align-items: center;
 }
 
 .image-container img {
-	width: 100%;
 	height: 100%;
+	width: 100%;
+	position: absolute;
 	object-fit: cover;
 	transition: 0.5s ease-in-out;
 	transition-delay: 0.25s;
