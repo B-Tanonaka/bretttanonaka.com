@@ -271,7 +271,6 @@ h4 {
 	position: absolute;
 	object-fit: cover;
 	transition: 0.5s ease-in-out;
-	transition-delay: 0.25s;
 }
 
 .project-image {
