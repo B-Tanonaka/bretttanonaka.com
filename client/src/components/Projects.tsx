@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import type { Project, DataProp } from '../../../interfaces';
 
 export default function Projects({ data }: DataProp) {
-  const [activeImage, setActiveImage] = useState<string>('');
+  const [showImage, setShowImage] = useState<boolean>(false);
   const renderList = (project: Project, index: number) => (
     <div
       className="project-single"
       key={index}
-      onMouseEnter={() => { setActiveImage('https://picsum.photos/200'); }}
-      onMouseLeave={() => { setActiveImage('https://picsum.photos/300'); }}
+      onMouseEnter={() => { setShowImage(true); }}
+      onMouseLeave={() => { setShowImage(false); }}
     >
       <hr style={{
         border: '0.03em dashed black',
@@ -34,7 +34,12 @@ export default function Projects({ data }: DataProp) {
         </div>
       </div>
       <div className="image-container">
-        <img className="project-image" src={activeImage} alt="placeholder" />
+        <img
+          className="project-image"
+          src="https://picsum.photos/400"
+          alt="placeholder"
+          style={{ opacity: showImage ? 1 : 0 }}
+        />
       </div>
     </div>
   );
