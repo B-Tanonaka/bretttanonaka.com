@@ -8,6 +8,7 @@ import About from './About';
 import Contact from './Contact';
 import Error from './Error';
 import ProjectDetails from './ProjectDetails';
+import Portfolio from './projects/Portfolio';
 import Modal from './ContactModal';
 import Background from './Background';
 import type { Project } from '../../../interfaces';
@@ -50,7 +51,7 @@ export default function App() {
             </>
             )}
         />
-        <Route path="/projects/:id" element={<ProjectDetails />} />
+        <Route path="/projects/portfolio" element={<Portfolio />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>

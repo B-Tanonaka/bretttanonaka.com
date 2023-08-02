@@ -5,7 +5,7 @@ const data = {
       year: 2023,
       role: ['Design', 'Engineering'],
       description: 'Portfolio to present my work as a full stack engineer and soon to feature my work as a video producer.',
-      techStack: ['TypeScript', 'React', 'AWS', 'Node.js'],
+      techStack: ['TypeScript', 'React', 'AWS', 'Node.js', 'Figma'],
       ref: 'portfolio',
     },
     {
@@ -13,7 +13,7 @@ const data = {
       year: 2023,
       role: ['UI Lead', 'Front-End Engineer'],
       description: 'Social media application to bring together fitness minded individuals. Create communities, host events, find gym buddies and promote a healthy lifestyle.',
-      techStack: ['JavaScript', 'React Native', 'Redux', 'Firebase', 'Expo'],
+      techStack: ['JavaScript', 'React Native', 'Redux', 'Firebase', 'Expo', 'Figma'],
       ref: 'fitbook',
     },
     {

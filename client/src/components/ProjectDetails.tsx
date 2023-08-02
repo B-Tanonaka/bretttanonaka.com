@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import type { Project } from '../../../interfaces';
 
-export default function ProjectDetails() {
+export default function ProjectDetails({ id }: { id: string }) {
   const [project, setProject] = useState<Project>({
     _id: '',
     name: '',
@@ -13,8 +13,8 @@ export default function ProjectDetails() {
     techStack: [],
     ref: '',
     repo: '',
+    img: '',
   });
-  const { id } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
