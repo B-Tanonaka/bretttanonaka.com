@@ -1,16 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-scroll';
 
 export default function Navbar() {
-  type Event = React.MouseEvent;
-  const [navbarToggle, setNavbarToggle] = useState<number>(0);
-
-  // const handleClick = (e: Event, page: number) => {
-  //   e.preventDefault();
-  //   setNavbarToggle(page);
-  //   console.log('navbarToggleInside: ', navbarToggle);
-  // };
-
   return (
     <div className="navbar-border">
       <div className="navbar-container">

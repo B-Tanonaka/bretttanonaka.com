@@ -138,6 +138,7 @@ h4 {
 	position: fixed;
 	display: flex;
 	align-items: flex-end;
+	z-index: 100;
 }
 
 .navbar-container {
@@ -377,7 +378,7 @@ h4 {
 	border: none;
 	border-radius: 50rem;
 	cursor: pointer;
-	z-index: 3;
+	z-index: 5;
 }
 
 .project-background {
