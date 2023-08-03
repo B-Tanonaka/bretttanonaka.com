@@ -31,5 +31,8 @@ export const BlankProject = {
   ref: '',
   repo: '',
   img: '',
-  images: { login: [{ src: '', alt: '' }] },
+  images: {
+    login: [{ src: '', alt: '' }],
+    figma: [{ src: '', alt: '' }],
+  },
 };
