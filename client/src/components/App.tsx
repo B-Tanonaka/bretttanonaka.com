@@ -9,6 +9,8 @@ import Contact from './Contact';
 import Error from './Error';
 import Portfolio from './projects/Portfolio';
 import Fitbook from './projects/Fitbook';
+import Mevify from './projects/Mevify';
+import WiredWardrobe from './projects/WiredWardrobe';
 import Modal from './ContactModal';
 import Background from './Background';
 import type { Project } from '../../../interfaces';
@@ -53,6 +55,8 @@ export default function App() {
         />
         <Route path="/projects/portfolio" element={<Portfolio />} />
         <Route path="/projects/fitbook" element={<Fitbook />} />
+        <Route path="/projects/fitbook" element={<Mevify />} />
+        <Route path="/projects/fitbook" element={<WiredWardrobe />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>
