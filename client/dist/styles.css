@@ -371,7 +371,7 @@ h4 {
 	position: fixed;
 	left: 5%;
 	top: 5%;
-  background-color: var(--white-color);
+  background-color: var(--cream1-color);
 	color: var(--main-text);
 	font-size: 0.8rem;
 	box-shadow: 0.25em 0.25em .75em -.5em var(--shadow-color);
@@ -612,6 +612,18 @@ h4 {
 		line-height: 2rem;
 	}
 
+	.navbar-base {
+		height: 33%;
+	}
+
+	.navbar-sections {
+		font-size: 0.8rem;
+	}
+
+	.back {
+		top: 2%;
+	}
+
 	.projects {
 		flex-direction: column;
 		justify-content: center;
@@ -700,13 +712,13 @@ h4 {
 /* Portrait tablets and large phones */
 @media (min-width: 600px) and (max-width: 768px) {
 	h1 {
-		font-size: 2rem;
+		font-size: 4rem;
 	}
 	h2 {
-		font-size: 1rem;
+		font-size: 2rem;
 	}
 	h4 {
-		font-size: 0.7rem;
+		font-size: 1.4rem;
 	}
 
 	.home-wrapper {
@@ -719,6 +731,20 @@ h4 {
 	}
 
 	.home-sec-text {
+		font-size: 1.5rem;
+	}
+
+	.navbar-base {
+		height: 33%;
+		width: 40%;
+	}
+
+	.navbar-sections {
+		font-size: 1rem;
+	}
+
+	.navbar-name {
+		left: 8%;
 		font-size: 1.5rem;
 	}
 
@@ -789,7 +815,7 @@ h4 {
 
 	.about p {
 		line-height: 1.5;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
 	}
 
 	.contact-container {
@@ -798,6 +824,10 @@ h4 {
 
 	.form {
 		font-size: 0.8rem;
+	}
+
+	.form label {
+		font-size: 1.3rem;
 	}
 }
 
