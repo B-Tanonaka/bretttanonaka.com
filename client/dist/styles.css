@@ -645,8 +645,7 @@ h4 {
 		height: 100vh;
 		width: 100vh;
 		left: 50%;
-		transform: translateX(-50%);
-		bottom: 25rem;
+		transform: translate(-50%, -50%);
 	}
 
 	.project-details p {
@@ -689,7 +688,7 @@ h4 {
 }
 
 /* Portrait tablets and large phones */
-@media (min-width: 600px) and (max-width: 767px) {
+@media (min-width: 600px) and (max-width: 768px) {
 	h1 {
 		font-size: 2rem;
 	}
@@ -723,6 +722,24 @@ h4 {
 		max-width: 100%;
 	}
 
+	.left-side {
+		width: 45%;
+		margin-left: 5%;
+	}
+
+	.repo-link {
+		font-size: 1.5rem;
+	}
+
+	.right-side {
+		width: 32%;
+		margin-right: 5%;
+	}
+
+	.right-side h2 {
+		font-size: 3.5rem;
+	}
+
 	.image-container {
 		display: none;
 	}
@@ -732,7 +749,20 @@ h4 {
 	}
 
 	.project-details p {
-		font-size: 1.1rem;
+		font-size: 1.5rem;
+	}
+
+	.project-year {
+		font-size: 1.5rem;
+	}
+
+	.list-items {
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+	}
+
+	.image-wrapper {
+		width: 95%;
 	}
 
 	.image-wrapper-phone {
@@ -762,7 +792,7 @@ h4 {
 }
 
 /* Landscape tablets */
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
 	h1 {
 		font-size: 2.5rem;
 	}
