@@ -588,13 +588,13 @@ h4 {
 /* Phones */
 @media (max-width: 600px) {
 	h1 {
-		font-size: 2rem;
+		font-size: 3.5rem;
 	}
 	h2 {
-		font-size: 1rem;
+		font-size: 1.4rem;
 	}
 	h4 {
-		font-size: 0.7rem;
+		font-size: 1rem;
 	}
 
 	.home-wrapper {
@@ -602,12 +602,13 @@ h4 {
 	}
 
 	.home-main-text {
-		font-size: 1.6rem;
-		line-height: 1.75rem;
+		font-size: 2.5rem;
+		line-height: 2.5rem;
 	}
 
 	.home-sec-text {
-		font-size: 0.9rem;
+		font-size: 1.3rem;
+		line-height: 2rem;
 	}
 
 	.projects {
@@ -674,8 +675,8 @@ h4 {
 	}
 
 	.about p {
-		line-height: 1.5;
-    font-size: 0.8rem;
+		line-height: 1.3rem;
+    font-size: 1.2rem;
 	}
 
 	.contact-container {
@@ -684,6 +685,10 @@ h4 {
 
 	.form {
 		font-size: 0.8rem;
+	}
+
+	.form label {
+		font-size: 1.3rem;
 	}
 }
 
