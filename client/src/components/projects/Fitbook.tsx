@@ -30,6 +30,12 @@ export default function Fitbook() {
           (img: { src: string, alt: string }, key: number) => renderList(img, key),
         ) }
       </div>
+      <h3>Home feed</h3>
+      <div className="image-wrapper-phone login">
+        { project.images.home.map(
+          (img: { src: string, alt: string }, key: number) => renderList(img, key),
+        ) }
+      </div>
     </div>
   );
 }
