@@ -17,7 +17,7 @@ export default function Portfolio() {
       src={img.src}
       alt={img.alt}
       key={key}
-      className="phone-image"
+      className="image-wrapper"
     />
   );
 
