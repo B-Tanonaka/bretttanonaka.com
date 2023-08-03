@@ -1,28 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import type { Project } from '../../../interfaces';
 
-export default function ProjectDetails({ id }: { id: string }) {
-  const [project, setProject] = useState<Project>({
-    _id: '',
-    name: '',
-    role: [],
-    year: 0,
-    description: '',
-    techStack: [],
-    ref: '',
-    repo: '',
-    img: '',
-    images: { '': [{ src: '', alt: '' }] },
-  });
+export default function ProjectDetails({ project }: { project: Project }) {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    axios.get<Project>(`/project-data/${id}`)
-      .then((response) => { setProject(response.data); })
-      .catch((err) => { throw err; });
-  }, []);
 
   const dividerLine = (
     <hr style={{

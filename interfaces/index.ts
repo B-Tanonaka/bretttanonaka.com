@@ -20,3 +20,16 @@ export type Form = {
   email: string;
   message: string;
 };
+
+export const BlankProject = {
+  _id: '',
+  name: '',
+  role: [],
+  year: 0,
+  description: '',
+  techStack: [],
+  ref: '',
+  repo: '',
+  img: '',
+  images: { login: [{ src: '', alt: '' }] },
+};

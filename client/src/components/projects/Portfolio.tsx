@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import type { Project } from '../../../../interfaces';
+import { BlankProject } from '../../../../interfaces';
 import ProjectDetails from '../ProjectDetails';
 
 export default function Portfolio() {
+  const [project, setProject] = useState<Project>(BlankProject);
   return (
     <div className="image-details">
-      <ProjectDetails id="portfolio" />
+      <ProjectDetails project={project} />
       <h3>Original Design in Figma</h3>
       <div className="image-wrapper">
         <img

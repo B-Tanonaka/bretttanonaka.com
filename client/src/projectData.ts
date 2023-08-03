@@ -47,11 +47,11 @@ const data = {
 export default data;
 
 
-db.portfolio.updateOne({_id: ObjectId("64b72b01af647d1064b96d48")}, {$set: {images: {
-  login: [
-    { src: 'https://user-images.githubusercontent.com/118404699/238809590-5fa94d3f-d9bd-4d3c-94b9-a93a6cc9ad6d.gif', alt: 'login' },
-    { src: 'https://user-images.githubusercontent.com/118404699/238809200-2fef05e3-8930-462c-8cd4-6f86716cf3b4.png', alt: 'Sign up' },
-    { src: 'https://user-images.githubusercontent.com/118404699/238809260-c1e8295d-1928-47f4-b3e4-e260c1e21ea4.png', alt: 'Forgot password' },
-    { src: 'https://user-images.githubusercontent.com/118404699/238809590-5fa94d3f-d9bd-4d3c-94b9-a93a6cc9ad6d.gif', alt: 'Forgot password gif' },
-  ]
-}}})
+// db.portfolio.updateOne({_id: ObjectId("64b72b01af647d1064b96d48")}, {$set: {images: {
+//   login: [
+//     { src: 'https://user-images.githubusercontent.com/118404699/238809590-5fa94d3f-d9bd-4d3c-94b9-a93a6cc9ad6d.gif', alt: 'login' },
+//     { src: 'https://user-images.githubusercontent.com/118404699/238809200-2fef05e3-8930-462c-8cd4-6f86716cf3b4.png', alt: 'Sign up' },
+//     { src: 'https://user-images.githubusercontent.com/118404699/238809260-c1e8295d-1928-47f4-b3e4-e260c1e21ea4.png', alt: 'Forgot password' },
+//     { src: 'https://user-images.githubusercontent.com/118404699/238809590-5fa94d3f-d9bd-4d3c-94b9-a93a6cc9ad6d.gif', alt: 'Forgot password gif' },
+//   ]
+// }}})

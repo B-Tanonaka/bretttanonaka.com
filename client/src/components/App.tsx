@@ -52,7 +52,7 @@ export default function App() {
             )}
         />
         <Route path="/projects/portfolio" element={<Portfolio />} />
-        <Route path="/projects/fitbook" element={<Fitbook data={data[1]} />} />
+        <Route path="/projects/fitbook" element={<Fitbook />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>
