@@ -14,7 +14,7 @@ export default function ProjectDetails({ id }: { id: string }) {
     ref: '',
     repo: '',
     img: '',
-    images: [{ src: '', alt: '' }],
+    images: { '': [{ src: '', alt: '' }] },
   });
   const navigate = useNavigate();
 
