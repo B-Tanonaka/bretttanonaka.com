@@ -8,6 +8,7 @@ export type Project = {
   ref: string;
   repo: string;
   img: string;
+  images: { [key: string]: { src: string, alt: string }[] };
 };
 
 export type DataProp = {

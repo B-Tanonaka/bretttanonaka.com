@@ -14,6 +14,7 @@ export default function ProjectDetails({ id }: { id: string }) {
     ref: '',
     repo: '',
     img: '',
+    images: [{ src: '', alt: '' }],
   });
   const navigate = useNavigate();
 
@@ -50,9 +51,9 @@ export default function ProjectDetails({ id }: { id: string }) {
           <h2>{project.name}</h2>
           <div className="project-year">{project.year}</div>
           { dividerLine }
-          { project.role.map((role: string, key: number) => renderList(role, key))}
+          { project.role.map((role: string, key: number) => renderList(role, key)) }
           { dividerLine }
-          { project.techStack.map((framework: string, key: number) => renderList(framework, key))}
+          { project.techStack.map((framework: string, key: number) => renderList(framework, key)) }
         </div>
         <div className="project-background" />
       </div>

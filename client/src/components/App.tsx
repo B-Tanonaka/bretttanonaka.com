@@ -7,8 +7,8 @@ import Projects from './Projects';
 import About from './About';
 import Contact from './Contact';
 import Error from './Error';
-import ProjectDetails from './ProjectDetails';
 import Portfolio from './projects/Portfolio';
+import Fitbook from './projects/Fitbook';
 import Modal from './ContactModal';
 import Background from './Background';
 import type { Project } from '../../../interfaces';
@@ -52,6 +52,7 @@ export default function App() {
             )}
         />
         <Route path="/projects/portfolio" element={<Portfolio />} />
+        <Route path="/projects/fitbook" element={<Fitbook data={data[1]} />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>

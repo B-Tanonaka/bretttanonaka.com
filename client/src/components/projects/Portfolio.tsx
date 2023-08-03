@@ -3,7 +3,7 @@ import ProjectDetails from '../ProjectDetails';
 
 export default function Portfolio() {
   return (
-    <div className="portfolio-details">
+    <div className="image-details">
       <ProjectDetails id="portfolio" />
       <h3>Original Design in Figma</h3>
       <div className="image-wrapper">
