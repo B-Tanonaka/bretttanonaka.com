@@ -620,25 +620,46 @@ h4 {
 		max-width: 100%;
 	}
 
+	.left-side {
+		width: 80%;
+		margin-bottom: 35%;
+		margin-left: 0;
+	}
+
+	.right-side {
+		text-align: center;
+		margin-right: 0;
+		margin-top: 30%;
+	}
+
 	.image-container {
 		display: none;
 	}
 
+	.project-details {
+		flex-direction: column-reverse;
+		justify-content: space-between;
+	}
+
 	.project-background {
-		right: 16rem;
+		height: 100vh;
+		width: 100vh;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 25rem;
 	}
 
 	.project-details p {
-		font-size: 0.9rem;
+		font-size: 1.4rem;
 	}
 
 	.project-year {
-		font-size: 0.8rem;
+		font-size: 1.5rem;
 	}
 
 	.list-items {
-		font-size: 0.8rem;
-		line-height: 1rem;
+		font-size: 1.2rem;
+		line-height: 1.4rem;
 	}
 
 	.image-wrapper-phone {
