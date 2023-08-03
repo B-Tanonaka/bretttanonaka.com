@@ -58,6 +58,10 @@ db.portfolio.updateOne({_id: ObjectId("64b72b01af647d1064b96d48")}, {$set: {imag
     { src: 'https://user-images.githubusercontent.com/118404699/238805508-2c8a7f1b-f235-450e-82a4-e5585f635e8d.gif', alt: 'Bottom navigation' },
     { src: 'https://user-images.githubusercontent.com/118404699/238500189-62638f1e-2278-42c9-8a08-7c666dab5b95.gif', alt: 'Event carousel' },
     { src: 'https://user-images.githubusercontent.com/118404699/238804259-64b45413-db8b-4f9b-ad8a-929effe007dc.png', alt: 'Home - dark mode' },
+  ],
+  comments: [
+    { src: 'https://user-images.githubusercontent.com/118404699/238511650-510a0780-eaf6-4486-b87d-f6ab2e4cf388.gif', alt: 'Opening comment' },
+    { src: 'https://user-images.githubusercontent.com/118404699/238511331-60c8974c-48c0-4e2f-af7d-50ed795b0356.gif', alt: 'Lift/drop' },
   ]
 }}})
 

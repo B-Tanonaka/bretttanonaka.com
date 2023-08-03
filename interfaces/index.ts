@@ -34,6 +34,7 @@ export const BlankProject = {
   images: {
     login: [{ src: '', alt: '' }],
     home: [{ src: '', alt: '' }],
+    comments: [{ src: '', alt: '' }],
     figma: [{ src: '', alt: '' }],
   },
 };
