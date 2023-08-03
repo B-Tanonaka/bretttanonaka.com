@@ -287,6 +287,110 @@ h4 {
 	border-top: 1px dotted;
 }
 
+/**** Project Details ****/
+
+.project-details {
+	height: 100vh;
+	width: 100vw;
+	max-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--cream1-color);
+}
+
+.project-details a {
+	text-decoration: none;
+	color: var(--main-text);
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+.project-details i {
+	font-size: 0.7rem;
+}
+
+.repo-link {
+	position: relative;
+	padding-bottom: 0.4rem;
+}
+
+.repo-link:hover {
+	color: var(--main-text);
+}
+
+.repo-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-text);
+  transform: scaleX(0);
+	transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+
+
+.repo-link:hover::before {
+  transform: scaleX(1);
+}
+
+.left-side {
+	width: 35%;
+	margin-left: 10%;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.2rem;
+	z-index: 2;
+}
+
+.right-side {
+	text-align: right;
+	margin-right: 10%;
+	z-index: 3;
+}
+
+.right-side h2 {
+	font-size: 2.5rem;
+}
+
+.project-year {
+	line-height: 1.5rem;
+}
+
+.list-items {
+	line-height: 1.2rem;
+}
+
+.back {
+	width: 5rem;
+	height: 2rem;
+	position: fixed;
+	left: 5%;
+	top: 5%;
+  background-color: var(--white-color);
+	color: var(--main-text);
+	font-size: 0.8rem;
+	box-shadow: 0.25em 0.25em .75em -.5em var(--shadow-color);
+	border: none;
+	border-radius: 50rem;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.project-background {
+	height: 300vh;
+	width: 300vh;
+	position: absolute;
+	right: 35rem;
+	border-radius: 50% 50% 50% 50%;
+	opacity: 70%;
+	background-image: radial-gradient(49% 81% at 45% 47%, #03FFC945 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #FF8C003D 1%, #FF000000 99%),radial-gradient(142% 91% at 86% 30%, #8D00FF87 0%, #FF000000 99%),radial-gradient(142% 91% at 4% 58%, #FF00E56E 1%, #00FFE000 99%),radial-gradient(142% 96% at 94% 78%, #D700FFB0 0%, #00C1FFFF 98%);
+}
+
+
 /**** About ****/
 
 .about {
@@ -437,109 +541,6 @@ h4 {
 	cursor: pointer;
 }
 
-/**** Project Details ****/
-
-.project-details {
-	height: 100vh;
-	width: 100vw;
-	max-width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: var(--cream1-color);
-}
-
-.project-details a {
-	text-decoration: none;
-	color: var(--main-text);
-	font-size: 1rem;
-	margin-top: 1rem;
-}
-
-.project-details i {
-	font-size: 0.7rem;
-}
-
-.repo-link {
-	position: relative;
-	padding-bottom: 0.4rem;
-}
-
-.repo-link:hover {
-	color: var(--main-text);
-}
-
-.repo-link::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1.5px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--main-text);
-  transform: scaleX(0);
-	transform-origin: top left;
-  transition: transform 0.3s ease;
-}
-
-
-.repo-link:hover::before {
-  transform: scaleX(1);
-}
-
-.left-side {
-	width: 35%;
-	margin-left: 10%;
-	display: flex;
-	flex-direction: column;
-	font-size: 1.2rem;
-	z-index: 2;
-}
-
-.right-side {
-	text-align: right;
-	margin-right: 10%;
-	z-index: 3;
-}
-
-.right-side h2 {
-	font-size: 2.5rem;
-}
-
-.project-year {
-	line-height: 1.5rem;
-}
-
-.list-items {
-	line-height: 1.2rem;
-}
-
-.back {
-	width: 5rem;
-	height: 2rem;
-	position: fixed;
-	left: 5%;
-	top: 5%;
-  background-color: var(--white-color);
-	color: var(--main-text);
-	font-size: 0.8rem;
-	box-shadow: 0.25em 0.25em .75em -.5em var(--shadow-color);
-	border: none;
-	border-radius: 50rem;
-	cursor: pointer;
-	z-index: 3;
-}
-
-.project-background {
-	height: 300vh;
-	width: 300vh;
-	position: absolute;
-	right: 35rem;
-	border-radius: 50% 50% 50% 50%;
-	opacity: 70%;
-	background-image: radial-gradient(49% 81% at 45% 47%, #03FFC945 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #FF8C003D 1%, #FF000000 99%),radial-gradient(142% 91% at 86% 30%, #8D00FF87 0%, #FF000000 99%),radial-gradient(142% 91% at 4% 58%, #FF00E56E 1%, #00FFE000 99%),radial-gradient(142% 96% at 94% 78%, #D700FFB0 0%, #00C1FFFF 98%);
-}
-
 /**** Project individual images ****/
 
 .image-wrapper {
@@ -640,6 +641,14 @@ h4 {
 		line-height: 1rem;
 	}
 
+	.image-wrapper-phone {
+		width: 100%;
+	}
+
+	.phone-image {
+		width: 40%;
+	}
+
 	.about-wrapper {
 		width: 80%;
 	}
@@ -655,14 +664,6 @@ h4 {
 
 	.form {
 		font-size: 0.8rem;
-	}
-
-	.image-wrapper-phone {
-
-	}
-
-	.phone-image {
-		width: 40%;
 	}
 }
 
@@ -706,24 +707,19 @@ h4 {
 	}
 
 	.project-background {
-		height: 125vh;
-		border-radius: 0 75% 75% 0;
-		width: 70%;
+		right: 20rem;
 	}
 
 	.project-details p {
-		width: 40%;
-		font-size: 0.9rem;
-		line-height: 1rem;
+		font-size: 1.1rem;
 	}
 
-	.project-year {
-		font-size: 0.8rem;
+	.image-wrapper-phone {
+		width: 100%;
 	}
 
-	.list-items {
-		font-size: 0.8rem;
-		line-height: 1rem;
+	.phone-image {
+		width: 27%;
 	}
 
 	.about-wrapper {
