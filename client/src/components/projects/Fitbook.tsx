@@ -31,14 +31,38 @@ export default function Fitbook() {
         ) }
       </div>
       <h3>Home feed</h3>
-      <div className="image-wrapper-phone login">
+      <div className="image-wrapper-phone home">
         { project.images.home.map(
           (img: { src: string, alt: string }, key: number) => renderList(img, key),
         ) }
       </div>
       <h3>Comments</h3>
-      <div className="image-wrapper-phone login">
+      <div className="image-wrapper-phone comments">
         { project.images.comments.map(
+          (img: { src: string, alt: string }, key: number) => renderList(img, key),
+        ) }
+      </div>
+      <h3>Profile</h3>
+      <div className="image-wrapper-phone profile">
+        { project.images.profile.map(
+          (img: { src: string, alt: string }, key: number) => renderList(img, key),
+        ) }
+      </div>
+      <h3>Communities</h3>
+      <div className="image-wrapper-phone profile">
+        { project.images.communities.map(
+          (img: { src: string, alt: string }, key: number) => renderList(img, key),
+        ) }
+      </div>
+      <h3>Messages</h3>
+      <div className="image-wrapper-phone profile">
+        { project.images.messages.map(
+          (img: { src: string, alt: string }, key: number) => renderList(img, key),
+        ) }
+      </div>
+      <h3>Create an event</h3>
+      <div className="image-wrapper-phone create-event">
+        { project.images.create.map(
           (img: { src: string, alt: string }, key: number) => renderList(img, key),
         ) }
       </div>

@@ -62,7 +62,25 @@ db.portfolio.updateOne({_id: ObjectId("64b72b01af647d1064b96d48")}, {$set: {imag
   comments: [
     { src: 'https://user-images.githubusercontent.com/118404699/238511650-510a0780-eaf6-4486-b87d-f6ab2e4cf388.gif', alt: 'Opening comment' },
     { src: 'https://user-images.githubusercontent.com/118404699/238511331-60c8974c-48c0-4e2f-af7d-50ed795b0356.gif', alt: 'Lift/drop' },
-  ]
+  ],
+  create: [
+    { src: 'https://user-images.githubusercontent.com/118404699/238501522-fb60787f-a247-443e-8c3f-435a674a87bc.gif', alt: 'Create event' },
+  ],
+  profile: [
+    { src: 'https://user-images.githubusercontent.com/118404699/238807754-f88be1ff-9de3-4ba1-8677-52ec4c16beae.png', alt: 'Profile - friends tab' },
+    { src: 'https://user-images.githubusercontent.com/118404699/238807480-c91097be-c33e-4836-825b-9fb6aae80073.png', alt: 'Profile - communities tab' },
+    { src: 'https://user-images.githubusercontent.com/118404699/238807866-90c49c0e-6843-4c04-9a6e-a25a3f22880a.png', alt: 'Profile - profile tab' },
+    { src: 'https://user-images.githubusercontent.com/118404699/238807175-bfa5153f-94ff-4dc9-adef-e38106e7fb14.png', alt: 'Add a fitness stat' },
+    { src: 'https://user-images.githubusercontent.com/118404699/238805701-c9c47419-0d99-434c-a71e-fafa90f8b775.gif', alt: 'Fitness stat interaction' },
+    { src: 'https://user-images.githubusercontent.com/118404699/238805915-596c9cb5-fb45-4636-941c-283c1f7e1a5a.gif', alt: 'Profile - scrolling between tabs' },
+  ],
+  communities: [
+    { src: 'https://user-images.githubusercontent.com/118404699/238501827-8de36655-ca86-43b0-8592-b7bced7d47fe.gif', alt: 'Search communities' },
+  ],
+  messages: [
+    { src: 'https://user-images.githubusercontent.com/118404699/238803450-6fabf363-43fd-4e29-86a4-a398a053735c.gif', alt: 'Message friend from profile friends tab' },
+    { src: 'https://user-images.githubusercontent.com/118404699/238804377-05ee188b-9218-43dc-ad70-819ab054af2d.png', alt: 'List of recent messages' },
+  ],
 }}})
 
 // db.portfolio.updateOne({_id: ObjectId("64b72af0af647d1064b96d47")}, {$set: {images: {

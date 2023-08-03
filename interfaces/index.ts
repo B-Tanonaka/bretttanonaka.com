@@ -35,6 +35,10 @@ export const BlankProject = {
     login: [{ src: '', alt: '' }],
     home: [{ src: '', alt: '' }],
     comments: [{ src: '', alt: '' }],
+    create: [{ src: '', alt: '' }],
+    profile: [{ src: '', alt: '' }],
+    communities: [{ src: '', alt: '' }],
+    messages: [{ src: '', alt: '' }],
     figma: [{ src: '', alt: '' }],
   },
 };
