@@ -31,7 +31,7 @@ export default function Mevify() {
         ) }
       </div>
       <h3>Loader.io post optimization testing</h3>
-      <p>Testing on deployed AWS:EC2 instances</p>
+      <p className="subtitle">Testing 5,000 and 7,500 requests per second on five deployed AWS:EC2 instances</p>
       <div className="image-wrapper login">
         { project.images.loader.map(
           (img: { src: string, alt: string }, key: number) => renderList(img, key),

@@ -590,6 +590,11 @@ h4 {
 	z-index: 3;
 }
 
+.subtitle {
+	font-size: 1rem;
+	padding: 1rem;
+}
+
 /* Phones */
 @media (max-width: 600px) {
 	h1 {
