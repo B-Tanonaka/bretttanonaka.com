@@ -40,5 +40,8 @@ export const BlankProject = {
     communities: [{ src: '', alt: '' }],
     messages: [{ src: '', alt: '' }],
     figma: [{ src: '', alt: '' }],
+    schema: [{ src: '', alt: '' }],
+    loader: [{ src: '', alt: '' }],
+    k6: [{ src: '', alt: '' }],
   },
 };

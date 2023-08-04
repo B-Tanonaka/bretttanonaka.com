@@ -546,6 +546,7 @@ h4 {
 /**** Project individual images ****/
 
 .image-wrapper {
+	width: 95%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

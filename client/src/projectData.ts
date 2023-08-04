@@ -102,3 +102,17 @@ export default data;
 //     { src: 'https://user-images.githubusercontent.com/118404699/238809590-5fa94d3f-d9bd-4d3c-94b9-a93a6cc9ad6d.gif', alt: 'Forgot password gif' },
 //   ]
 // }}})
+
+// db.portfolio.updateOne({_id: ObjectId("64b72b10af647d1064b96d49")}, {$set: {images: {
+//   schema: [
+//     { src: 'https://user-images.githubusercontent.com/118404699/232244966-fe93e175-9f0f-46e5-8f28-5faae4dbf369.png', alt: 'Schema' },
+//   ],
+//   loader: [
+//     { src: 'https://user-images.githubusercontent.com/118404699/232247977-832f24fa-f640-45ab-96f3-b09c9143f801.png', alt: '5000 requests per second' },
+//     { src: 'https://user-images.githubusercontent.com/118404699/232241888-09b4b35d-5232-4b93-a911-ec54e4c83c30.png', alt: '7500 requests per second' },
+//   ],
+//   k6: [
+//     { src: 'https://user-images.githubusercontent.com/118404699/232246178-6739aeb1-3b72-4246-8027-ab54a512d503.png', alt: 'Pre-optimization local test product id endpoint' },
+//     { src: 'https://user-images.githubusercontent.com/118404699/232246237-53a1910c-572c-4d18-951b-ed9cd1635aaf.png', alt: 'Pre-optimization local test styles endpoint' },
+//   ]
+// }}})

@@ -55,8 +55,8 @@ export default function App() {
         />
         <Route path="/projects/portfolio" element={<Portfolio />} />
         <Route path="/projects/fitbook" element={<Fitbook />} />
-        <Route path="/projects/fitbook" element={<Mevify />} />
-        <Route path="/projects/fitbook" element={<WiredWardrobe />} />
+        <Route path="/projects/mevify" element={<Mevify />} />
+        <Route path="/projects/wired-wardrobe" element={<WiredWardrobe />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>

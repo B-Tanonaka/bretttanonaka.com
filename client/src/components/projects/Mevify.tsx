@@ -8,7 +8,7 @@ export default function Mevify() {
   const [project, setProject] = useState<Project>(BlankProject);
 
   useEffect(() => {
-    axios.get<Project>('/project-data/Mevify')
+    axios.get<Project>('/project-data/mevify')
       .then((response) => { setProject(response.data); })
       .catch((err) => { throw err; });
   }, []);
@@ -18,15 +18,28 @@ export default function Mevify() {
       src={img.src}
       alt={img.alt}
       key={key}
-      className="phone-image"
+      className="image-wrapper"
     />
   );
   return (
     <div className="image-details">
       <ProjectDetails project={project} />
-      <h3>Login</h3>
-      <div className="image-wrapper-phone login">
-        { project.images.login.map(
+      <h3>Schema</h3>
+      <div className="image-wrapper login">
+        { project.images.schema.map(
+          (img: { src: string, alt: string }, key: number) => renderList(img, key),
+        ) }
+      </div>
+      <h3>Loader.io post optimization testing</h3>
+      <p>Testing on deployed AWS:EC2 instances</p>
+      <div className="image-wrapper login">
+        { project.images.loader.map(
+          (img: { src: string, alt: string }, key: number) => renderList(img, key),
+        ) }
+      </div>
+      <h3>K6 pre optimization local testing</h3>
+      <div className="image-wrapper login">
+        { project.images.k6.map(
           (img: { src: string, alt: string }, key: number) => renderList(img, key),
         ) }
       </div>
