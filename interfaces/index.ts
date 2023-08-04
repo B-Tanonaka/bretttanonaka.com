@@ -43,5 +43,9 @@ export const BlankProject = {
     schema: [{ src: '', alt: '' }],
     loader: [{ src: '', alt: '' }],
     k6: [{ src: '', alt: '' }],
+    overview: [{ src: '', alt: '' }],
+    related: [{ src: '', alt: '' }],
+    qna: [{ src: '', alt: '' }],
+    rnr: [{ src: '', alt: '' }],
   },
 };

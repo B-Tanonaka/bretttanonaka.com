@@ -46,7 +46,7 @@ const data = {
 
 export default data;
 
-
+// Fitbook images
 // db.portfolio.updateOne({_id: ObjectId("64b72b01af647d1064b96d48")}, {$set: {images: {
 //   login: [
 //     { src: 'https://user-images.githubusercontent.com/118404699/238809151-a7a9065f-aeff-4ff2-9f14-24b422ba322e.png', alt: 'Login' },
@@ -83,6 +83,7 @@ export default data;
 //   ],
 // }}})
 
+// Portfolio images
 // db.portfolio.updateOne({_id: ObjectId("64b72af0af647d1064b96d47")}, {$set: {images: {
 //   figma: [
 //     { src: 'https://live.staticflickr.com/65535/53090099930_1882462e7e_b.jpg', alt: 'Home' },
@@ -94,15 +95,7 @@ export default data;
 //   ]
 // }}})
 
-// db.portfolio.updateOne({_id: ObjectId("64b72b1caf647d1064b96d4a")}, {$unset: {images: {
-//   login: [
-//     { src: 'https://user-images.githubusercontent.com/118404699/238809151-a7a9065f-aeff-4ff2-9f14-24b422ba322e.png', alt: 'login' },
-//     { src: 'https://user-images.githubusercontent.com/118404699/238809200-2fef05e3-8930-462c-8cd4-6f86716cf3b4.png', alt: 'Sign up' },
-//     { src: 'https://user-images.githubusercontent.com/118404699/238809260-c1e8295d-1928-47f4-b3e4-e260c1e21ea4.png', alt: 'Forgot password' },
-//     { src: 'https://user-images.githubusercontent.com/118404699/238809590-5fa94d3f-d9bd-4d3c-94b9-a93a6cc9ad6d.gif', alt: 'Forgot password gif' },
-//   ]
-// }}})
-
+// Mevify images
 // db.portfolio.updateOne({_id: ObjectId("64b72b10af647d1064b96d49")}, {$set: {images: {
 //   schema: [
 //     { src: 'https://user-images.githubusercontent.com/118404699/232244966-fe93e175-9f0f-46e5-8f28-5faae4dbf369.png', alt: 'Schema' },
@@ -114,5 +107,21 @@ export default data;
 //   k6: [
 //     { src: 'https://user-images.githubusercontent.com/118404699/232246178-6739aeb1-3b72-4246-8027-ab54a512d503.png', alt: 'Pre-optimization local test product id endpoint' },
 //     { src: 'https://user-images.githubusercontent.com/118404699/232246237-53a1910c-572c-4d18-951b-ed9cd1635aaf.png', alt: 'Pre-optimization local test styles endpoint' },
+//   ]
+// }}})
+
+// Wired-wardrobe images
+// db.portfolio.updateOne({_id: ObjectId("64b72b1caf647d1064b96d4a")}, {$set: {images: {
+//   overview: [
+//     { src: 'https://user-images.githubusercontent.com/91165462/229319127-6bdc5119-7f46-46e0-bb93-f69ef21cb98d.png', alt: 'Product overview' },
+//   ],
+//   related: [
+//     { src: 'https://user-images.githubusercontent.com/118404699/229316033-ead60d0c-d80a-4444-8461-7ebda8f8e015.png', alt: 'Related items' },
+//   ],
+//   qna: [
+//     { src: 'https://user-images.githubusercontent.com/80349718/229324161-03e53deb-c327-4987-8be9-ba3668328553.png', alt: 'Questions and answers' },
+//   ],
+//   rnr: [
+//     { src: 'https://camo.githubusercontent.com/ddc9b133f4cdb82d13e4b6685b981d75620600f45aa8b80fe1b8cca47619d89f/68747470733a2f2f692e696d6775722e636f6d2f756934475238642e706e67', alt: 'Ratings and reviews' },
 //   ]
 // }}})

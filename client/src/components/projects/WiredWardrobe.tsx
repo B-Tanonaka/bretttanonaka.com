@@ -18,15 +18,33 @@ export default function WiredWardrobe() {
       src={img.src}
       alt={img.alt}
       key={key}
-      className="phone-image"
+      className="image-wrapper"
     />
   );
   return (
     <div className="image-details">
       <ProjectDetails project={project} />
-      <h3>Login</h3>
-      <div className="image-wrapper-phone login">
-        { project.images.login.map(
+      <h3>Product overview</h3>
+      <div className="image-wrapper overview">
+        { project.images.overview.map(
+          (img: { src: string, alt: string }, key: number) => renderList(img, key),
+        ) }
+      </div>
+      <h3>Related Items and My Outfit</h3>
+      <div className="image-wrapper related-items">
+        { project.images.related.map(
+          (img: { src: string, alt: string }, key: number) => renderList(img, key),
+        ) }
+      </div>
+      <h3>Questions and Answers</h3>
+      <div className="image-wrapper qna">
+        { project.images.qna.map(
+          (img: { src: string, alt: string }, key: number) => renderList(img, key),
+        ) }
+      </div>
+      <h3>Ratings and Reviews</h3>
+      <div className="image-wrapper rnr">
+        { project.images.rnr.map(
           (img: { src: string, alt: string }, key: number) => renderList(img, key),
         ) }
       </div>
