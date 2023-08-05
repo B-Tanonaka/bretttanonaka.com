@@ -78,12 +78,12 @@ button {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 3.2rem;
 	margin-bottom: 3%;
 }
 
 h2 {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 }
 
@@ -93,7 +93,7 @@ h3 {
 }
 
 h4 {
-	font-size: 1rem;
+	font-size: 1.2rem;
 }
 
 /**** App ****/
@@ -120,11 +120,11 @@ h4 {
 }
 
 .home-main-text {
-	font-size: 2.2rem;
+	font-size: 2.6rem;
 }
 
 .home-sec-text {
-	font-size: 1rem;
+	font-size: 1.3rem;
 	margin-left: 1%;
 }
 
@@ -154,6 +154,7 @@ h4 {
 	position: absolute;
 	left: 5%;
 	text-decoration: none;
+	font-size: 1.5rem;
 	color: var(--main-text);
 		-webkit-mask-image: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%);
   mask-image: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%);
@@ -179,7 +180,7 @@ h4 {
 	width: 80%;
 	justify-content: space-between;
 	align-items: center;
-	font-size: .75rem;
+	font-size: 1.05rem;
 	z-index: 2;
 }
 
@@ -309,12 +310,13 @@ h4 {
 }
 
 .project-details i {
-	font-size: 0.7rem;
+	font-size: 0.9rem;
 }
 
 .repo-link {
 	position: relative;
 	padding-bottom: 0.4rem;
+	font-size: 1.3rem;
 }
 
 .repo-link:hover {
@@ -344,7 +346,7 @@ h4 {
 	margin-left: 10%;
 	display: flex;
 	flex-direction: column;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	z-index: 2;
 }
 
@@ -355,15 +357,17 @@ h4 {
 }
 
 .right-side h2 {
-	font-size: 2.5rem;
+	font-size: 2.7rem;
 }
 
 .project-year {
 	line-height: 1.5rem;
+	font-size: 1.3rem;
 }
 
 .list-items {
-	line-height: 1.2rem;
+	line-height: 1.5rem;
+	font-size: 1.4rem;
 }
 
 .back {
@@ -419,7 +423,7 @@ h4 {
 
 .about p {
 	line-height: 1.5;
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 }
 
 /**** Contact ****/
@@ -501,7 +505,7 @@ h4 {
   background-color: var(--gray3-color);
 	color: var(--white-color);
 	margin-top: 3%;
-	font-size: 0.7rem;
+	font-size: 0.9rem;
 	float: right;
 	cursor: pointer;
 }
@@ -546,7 +550,7 @@ h4 {
 /**** Project individual images ****/
 
 .image-wrapper {
-	width: 95%;
+	width: 75%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

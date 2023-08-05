@@ -35,7 +35,7 @@ const data = {
     {
       name: 'Wired Wardrobe',
       year: 2023,
-      role: ['Design Lead, Front-End Engineer'],
+      role: ['Design Lead', 'Front-End Engineer'],
       description: 'A single page item description page for an e-commerce brand.',
       techStack: ['JavaScript', 'React', 'HTML5/CSS3', 'Redux', 'AWS', 'Jest', 'Node.js'],
       ref: 'wired-wardrobe',
@@ -125,3 +125,5 @@ export default data;
 //     { src: 'https://camo.githubusercontent.com/ddc9b133f4cdb82d13e4b6685b981d75620600f45aa8b80fe1b8cca47619d89f/68747470733a2f2f692e696d6775722e636f6d2f756934475238642e706e67', alt: 'Ratings and reviews' },
 //   ]
 // }}})
+
+// db.portfolio.updateOne({_id: ObjectId("64b72b1caf647d1064b96d4a")}, {$set: {role: ['Design Lead', 'Front-End Engineer']}})

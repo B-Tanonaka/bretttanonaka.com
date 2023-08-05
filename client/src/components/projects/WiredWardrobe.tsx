@@ -24,7 +24,7 @@ export default function WiredWardrobe() {
   return (
     <div className="image-details">
       <ProjectDetails project={project} />
-      <h3>Product overview</h3>
+      <h3>Product Overview</h3>
       <div className="image-wrapper overview">
         { project.images.overview.map(
           (img: { src: string, alt: string }, key: number) => renderList(img, key),

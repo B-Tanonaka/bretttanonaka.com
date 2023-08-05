@@ -1,2 +1,3 @@
 import React from 'react';
-export default function Projects(): React.JSX.Element;
+import type { DataProp } from '../../../interfaces';
+export default function Projects({ data }: DataProp): React.JSX.Element;
