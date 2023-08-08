@@ -72,6 +72,7 @@ button {
   --purple1-color: #CAAEF9;
 	--green1-color: #309D51;
 	--cream1-color: #FFFEF9;
+	--blue1-color: #4c90ff;
 
 	/* Drop shadow */
 	--shadow-color: hsl(0deg 0% 0% / 26%);
@@ -168,7 +169,7 @@ h4 {
 	box-shadow: 0.25em 0.25em .75em -.5em var(--shadow-color);
 	border-radius: 1.5em;
 	width: 20%;
-	height: 40%;
+	height: 35%;
 	max-width: 25em;
 	min-width: 15em;
 	position: absolute;
@@ -180,18 +181,22 @@ h4 {
 	width: 80%;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 1.05rem;
+	font-size: 1rem;
 	z-index: 2;
 }
 
 .navbar-base a {
 	text-decoration: none;
-	color: var(--main-text);
+	font-weight: 500;
 }
 
 .navbar-base a:hover {
-	color: var(--sec-text);
+	color: #A068FF;
 	cursor: pointer;
+}
+
+.active {
+	color: var(--blue1-color);
 }
 
 /**** Projects ****/
