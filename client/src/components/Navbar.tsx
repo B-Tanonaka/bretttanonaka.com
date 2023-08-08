@@ -2,11 +2,20 @@ import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 
 export default function Navbar() {
+  const [hamOpen, setHamOpen] = useState<boolean>(false);
+  const handleHamClick = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    setHamOpen(true);
+  };
+
   return (
     <div className="navbar-border">
       <div className="navbar-container">
         <a href="/" className="navbar-name">Brett Tanonaka</a>
-        <nav className="navbar-base">
+        <nav
+          className="navbar-base"
+          style={hamOpen ? { transform: 'translateX(-100%)' } : { transform: 'rotate(0)' }}
+        >
           <ul className="navbar-sections">
             <li>
               <Link to="home" smooth spy duration={400}>Home</Link>
@@ -22,7 +31,11 @@ export default function Navbar() {
             </li>
           </ul>
         </nav>
-        <i className="fa-solid fa-bars hamburger" />
+        <i
+          className="fa-solid fa-bars hamburger"
+          onClick={handleHamClick}
+          role="presentation"
+        />
       </div>
     </div>
   );
