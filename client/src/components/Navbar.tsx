@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 
 export default function Navbar() {
@@ -22,6 +22,7 @@ export default function Navbar() {
             </li>
           </ul>
         </nav>
+        <i className="fa-solid fa-bars hamburger" />
       </div>
     </div>
   );

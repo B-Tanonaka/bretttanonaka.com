@@ -630,12 +630,28 @@ h4 {
 		line-height: 2rem;
 	}
 
+	.navbar-border {
+		height: 25vh;
+		align-items: center;
+	}
+
 	.navbar-base {
-		height: 33%;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		align-items: center;
+		border-radius: 0;
+		right: 0;
 	}
 
 	.navbar-sections {
-		font-size: 0.8rem;
+		font-size: 1.8rem;
+		flex-direction: column;
+		line-height: 2.3rem;
+	}
+
+	.navbar-sections li {
+		padding: 0.5rem;
 	}
 
 	.back {
