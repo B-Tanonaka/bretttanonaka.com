@@ -5,7 +5,7 @@ export default function Navbar() {
   const [hamOpen, setHamOpen] = useState<boolean>(false);
   const handleHamClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    setHamOpen(true);
+    setHamOpen(!hamOpen);
   };
 
   return (
@@ -31,6 +31,14 @@ export default function Navbar() {
             </li>
           </ul>
         </nav>
+        {hamOpen
+        && (
+          <i
+            className="fa-solid fa-xmark xmark"
+            onClick={handleHamClick}
+            role="presentation"
+          />
+        )}
         <i
           className="fa-solid fa-bars hamburger"
           onClick={handleHamClick}
