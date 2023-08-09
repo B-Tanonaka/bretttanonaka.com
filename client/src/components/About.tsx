@@ -14,9 +14,24 @@ export default function About() {
         <p>{description}</p>
       </div>
       <div className="about-icon-container">
-        <i className="fa-brands fa-linkedin-in about-icon" />
-        <i className="fa-brands fa-github about-icon" />
-        <i className="fa-brands fa-vimeo-v about-icon" />
+        <a
+          href="https://www.linkedin.com/in/bretttanonaka"
+          aria-label="LinkedIn profile"
+        >
+          <i className="fa-brands fa-linkedin-in about-icon" />
+        </a>
+        <a
+          href="https://github.com/B-Tanonaka"
+          aria-label="GitHub profile"
+        >
+          <i className="fa-brands fa-github about-icon" />
+        </a>
+        <a
+          href="https://vimeo.com/bretttanonaka"
+          aria-label="Vimeo profile"
+        >
+          <i className="fa-brands fa-vimeo-v about-icon" />
+        </a>
       </div>
     </div>
   );
