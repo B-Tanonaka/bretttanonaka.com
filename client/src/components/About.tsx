@@ -11,9 +11,12 @@ export default function About() {
           boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
         }}
         />
-        <span>
-          <p>{description}</p>
-        </span>
+        <p>{description}</p>
+      </div>
+      <div className="about-icon-container">
+        <i className="fa-brands fa-linkedin-in about-icon" />
+        <i className="fa-brands fa-github about-icon" />
+        <i className="fa-brands fa-vimeo-v about-icon" />
       </div>
     </div>
   );
