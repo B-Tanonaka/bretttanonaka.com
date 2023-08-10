@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import { FaBars } from 'react-icons/fa6';
 
 export default function Navbar() {
   const [hamOpen, setHamOpen] = useState<boolean>(false);
@@ -42,7 +41,7 @@ export default function Navbar() {
             role="presentation"
           />
         )}
-        <FaBars
+        <i
           className="fa-solid fa-bars hamburger"
           onClick={handleHamClick}
           role="presentation"
