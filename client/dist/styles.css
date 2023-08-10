@@ -33,7 +33,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Outfit', sans-serif;
-	color: var(--main-text)
+	color: var(--main-text);
 }
 ol, ul {
 	list-style: none;
