@@ -14,7 +14,9 @@ export default function Navbar() {
         <a href="/" className="navbar-name">Brett Tanonaka</a>
         <nav
           className="navbar-base"
-          style={hamOpen ? { transform: 'translateX(-100%)' } : { transform: 'rotate(0)' }}
+          style={hamOpen
+            ? { transform: 'translateX(-100%)', transition: 'all 0.3s ease-in-out' }
+            : { transform: 'rotate(0)' }}
         >
           <ul className="navbar-sections">
             <li>
