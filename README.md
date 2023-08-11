@@ -55,20 +55,18 @@ Portfolio to showcase my engineer projects.
 Installation
 - Clone the repository
     ```
-        git clone https://github.com/Wired-Wardrobe/project-atlier.git
+        git clone https://github.com/B-Tanonaka/bretttanonaka.com.git
     ```
 - Install the dependencies
     ```
         npm install
     ```
-- Copy example.env file and rename to .env with the following within
-    ```
-        PORT=3000
-        HOST='localhost'
-        API_TOKEN='Insert GitHub API token'
-    ```
-- Run the following script
+- Compile and build the files
     ```
         npm run build
+        npm run bundle
+    ```
+- Start the program
+    ```
         npm start
     ```
