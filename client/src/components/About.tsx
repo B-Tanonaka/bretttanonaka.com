@@ -1,5 +1,5 @@
 import React from 'react';
-import Resume from '../documents/resume-bretttanonaka.pdf'
+import Resume from '../documents/resume-bretttanonaka.pdf';
 
 export default function About() {
   const description = 'Hello, my name is Brett Tanonaka and I am a full stack developer. Prior to engineering, I was a video producer for almost 10 years. When I was exploring motion design, I discovered After Effects Expressions, a JavaScript based animation language, and saw what is possible with code. Today, I use my experience with design to build end-to-end applications that are user-focused, intuitive, and scalable.';
