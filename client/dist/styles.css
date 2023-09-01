@@ -422,6 +422,7 @@ h4 {
 
 .about-wrapper {
 	width: 60%;
+	position: relative;
 }
 
 .about h1 {
@@ -452,6 +453,15 @@ h4 {
 .about-icon {
 	font-size: 1.5rem;
 	padding: 1rem 0;
+}
+
+.resume {
+	position: absolute;
+	right: 0;
+	font-size: 1.5rem;
+	margin-top: 3%;
+	text-decoration: none;
+	color: var(--main-text);
 }
 
 /**** Contact ****/

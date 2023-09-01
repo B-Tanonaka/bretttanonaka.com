@@ -13,6 +13,16 @@ export default function About() {
         }}
         />
         <p>{description}</p>
+        <a
+          href={Resume}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="resume"
+        >
+          <span>
+            resume
+          </span>
+        </a>
       </div>
       <div className="about-icon-container">
         <a
@@ -34,7 +44,6 @@ export default function About() {
           <i className="fa-brands fa-vimeo-v about-icon" />
         </a>
       </div>
-      <a href={Resume} target="_blank" rel="noopener noreferrer">resume</a>
     </div>
   );
 }
