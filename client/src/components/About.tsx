@@ -13,15 +13,9 @@ export default function About() {
         }}
         />
         <p>{description}</p>
-        <a
-          href={Resume}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="resume"
-        >
-          <span>
-            resume
-          </span>
+        <a href={Resume} target="_blank" rel="noopener noreferrer" className="resume">
+          <i className="fa-solid fa-check-double" />
+          <span> resume</span>
         </a>
       </div>
       <div className="about-icon-container">
