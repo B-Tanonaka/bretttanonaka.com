@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	overflow-x: hidden;
+	font-family: 'Outfit', sans-serif;
+	color: var(--main-text);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button {
+	font-family: 'Outfit', sans-serif;
+	border: none;
+}
+
+:root {
+
+	/* Text hues */
+  --main-text: #3A3640;
+  --sec-text: #7F768F;
+
+  /* Primary grays */
+  --gray3-color: #525252;
+  --gray2-color: #C2C2C2;
+  --gray1-color: #EBEBEB;
+  --white-color: #FCFCFC;
+
+  /* Hues */
+  --purple1-color: #CAAEF9;
+	--green1-color: #309D51;
+	--cream1-color: #FFFEF9;
+	--blue1-color: #4c90ff;
+
+	/* Drop shadow */
+	--shadow-color: hsl(0deg 0% 0% / 26%);
+}
+
+h1 {
+	font-size: 3.2rem;
+	margin-bottom: 3%;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+h4 {
+	font-size: 1.2rem;
+}

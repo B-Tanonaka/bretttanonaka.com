@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import axios from 'axios';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
@@ -14,7 +13,7 @@ import WiredWardrobe from './components/projects/WiredWardrobe';
 import Modal from './components/ContactModal';
 import Background from './components/Background';
 import type { Project } from '../interfaces';
-import './App.css'
+import './css/App.css'
 
 export default function App() {
   const [data, setData] = useState<Project[]>([]);
@@ -22,9 +21,6 @@ export default function App() {
   const [modalState, setModalState] = useState(true);
 
   useEffect(() => {
-    // axios.get<Project[]>('localhost:3131/project-data')
-    //   .then((response) => { setData(response.data); })
-    //   .catch((err) => { throw err; });
     const fetchData = async() => {
       try {
         const res = await fetch('http://localhost:3131/project-data');
