@@ -1,35 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import axios from 'axios';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+import Projects from './components/Projects';
+import About from './components/About';
+import Contact from './components/Contact';
+import Error from './components/Error';
+import Portfolio from './components/projects/Portfolio';
+import Fitbook from './components/projects/Fitbook';
+import Mevify from './components/projects/Mevify';
+import WiredWardrobe from './components/projects/WiredWardrobe';
+import Modal from './components/ContactModal';
+import Background from './components/Background';
+import type { Project } from '../interfaces';
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [data, setData] = useState<Project[]>([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalState, setModalState] = useState(true);
+
+  useEffect(() => {
+    axios.get<Project[]>('/project-data')
+      .then((response) => { setData(response.data); })
+      .catch((err) => { throw err; });
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="app">
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={(
+              <>
+                <Background />
+                {modalOpen
+                  && (
+                    <div className="submit-overlay">
+                      {modalState
+                        ? <Modal success setModalOpen={setModalOpen} />
+                        : <Modal success={false} setModalOpen={setModalOpen} />}
+                    </div>
+                  )}
+                <Navbar />
+                <Home />
+                <Projects data={data} />
+                <About />
+                <Contact
+                  setModalOpen={setModalOpen}
+                  setModalState={setModalState}
+                />
+              </>
+              )}
+          />
+          <Route path="/projects/portfolio" element={<Portfolio />} />
+          <Route path="/projects/fitbook" element={<Fitbook />} />
+          <Route path="/projects/mevify" element={<Mevify />} />
+          <Route path="/projects/wired-wardrobe" element={<WiredWardrobe />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Router>
+    </div>
+  );
 }
-
-export default App
