@@ -1,14 +1,9 @@
-import type { Project } from '../../../interfaces';
+import type { Project, RenderPhotoList } from '../../../interfaces';
 
-export default function Mevify({ projectData } : { projectData: Project }) {
-  const renderList = (img: { src: string, alt: string }, key: number) => (
-    <img
-      src={img.src}
-      alt={img.alt}
-      key={key}
-      className="image-wrapper"
-    />
-  );
+export default function Mevify(
+  { projectData, renderList } :
+  { projectData: Project, renderList: RenderPhotoList },
+) {
   return (
     <div className="image-details">
       <h3>Schema</h3>

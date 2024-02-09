@@ -7,7 +7,7 @@ import {
 import { useNavigate, useMatch } from 'react-router-dom';
 import type { Project } from '../../interfaces';
 import fetchProjectData from '../utils/fetchData';
-// import Portfolio from './projects/Portfolio';
+import Portfolio from './projects/Portfolio';
 // import Fitbook from './projects/Fitbook';
 import Mevify from './projects/Mevify';
 import WiredWardrobe from './projects/WiredWardrobe';
@@ -82,7 +82,14 @@ export default function ProjectDetails({
         && (
         <WiredWardrobe projectData={projectData} renderList={renderProjectImages} />
         )}
-      { projectName === 'mevify' && <Mevify projectData={projectData} />}
+      { projectName === 'mevify'
+        && (
+        <Mevify projectData={projectData} renderList={renderProjectImages} />
+        )}
+      { projectName === 'portfolio'
+        && (
+        <Portfolio projectData={projectData} renderList={renderProjectImages} />
+        )}
     </div>
   );
 }
