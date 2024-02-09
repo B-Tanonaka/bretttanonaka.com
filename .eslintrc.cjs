@@ -7,12 +7,11 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'airbnb',
     'airbnb-typescript'
-    'airbnb/hooks',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.eslint.json'
+    project: './tsconfig.json'
   },
   plugins: ['react-refresh'],
   rules: {
@@ -20,5 +19,6 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    "react/react-in-jsx-scope": "off"
   },
 }

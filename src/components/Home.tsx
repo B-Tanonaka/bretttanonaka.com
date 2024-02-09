@@ -8,14 +8,13 @@ import Contact from './Contact';
 import Modal from './ContactModal';
 import Background from './Background';
 
-
 export default function Home() {
   const [data, setData] = useState<Project[]>([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalState, setModalState] = useState(true);
 
   useEffect(() => {
-    const fetchData = async() => {
+    const fetchData = async () => {
       try {
         const res = await fetch('http://localhost:3131/project-data');
         const response = await res.json();
@@ -23,7 +22,7 @@ export default function Home() {
       } catch (err) {
         console.error(err);
       }
-    }
+    };
     fetchData();
   }, []);
 
@@ -47,5 +46,5 @@ export default function Home() {
         setModalState={setModalState}
       />
     </>
-  )
+  );
 }
