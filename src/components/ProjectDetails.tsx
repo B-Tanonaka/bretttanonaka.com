@@ -1,8 +1,37 @@
-import { useNavigate } from 'react-router-dom';
+import {
+  useEffect,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from 'react';
+import { useNavigate, useMatch } from 'react-router-dom';
 import type { Project } from '../../interfaces';
+import fetchProjectData from '../utils/fetchData';
+// import Portfolio from './components/projects/Portfolio';
+// import Fitbook from './components/projects/Fitbook';
+// import Mevify from './components/projects/Mevify';
+import WiredWardrobe from './projects/WiredWardrobe';
 
-export default function ProjectDetails({ project }: { project: Project }) {
+export default function ProjectDetails({
+  projectData,
+  setProjectData,
+}: {
+  projectData: Project,
+  setProjectData: Dispatch<SetStateAction<Project>>
+}) {
   const navigate = useNavigate();
+  const match = useMatch('/projects/:projectLink');
+  const pathname = match?.params.projectLink;
+  const [projectName, setProjectName] = useState<string>('');
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetchProjectData(pathname);
+      setProjectData(response);
+      setProjectName(pathname);
+    };
+    fetchData();
+  }, [projectName, setProjectData, pathname]);
 
   const dividerLine = (
     <hr style={{
@@ -17,26 +46,29 @@ export default function ProjectDetails({ project }: { project: Project }) {
   );
 
   return (
-    <>
+    <div>
       <input type="button" value="Back" className="back" onClick={() => { navigate(-1); }} />
       <div className="project-details">
         <div className="left-side">
-          <p>{project.description}</p>
-          <a href={project.repo} target="_blank" rel="noopener noreferrer">
+          <p>{projectData.description}</p>
+          <a href={projectData.repo} target="_blank" rel="noopener noreferrer">
             <span className="repo-link">repo  </span>
             <i className="fa-solid fa-arrows-turn-right" />
           </a>
         </div>
         <div className="right-side">
-          <h2>{project.name}</h2>
-          <div className="project-year">{project.year}</div>
+          <h2>{projectData.name}</h2>
+          <div className="project-year">{projectData.year}</div>
           { dividerLine }
-          { project.role.map((role: string, key: number) => renderList(role, key)) }
+          { projectData.role.map((role: string, key: number) => renderList(role, key)) }
           { dividerLine }
-          { project.techStack.map((framework: string, key: number) => renderList(framework, key)) }
+          { projectData.techStack.map(
+            (framework: string, key: number) => renderList(framework, key),
+          ) }
         </div>
         <div className="project-background" />
       </div>
-    </>
+      { projectName === 'wired-wardrobe' && <WiredWardrobe projectData={projectData} />}
+    </div>
   );
 }

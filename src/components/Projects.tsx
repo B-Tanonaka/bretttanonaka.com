@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { Project, DataProp } from '../../interfaces';
 
-export default function Projects({ data }: DataProp) {
+export default function Projects({ data }: { data: DataProp }) {
   const [activeImage, setActiveImage] = useState<number>(-1);
   const [showImage, setShowImage] = useState<boolean>(false);
   const renderList = (project: Project, index: number) => (
@@ -17,7 +17,11 @@ export default function Projects({ data }: DataProp) {
         boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
       }}
       />
-      <Link to={`/projects/${project.ref}`} className="project-title" key={index}>
+      <Link
+        to={`/projects/${project.ref}`}
+        className="project-title"
+        key={index}
+      >
         <span className="project-text">
           <h2 className="project-name">{project.name}</h2>
           <h4 className="project-role">{project.role.join(' & ')}</h4>
