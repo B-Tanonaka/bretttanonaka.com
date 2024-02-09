@@ -21,17 +21,18 @@ export default function ProjectDetails({
 }) {
   const navigate = useNavigate();
   const match = useMatch('/projects/:projectLink');
-  const pathname = match?.params.projectLink;
+  // Exclamation point is used to indicate match is non-null
+  const { projectLink } = match!.params;
   const [projectName, setProjectName] = useState<string>('');
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetchProjectData(pathname);
+      const response = await fetchProjectData(projectLink!);
       setProjectData(response);
-      setProjectName(pathname);
+      setProjectName(projectLink!);
     };
     fetchData();
-  }, [projectName, setProjectData, pathname]);
+  }, [projectName, setProjectData, projectLink]);
 
   const dividerLine = (
     <hr style={{
