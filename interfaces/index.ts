@@ -15,6 +15,10 @@ export type DataProp = {
   data: Project[];
 };
 
+export type RenderPhotoList = (
+  img: { src: string, alt: string }, key: number
+) => JSX.Element;
+
 export type Form = {
   name: string;
   email: string;

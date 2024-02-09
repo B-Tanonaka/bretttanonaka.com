@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { Project, DataProp } from '../../interfaces';
 
-export default function Projects({ data }: { data: DataProp }) {
+export default function Projects({ data }: DataProp) {
   const [activeImage, setActiveImage] = useState<number>(-1);
   const [showImage, setShowImage] = useState<boolean>(false);
   const renderList = (project: Project, index: number) => (

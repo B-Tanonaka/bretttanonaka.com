@@ -7,9 +7,9 @@ import {
 import { useNavigate, useMatch } from 'react-router-dom';
 import type { Project } from '../../interfaces';
 import fetchProjectData from '../utils/fetchData';
-// import Portfolio from './components/projects/Portfolio';
-// import Fitbook from './components/projects/Fitbook';
-// import Mevify from './components/projects/Mevify';
+// import Portfolio from './projects/Portfolio';
+// import Fitbook from './projects/Fitbook';
+import Mevify from './projects/Mevify';
 import WiredWardrobe from './projects/WiredWardrobe';
 
 export default function ProjectDetails({
@@ -45,6 +45,15 @@ export default function ProjectDetails({
     <div className="list-items" key={index}>{text}</div>
   );
 
+  const renderProjectImages = (img: { src: string, alt: string }, key: number) => (
+    <img
+      src={img.src}
+      alt={img.alt}
+      key={key}
+      className="image-wrapper"
+    />
+  );
+
   return (
     <div>
       <input type="button" value="Back" className="back" onClick={() => { navigate(-1); }} />
@@ -68,7 +77,11 @@ export default function ProjectDetails({
         </div>
         <div className="project-background" />
       </div>
-      { projectName === 'wired-wardrobe' && <WiredWardrobe projectData={projectData} />}
+      { projectName === 'wired-wardrobe'
+        && (
+        <WiredWardrobe projectData={projectData} renderList={renderProjectImages} />
+        )}
+      { projectName === 'mevify' && <Mevify projectData={projectData} />}
     </div>
   );
 }
