@@ -1,15 +1,15 @@
 import type { Project, RenderPhotoList } from '../../../interfaces';
 
 export default function Portfolio(
-  { projectData, renderList } :
-  { projectData: Project, renderList: RenderPhotoList },
+  { projectData, renderProjectImages } :
+  { projectData: Project, renderProjectImages: RenderPhotoList },
 ) {
   return (
     <div className="image-details">
       <h3>Original Design in Figma</h3>
       <div className="image-wrapper">
         { projectData.images.figma.map(
-          (img: { src: string, alt: string }, key: number) => renderList(img, key),
+          (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key),
         ) }
       </div>
     </div>

@@ -8,7 +8,7 @@ import { useNavigate, useMatch } from 'react-router-dom';
 import type { Project } from '../../interfaces';
 import fetchProjectData from '../utils/fetchData';
 import Portfolio from './projects/Portfolio';
-// import Fitbook from './projects/Fitbook';
+import Fitbook from './projects/Fitbook';
 import Mevify from './projects/Mevify';
 import WiredWardrobe from './projects/WiredWardrobe';
 
@@ -25,6 +25,7 @@ export default function ProjectDetails({
   const { projectLink } = match!.params;
   const [projectName, setProjectName] = useState<string>('');
 
+  // API call for data of the selected project
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetchProjectData(projectLink!);
@@ -42,10 +43,13 @@ export default function ProjectDetails({
     }}
     />
   );
+
+  // Render list of tech stack
   const renderList = (text: string, index: number) => (
     <div className="list-items" key={index}>{text}</div>
   );
 
+  // Child component function to render each of the images
   const renderProjectImages = (img: { src: string, alt: string }, key: number) => (
     <img
       src={img.src}
@@ -78,17 +82,21 @@ export default function ProjectDetails({
         </div>
         <div className="project-background" />
       </div>
-      { projectName === 'wired-wardrobe'
+      { projectName === 'portfolio'
         && (
-        <WiredWardrobe projectData={projectData} renderList={renderProjectImages} />
+        <Portfolio projectData={projectData} renderProjectImages={renderProjectImages} />
+        )}
+      { projectName === 'fitbook'
+        && (
+        <Fitbook projectData={projectData} renderProjectImages={renderProjectImages} />
         )}
       { projectName === 'mevify'
         && (
-        <Mevify projectData={projectData} renderList={renderProjectImages} />
+        <Mevify projectData={projectData} renderProjectImages={renderProjectImages} />
         )}
-      { projectName === 'portfolio'
+      { projectName === 'wired-wardrobe'
         && (
-        <Portfolio projectData={projectData} renderList={renderProjectImages} />
+        <WiredWardrobe projectData={projectData} renderProjectImages={renderProjectImages} />
         )}
     </div>
   );
