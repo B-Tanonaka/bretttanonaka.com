@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from 'react';
+import fetchProjectData from '../../utils/fetchData';
 import type { Project } from '../../../interfaces';
 import { BlankProject } from '../../../interfaces';
 import ProjectDetails from '../ProjectDetails';
@@ -7,9 +7,11 @@ import ProjectDetails from '../ProjectDetails';
 export default function Portfolio() {
   const [project, setProject] = useState<Project>(BlankProject);
   useEffect(() => {
-    axios.get<Project>('/project-data/portfolio')
-      .then((response) => { setProject(response.data); })
-      .catch((err) => { throw err; });
+    const fetchData = async () => {
+      const response = await fetchProjectData('portfolio');
+      setProject(response);
+    };
+    fetchData();
   }, []);
 
   const renderList = (img: { src: string, alt: string }, key: number) => (
