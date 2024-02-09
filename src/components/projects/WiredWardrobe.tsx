@@ -30,7 +30,7 @@ export default function WiredWardrobe() {
       <div className="image-wrapper overview">
         { project.images.overview.map(
           (img: { src: string, alt: string }, key: number) => renderList(img, key),
-        ) }
+        )}
       </div>
       <h3>Related Items and My Outfit</h3>
       <div className="image-wrapper related-items">

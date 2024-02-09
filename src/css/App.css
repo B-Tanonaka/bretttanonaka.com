@@ -558,6 +558,17 @@
 	padding: 1rem;
 }
 
+/* Error */
+
+.error-container {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Phones */
 @media (max-width: 600px) {
 	h1 {
