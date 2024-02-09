@@ -1,6 +1,5 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import type { Project } from '../../../interfaces';
+import type { Project } from '../../interfaces';
 
 export default function ProjectDetails({ project }: { project: Project }) {
   const navigate = useNavigate();

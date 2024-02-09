@@ -7,9 +7,13 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'airbnb',
     'airbnb-typescript'
+    'airbnb/hooks',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.eslint.json'
+  },
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': [

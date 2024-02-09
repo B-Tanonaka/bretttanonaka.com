@@ -1,4 +1,3 @@
-import React from 'react';
 import Resume from '../assets/resume-bretttanonaka.pdf';
 
 export default function About() {

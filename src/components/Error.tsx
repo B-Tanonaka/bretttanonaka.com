@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRouteError, isRouteErrorResponse } from 'react-router-dom';
 
 export default function Error() {
@@ -6,7 +5,7 @@ export default function Error() {
   let errorMessage: string;
 
   if (isRouteErrorResponse(error)) {
-    errorMessage = error.error?.message || error.statusText;
+    errorMessage = error.statusText;
   } else if (typeof error === 'string') {
     errorMessage = error;
   } else {
