@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { Project, DataProp } from '../../interfaces';
+import '../css/Projects.css';
 
 export default function Projects({ data }: DataProp) {
   const [activeImage, setActiveImage] = useState<number>(-1);

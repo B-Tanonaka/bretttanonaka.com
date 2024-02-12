@@ -43,7 +43,7 @@
 
 
 /* Portrait tablets and large phones */
-@media (min-width: 601px) and (max-width: 992px) {
+@media (min-width: 601px) and (max-width: 1024px) {
 	.home-wrapper {
 		width: 85%;
 	}
@@ -59,7 +59,7 @@
 }
 
 /* Small laptops and desktops */
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 1025px) and (max-width: 1200px) {
 
 }
 

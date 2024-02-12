@@ -157,7 +157,7 @@
 
 
 /* Portrait tablets and large phones */
-@media (min-width: 601px) and (max-width: 992px) {
+@media (min-width: 601px) and (max-width: 1024px) {
 	.left-side {
 		width: 45%;
 		margin-left: 5%;
@@ -196,10 +196,14 @@
 	.image-wrapper {
 		width: 95%;
 	}
+
+  .back {
+    top: 2%;
+  }
 }
 
 /* Small laptops and desktops */
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 1025px) and (max-width: 1200px) {
 
 }
 
