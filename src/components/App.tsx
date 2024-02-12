@@ -29,10 +29,6 @@ export default function App() {
               />
             )}
           />
-          {/* <Route path="/projects/portfolio" element={<Portfolio />} />
-          <Route path="/projects/fitbook" element={<Fitbook />} />
-          <Route path="/projects/mevify" element={<Mevify />} />
-          <Route path="/projects/wired-wardrobe" element={<WiredWardrobe />} /> */}
           <Route path="/404" element={<Error />} />
           <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>

@@ -4,7 +4,7 @@ import {
   Dispatch,
   SetStateAction,
 } from 'react';
-import { Link, useMatch } from 'react-router-dom';
+import { Link, useMatch, useNavigate } from 'react-router-dom';
 import type { Project } from '../../interfaces';
 import fetchProjectData from '../utils/fetchData';
 import Portfolio from './projects/Portfolio';
@@ -21,17 +21,27 @@ export default function ProjectDetails({
   projectData: Project,
   setProjectData: Dispatch<SetStateAction<Project>>
 }) {
+  const [projectName, setProjectName] = useState<string>('');
+
+  const navigate = useNavigate();
   const match = useMatch('/projects/:projectLink');
   // Exclamation point is used to indicate match is non-null
   const { projectLink } = match!.params;
-  const [projectName, setProjectName] = useState<string>('');
 
   // API call for data of the selected project
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetchProjectData(projectLink!);
-      setProjectData(response);
-      setProjectName(projectLink!);
+      try {
+        const response = await fetchProjectData(projectLink!);
+        if (response.ref) {
+          setProjectData(response);
+          setProjectName(projectLink!);
+        } else {
+          throw new Error('Failed to receive data');
+        }
+      } catch (err) {
+        navigate('/404', { replace: true });
+      }
     };
     fetchData();
   }, [projectName, setProjectData, projectLink]);
