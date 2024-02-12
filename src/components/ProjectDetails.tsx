@@ -4,7 +4,7 @@ import {
   Dispatch,
   SetStateAction,
 } from 'react';
-import { useNavigate, useMatch } from 'react-router-dom';
+import { Link, useMatch } from 'react-router-dom';
 import type { Project } from '../../interfaces';
 import fetchProjectData from '../utils/fetchData';
 import Portfolio from './projects/Portfolio';
@@ -19,7 +19,6 @@ export default function ProjectDetails({
   projectData: Project,
   setProjectData: Dispatch<SetStateAction<Project>>
 }) {
-  const navigate = useNavigate();
   const match = useMatch('/projects/:projectLink');
   // Exclamation point is used to indicate match is non-null
   const { projectLink } = match!.params;
@@ -60,8 +59,10 @@ export default function ProjectDetails({
   );
 
   return (
-    <div>
-      <input type="button" value="Back" className="back" onClick={() => { navigate(-1); }} />
+    <div className="project-details-container">
+      <Link to="/">
+        <input type="button" value="Home" className="back" />
+      </Link>
       <div className="project-details">
         <div className="left-side">
           <p>{projectData.description}</p>
