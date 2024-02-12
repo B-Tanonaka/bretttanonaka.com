@@ -3,32 +3,6 @@
 	overflow-y: overlay;
 }
 
-/**** Home ****/
-
-.home-container {
-	height: 100vh;
-	max-height: 100%;
-  width: 100vw;
-	max-width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 0;
-}
-
-.home-wrapper {
-	width: 60%;
-}
-
-.home-main-text {
-	font-size: 2.6rem;
-}
-
-.home-sec-text {
-	font-size: 1.3rem;
-	margin-left: 1%;
-}
-
 /**** Navbar ****/
 
 .navbar-border {

@@ -7,6 +7,7 @@ import About from './About';
 import Contact from './Contact';
 import Modal from './ContactModal';
 import Background from './Background';
+import '../css/Home.css';
 
 export default function Home() {
   const [data, setData] = useState<Project[]>([]);
