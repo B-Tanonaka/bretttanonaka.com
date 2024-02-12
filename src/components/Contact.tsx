@@ -7,6 +7,7 @@ import {
 } from 'react';
 import axios from 'axios';
 import type { Form } from '../../interfaces';
+import '../css/Contact.css';
 
 export default function Contact({
   setModalOpen,
