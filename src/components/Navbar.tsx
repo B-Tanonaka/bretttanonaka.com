@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
+import '../css/Navbar.css';
 
 export default function Navbar() {
   const [hamOpen, setHamOpen] = useState<boolean>(false);
@@ -36,13 +37,13 @@ export default function Navbar() {
         {hamOpen
         && (
           <i
-            className="fa-solid fa-xmark xmark"
+            className="fa-solid fa-xmark navbar-xmark"
             onClick={handleHamClick}
             role="presentation"
           />
         )}
         <i
-          className="fa-solid fa-bars hamburger"
+          className="fa-solid fa-bars navbar-hamburger"
           onClick={handleHamClick}
           role="presentation"
         />
