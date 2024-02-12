@@ -12,6 +12,7 @@ import Fitbook from './projects/Fitbook';
 import Mevify from './projects/Mevify';
 import WiredWardrobe from './projects/WiredWardrobe';
 import '../css/ProjectDetails.css';
+import '../css/ProjectImages.css';
 
 export default function ProjectDetails({
   projectData,

@@ -5,7 +5,7 @@ export default function Fitbook(
   { projectData: Project, renderProjectImages: RenderPhotoList },
 ) {
   return (
-    <div className="image-details">
+    <div className="image-details-container">
       <h3>Login</h3>
       <div className="image-wrapper-phone login">
         { projectData.images.login.map(

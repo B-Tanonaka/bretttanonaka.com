@@ -5,7 +5,7 @@ export default function Portfolio(
   { projectData: Project, renderProjectImages: RenderPhotoList },
 ) {
   return (
-    <div className="image-details">
+    <div className="image-details-container">
       <h3>Original Design in Figma</h3>
       <div className="image-wrapper">
         { projectData.images.figma.map(

@@ -5,7 +5,7 @@ export default function Mevify(
   { projectData: Project, renderProjectImages: RenderPhotoList },
 ) {
   return (
-    <div className="image-details">
+    <div className="image-details-container">
       <h3>Schema</h3>
       <div className="image-wrapper schema">
         { projectData.images.schema.map(
