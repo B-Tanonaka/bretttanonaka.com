@@ -11,6 +11,7 @@ import Portfolio from './projects/Portfolio';
 import Fitbook from './projects/Fitbook';
 import Mevify from './projects/Mevify';
 import WiredWardrobe from './projects/WiredWardrobe';
+import '../css/ProjectDetails.css';
 
 export default function ProjectDetails({
   projectData,
@@ -59,7 +60,7 @@ export default function ProjectDetails({
   );
 
   return (
-    <div className="project-details-container">
+    <>
       <Link to="/">
         <input type="button" value="Home" className="back" />
       </Link>
@@ -99,6 +100,6 @@ export default function ProjectDetails({
         && (
         <WiredWardrobe projectData={projectData} renderProjectImages={renderProjectImages} />
         )}
-    </div>
+    </>
   );
 }
