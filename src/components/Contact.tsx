@@ -5,7 +5,7 @@ import {
   Dispatch,
   SetStateAction,
 } from 'react';
-import axios from 'axios';
+import { fetchContact } from '../utils/fetchData';
 import type { Form } from '../../interfaces';
 import '../css/Contact.css';
 
@@ -13,8 +13,8 @@ export default function Contact({
   setModalOpen,
   setModalState,
 } : {
-  setModalOpen: Dispatch<SetStateAction<any>>,
-  setModalState: Dispatch<SetStateAction<any>>,
+  setModalOpen: Dispatch<SetStateAction<boolean>>,
+  setModalState: Dispatch<SetStateAction<boolean>>,
 
 }) {
   const blankForm: Form = {
@@ -29,18 +29,21 @@ export default function Contact({
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    axios.post('/contact-data', form)
-      .then(() => {
+    try {
+      const response = await fetchContact(form);
+      if (response === 201) {
         setForm(blankForm);
         setModalOpen(true);
         setModalState(true);
-      })
-      .catch(() => {
-        setModalOpen(true);
-        setModalState(false);
-      });
+      } else {
+        throw new Error('Message not sent');
+      }
+    } catch (err) {
+      setModalOpen(true);
+      setModalState(false);
+    }
   };
 
   return (

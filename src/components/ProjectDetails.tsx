@@ -6,7 +6,7 @@ import {
 } from 'react';
 import { Link, useMatch, useNavigate } from 'react-router-dom';
 import type { Project } from '../../interfaces';
-import fetchProjectData from '../utils/fetchData';
+import { fetchProjectData } from '../utils/fetchData';
 import Portfolio from './projects/Portfolio';
 import Fitbook from './projects/Fitbook';
 import Mevify from './projects/Mevify';
@@ -44,7 +44,7 @@ export default function ProjectDetails({
       }
     };
     fetchData();
-  }, [projectName, setProjectData, projectLink]);
+  }, [projectName, setProjectData, projectLink, navigate]);
 
   const dividerLine = (
     <hr style={{
@@ -95,6 +95,7 @@ export default function ProjectDetails({
         </div>
         <div className="project-background" />
       </div>
+      {/* Render only the selected project */}
       { projectName === 'portfolio'
         && (
         <Portfolio projectData={projectData} renderProjectImages={renderProjectImages} />

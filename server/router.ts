@@ -1,5 +1,6 @@
-import { getTitles, getSingleProject, writeContact } from './controller';
 import express from 'express';
+import { getTitles, getSingleProject, writeContact } from './controller';
+
 const router = express.Router();
 
 router.get('/project-data', getTitles);
