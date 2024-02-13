@@ -127,6 +127,10 @@
 		font-size: 1.5rem;
 		color: var(--gray3-color);
 	}
+
+  .navbar-icon:hover {
+		cursor: pointer;
+	}
 }
 
 /* Portrait tablets and large phones */

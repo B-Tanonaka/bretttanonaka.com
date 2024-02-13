@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FaXmark, FaBars } from 'react-icons/fa6';
 import { Link } from 'react-scroll';
 import '../css/Navbar.css';
 
@@ -36,14 +37,14 @@ export default function Navbar() {
         </nav>
         {hamOpen
         && (
-          <i
-            className="fa-solid fa-xmark navbar-xmark"
+          <FaXmark
+            className="navbar-xmark navbar-icon"
             onClick={handleHamClick}
             role="presentation"
           />
         )}
-        <i
-          className="fa-solid fa-bars navbar-hamburger"
+        <FaBars
+          className="navbar-hamburger navbar-icon"
           onClick={handleHamClick}
           role="presentation"
         />
