@@ -60,12 +60,11 @@ Installation
     ```
         npm install
     ```
-- Compile and build the files
-    ```
-        npm run build
-        npm run bundle
-    ```
 - Start the program
     ```
         npm start
+    ```
+- In a separate terminal, start the backend
+    ```
+        npm run backend
     ```
