@@ -1,0 +1,100 @@
+/**** Project individual images ****/
+.image-details-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--white-color);
+	background-image: var(--grain-bg);
+}
+
+.image-wrapper {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	z-index: 2;
+}
+
+.image-wrapper-phone {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+	width: 20%;
+}
+
+.phone-image {
+	height: 20%;
+	width: 20%;
+	padding: 1rem;
+	z-index: 2;
+}
+
+.large-image {
+	margin: 3rem;
+	box-shadow: 0.25em 0.25em .75em -.5em var(--shadow-color);
+	z-index: 3;
+}
+
+.image-details-container h3 {
+	background-color: var(--gray3-color);
+	color: var(--white-color);
+	padding: 1rem 2rem;
+	z-index: 3;
+}
+
+.subtitle {
+	font-size: 1rem;
+	padding: 1rem;
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .image-wrapper {
+    width: 90%;
+  }
+	.image-wrapper-phone {
+		width: 100%;
+    flex-wrap: wrap;
+	}
+
+  .phone-image {
+		width: 27%;
+	}
+}
+
+
+/* Portrait tablets and large phones */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .image-wrapper {
+    width: 90%;
+  }
+
+	.image-wrapper-phone {
+		width: 100%;
+    flex-wrap: wrap;
+	}
+}
+
+/* Small laptops and desktops */
+@media (min-width: 1025px) and (max-width: 1200px) {
+	h1 {
+		font-size: 3.5rem;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+
+/* Medium laptops and desktops */
+@media (min-width: 1201px) and (max-width: 1500px) {
+
+}
+
+/* Large laptops and desktops */
+@media (min-width: 1500px) {
+
+}

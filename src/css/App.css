@@ -1,0 +1,49 @@
+/**** App ****/
+
+/* Phones */
+@media (max-width: 600px) {
+	h1 {
+		font-size: 3.5rem;
+	}
+	h2 {
+		font-size: 1.4rem;
+	}
+	h4 {
+		font-size: 1rem;
+	}
+}
+
+
+/* Portrait tablets and large phones */
+@media (min-width: 601px) and (max-width: 1024px) {
+	h1 {
+		font-size: 4rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	h4 {
+		font-size: 1.4rem;
+	}
+}
+
+/* Small laptops and desktops */
+@media (min-width: 1025px) and (max-width: 1200px) {
+	h1 {
+		font-size: 3.5rem;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+
+/* Medium laptops and desktops */
+@media (min-width: 1201px) and (max-width: 1500px) {
+}
+
+/* Large laptops and desktops */
+@media (min-width: 1500px) {
+}

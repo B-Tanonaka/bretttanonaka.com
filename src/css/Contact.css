@@ -1,0 +1,171 @@
+/**** Contact ****/
+.submit-overlay {
+	height: 100vh;
+	max-height: 100%;
+	width: 100vw;
+	max-width: 100%;
+	overflow-y: hidden;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2;
+}
+
+.contact {
+	height: 100vh;
+	max-height: 100%;
+	width: 100vw;
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact-container {
+	width: 30%;
+}
+
+.top-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.name-email {
+	margin-bottom: 0.5rem;
+	width: 45%;
+}
+
+.input-box-top {
+	height: 2rem;
+	width: 100%;
+}
+
+.input-box-bottom {
+  height: 10rem;
+	width: 100%;
+}
+
+.contact input {
+	box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+	border-color: var(--gray3-color);
+	border-width: 0.05rem;
+	border-radius: 0.1rem;
+	padding: 0.5rem;
+	margin-top: 0.3rem;
+}
+
+.contact textarea {
+	box-sizing: border-box;
+	max-width: 100%;
+	min-width: 100%;
+	font-family: 'Outfit', sans-serif;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-color: var(--gray3-color);
+	padding: 0.5rem;
+	margin-top: 0.3rem;
+}
+
+.contact button[type="submit"] {
+	height: 2rem;
+	width: 25%;
+	min-width: 4rem;
+	border-radius: 50rem;
+  background-color: var(--gray3-color);
+	color: var(--white-color);
+	margin-top: 7%;
+	font-size: 0.9rem;
+	float: right;
+	cursor: pointer;
+}
+
+.contact-message {
+	height: 10rem;
+	width: 10rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+	border-radius: 1rem;
+	box-shadow: 0.25em 0.25em .75em -.5em var(--shadow-color);
+	font-size: 0.8rem;
+	text-align: center;
+	padding: 1rem;
+	z-index: 1;
+}
+
+.title-text {
+	font-size: 1.5rem;
+	font-weight: 600;
+	display: block;
+	line-height: 2rem;
+}
+
+.contact-icon {
+	font-size: 2.5rem;
+	margin-top: 1rem;
+}
+
+.ok-button {
+	width: 90%;
+	height: 1.5rem;
+	border-radius: 50rem;
+	font-size: 0.7rem;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+
+/* Phones */
+@media (max-width: 600px) {
+	.contact-container {
+		width: 80%;
+	}
+
+	.form {
+		font-size: 0.8rem;
+	}
+
+	.form label {
+		font-size: 1.3rem;
+	}
+}
+
+/* Portrait tablets and large phones */
+@media (min-width: 601px) and (max-width: 1024px) {
+	.contact-container {
+		width: 80%;
+	}
+
+	.form {
+		font-size: 0.8rem;
+	}
+
+	.form label {
+		font-size: 1.3rem;
+	}
+}
+
+/* Small laptops and desktops */
+@media (min-width: 1025px) and (max-width: 1200px) {
+	h1 {
+		font-size: 3.5rem;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+
+/* Medium laptops and desktops */
+@media (min-width: 1201px) and (max-width: 1500px) {
+}
+
+/* Large laptops and desktops */
+@media (min-width: 1500px) {
+}

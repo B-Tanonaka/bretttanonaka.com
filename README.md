@@ -46,7 +46,6 @@ Portfolio to showcase my engineer projects.
 #### Features
 - Active form that saves the message into the database
 - Success and failure modals appear upon submitting message
-  
 <img src="https://github.com/B-Tanonaka/bretttanonaka.com/assets/118404699/3a28f1ab-2221-440d-92df-878c4e735a84" alt="About and contact pages">
 <img src="https://github.com/B-Tanonaka/bretttanonaka.com/assets/118404699/488e9a95-c2f0-4e4f-bafa-84ad305b7400" alt="About and contact pages">
 

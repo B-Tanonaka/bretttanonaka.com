@@ -9,11 +9,16 @@ export type Project = {
   repo: string;
   img: string;
   images: { [key: string]: { src: string, alt: string }[] };
+  order: number;
 };
 
 export type DataProp = {
   data: Project[];
 };
+
+export type RenderPhotoList = (
+  img: { src: string, alt: string }, key: number
+) => JSX.Element;
 
 export type Form = {
   name: string;
