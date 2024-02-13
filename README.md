@@ -60,11 +60,12 @@ Installation
     ```
         npm install
     ```
-- Start the program
+- Start the client
     ```
         npm start
     ```
-- In a separate terminal, start the backend
+- In a separate terminal start the backend
     ```
         npm run backend
     ```
+
