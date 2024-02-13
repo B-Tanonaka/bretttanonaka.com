@@ -1,3 +1,9 @@
+import {
+  FaCheckDouble,
+  FaLinkedinIn,
+  FaGithub,
+  FaVimeoV,
+} from 'react-icons/fa';
 import Resume from '../assets/resume-bretttanonaka.pdf';
 import '../css/About.css';
 
@@ -14,7 +20,7 @@ export default function About() {
         />
         <p>{description}</p>
         <a href={Resume} target="_blank" rel="noopener noreferrer" className="resume">
-          <i className="fa-solid fa-check-double" />
+          <FaCheckDouble />
           <span> resume</span>
         </a>
       </div>
@@ -23,19 +29,19 @@ export default function About() {
           href="https://www.linkedin.com/in/bretttanonaka"
           aria-label="LinkedIn profile"
         >
-          <i className="fa-brands fa-linkedin-in about-icon" />
+          <FaLinkedinIn className="about-icon" />
         </a>
         <a
           href="https://github.com/B-Tanonaka"
           aria-label="GitHub profile"
         >
-          <i className="fa-brands fa-github about-icon" />
+          <FaGithub className="about-icon" />
         </a>
         <a
           href="https://vimeo.com/bretttanonaka"
           aria-label="Vimeo profile"
         >
-          <i className="fa-brands fa-vimeo-v about-icon" />
+          <FaVimeoV className="about-icon" />
         </a>
       </div>
     </div>
