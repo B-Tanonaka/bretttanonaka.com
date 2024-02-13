@@ -7,6 +7,7 @@ import About from './About';
 import Contact from './Contact';
 import Modal from './ContactModal';
 import Background from './Background';
+import { fetchProjectData } from '../utils/fetchData';
 import '../css/Home.css';
 
 export default function Home() {
@@ -17,8 +18,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('http://localhost:3131/project-data');
-        const response = await res.json();
+        const response = await fetchProjectData();
         response.sort((a: Project, b: Project) => b.order - a.order);
         setData(response);
       } catch (err) {
