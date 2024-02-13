@@ -19,6 +19,7 @@ export default function Home() {
       try {
         const res = await fetch('http://localhost:3131/project-data');
         const response = await res.json();
+        response.sort((a: Project, b: Project) => b.order - a.order);
         setData(response);
       } catch (err) {
         console.error(err);

@@ -7,6 +7,7 @@ import {
 import { Link, useMatch, useNavigate } from 'react-router-dom';
 import type { Project } from '../../interfaces';
 import { fetchProjectData } from '../utils/fetchData';
+import LitterSort from './projects/LitterSort';
 import Portfolio from './projects/Portfolio';
 import Fitbook from './projects/Fitbook';
 import Mevify from './projects/Mevify';
@@ -96,6 +97,10 @@ export default function ProjectDetails({
         <div className="project-background" />
       </div>
       {/* Render only the selected project */}
+      { projectName === 'littersort'
+        && (
+        <LitterSort projectData={projectData} renderProjectImages={renderProjectImages} />
+        )}
       { projectName === 'portfolio'
         && (
         <Portfolio projectData={projectData} renderProjectImages={renderProjectImages} />
