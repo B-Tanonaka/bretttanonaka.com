@@ -10,6 +10,7 @@ export type Project = {
   img: string;
   images: { [key: string]: { src: string, alt: string }[] };
   order: number;
+  link: string;
 };
 
 export type DataProp = {
@@ -36,6 +37,8 @@ export const BlankProject = {
   ref: '',
   repo: '',
   img: '',
+  order: 0,
+  link: '',
   images: {
     login: [{ src: '', alt: '' }],
     home: [{ src: '', alt: '' }],

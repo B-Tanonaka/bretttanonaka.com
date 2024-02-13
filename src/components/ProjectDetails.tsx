@@ -5,8 +5,11 @@ import {
   SetStateAction,
 } from 'react';
 import { Link, useMatch, useNavigate } from 'react-router-dom';
+import { FaArrowsTurnRight } from 'react-icons/fa6';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import type { Project } from '../../interfaces';
 import { fetchProjectData } from '../utils/fetchData';
+import dividerLine from '../utils/dividerLine';
 import LitterSort from './projects/LitterSort';
 import Portfolio from './projects/Portfolio';
 import Fitbook from './projects/Fitbook';
@@ -47,15 +50,6 @@ export default function ProjectDetails({
     fetchData();
   }, [projectName, setProjectData, projectLink, navigate]);
 
-  const dividerLine = (
-    <hr style={{
-      border: '0.03em dashed black',
-      boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
-      margin: '7% auto',
-    }}
-    />
-  );
-
   // Render list of tech stack
   const renderList = (text: string, index: number) => (
     <div className="list-items" key={index}>{text}</div>
@@ -81,8 +75,14 @@ export default function ProjectDetails({
           <p>{projectData.description}</p>
           <a href={projectData.repo} target="_blank" rel="noopener noreferrer">
             <span className="repo-link">repo  </span>
-            <i className="fa-solid fa-arrows-turn-right" />
+            <FaArrowsTurnRight />
           </a>
+          { projectData.link && (
+          <a href={projectData.link} target="_blank" rel="noopener noreferrer">
+            <span className="repo-link">live link  </span>
+            <FaExternalLinkAlt />
+          </a>
+          )}
         </div>
         <div className="right-side">
           <h2>{projectData.name}</h2>
