@@ -1,7 +1,4 @@
 /**** App ****/
-.app {
-	overflow-y: overlay;
-}
 
 /* Phones */
 @media (max-width: 600px) {

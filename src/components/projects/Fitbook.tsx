@@ -1,9 +1,15 @@
+import { useEffect } from 'react';
 import type { Project, RenderPhotoList } from '../../../interfaces';
 
 export default function Fitbook(
   { projectData, renderProjectImages } :
   { projectData: Project, renderProjectImages: RenderPhotoList },
 ) {
+  // Scroll to top of page upon load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="image-details-container">
       <h3>Login</h3>
