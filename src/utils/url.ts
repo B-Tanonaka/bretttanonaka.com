@@ -1,5 +1,5 @@
 export default function urlPath(subdomain: string, endpoint?: string) {
   return endpoint
-    ? `http://localhost:3131/${subdomain}/${endpoint}`
-    : `http://localhost:3131/${subdomain}`;
+    ? `${import.meta.env.VITE_API_KEY}/${subdomain}/${endpoint}`
+    : `${import.meta.env.VITE_API_KEY}/${subdomain}`;
 }
