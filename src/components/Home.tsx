@@ -1,5 +1,5 @@
 import {
-  useState, useEffect, Dispatch, SetStateAction,
+  useState, useEffect,
 } from 'react';
 import { useParams } from 'react-router-dom';
 import type { EngineerProject } from '../../interfaces';
@@ -13,9 +13,7 @@ import Background from './Background';
 import { fetchProjectData } from '../utils/fetchData';
 import '../css/Home.css';
 
-export default function Home(
-  { setActiveCategory }: { setActiveCategory: Dispatch<SetStateAction<string>> },
-) {
+export default function Home() {
   const [data, setData] = useState<EngineerProject[]>([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalState, setModalState] = useState(true);
@@ -24,8 +22,6 @@ export default function Home(
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setActiveCategory(category!);
-
         const response = await fetchProjectData(category!);
         response.sort((a: EngineerProject, b: EngineerProject) => b.order - a.order);
 
@@ -35,7 +31,7 @@ export default function Home(
       }
     };
     fetchData();
-  }, [category, setActiveCategory]);
+  }, [category]);
 
   return (
     <>
@@ -48,7 +44,7 @@ export default function Home(
               : <Modal success={false} setModalOpen={setModalOpen} />}
           </div>
         )}
-      <Navbar setActiveCategory={setActiveCategory} />
+      <Navbar />
       <Intro />
       <Projects data={data} />
       <About />

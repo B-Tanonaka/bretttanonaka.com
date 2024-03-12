@@ -1,14 +1,9 @@
-import {
-  useState, Dispatch, SetStateAction,
-} from 'react';
+import { useState } from 'react';
 import { FaXmark, FaBars } from 'react-icons/fa6';
 import { Link } from 'react-scroll';
 import '../css/Navbar.css';
 
-export default function Navbar(
-  { setActiveCategory }:
-  { setActiveCategory: Dispatch<SetStateAction<string>> },
-) {
+export default function Navbar() {
   const [hamOpen, setHamOpen] = useState<boolean>(false);
   const [currentSection, setCurrentSection] = useState<string>('Engineering');
   const handleHamClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -18,8 +13,7 @@ export default function Navbar(
 
   const handleSectionChange = async (e: React.ChangeEvent<HTMLSelectElement>) => {
     e.preventDefault();
-    await setCurrentSection(e.target.value);
-    await setActiveCategory(currentSection);
+    setCurrentSection(e.target.value);
   };
 
   return (
