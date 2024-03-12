@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
-import { EngineerProject, VideoProject, Form } from '../interfaces';
+import {
+  EngineerProject, VideoProject, AboutData, Form,
+} from '../interfaces';
 
 mongoose.connect('mongodb://localhost/portfolio');
 
@@ -32,6 +34,11 @@ const videoSchema = new mongoose.Schema<VideoProject>({
   order: Number,
 });
 
+const aboutSchema = new mongoose.Schema<AboutData>({
+  engineer: Object,
+  video: Object,
+});
+
 const formSchema = new mongoose.Schema<Form>({
   name: String,
   email: String,
@@ -40,4 +47,5 @@ const formSchema = new mongoose.Schema<Form>({
 
 export const EngineerModel = mongoose.model('engineer', engineerSchema);
 export const VideoModel = mongoose.model('video-production', videoSchema);
+export const AboutModel = mongoose.model('about', aboutSchema);
 export const FormModel = mongoose.model('contact', formSchema);

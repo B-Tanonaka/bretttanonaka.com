@@ -10,11 +10,12 @@ import About from './About';
 import Contact from './Contact';
 import Modal from './ContactModal';
 import Background from './Background';
-import { fetchProjectData } from '../utils/fetchData';
+import { fetchProjectData, fetchAboutData } from '../utils/fetchData';
 import '../css/Home.css';
 
 export default function Home() {
-  const [data, setData] = useState<EngineerProject[]>([]);
+  const [projectData, setProjectData] = useState<EngineerProject[]>([]);
+  const [aboutData, setAboutData] = useState({});
   const [modalOpen, setModalOpen] = useState(false);
   const [modalState, setModalState] = useState(true);
   const { category } = useParams();
@@ -22,10 +23,12 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetchProjectData(category!);
-        response.sort((a: EngineerProject, b: EngineerProject) => b.order - a.order);
+        const projectResponse = await fetchProjectData(category!);
+        projectResponse.sort((a: EngineerProject, b: EngineerProject) => b.order - a.order);
+        setProjectData(projectResponse);
 
-        setData(response);
+        const aboutResponse = await fetchAboutData();
+        setAboutData(aboutResponse);
       } catch (err) {
         console.error(err);
       }
@@ -45,9 +48,9 @@ export default function Home() {
           </div>
         )}
       <Navbar />
-      <Intro />
-      <Projects data={data} />
-      <About />
+      <Intro data={aboutData} />
+      <Projects data={projectData} />
+      <About data={aboutData} />
       <Contact
         setModalOpen={setModalOpen}
         setModalState={setModalState}

@@ -27,8 +27,26 @@ export type VideoProject = {
   order: number;
 };
 
-export type DataProp = {
-  data: EngineerProject[];
+export type AboutData = {
+  engineer: {
+    about: string,
+    intro: {
+      main: string,
+      sec: string
+    }
+  },
+  video: {
+    about: string,
+    intro: {
+      main: string,
+      sec: string
+    }
+  },
+  about: string
+};
+
+export type AboutInfo = {
+  [key: string]: AboutData,
 };
 
 export type RenderPhotoList = (
@@ -39,6 +57,23 @@ export type Form = {
   name: string;
   email: string;
   message: string;
+};
+
+export const BlankAboutData = {
+  engineer: {
+    about: '',
+    intro: {
+      main: '',
+      sec: '',
+    },
+  },
+  video: {
+    about: '',
+    intro: {
+      main: '',
+      sec: '',
+    },
+  },
 };
 
 export const BlankProject = {
