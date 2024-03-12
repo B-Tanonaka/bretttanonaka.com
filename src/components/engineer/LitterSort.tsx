@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
-import type { Project, RenderPhotoList } from '../../../interfaces';
+import type { EngineerProject, RenderPhotoList } from '../../../interfaces';
 
 export default function LitterSort(
   { projectData, renderProjectImages } :
-  { projectData: Project, renderProjectImages: RenderPhotoList },
+  { projectData: EngineerProject, renderProjectImages: RenderPhotoList },
 ) {
   // Scroll to top of page upon load
   useEffect(() => {

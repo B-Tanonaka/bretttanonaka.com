@@ -8,13 +8,13 @@ import {
 } from 'react-router-dom';
 import Home from './Home';
 import Error from './Error';
-import type { Project } from '../../interfaces';
+import type { EngineerProject } from '../../interfaces';
 import { BlankProject } from '../../interfaces';
 import ProjectDetails from './ProjectDetails';
 import '../css/App.css';
 
 export default function App() {
-  const [projectData, setProjectData] = useState<Project>(BlankProject);
+  const [projectData, setProjectData] = useState<EngineerProject>(BlankProject);
   return (
     <div className="app">
       <Router>

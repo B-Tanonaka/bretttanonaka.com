@@ -1,6 +1,6 @@
-import { ProjectModel, FormModel } from './database';
+import { EngineerModel, FormModel } from './database';
 import { Form } from '../interfaces';
 
-export const getAllTitles = () => (ProjectModel.find({}));
-export const getProjectDetails = (id: string) => (ProjectModel.findOne({ ref: `${id}` }));
+export const getAllTitles = () => (EngineerModel.find({}));
+export const getProjectDetails = (id: string) => (EngineerModel.findOne({ ref: `${id}` }));
 export const saveContact = (data: Form) => (FormModel.create(data));

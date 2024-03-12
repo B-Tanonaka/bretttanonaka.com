@@ -1,4 +1,4 @@
-export type Project = {
+export type EngineerProject = {
   _id: string;
   name: string;
   role: string[];
@@ -7,14 +7,28 @@ export type Project = {
   techStack: string[];
   ref: string;
   repo: string;
-  img: string;
+  banner: string;
   images: { [key: string]: { src: string, alt: string }[] };
   order: number;
   link: string;
 };
 
+export type VideoProject = {
+  _id: string;
+  name: string;
+  year: string;
+  role: string[];
+  description: string;
+  techStack: string[];
+  ref: string;
+  banner: string;
+  images: { [key: string]: { src: string, alt: string }[] };
+  video: { [key: string]: { src: string, alt: string }[] };
+  order: number;
+};
+
 export type DataProp = {
-  data: Project[];
+  data: EngineerProject[];
 };
 
 export type RenderPhotoList = (
@@ -36,7 +50,7 @@ export const BlankProject = {
   techStack: [],
   ref: '',
   repo: '',
-  img: '',
+  banner: '',
   order: 0,
   link: '',
   images: {

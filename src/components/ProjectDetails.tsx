@@ -10,11 +10,11 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import type { Project } from '../../interfaces';
 import { fetchProjectData } from '../utils/fetchData';
 import dividerLine from '../utils/dividerLine';
-import LitterSort from './projects/LitterSort';
-import Portfolio from './projects/Portfolio';
-import Fitbook from './projects/Fitbook';
-import Mevify from './projects/Mevify';
-import WiredWardrobe from './projects/WiredWardrobe';
+import LitterSort from './engineer/LitterSort';
+import Portfolio from './engineer/Portfolio';
+import Fitbook from './engineer/Fitbook';
+import Mevify from './engineer/Mevify';
+import WiredWardrobe from './engineer/WiredWardrobe';
 import '../css/ProjectDetails.css';
 import '../css/ProjectImages.css';
 

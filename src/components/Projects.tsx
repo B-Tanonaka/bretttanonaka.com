@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import type { Project, DataProp } from '../../interfaces';
+import type { EngineerProject, DataProp } from '../../interfaces';
 import '../css/Projects.css';
 
 export default function Projects({ data }: DataProp) {
   const [activeImage, setActiveImage] = useState<number>(-1);
   const [showImage, setShowImage] = useState<boolean>(false);
-  const renderList = (project: Project, index: number) => (
+  const renderList = (project: EngineerProject, index: number) => (
     <div
       className="project-single"
       key={index}
@@ -31,11 +31,11 @@ export default function Projects({ data }: DataProp) {
     </div>
   );
 
-  const renderImages = (project: Project, index: number) => (
+  const renderImages = (project: EngineerProject, index: number) => (
     <img
       className="project-image"
       key={index}
-      src={project.img}
+      src={project.banner}
       alt="placeholder"
       style={{ opacity: activeImage === index && showImage ? 1 : 0 }}
     />
@@ -46,11 +46,11 @@ export default function Projects({ data }: DataProp) {
       <div className="project-left-side">
         <h1>Projects</h1>
         <div className="project-list">
-          {data.map((project: Project, index: number) => renderList(project, index))}
+          {data.map((project: EngineerProject, index: number) => renderList(project, index))}
         </div>
       </div>
       <div className="image-container">
-        {data.map((project: Project, index: number) => renderImages(project, index))}
+        {data.map((project: EngineerProject, index: number) => renderImages(project, index))}
       </div>
     </div>
   );
