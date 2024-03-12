@@ -30,6 +30,16 @@
 	backdrop-filter: blur(0.5rem);
 }
 
+.navbar-right-side {
+	display: flex;
+	height: 100%;
+	width: 100vw;
+	max-width: 100%;
+	align-items: center;
+  justify-content: flex-end;
+	z-index: 1;
+}
+
 .navbar-base {
 	display: flex;
 	justify-content: center;
@@ -37,11 +47,10 @@
 	box-shadow: 0.25em 0.25em .75em -.5em var(--shadow-color);
 	border-radius: 1.5em;
 	width: 30%;
-	height: 35%;
+	height: 45%;
 	max-width: 25em;
 	min-width: 15em;
-	position: absolute;
-	right: 5%;
+  margin: 0 5rem 0 1.5rem;
 }
 
 .navbar-sections {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { Project } from '../../interfaces';
+import type { EngineerProject } from '../../interfaces';
 import Landing from './Landing';
 import Navbar from './Navbar';
 import Projects from './Projects';
@@ -11,7 +11,7 @@ import { fetchProjectData } from '../utils/fetchData';
 import '../css/Home.css';
 
 export default function Home() {
-  const [data, setData] = useState<Project[]>([]);
+  const [data, setData] = useState<EngineerProject[]>([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalState, setModalState] = useState(true);
 
@@ -19,7 +19,7 @@ export default function Home() {
     const fetchData = async () => {
       try {
         const response = await fetchProjectData();
-        response.sort((a: Project, b: Project) => b.order - a.order);
+        response.sort((a: EngineerProject, b: EngineerProject) => b.order - a.order);
         setData(response);
       } catch (err) {
         console.error(err);
