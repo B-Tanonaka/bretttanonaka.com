@@ -42,7 +42,11 @@ export type AboutData = {
       sec: string
     }
   },
-  about: string
+  about: string,
+  intro: {
+    main: string,
+    sec: string,
+  };
 };
 
 export type AboutInfo = {

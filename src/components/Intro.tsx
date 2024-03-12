@@ -1,11 +1,19 @@
-export default function Intro() {
+import { useParams } from 'react-router-dom';
+import type { AboutInfo } from '../../interfaces';
+
+export default function Intro({ data }: { data: AboutInfo }) {
+  const { category } = useParams();
+  const validCategory: string = category!;
+
   return (
     <div className="home-container" id="home">
       <div className="home-wrapper">
-        <p>
-          <span className="home-main-text">Aloha 🤙 I’m a full stack developer with experience in UX/UI design, system design, and video production.</span>
-          <span className="home-sec-text">Yes, you read that correctly.</span>
-        </p>
+        { data[validCategory] && (
+          <p>
+            <span className="home-main-text">{data[validCategory].intro.main}</span>
+            <span className="home-sec-text">{data[validCategory].intro.sec}</span>
+          </p>
+        )}
       </div>
     </div>
   );
