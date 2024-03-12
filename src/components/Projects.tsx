@@ -4,8 +4,7 @@ import type { EngineerProject } from '../../interfaces';
 import '../css/Projects.css';
 
 export default function Projects(
-  { data }:
-  { data: EngineerProject[] },
+  { data }: { data: EngineerProject[] },
 ) {
   const [activeImage, setActiveImage] = useState<number>(-1);
   const [showImage, setShowImage] = useState<boolean>(false);

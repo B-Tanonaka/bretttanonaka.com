@@ -30,7 +30,6 @@ export default function App() {
             path="/:category"
             element={(
               <Home
-                activeCategory={activeCategory}
                 setActiveCategory={setActiveCategory}
               />
             )}
@@ -45,7 +44,7 @@ export default function App() {
             )}
           />
           <Route path="/404" element={<Error />} />
-          {/* <Route path="*" element={<Navigate to="/404" replace />} /> */}
+          <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
       </Router>
     </div>

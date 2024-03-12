@@ -14,8 +14,7 @@ import { fetchProjectData } from '../utils/fetchData';
 import '../css/Home.css';
 
 export default function Home(
-  { activeCategory, setActiveCategory }:
-  { activeCategory: string, setActiveCategory: Dispatch<SetStateAction<string>> },
+  { setActiveCategory }: { setActiveCategory: Dispatch<SetStateAction<string>> },
 ) {
   const [data, setData] = useState<EngineerProject[]>([]);
   const [modalOpen, setModalOpen] = useState(false);
@@ -51,7 +50,7 @@ export default function Home(
         )}
       <Navbar setActiveCategory={setActiveCategory} />
       <Intro />
-      <Projects data={data} activeCategory={activeCategory} />
+      <Projects data={data} />
       <About />
       <Contact
         setModalOpen={setModalOpen}
