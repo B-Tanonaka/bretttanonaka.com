@@ -53,6 +53,14 @@
   margin: 0 5rem 0 1.5rem;
 }
 
+.navbar-dropdown {
+	background: none;
+  border: none;
+  font-size: 1rem;
+  padding-right: 0.5rem;
+  text-align: right;
+}
+
 .navbar-sections {
 	display: flex;
 	width: 80%;

@@ -15,11 +15,20 @@ import '../css/App.css';
 
 export default function App() {
   const [engProjectData, setEngProjectData] = useState<EngineerProject>(BlankProject);
+  const [activeCategory, setActiveCategory] = useState<string>('');
   return (
     <div className="app">
       <Router>
         <Routes>
-          <Route path="/" element={(<Home />)} />
+          <Route
+            path="/"
+            element={(
+              <Home
+                activeCategory={activeCategory}
+                setActiveCategory={setActiveCategory}
+              />
+            )}
+          />
           <Route
             path="/projects/:project-name"
             element={(

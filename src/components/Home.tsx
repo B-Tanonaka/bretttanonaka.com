@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react';
+import {
+  useState, useEffect, Dispatch, SetStateAction,
+} from 'react';
 import type { EngineerProject } from '../../interfaces';
 import Landing from './Landing';
 import Navbar from './Navbar';
@@ -10,7 +12,10 @@ import Background from './Background';
 import { fetchProjectData } from '../utils/fetchData';
 import '../css/Home.css';
 
-export default function Home() {
+export default function Home(
+  {activeCategory, setActiveCategory}:
+  { activeCategory: string, setActiveCategory: Dispatch<SetStateAction<string>> },
+) {
   const [data, setData] = useState<EngineerProject[]>([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalState, setModalState] = useState(true);
@@ -39,7 +44,7 @@ export default function Home() {
               : <Modal success={false} setModalOpen={setModalOpen} />}
           </div>
         )}
-      <Navbar />
+      <Navbar setActiveCategory={setActiveCategory} />
       <Landing />
       <Projects data={data} />
       <About />

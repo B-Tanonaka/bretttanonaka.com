@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import {
+  useState, Dispatch, SetStateAction,
+} from 'react';
 import { FaXmark, FaBars } from 'react-icons/fa6';
 import { Link } from 'react-scroll';
 import '../css/Navbar.css';
 
-export default function Navbar() {
+export default function Navbar(
+  { setActiveCategory }:
+  { setActiveCategory: Dispatch<SetStateAction<string>> },
+) {
   const [hamOpen, setHamOpen] = useState<boolean>(false);
   const [currentSection, setCurrentSection] = useState<string>('Engineering');
   const handleHamClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -11,9 +16,10 @@ export default function Navbar() {
     setHamOpen(!hamOpen);
   };
 
-  const handleSectionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleSectionChange = async (e: React.ChangeEvent<HTMLSelectElement>) => {
     e.preventDefault();
-    setCurrentSection(e.target.value);
+    await setCurrentSection(e.target.value);
+    await setActiveCategory(currentSection);
   };
 
   return (
@@ -21,7 +27,7 @@ export default function Navbar() {
       <div className="navbar-container">
         <a href="/" className="navbar-name">Brett Tanonaka</a>
         <div className="navbar-right-side">
-          <select value={currentSection} onChange={handleSectionChange}>
+          <select className="navbar-dropdown" value={currentSection} onChange={handleSectionChange}>
             <option value="Engineering">Engineering</option>
             <option value="Video Production">Video Production</option>
           </select>
