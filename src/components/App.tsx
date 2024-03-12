@@ -7,6 +7,7 @@ import {
   Routes,
 } from 'react-router-dom';
 import Home from './Home';
+import Landing from './Landing';
 import Error from './Error';
 import type { EngineerProject } from '../../interfaces';
 import { BlankProject } from '../../interfaces';
@@ -22,6 +23,10 @@ export default function App() {
         <Routes>
           <Route
             path="/"
+            element={(<Landing setActiveCategory={setActiveCategory} />)}
+          />
+          <Route
+            path="/engineer"
             element={(
               <Home
                 activeCategory={activeCategory}
@@ -30,7 +35,7 @@ export default function App() {
             )}
           />
           <Route
-            path="/projects/:project-name"
+            path="engineering/projects/:project-name"
             element={(
               <EngProjectDetails
                 projectData={engProjectData}

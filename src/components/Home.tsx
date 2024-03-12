@@ -2,7 +2,7 @@ import {
   useState, useEffect, Dispatch, SetStateAction,
 } from 'react';
 import type { EngineerProject } from '../../interfaces';
-import Landing from './Landing';
+import Intro from './Intro';
 import Navbar from './Navbar';
 import Projects from './Projects';
 import About from './About';
@@ -13,7 +13,7 @@ import { fetchProjectData } from '../utils/fetchData';
 import '../css/Home.css';
 
 export default function Home(
-  {activeCategory, setActiveCategory}:
+  { activeCategory, setActiveCategory }:
   { activeCategory: string, setActiveCategory: Dispatch<SetStateAction<string>> },
 ) {
   const [data, setData] = useState<EngineerProject[]>([]);
@@ -45,7 +45,7 @@ export default function Home(
           </div>
         )}
       <Navbar setActiveCategory={setActiveCategory} />
-      <Landing />
+      <Intro />
       <Projects data={data} />
       <About />
       <Contact
