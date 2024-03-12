@@ -25,7 +25,7 @@ export default function Home(
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await setActiveCategory(category!);
+        setActiveCategory(category!);
 
         const response = await fetchProjectData(category!);
         response.sort((a: EngineerProject, b: EngineerProject) => b.order - a.order);

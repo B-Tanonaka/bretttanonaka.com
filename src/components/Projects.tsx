@@ -4,8 +4,8 @@ import type { EngineerProject } from '../../interfaces';
 import '../css/Projects.css';
 
 export default function Projects(
-  { data, activeCategory }:
-  { data: EngineerProject[], activeCategory: string },
+  { data }:
+  { data: EngineerProject[] },
 ) {
   const [activeImage, setActiveImage] = useState<number>(-1);
   const [showImage, setShowImage] = useState<boolean>(false);
@@ -22,7 +22,7 @@ export default function Projects(
       }}
       />
       <Link
-        to={`${activeCategory}/projects/${project.ref}`}
+        to={`projects/${project.ref}`}
         className="project-title"
         key={index}
       >

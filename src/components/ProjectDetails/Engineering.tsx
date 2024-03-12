@@ -28,7 +28,7 @@ export default function EngProjectDetails({
   const [projectName, setProjectName] = useState<string>('');
 
   const navigate = useNavigate();
-  const match = useMatch('/engineer/projects/:projectLink');
+  const match = useMatch(':category/projects/:projectLink');
   // Exclamation point is used to indicate match is non-null
   const { projectLink } = match!.params;
 
@@ -67,7 +67,7 @@ export default function EngProjectDetails({
 
   return (
     <>
-      <Link to="/">
+      <Link to="/engineer">
         <input type="button" value="Home" className="back" />
       </Link>
       <div className="project-details">
