@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import type { EngineerProject, DataProp } from '../../interfaces';
+import type { EngineerProject } from '../../interfaces';
 import '../css/Projects.css';
 
-export default function Projects({ data }: DataProp) {
+export default function Projects(
+  { data, activeCategory }:
+  { data: EngineerProject[], activeCategory: string },
+) {
   const [activeImage, setActiveImage] = useState<number>(-1);
   const [showImage, setShowImage] = useState<boolean>(false);
   const renderList = (project: EngineerProject, index: number) => (
@@ -19,7 +22,7 @@ export default function Projects({ data }: DataProp) {
       }}
       />
       <Link
-        to={`/projects/${project.ref}`}
+        to={`${activeCategory}/projects/${project.ref}`}
         className="project-title"
         key={index}
       >

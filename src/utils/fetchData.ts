@@ -1,9 +1,9 @@
 import urlPath from './url';
 import { Form } from '../../interfaces';
 
-export async function fetchProjectData(endpoint?: string) {
+export async function fetchProjectData(param: string, endpoint?: string) {
   try {
-    const res = await fetch(urlPath('project-data', endpoint));
+    const res = await fetch(urlPath(param, 'project-data', endpoint));
     const response = await res.json();
     return response;
   } catch (err) {

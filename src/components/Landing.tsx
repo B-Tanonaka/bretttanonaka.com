@@ -4,7 +4,8 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function Landing(
-  { setActiveCategory}: Dispatch<SetStateAction<string>>,
+  { setActiveCategory }:
+  { setActiveCategory: Dispatch<SetStateAction<string>> },
 ) {
   return (
     <div className="home-container" id="home">
@@ -15,8 +16,16 @@ export default function Landing(
         <Link
           to="/engineer"
           className="project-title"
+          onClick={() => setActiveCategory('engineer')}
         >
           Engineering
+        </Link>
+        <Link
+          to="/video"
+          className="project-title"
+          onClick={() => setActiveCategory('video')}
+        >
+          Video Production
         </Link>
       </div>
     </div>

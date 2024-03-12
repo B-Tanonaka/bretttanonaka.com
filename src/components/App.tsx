@@ -17,6 +17,7 @@ import '../css/App.css';
 export default function App() {
   const [engProjectData, setEngProjectData] = useState<EngineerProject>(BlankProject);
   const [activeCategory, setActiveCategory] = useState<string>('');
+
   return (
     <div className="app">
       <Router>
@@ -26,7 +27,7 @@ export default function App() {
             element={(<Landing setActiveCategory={setActiveCategory} />)}
           />
           <Route
-            path="/engineer"
+            path="/:category"
             element={(
               <Home
                 activeCategory={activeCategory}
@@ -35,7 +36,7 @@ export default function App() {
             )}
           />
           <Route
-            path="engineering/projects/:project-name"
+            path="/:category/projects/:project-name"
             element={(
               <EngProjectDetails
                 projectData={engProjectData}
@@ -44,7 +45,7 @@ export default function App() {
             )}
           />
           <Route path="/404" element={<Error />} />
-          <Route path="*" element={<Navigate to="/404" replace />} />
+          {/* <Route path="*" element={<Navigate to="/404" replace />} /> */}
         </Routes>
       </Router>
     </div>

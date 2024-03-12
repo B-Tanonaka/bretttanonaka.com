@@ -28,7 +28,7 @@ export default function EngProjectDetails({
   const [projectName, setProjectName] = useState<string>('');
 
   const navigate = useNavigate();
-  const match = useMatch('/projects/:projectLink');
+  const match = useMatch('/engineer/projects/:projectLink');
   // Exclamation point is used to indicate match is non-null
   const { projectLink } = match!.params;
 
@@ -36,7 +36,7 @@ export default function EngProjectDetails({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetchProjectData(projectLink!);
+        const response = await fetchProjectData('engineer', projectLink!);
         if (response.ref) {
           setProjectData(response);
           setProjectName(projectLink!);

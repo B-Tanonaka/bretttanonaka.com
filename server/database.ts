@@ -15,7 +15,7 @@ const engineerSchema = new mongoose.Schema<EngineerProject>({
   ref: String,
   repo: String,
   banner: String,
-  images: [],
+  images: Object,
   order: Number,
   link: String,
 });
