@@ -10,11 +10,11 @@ import Home from './Home';
 import Error from './Error';
 import type { EngineerProject } from '../../interfaces';
 import { BlankProject } from '../../interfaces';
-import ProjectDetails from './ProjectDetails';
+import EngProjectDetails from './ProjectDetails/Engineering';
 import '../css/App.css';
 
 export default function App() {
-  const [projectData, setProjectData] = useState<EngineerProject>(BlankProject);
+  const [engProjectData, setEngProjectData] = useState<EngineerProject>(BlankProject);
   return (
     <div className="app">
       <Router>
@@ -23,9 +23,9 @@ export default function App() {
           <Route
             path="/projects/:project-name"
             element={(
-              <ProjectDetails
-                projectData={projectData}
-                setProjectData={setProjectData}
+              <EngProjectDetails
+                projectData={engProjectData}
+                setProjectData={setEngProjectData}
               />
             )}
           />

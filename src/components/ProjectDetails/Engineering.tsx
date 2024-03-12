@@ -7,23 +7,23 @@ import {
 import { Link, useMatch, useNavigate } from 'react-router-dom';
 import { FaArrowsTurnRight } from 'react-icons/fa6';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import type { Project } from '../../interfaces';
-import { fetchProjectData } from '../utils/fetchData';
-import dividerLine from '../utils/dividerLine';
-import LitterSort from './engineer/LitterSort';
-import Portfolio from './engineer/Portfolio';
-import Fitbook from './engineer/Fitbook';
-import Mevify from './engineer/Mevify';
-import WiredWardrobe from './engineer/WiredWardrobe';
-import '../css/ProjectDetails.css';
-import '../css/ProjectImages.css';
+import type { EngineerProject } from '../../../interfaces';
+import { fetchProjectData } from '../../utils/fetchData';
+import dividerLine from '../../utils/dividerLine';
+import LitterSort from '../engineer/LitterSort';
+import Portfolio from '../engineer/Portfolio';
+import Fitbook from '../engineer/Fitbook';
+import Mevify from '../engineer/Mevify';
+import WiredWardrobe from '../engineer/WiredWardrobe';
+import '../../css/ProjectDetails.css';
+import '../../css/ProjectImages.css';
 
-export default function ProjectDetails({
+export default function EngProjectDetails({
   projectData,
   setProjectData,
 }: {
-  projectData: Project,
-  setProjectData: Dispatch<SetStateAction<Project>>
+  projectData: EngineerProject,
+  setProjectData: Dispatch<SetStateAction<EngineerProject>>
 }) {
   const [projectName, setProjectName] = useState<string>('');
 
