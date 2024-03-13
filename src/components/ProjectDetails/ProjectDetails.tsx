@@ -5,10 +5,10 @@ import {
   SetStateAction,
 } from 'react';
 import { useMatch, useNavigate, useParams } from 'react-router-dom';
-import type { EngineerProject } from '../../../interfaces';
+import type { EngineerProject, VideoProject } from '../../../interfaces';
 import { fetchProjectData } from '../../utils/fetchData';
 import EngProjectDetails from './EngDetails';
-// import VideoProjectDetails from './VideoDetails';
+import VideoProjectDetails from './VideoDetails';
 import '../../css/ProjectDetails.css';
 import '../../css/ProjectImages.css';
 
@@ -16,8 +16,8 @@ export default function ProjectDetails({
   projectData,
   setProjectData,
 }: {
-  projectData: EngineerProject | null,
-  setProjectData: Dispatch<SetStateAction<EngineerProject | null>>
+  projectData: EngineerProject | VideoProject | null,
+  setProjectData: Dispatch<SetStateAction<EngineerProject | VideoProject | null>>
 }) {
   const [projectName, setProjectName] = useState<string>('');
 
@@ -61,18 +61,23 @@ export default function ProjectDetails({
   );
 
   return (
-    <>
-      <EngProjectDetails
-        projectName={projectName}
-        projectData={projectData}
-        renderList={renderList}
-        renderProjectImages={renderProjectImages}
-      />
-      {/* <VideoProjectDetails
-        projectData={projectData}
-        renderList={renderList}
-        renderProjectImages={renderProjectImages}
-      /> */}
-    </>
+    <div>
+      { category === 'engineer' ? (
+        <EngProjectDetails
+          projectName={projectName}
+          projectData={projectData}
+          renderList={renderList}
+          renderProjectImages={renderProjectImages}
+        />
+      )
+        : (
+          <VideoProjectDetails
+            projectName={projectName}
+            projectData={projectData}
+            renderList={renderList}
+            renderProjectImages={renderProjectImages}
+          />
+        )}
+    </div>
   );
 }
