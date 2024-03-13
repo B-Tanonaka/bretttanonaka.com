@@ -57,6 +57,8 @@ export type RenderPhotoList = (
   img: { src: string, alt: string }, key: number
 ) => JSX.Element;
 
+export type RenderList = (text: string, index: number) => JSX.Element;
+
 export type Form = {
   name: string;
   email: string;

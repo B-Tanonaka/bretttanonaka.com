@@ -1,14 +1,7 @@
-import {
-  useEffect,
-  useState,
-  Dispatch,
-  SetStateAction,
-} from 'react';
-import { Link, useMatch, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaArrowsTurnRight } from 'react-icons/fa6';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import type { EngineerProject } from '../../../interfaces';
-import { fetchProjectData } from '../../utils/fetchData';
+import type { EngineerProject, RenderList, RenderPhotoList } from '../../../interfaces';
 import dividerLine from '../../utils/dividerLine';
 import LitterSort from '../engineer/LitterSort';
 import Portfolio from '../engineer/Portfolio';
@@ -19,52 +12,16 @@ import '../../css/ProjectDetails.css';
 import '../../css/ProjectImages.css';
 
 export default function EngProjectDetails({
+  projectName,
   projectData,
-  setProjectData,
+  renderList,
+  renderProjectImages,
 }: {
+  projectName: string
   projectData: EngineerProject | null,
-  setProjectData: Dispatch<SetStateAction<EngineerProject | null>>
+  renderList: RenderList,
+  renderProjectImages: RenderPhotoList
 }) {
-  const [projectName, setProjectName] = useState<string>('');
-
-  const navigate = useNavigate();
-  const match = useMatch('engineer/projects/:projectLink');
-  // Exclamation point is used to indicate match is non-null
-  const { projectLink } = match!.params;
-
-  // API call for data of the selected project
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetchProjectData('engineer', projectLink!);
-        if (response.ref) {
-          setProjectData(response);
-          setProjectName(projectLink!);
-        } else {
-          throw new Error('Failed to receive data');
-        }
-      } catch (err) {
-        navigate('/404', { replace: true });
-      }
-    };
-    fetchData();
-  }, [projectName, setProjectData, projectLink, navigate]);
-
-  // Render list of tech stack
-  const renderList = (text: string, index: number) => (
-    <div className="list-items" key={index}>{text}</div>
-  );
-
-  // Child component function to render each of the images
-  const renderProjectImages = (img: { src: string, alt: string }, key: number) => (
-    <img
-      src={img.src}
-      alt={img.alt}
-      key={key}
-      className="image-wrapper"
-    />
-  );
-
   return (
     <>
       <Link to="/engineer">

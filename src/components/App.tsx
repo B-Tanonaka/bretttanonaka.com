@@ -14,6 +14,7 @@ import type { EngineerProject, VideoProject } from '../../interfaces';
 import EngProjectDetails from './ProjectDetails/EngDetails';
 import VideoProjectDetails from './ProjectDetails/VideoDetails';
 import '../css/App.css';
+import ProjectDetails from './ProjectDetails/ProjectDetails';
 
 export default function App() {
   const [engProjectData, setEngProjectData] = useState<EngineerProject | null>(null);
@@ -34,15 +35,15 @@ export default function App() {
             )}
           />
           <Route
-            path="/engineer/projects/:project-name"
+            path="/:category/projects/:project-name"
             element={(
-              <EngProjectDetails
+              <ProjectDetails
                 projectData={engProjectData}
                 setProjectData={setEngProjectData}
               />
             )}
           />
-          <Route
+          {/* <Route
             path="/video/projects/:project-name"
             element={(
               <VideoProjectDetails
@@ -50,7 +51,7 @@ export default function App() {
                 setProjectData={setVideoProjectData}
               />
             )}
-          />
+          /> */}
           <Route path="/404" element={<Error />} />
           <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
