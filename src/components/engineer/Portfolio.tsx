@@ -3,7 +3,7 @@ import type { EngineerProject, RenderPhotoList } from '../../../interfaces';
 
 export default function Portfolio(
   { projectData, renderProjectImages } :
-  { projectData: EngineerProject, renderProjectImages: RenderPhotoList },
+  { projectData: EngineerProject | null, renderProjectImages: RenderPhotoList },
 ) {
   // Scroll to top of page upon load
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function Portfolio(
     <div className="image-details-container">
       <h3>Original Design in Figma</h3>
       <div className="image-wrapper">
-        { projectData.images.figma.map(
+        { projectData!.images.figma.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key),
         ) }
       </div>
