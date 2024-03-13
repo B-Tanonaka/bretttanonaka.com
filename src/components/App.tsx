@@ -11,8 +11,8 @@ import Landing from './Landing';
 import Error from './Error';
 import type { EngineerProject, VideoProject } from '../../interfaces';
 // import { BlankEngProject } from '../../interfaces';
-import EngProjectDetails from './ProjectDetails/Engineering';
-import VideoProjectDetails from './ProjectDetails/Video';
+import EngProjectDetails from './ProjectDetails/EngDetails';
+import VideoProjectDetails from './ProjectDetails/VideoDetails';
 import '../css/App.css';
 
 export default function App() {
@@ -34,7 +34,7 @@ export default function App() {
             )}
           />
           <Route
-            path="/:category/projects/:project-name"
+            path="/engineer/projects/:project-name"
             element={(
               <EngProjectDetails
                 projectData={engProjectData}
@@ -43,16 +43,16 @@ export default function App() {
             )}
           />
           <Route
-            path="/:category/projects/:project-name"
+            path="/video/projects/:project-name"
             element={(
               <VideoProjectDetails
-                projectData={engProjectData}
-                setProjectData={setEngProjectData}
+                projectData={videoProjectData}
+                setProjectData={setVideoProjectData}
               />
             )}
           />
           <Route path="/404" element={<Error />} />
-          {/* <Route path="*" element={<Navigate to="/404" replace />} /> */}
+          <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
       </Router>
     </div>
