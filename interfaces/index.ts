@@ -27,6 +27,8 @@ export type VideoProject = {
   order: number;
 };
 
+export type Project = VideoProject | EngineerProject;
+
 export type AboutData = {
   engineer: {
     about: string,

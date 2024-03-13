@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { FaArrowsTurnRight } from 'react-icons/fa6';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import type {
-  EngineerProject, RenderList, RenderPhotoList,
+  Project, RenderList, RenderPhotoList,
 } from '../../../interfaces';
 import dividerLine from '../../utils/dividerLine';
 import LitterSort from '../engineer/LitterSort';
@@ -20,64 +20,66 @@ export default function EngProjectDetails({
   renderProjectImages,
 }: {
   projectName: string
-  projectData: EngineerProject | null,
+  projectData: Project | null,
   renderList: RenderList,
   renderProjectImages: RenderPhotoList
 }) {
-  return (
-    <>
-      <Link to="/engineer">
-        <input type="button" value="Home" className="back" />
-      </Link>
-      { projectData && (
-      <div className="project-details">
-        <div className="left-side">
-          <p>{projectData.description}</p>
-          <a href={projectData.repo} target="_blank" rel="noopener noreferrer">
-            <span className="repo-link">repo  </span>
-            <FaArrowsTurnRight />
-          </a>
-          { projectData.link && (
-          <a href={projectData.link} target="_blank" rel="noopener noreferrer">
-            <span className="repo-link">live link  </span>
-            <FaExternalLinkAlt />
-          </a>
+  if ('repo' in projectData!) {
+    return (
+      <>
+        <Link to="/engineer">
+          <input type="button" value="Home" className="back" />
+        </Link>
+        { projectData && (
+        <div className="project-details">
+          <div className="left-side">
+            <p>{projectData.description}</p>
+            <a href={projectData.repo} target="_blank" rel="noopener noreferrer">
+              <span className="repo-link">repo  </span>
+              <FaArrowsTurnRight />
+            </a>
+            { projectData.link && (
+            <a href={projectData.link} target="_blank" rel="noopener noreferrer">
+              <span className="repo-link">live link  </span>
+              <FaExternalLinkAlt />
+            </a>
+            )}
+          </div>
+          <div className="right-side">
+            <h2>{projectData.name}</h2>
+            <div className="project-year">{projectData.year}</div>
+            { dividerLine }
+            { projectData.role.map((role: string, key: number) => renderList(role, key)) }
+            { dividerLine }
+            { projectData.techStack.map(
+              (framework: string, key: number) => renderList(framework, key),
+            ) }
+          </div>
+          <div className="project-background" />
+        </div>
+        )}
+        {/* Render only the selected project */}
+        { projectName === 'littersort'
+          && (
+          <LitterSort projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
-        </div>
-        <div className="right-side">
-          <h2>{projectData.name}</h2>
-          <div className="project-year">{projectData.year}</div>
-          { dividerLine }
-          { projectData.role.map((role: string, key: number) => renderList(role, key)) }
-          { dividerLine }
-          { projectData.techStack.map(
-            (framework: string, key: number) => renderList(framework, key),
-          ) }
-        </div>
-        <div className="project-background" />
-      </div>
-      )}
-      {/* Render only the selected project */}
-      { projectName === 'littersort'
-        && (
-        <LitterSort projectData={projectData} renderProjectImages={renderProjectImages} />
-        )}
-      { projectName === 'portfolio'
-        && (
-        <Portfolio projectData={projectData} renderProjectImages={renderProjectImages} />
-        )}
-      { projectName === 'fitbook'
-        && (
-        <Fitbook projectData={projectData} renderProjectImages={renderProjectImages} />
-        )}
-      { projectName === 'mevify'
-        && (
-        <Mevify projectData={projectData} renderProjectImages={renderProjectImages} />
-        )}
-      { projectName === 'wired-wardrobe'
-        && (
-        <WiredWardrobe projectData={projectData} renderProjectImages={renderProjectImages} />
-        )}
-    </>
-  );
+        { projectName === 'portfolio'
+          && (
+          <Portfolio projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+        { projectName === 'fitbook'
+          && (
+          <Fitbook projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+        { projectName === 'mevify'
+          && (
+          <Mevify projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+        { projectName === 'wired-wardrobe'
+          && (
+          <WiredWardrobe projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+      </>
+    );
+  }
 }
