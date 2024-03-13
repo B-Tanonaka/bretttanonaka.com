@@ -10,7 +10,6 @@ import { fetchProjectData } from '../../utils/fetchData';
 import EngProjectDetails from './EngDetails';
 import VideoProjectDetails from './VideoDetails';
 import '../../css/ProjectDetails.css';
-import '../../css/ProjectImages.css';
 
 export default function ProjectDetails({
   projectData,
@@ -51,12 +50,14 @@ export default function ProjectDetails({
   );
 
   // Child component function to render each of the images
-  const renderProjectImages = (img: { src: string, alt: string }, key: number) => (
+  const renderProjectImages = (img: {
+    src: string, alt: string
+  }, key: number, className: string) => (
     <img
       src={img.src}
       alt={img.alt}
       key={key}
-      className="image-wrapper"
+      className={className}
     />
   );
 

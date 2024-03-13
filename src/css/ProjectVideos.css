@@ -1,53 +1,50 @@
 /**** Project individual images ****/
-.image-details-container {
+.details-container {
   width: 100%;
-  height: 100%;
+  height: 100dvh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+  justify-content: center;
 	background-color: var(--white-color);
 	background-image: var(--grain-bg);
 }
 
-.image-details-container h3 {
+.details-container h3 {
 	background-color: var(--gray3-color);
 	color: var(--white-color);
 	padding: 1rem 2rem;
 	z-index: 3;
 }
 
+.full-video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.full-video h4 {
+  width: auto;
+	background-color: var(--white-color);
+	color: var(--main-text);
+	padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
 .image-wrapper {
-	width: 80%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 1rem;
-	z-index: 2;
+  width: 50%;
 }
 
-.image-wrapper-phone {
-	display: flex;
-	justify-content: center;
-	padding: 1rem;
-	width: 20%;
-}
-
-.phone-image {
-	height: 20%;
-	width: 20%;
-	padding: 1rem;
-	z-index: 2;
-}
-
-.large-image {
-	margin: 3rem;
-	box-shadow: 0.25em 0.25em .75em -.5em var(--shadow-color);
-	z-index: 3;
-}
-
-.subtitle {
-	font-size: 1rem;
-	padding: 1rem;
+/* LinkedIn */
+.li-image-posts {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  z-index: 2;
 }
 
 /* Phones */

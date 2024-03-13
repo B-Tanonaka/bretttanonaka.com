@@ -3,8 +3,8 @@ import type {
   RenderList, RenderPhotoList, Project,
 } from '../../../interfaces';
 import dividerLine from '../../utils/dividerLine';
+import LinkedInInfluencer from '../video/LinkedInInfluencer';
 import '../../css/ProjectDetails.css';
-import '../../css/ProjectImages.css';
 
 export default function VideoProjectDetails({
   projectName,
@@ -17,7 +17,7 @@ export default function VideoProjectDetails({
   renderList: RenderList,
   renderProjectImages: RenderPhotoList
 }) {
-  if ('videos' in projectData!) {
+  if (projectData && 'videos' in projectData!) {
     return (
       <>
         <Link to="/video">
@@ -26,10 +26,20 @@ export default function VideoProjectDetails({
         { projectData && (
         <div className="project-details">
           <div className="left-side">
-            <p>{projectData!.description}</p>
+            <p>{projectData!.description.partOne}</p>
+            {/* If description needs a line break */}
+            { projectData!.description.partTwo
+            && (
+              <>
+                <br />
+                <p>{projectData!.description.partTwo}</p>
+              </>
+            )}
           </div>
           <div className="right-side">
             <h2>{projectData!.name}</h2>
+            {/* If project is for a company */}
+            { projectData!.company && <h3>{projectData!.company}</h3>}
             <div className="project-year">{projectData!.year}</div>
             { dividerLine }
             { projectData!.role.map((role: string, key: number) => renderList(role, key)) }
@@ -42,6 +52,10 @@ export default function VideoProjectDetails({
         </div>
         )}
         {/* Render only the selected project */}
+        { projectName === 'linkedininfluencer'
+          && (
+          <LinkedInInfluencer projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
       </>
     );
   }

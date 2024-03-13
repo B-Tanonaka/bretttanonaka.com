@@ -10,7 +10,6 @@ import Portfolio from '../engineer/Portfolio';
 import Fitbook from '../engineer/Fitbook';
 import Mevify from '../engineer/Mevify';
 import WiredWardrobe from '../engineer/WiredWardrobe';
-import '../../css/ProjectDetails.css';
 import '../../css/ProjectImages.css';
 
 export default function EngProjectDetails({
@@ -24,7 +23,7 @@ export default function EngProjectDetails({
   renderList: RenderList,
   renderProjectImages: RenderPhotoList
 }) {
-  if ('repo' in projectData!) {
+  if (projectData && 'repo' in projectData!) {
     return (
       <>
         <Link to="/engineer">

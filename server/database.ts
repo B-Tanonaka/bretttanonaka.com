@@ -24,13 +24,15 @@ const engineerSchema = new mongoose.Schema<EngineerProject>({
 
 const videoSchema = new mongoose.Schema<VideoProject>({
   name: String,
+  company: String,
   year: String,
   role: [],
-  description: String,
+  description: Object,
   techStack: [],
   ref: String,
   banner: String,
-  images: [],
+  images: Object,
+  videos: Object,
   order: Number,
 });
 

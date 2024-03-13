@@ -15,15 +15,16 @@ export type EngineerProject = {
 
 export type VideoProject = {
   _id: string;
+  company: string;
   name: string;
   year: string;
   role: string[];
-  description: string;
+  description: { partOne: string, partTwo: string };
   techStack: string[];
   ref: string;
   banner: string;
-  images: { [key: string]: { src: string, alt: string }[] };
-  video: { [key: string]: { src: string, alt: string }[] };
+  images: { [key: string]: { src: string, alt: string } };
+  videos: { [key: string]: { link: string, blurb: string } };
   order: number;
 };
 
@@ -56,7 +57,7 @@ export type AboutInfo = {
 };
 
 export type RenderPhotoList = (
-  img: { src: string, alt: string }, key: number
+  img: { src: string, alt: string }, key: number, className: string
 ) => JSX.Element;
 
 export type RenderList = (text: string, index: number) => JSX.Element;
