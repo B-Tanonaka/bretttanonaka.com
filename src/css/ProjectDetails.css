@@ -109,14 +109,14 @@
 @media (max-width: 600px) {
 	.left-side {
 		width: 80%;
-		margin-bottom: 25%;
-		margin-left: 0;
+    height: auto;
+		margin: 30% 0 10% 0;
 	}
 
 	.right-side {
 		text-align: center;
 		margin-right: 0;
-		margin-top: 20%;
+		margin-top: 25%;
 	}
 
 	.image-container {
@@ -124,6 +124,7 @@
 	}
 
 	.project-details {
+    height: auto;
 		flex-direction: column-reverse;
 		justify-content: space-between;
     overflow: hidden;
@@ -137,7 +138,7 @@
 		height: 100vh;
 		width: 100vh;
 		left: 50%;
-		top: 10%;
+		top: 13%;
 		transform: translate(-50%, -50%);
 	}
 
@@ -155,6 +156,12 @@
 	}
 }
 
+@media (min-width: 400px) and (max-width: 599px) {
+	.project-background {
+		top: 7%;
+	}
+}
+
 
 /* Portrait tablets and large phones */
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -168,7 +175,7 @@
 	}
 
 	.right-side {
-		width: 32%;
+		width: 30%;
 		margin-right: 5%;
 	}
 
