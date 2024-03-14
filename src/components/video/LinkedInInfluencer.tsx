@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
-import ReactPlayer from 'react-player/lazy';
 import VideoWithBlurb from '../VideoWithBlurb';
+import Carousel from '../Carousel';
 import type { VideoProject, RenderPhotoList } from '../../../interfaces';
-import '../../css/ProjectVideos.css';
 import '../../css/ProjectImages.css';
 
 export default function LinkedInInfluencer(
@@ -13,6 +12,7 @@ export default function LinkedInInfluencer(
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
+  console.log('images: ', projectData!.images.company);
 
   return (
     <div className="details-container">
@@ -39,6 +39,9 @@ export default function LinkedInInfluencer(
           info={projectData!.videos.stanford}
           className="video-2-col"
         />
+      </div>
+      <div className="carousel-wrapper carousel-li-companies">
+        <Carousel images={projectData!.images.company} />
       </div>
     </div>
   );

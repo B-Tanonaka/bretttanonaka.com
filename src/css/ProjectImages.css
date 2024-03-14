@@ -50,6 +50,20 @@
 	padding: 1rem;
 }
 
+.carousel-wrapper {
+  margin-bottom: 4rem;
+}
+
+.carousel-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Single projects */
+.carousel-li-companies {
+  width: 50%;
+}
+
 /* Phones */
 @media (max-width: 600px) {
   .image-wrapper {

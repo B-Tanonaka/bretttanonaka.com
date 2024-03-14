@@ -68,6 +68,11 @@ export type Form = {
   message: string;
 };
 
+export type Image = {
+  src: string;
+  alt: string;
+};
+
 export const BlankAboutData = {
   engineer: {
     about: '',
