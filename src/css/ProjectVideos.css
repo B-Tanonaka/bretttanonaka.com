@@ -25,13 +25,6 @@
   border-radius: 0 0 1rem 1rem;
 }
 
-.video-container {
-  width: 80%;
-  height: 100%;
-  z-index: 1;
-  margin-bottom: 4rem;
-}
-
 .single-video {
   width: 100%;
   height: 100%;
@@ -39,25 +32,25 @@
   padding-top: 56.25%;
 }
 
-.two-video {
+.video-2-col {
+  width: 45%;
+  height: 45%;
+}
+
+.one-video-container {
+  width: 80%;
+  height: 100%;
+  z-index: 1;
+  margin-bottom: 4rem;
+}
+
+.two-video-container {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-around;
   margin-bottom: 4rem;
   z-index: 1;
-}
-
-.stanford-video {
-  width: ma
-}
-
-.video-with-blurb {
-  width: 45%;
-  height: 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .react-player {
@@ -82,6 +75,7 @@
   align-items: start;
   justify-content: center;
   z-index: 2;
+  margin-bottom: 4rem;
 }
 
 /* Phones */

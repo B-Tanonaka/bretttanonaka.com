@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
-import ReactPlayer from 'react-player/lazy'
+import ReactPlayer from 'react-player/lazy';
+import VideoWithBlurb from '../VideoWithBlurb';
 import type { VideoProject, RenderPhotoList } from '../../../interfaces';
 import '../../css/ProjectVideos.css';
 import '../../css/ProjectImages.css';
@@ -13,30 +14,14 @@ export default function LinkedInInfluencer(
   //   window.scrollTo(0, 0);
   // }, []);
 
-  const config = {
-    vimeo: {
-      playerOptions: {
-        autoplay: false,
-        loop: false,
-        controls: true,
-      },
-    },
-  };
-
   return (
     <div className="details-container">
       {/* Main video */}
-      <div className="video-container">
-        <div className="single-video">
-          <ReactPlayer
-            url={projectData!.videos.kindness.link}
-            className="react-player"
-            width="100%"
-            height="100%"
-            config={config}
-          />
-        </div>
-        <h4>{projectData!.videos.kindness.blurb}</h4>
+      <div className="one-video-container">
+        <VideoWithBlurb
+          info={projectData!.videos.kindness}
+          className=""
+        />
       </div>
       {/* LinkedIn posts */}
       <div className="li-image-posts">
@@ -45,31 +30,15 @@ export default function LinkedInInfluencer(
         )}
       </div>
       {/* Main video */}
-      <div className="two-video">
-        <div className="video-with-blurb">
-          <div className="single-video">
-            <ReactPlayer
-              url={projectData!.videos.future.link}
-              className="react-player"
-              width="100%"
-              height="100%"
-              config={config}
-            />
-          </div>
-          <h4>{projectData!.videos.future.blurb}</h4>
-        </div>
-        <div className="video-with-blurb">
-          <div className="single-video stanford-video">
-            <ReactPlayer
-              url={projectData!.videos.stanford.link}
-              className="react-player"
-              width="100%"
-              height="100%"
-              config={config}
-            />
-          </div>
-          <h4>{projectData!.videos.stanford.blurb}</h4>
-        </div>
+      <div className="two-video-container">
+        <VideoWithBlurb
+          info={projectData!.videos.future}
+          className="video-2-col"
+        />
+        <VideoWithBlurb
+          info={projectData!.videos.stanford}
+          className="video-2-col"
+        />
       </div>
     </div>
   );
