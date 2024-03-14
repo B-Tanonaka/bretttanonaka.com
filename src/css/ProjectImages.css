@@ -77,7 +77,8 @@
 	display: flex;
 	justify-content: center;
 	padding: 1rem;
-	width: 20%;
+	width: 80%;
+  z-index: 1;
 }
 
 .phone-image {
@@ -110,6 +111,12 @@
 /* Single projects */
 .carousel-li-companies {
   width: 80%;
+}
+
+.fb-profile {
+  display: flex;
+  flex-wrap: wrap;
+  height: 10%;
 }
 
 /* Phones */
