@@ -16,6 +16,32 @@
 	z-index: 3;
 }
 
+.image-2-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.image-2-col {
+  width: 25%;
+  margin: 0 2rem;
+}
+
+.image-3-container {
+  width: 80%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  z-index: 2;
+  margin-bottom: 4rem;
+}
+
+.image-3-col {
+  width: 30%;
+  margin: 0 2rem;
+}
+
 .image-wrapper {
 	width: 80%;
 	display: flex;
