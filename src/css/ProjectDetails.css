@@ -156,12 +156,17 @@
 	}
 }
 
-@media (min-width: 400px) and (max-width: 599px) {
+@media (min-width: 400px) and (max-width: 539px) {
 	.project-background {
 		top: 7%;
 	}
 }
 
+@media (min-width: 540px) and (max-width: 600px) {
+	.project-background {
+		top: 20%;
+	}
+}
 
 /* Portrait tablets and large phones */
 @media (min-width: 601px) and (max-width: 1024px) {
