@@ -1,35 +1,3 @@
-export type EngineerProject = {
-  _id: string;
-  name: string;
-  role: string[];
-  year: number;
-  description: string;
-  techStack: string[];
-  ref: string;
-  repo: string;
-  banner: string;
-  images: { [key: string]: { src: string, alt: string }[] };
-  order: number;
-  link: string;
-};
-
-export type VideoProject = {
-  _id: string;
-  company: string;
-  name: string;
-  year: string;
-  role: string[];
-  description: { partOne: string, partTwo: string };
-  techStack: string[];
-  ref: string;
-  banner: string;
-  images: { [key: string]: { src: string, alt: string }[] };
-  videos: { [key: string]: { link: string, blurb: string } };
-  order: number;
-};
-
-export type Project = VideoProject | EngineerProject;
-
 export type AboutData = {
   engineer: {
     about: string,
@@ -71,7 +39,40 @@ export type Form = {
 export type Image = {
   src: string;
   alt: string;
+  desc: string;
 };
+
+export type EngineerProject = {
+  _id: string;
+  name: string;
+  role: string[];
+  year: number;
+  description: string;
+  techStack: string[];
+  ref: string;
+  repo: string;
+  banner: string;
+  images: { [key: string]: { src: string, alt: string }[] };
+  order: number;
+  link: string;
+};
+
+export type VideoProject = {
+  _id: string;
+  company: string;
+  name: string;
+  year: string;
+  role: string[];
+  description: { partOne: string, partTwo: string };
+  techStack: string[];
+  ref: string;
+  banner: string;
+  images: { [key: string]: { [key: string]: Image } } & { [key: string]: Image[] };
+  videos: { [key: string]: { link: string, blurb: string } };
+  order: number;
+};
+
+export type Project = VideoProject | EngineerProject;
 
 export const BlankAboutData = {
   engineer: {

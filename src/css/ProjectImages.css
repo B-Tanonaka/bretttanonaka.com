@@ -24,8 +24,15 @@
 }
 
 .image-2-col {
-  width: 25%;
-  margin: 0 2rem;
+  width: 49%;
+}
+
+.image-2-col-left {
+  margin-right: 1rem;
+}
+
+.image-2-col-right {
+  margin-left: 1rem;
 }
 
 .image-3-container {
@@ -87,7 +94,7 @@
 
 /* Single projects */
 .carousel-li-companies {
-  width: 50%;
+  width: 80%;
 }
 
 /* Phones */

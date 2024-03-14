@@ -13,6 +13,8 @@ export default function LinkedInInfluencer(
   //   window.scrollTo(0, 0);
   // }, []);
 
+  console.log('proj: ', projectData);
+
   return (
     <div className="details-container">
       {/* Main video */}
@@ -45,15 +47,25 @@ export default function LinkedInInfluencer(
       </div>
       <div className="image-2-container">
         <img
-          className="image-2-col"
-          src={projectData!.images.gifs[0].src}
-          alt={projectData!.images.gifs[0].alt}
+          className="image-2-col image-2-col-left"
+          src={projectData!.images.gifs.shopping.src}
+          alt={projectData!.images.gifs.shopping.alt}
         />
         <img
-          className="image-2-col"
-          src={projectData!.images.gifs[1].src}
-          alt={projectData!.images.gifs[1].alt}
+          className="image-2-col image-2-col-right"
+          src={projectData!.images.gifs.amazon.src}
+          alt={projectData!.images.gifs.amazon.alt}
         />
+      </div>
+      <div className="image-3-quarter-container">
+        <img
+          className="image-3-quarter-col"
+          src={projectData!.images.gifs.attc.src}
+          alt={projectData!.images.gifs.attc.alt}
+        />
+        <h2>
+          {projectData!.images.gifs.attc.desc}
+        </h2>
       </div>
     </div>
   );
