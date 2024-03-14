@@ -20,7 +20,7 @@
   width: 80%;
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .image-2-col {
@@ -47,6 +47,21 @@
 .image-3-col {
   width: 30%;
   margin: 0 2rem;
+}
+
+.image-3-quarter-container {
+  width: 80%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin-bottom: 4rem;
+}
+
+.image-3-quarter-col {
+  width: 70%;
+  margin-right: 2rem;
 }
 
 .image-wrapper {
