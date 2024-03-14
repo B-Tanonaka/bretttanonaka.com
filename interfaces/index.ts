@@ -23,7 +23,7 @@ export type VideoProject = {
   techStack: string[];
   ref: string;
   banner: string;
-  images: { [key: string]: { src: string, alt: string } };
+  images: { [key: string]: { src: string, alt: string }[] };
   videos: { [key: string]: { link: string, blurb: string } };
   order: number;
 };

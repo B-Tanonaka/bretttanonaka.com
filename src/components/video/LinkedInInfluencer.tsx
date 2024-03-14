@@ -25,19 +25,51 @@ export default function LinkedInInfluencer(
 
   return (
     <div className="details-container">
-      <div className="full-video">
-        <ReactPlayer
-          url={projectData!.videos.kindness.link}
-          width="100%"
-          height="100%"
-          config={config}
-        />
-        <h4>Episode 4 - Kindness is a Choice | Role: Editor & Producer</h4>
+      {/* Main video */}
+      <div className="video-container">
+        <div className="single-video">
+          <ReactPlayer
+            url={projectData!.videos.kindness.link}
+            className="react-player"
+            width="100%"
+            height="100%"
+            config={config}
+          />
+        </div>
+        <h4>{projectData!.videos.kindness.blurb}</h4>
       </div>
+      {/* LinkedIn posts */}
       <div className="li-image-posts">
         { projectData!.images.linkedin.map(
           (img, key) => renderProjectImages(img, key, 'li-post'),
         )}
+      </div>
+      {/* Main video */}
+      <div className="two-video">
+        <div className="video-with-blurb">
+          <div className="single-video">
+            <ReactPlayer
+              url={projectData!.videos.future.link}
+              className="react-player"
+              width="100%"
+              height="100%"
+              config={config}
+            />
+          </div>
+          <h4>{projectData!.videos.future.blurb}</h4>
+        </div>
+        <div className="video-with-blurb">
+          <div className="single-video stanford-video">
+            <ReactPlayer
+              url={projectData!.videos.stanford.link}
+              className="react-player"
+              width="100%"
+              height="100%"
+              config={config}
+            />
+          </div>
+          <h4>{projectData!.videos.stanford.blurb}</h4>
+        </div>
       </div>
     </div>
   );
