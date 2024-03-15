@@ -2,8 +2,8 @@ import ReactPlayer from 'react-player/lazy';
 import '../css/ProjectVideos.css';
 
 export default function VideoWithBlurb(
-  { info, className }:
-  { className: string, info: { link: string, blurb: string } },
+  { info, contClassName, className }:
+  { info: { link: string, blurb: string }, contClassName: string, className: string },
 ) {
   const config = {
     vimeo: {
@@ -16,8 +16,8 @@ export default function VideoWithBlurb(
   };
 
   return (
-    <div className={className}>
-      <div className="single-video">
+    <div className={contClassName}>
+      <div className={className}>
         <ReactPlayer
           url={info.link}
           className="react-player"

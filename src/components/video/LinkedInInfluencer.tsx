@@ -19,7 +19,8 @@ export default function LinkedInInfluencer(
       <div className="video-1-container">
         <VideoWithBlurb
           info={projectData!.videos.kindness}
-          className=""
+          contClassName=""
+          className="single-video"
         />
       </div>
       {/* LinkedIn posts */}
@@ -32,11 +33,13 @@ export default function LinkedInInfluencer(
       <div className="video-2-container">
         <VideoWithBlurb
           info={projectData!.videos.future}
-          className="video-2-col video-2-col-left"
+          contClassName="video-2-col video-2-col-left"
+          className="single-video"
         />
         <VideoWithBlurb
           info={projectData!.videos.stanford}
-          className="video-2-col video-2-col-right"
+          contClassName="video-2-col video-2-col-right"
+          className="single-video"
         />
       </div>
       {/* Company image carousel */}
@@ -69,7 +72,8 @@ export default function LinkedInInfluencer(
       <div className="video-1-container">
         <VideoWithBlurb
           info={projectData!.videos.office}
-          className=""
+          contClassName=""
+          className="single-video"
         />
       </div>
     </div>
