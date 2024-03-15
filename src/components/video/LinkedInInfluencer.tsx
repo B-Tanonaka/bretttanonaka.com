@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import VideoWithBlurb from '../VideoWithBlurb';
 import Carousel from '../Carousel';
 import type { VideoProject, RenderPhotoList } from '../../../interfaces';
-import '../../css/ProjectImages.css';
 
 export default function LinkedInInfluencer(
   { projectData, renderProjectImages } :

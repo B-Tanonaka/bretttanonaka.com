@@ -10,7 +10,6 @@ import Portfolio from '../engineer/Portfolio';
 import Fitbook from '../engineer/Fitbook';
 import Mevify from '../engineer/Mevify';
 import WiredWardrobe from '../engineer/WiredWardrobe';
-import '../../css/ProjectImages.css';
 
 export default function EngProjectDetails({
   projectName,

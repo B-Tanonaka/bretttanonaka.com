@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import VideoWithBlurb from '../VideoWithBlurb';
 import type { VideoProject, RenderPhotoList } from '../../../interfaces';
-import '../../css/ProjectImages.css';
 
 export default function GoingPublic(
   { projectData, renderProjectImages } :

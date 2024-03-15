@@ -39,6 +39,8 @@
   border-radius: 0 0 1rem 1rem;
 }
 
+/**** Videos ****/
+
 .single-video {
   width: 100%;
   height: 100%;
@@ -89,8 +91,157 @@
   left: 0;
 }
 
+/**** Images ****/
+.image-2-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.image-2-col {
+  width: 49%;
+}
+
+.image-2-col-left {
+  margin-right: 1rem;
+}
+
+.image-2-col-right {
+  margin-left: 1rem;
+}
+
+.image-3-container {
+  width: 80%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  z-index: 2;
+  margin-bottom: 4rem;
+}
+
+.image-3-col {
+  width: 30%;
+  margin: 0 2rem;
+}
+
+.image-3-quarter-container {
+  width: 80%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin-bottom: 4rem;
+}
+
+.image-3-quarter-col {
+  width: 70%;
+  margin-right: 2rem;
+}
+
+.image-3-col-2-row-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.image-3-col-2-row {
+  width: 32%;
+  margin-bottom: 2rem;
+}
+
 .image-wrapper {
-  width: 50%;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	z-index: 2;
+}
+
+.image-wrapper-phone {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+	width: 80%;
+  z-index: 1;
+}
+
+.desktop-image {
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.phone-image {
+	height: 20%;
+	width: 20%;
+	padding: 1rem;
+	z-index: 2;
+}
+
+.large-image {
+	margin: 3rem;
+	box-shadow: 0.25em 0.25em .75em -.5em var(--shadow-color);
+	z-index: 3;
+}
+
+.subtitle {
+	font-size: 1rem;
+	padding: 1rem;
+}
+
+.carousel-wrapper {
+  margin-bottom: 4rem;
+}
+
+.carousel-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Single projects */
+.carousel-li-companies {
+  width: 80%;
+}
+
+.fb-profile {
+  display: flex;
+  flex-wrap: wrap;
+  height: 10%;
+}
+
+.nasdaq-image-container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.nasdaq-image-wrapper {
+  width: 55%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.nasdaq-image-wrapper h2 {
+  line-height: 1.5;
+}
+
+.nasdaq-framework {
+  width: 40%;
+  height: auto;
+}
+
+.nasdaq-board {
+  width: 100%;
+  height: auto;
 }
 
 /* Phones */
@@ -123,21 +274,60 @@
   .image-2-col-right {
     margin: 1rem 0;
   }
+
+  .image-wrapper {
+    width: 90%;
+  }
+	.image-wrapper-phone {
+		width: 100%;
+    flex-wrap: wrap;
+	}
+
+  .phone-image {
+		width: 27%;
+	}
 }
 
 /* Portrait tablets and large phones */
 @media (min-width: 501px) and (max-width: 1024px) {
-  .details-container h2 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-  }
-
   .details-container h4 {
     font-size: 1.3rem;
   }
 
   .image-3-col {
     margin: 0 1rem;
+  }
+
+  .image-3-quarter-container h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .image-wrapper {
+    width: 90%;
+  }
+
+	.image-wrapper-phone {
+		width: 100%;
+    flex-wrap: wrap;
+	}
+
+  .nasdaq-image-wrapper {
+    width: 49%;
+    align-items: flex-start;
+  }
+
+  .nasdaq-image-wrapper h2 {
+    width: 90%;
+    height: 45%;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1;
+  }
+
+  .nasdaq-framework {
+    width: 47%;
+    height: 100%;
   }
 }
 
