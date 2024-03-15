@@ -68,7 +68,7 @@ export type VideoProject = {
   ref: string;
   banner: string;
   images: { [key: string]: { [key: string]: Image } } & { [key: string]: Image[] };
-  videos: { [key: string]: { link: string, blurb: string } };
+  videos: { [key: string]: { link: string, blurb: string, desc?: string } };
   order: number;
 };
 

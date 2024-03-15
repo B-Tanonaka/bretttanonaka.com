@@ -124,6 +124,37 @@
   height: 10%;
 }
 
+.nasdaq-image-container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.nasdaq-image-wrapper {
+  width: 55%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.nasdaq-image-wrapper h2 {
+  line-height: 1.5;
+}
+
+.nasdaq-framework {
+  width: 40%;
+  height: auto;
+}
+
+.nasdaq-board {
+  width: 100%;
+  height: auto;
+}
+
 /* Phones */
 @media (max-width: 600px) {
   .image-wrapper {

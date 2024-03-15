@@ -4,6 +4,7 @@ import type {
 } from '../../../interfaces';
 import dividerLine from '../../utils/dividerLine';
 import LinkedInInfluencer from '../video/LinkedInInfluencer';
+import GoingPublic from '../video/GoingPublic';
 import '../../css/ProjectDetails.css';
 
 export default function VideoProjectDetails({
@@ -55,6 +56,10 @@ export default function VideoProjectDetails({
         { projectName === 'linkedininfluencer'
           && (
           <LinkedInInfluencer projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+        { projectName === 'goingpublic'
+          && (
+          <GoingPublic projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
       </>
     );
