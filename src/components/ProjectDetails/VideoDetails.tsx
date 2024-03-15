@@ -48,7 +48,7 @@ export default function VideoProjectDetails({
               (framework: string, key: number) => renderList(framework, key),
             ) }
           </div>
-          <div className="project-background" />
+          <div className="project-background-video" />
         </div>
         )}
         {/* Render only the selected project */}
