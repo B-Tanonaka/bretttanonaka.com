@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import type { EngineerProject, VideoProject } from '../../interfaces';
+import type { Project } from '../../interfaces';
 import '../css/Projects.css';
 
 export default function Projects(
-  { data }: { data: EngineerProject[] | VideoProject[] },
+  { data }: { data: Project[] | Project[] },
 ) {
   const [activeImage, setActiveImage] = useState<number>(-1);
   const [showImage, setShowImage] = useState<boolean>(false);
-  const renderList = (project: EngineerProject | VideoProject, index: number) => (
+  const renderList = (project: Project, index: number) => (
     <div
       className="project-single"
       key={index}
@@ -33,7 +33,7 @@ export default function Projects(
     </div>
   );
 
-  const renderImages = (project: EngineerProject | VideoProject, index: number) => (
+  const renderImages = (project: Project, index: number) => (
     <img
       className="project-image"
       key={index}
@@ -49,13 +49,13 @@ export default function Projects(
         <h1>Projects</h1>
         <div className="project-list">
           {data.map(
-            (project: EngineerProject | VideoProject, index: number) => renderList(project, index),
+            (project: Project, index: number) => renderList(project, index),
           )}
         </div>
       </div>
       <div className="image-container">
         {data.map(
-          (project: EngineerProject | VideoProject, index: number) => renderImages(project, index),
+          (project: Project, index: number) => renderImages(project, index),
         )}
       </div>
     </div>

@@ -2,7 +2,7 @@ import {
   useState, useEffect,
 } from 'react';
 import { useParams } from 'react-router-dom';
-import type { EngineerProject } from '../../interfaces';
+import type { Project } from '../../interfaces';
 import Intro from './Intro';
 import Navbar from './Navbar';
 import Projects from './Projects';
@@ -14,7 +14,7 @@ import { fetchProjectData, fetchAboutData } from '../utils/fetchData';
 import '../css/Home.css';
 
 export default function Home() {
-  const [projectData, setProjectData] = useState<EngineerProject[]>([]);
+  const [projectData, setProjectData] = useState<Project[]>([]);
   const [aboutData, setAboutData] = useState({});
   const [modalOpen, setModalOpen] = useState(false);
   const [modalState, setModalState] = useState(true);
@@ -24,7 +24,7 @@ export default function Home() {
     const fetchData = async () => {
       try {
         const projectResponse = await fetchProjectData(category!);
-        projectResponse.sort((a: EngineerProject, b: EngineerProject) => b.order - a.order);
+        projectResponse.sort((a: Project, b: Project) => b.order - a.order);
         setProjectData(projectResponse);
 
         const aboutResponse = await fetchAboutData();
@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <>
-      <Background />
+      <Background category={category!} />
       { modalOpen
         && (
           <div className="submit-overlay">

@@ -9,16 +9,12 @@ import {
 import Home from './Home';
 import Landing from './Landing';
 import Error from './Error';
-import type { EngineerProject, VideoProject } from '../../interfaces';
-// import { BlankEngProject } from '../../interfaces';
-import EngProjectDetails from './ProjectDetails/EngDetails';
-import VideoProjectDetails from './ProjectDetails/VideoDetails';
+import type { Project } from '../../interfaces';
 import '../css/App.css';
 import ProjectDetails from './ProjectDetails/ProjectDetails';
 
 export default function App() {
-  const [engProjectData, setEngProjectData] = useState<EngineerProject | null>(null);
-  const [videoProjectData, setVideoProjectData] = useState<VideoProject | null>(null);
+  const [projectData, setProjectData] = useState<Project | null>(null);
 
   return (
     <div className="app">
@@ -38,20 +34,11 @@ export default function App() {
             path="/:category/projects/:project-name"
             element={(
               <ProjectDetails
-                projectData={engProjectData}
-                setProjectData={setEngProjectData}
+                projectData={projectData}
+                setProjectData={setProjectData}
               />
             )}
           />
-          {/* <Route
-            path="/video/projects/:project-name"
-            element={(
-              <VideoProjectDetails
-                projectData={videoProjectData}
-                setProjectData={setVideoProjectData}
-              />
-            )}
-          /> */}
           <Route path="/404" element={<Error />} />
           <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
