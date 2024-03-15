@@ -1,5 +1,5 @@
 import ReactPlayer from 'react-player/lazy';
-import '../css/ProjectVideos.css';
+import '../css/ProjectAssets.css';
 
 export default function VideoWithBlurb(
   { info, contClassName, className }:

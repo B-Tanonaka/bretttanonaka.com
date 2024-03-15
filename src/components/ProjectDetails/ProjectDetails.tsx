@@ -10,7 +10,7 @@ import { fetchProjectData } from '../../utils/fetchData';
 import EngProjectDetails from './EngDetails';
 import VideoProjectDetails from './VideoDetails';
 import '../../css/ProjectDetails.css';
-import '../../css/ProjectVideos.css';
+import '../../css/ProjectAssets.css';
 
 export default function ProjectDetails({
   projectData,
