@@ -22,9 +22,14 @@ export default function GoingPublic(
           className=""
         />
       </div>
-      <div className="image-3-container">
-        { projectData!.images.experience.map(
-          (img, key) => renderProjectImages(img, key, 'image-3-col'),
+      <div className="image-2-container">
+        { projectData!.images.experience.slice(0, 2).map(
+          (img, key) => renderProjectImages(img, key, 'image-2-col'),
+        )}
+      </div>
+      <div className="image-3-col-2-row-container">
+        { projectData!.images.experience.slice(2).map(
+          (img, key) => renderProjectImages(img, key, 'image-3-col-2-row'),
         )}
       </div>
       {/* Nasdaq tower images */}
