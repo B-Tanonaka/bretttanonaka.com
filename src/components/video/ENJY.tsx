@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import VideoWithBlurb from '../VideoWithBlurb';
 import type { VideoProject, RenderPhotoList } from '../../../interfaces';
 
-export default function GoingPublic(
+export default function ENJY(
   { projectData, renderProjectImages } :
   { projectData: VideoProject | null, renderProjectImages: RenderPhotoList },
 ) {
