@@ -39,7 +39,8 @@ export type Form = {
 export type Image = {
   src: string;
   alt: string;
-  desc: string;
+  desc?: string;
+  title?: string;
 };
 
 export type EngineerProject = {
@@ -67,7 +68,8 @@ export type VideoProject = {
   techStack: string[];
   ref: string;
   banner: string;
-  images: { [key: string]: { [key: string]: Image } } & { [key: string]: Image[] };
+  images: { [key: string]: { [key: string]: Image } }
+  & { [key: string]: Image[] } & { [key: string]: Image };
   videos: { [key: string]: { link: string, blurb: string, desc?: string } };
   order: number;
 };

@@ -1,0 +1,93 @@
+import { useEffect } from 'react';
+import VideoWithBlurb from '../VideoWithBlurb';
+import Carousel from '../Carousel';
+import type { VideoProject, RenderPhotoList } from '../../../interfaces';
+
+export default function MotionGraphics(
+  { projectData, renderProjectImages } :
+  { projectData: VideoProject | null, renderProjectImages: RenderPhotoList },
+) {
+  // Scroll to top of page upon load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="details-container">
+      {/* Main video */}
+      <h1>Technology that Powers Enjoy</h1>
+      <div className="video-1-container">
+        <VideoWithBlurb
+          info={projectData!.videos.store}
+          contClassName=""
+          className="single-video"
+        />
+      </div>
+      <div className="image-2-container">
+        <div className="image-2-text image-2-col">
+          <h3>{projectData!.images.truckMap.title}</h3>
+          <h2>{projectData!.images.truckMap.desc}</h2>
+        </div>
+      </div>
+      <img
+        className="image-2-col"
+        src={projectData!.images.truckMap.src}
+        alt={projectData!.images.truckMap.alt}
+      />
+      <div className="image-4-container">
+        { projectData!.images.delivery.map(
+          (img, key) => renderProjectImages(img, key, 'image-4-col'),
+        )}
+      </div>
+      {/* One million visits */}
+      <h1>One Million Visits</h1>
+      <div className="video-2-container">
+        <h2>
+          {projectData!.videos.millionVisits.desc}
+        </h2>
+        <VideoWithBlurb
+          info={projectData!.videos.millionVisits}
+          contClassName="video-2-col video-2-col-right"
+          className="single-video"
+        />
+      </div>
+      {/* Social Media */}
+      <h1>Social Media</h1>
+      <div className="video-1-carousel-text-container">
+        <VideoWithBlurb
+          info={projectData!.videos.city}
+          contClassName="video-1-carousel-text-left"
+          className="single-video"
+        />
+        <div className="video-1-carousel-text-right">
+          <Carousel images={projectData!.images.social} />
+          <h2>
+            {projectData!.videos.city.desc}
+          </h2>
+        </div>
+      </div>
+      <div className="portrait-2-text-container">
+        <h2>{projectData!.videos.speaker.desc}</h2>
+        <VideoWithBlurb
+          info={projectData!.videos.speaker}
+          contClassName=""
+          className="single-video"
+        />
+        <img
+          className="portrait-2-text"
+          src={projectData!.images.truckMap.src}
+          alt={projectData!.images.truckMap.alt}
+        />
+      </div>
+      {/* Enjoy.com graphics */}
+      <h1>Enjoy.com Graphics</h1>
+      <div className="video-1-container-enjoy.com">
+        <VideoWithBlurb
+          info={projectData!.videos.website}
+          contClassName=""
+          className="single-video-enjoy.com"
+        />
+      </div>
+    </div>
+  );
+}

@@ -6,6 +6,7 @@ import dividerLine from '../../utils/dividerLine';
 import LinkedInInfluencer from '../video/LinkedInInfluencer';
 import ENJY from '../video/ENJY';
 import Recruiting from '../video/Recruiting';
+import MotionGraphics from '../video/MotionGraphics';
 
 export default function VideoProjectDetails({
   projectName,
@@ -64,6 +65,10 @@ export default function VideoProjectDetails({
         { projectName === 'recruiting'
           && (
           <Recruiting projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+        { projectName === 'motiongraphics'
+          && (
+          <MotionGraphics projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
       </>
     );
