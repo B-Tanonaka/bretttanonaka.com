@@ -41,7 +41,7 @@ export default function ENJY(
           alt={projectData!.images.nasdaq[1].alt}
         />
         <div className="nasdaq-image-wrapper">
-          <h2>{projectData!.images.nasdaq[0].desc}</h2>
+          <h5>{projectData!.images.nasdaq[0].desc}</h5>
           <img
             className="nasdaq-board"
             src={projectData!.images.nasdaq[0].src}
@@ -77,9 +77,9 @@ export default function ENJY(
       {/* Customer reviews video */}
       <h1>Customer Reviews</h1>
       <div className="video-2-container">
-        <h2>
+        <h5>
           {projectData!.videos.reviews.desc}
-        </h2>
+        </h5>
         <VideoWithBlurb
           info={projectData!.videos.reviews}
           contClassName="video-2-col video-2-col-right"

@@ -35,7 +35,7 @@ export default function ENJY(
             src={projectData!.images.quotes[1].src}
             alt={projectData!.images.quotes[1].alt}
           />
-          <h2 className="recruiting-quote-text">{projectData!.images.quotes[1].desc}</h2>
+          <h5 className="recruiting-quote-text">{projectData!.images.quotes[1].desc}</h5>
         </div>
       </div>
       {/* Go Get Great campaign */}
@@ -46,9 +46,9 @@ export default function ENJY(
         )}
       </div>
       <div className="video-2-container">
-        <h2>
+        <h5>
           {projectData!.images.gifs[1].desc}
-        </h2>
+        </h5>
         <VideoWithBlurb
           info={projectData!.videos.premiumdrive}
           contClassName="video-2-col video-2-col-right"

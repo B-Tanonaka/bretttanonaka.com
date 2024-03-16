@@ -64,9 +64,9 @@ export default function LinkedInInfluencer(
           src={projectData!.images.gifs.attc.src}
           alt={projectData!.images.gifs.attc.alt}
         />
-        <h2>
+        <h5>
           {projectData!.images.gifs.attc.desc}
-        </h2>
+        </h5>
       </div>
       <div className="video-1-container">
         <VideoWithBlurb

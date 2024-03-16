@@ -19,9 +19,10 @@
   z-index: 1;
 }
 
-.details-container h2 {
+.details-container h5 {
   width: 100%;
   line-height: 1.5;
+  font-size: 1.4rem;
 }
 
 .details-container h3 {
@@ -53,6 +54,13 @@
   height: 100%;
   position: relative;
   padding-top: 36.24%;
+}
+
+.single-video-enjoy-website {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 18.75%;
 }
 
 .video-1-container {
@@ -117,6 +125,19 @@
   height: 60%;
 }
 
+.image-2-text {
+  width: 50%;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.image-2-text h2 {
+  margin-bottom: 1rem;
+}
+
 .image-2-col-text-wrapper {
   width: 38%;
   height: auto;
@@ -165,6 +186,19 @@
 .image-3-col-2-row {
   width: 32%;
   margin-bottom: 2rem;
+}
+
+
+.image-4-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.image-4-col {
+  width: 23%;
+  border-radius: 0.5rem;
 }
 
 .image-wrapper {
@@ -244,7 +278,7 @@
   align-items: flex-end;
 }
 
-.nasdaq-image-wrapper h2 {
+.nasdaq-image-wrapper h5 {
   width: 100%;
   line-height: 1.5;
 }
@@ -274,13 +308,13 @@
     font-size: 1.5rem;
   }
 
-  .details-container h2,
-  .details-container h4 {
+  .details-container h4,
+  .details-container h5 {
     font-size: 1rem;
     line-height: 1;
   }
 
-  .details-container h2 {
+  .details-container h5 {
     width: 100%;
   }
 
@@ -355,7 +389,7 @@
     flex-direction: column-reverse;
   }
 
-  .nasdaq-image-wrapper h2 {
+  .nasdaq-image-wrapper h5 {
     width: 100%;
     height: 45%;
     margin: 1rem 0;
@@ -377,19 +411,19 @@
 
 /* Portrait tablets and large phones */
 @media (min-width: 501px) and (max-width: 1024px) {
-  .details-container h2 {
-    line-height: 1;
-  }
-
   .details-container h4 {
     font-size: 1.3rem;
+  }
+
+  .details-container h5 {
+    line-height: 1;
   }
 
   .image-3-col {
     margin: 0 1rem;
   }
 
-  .image-3-quarter-container h2 {
+  .image-3-quarter-container h5 {
     font-size: 1.5rem;
   }
 
@@ -407,7 +441,7 @@
     align-items: flex-start;
   }
 
-  .nasdaq-image-wrapper h2 {
+  .nasdaq-image-wrapper h5 {
     width: 90%;
     height: 45%;
     font-size: 1.2rem;
@@ -428,11 +462,11 @@
 	h1 {
 		font-size: 3.5rem;
 	}
-	h2 {
-		font-size: 1.5rem;
-	}
 	h4 {
 		font-size: 1.3rem;
+	}
+  h5 {
+		font-size: 1.5rem;
 	}
 }
 
