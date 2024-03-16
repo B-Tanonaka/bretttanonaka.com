@@ -55,14 +55,19 @@ export default function MotionGraphics(
       </div>
       {/* Social Media */}
       <h1>Social Media</h1>
-      <div className="video-1-carousel-text-container">
+      <div className="video-1-portrait-carousel-text-container">
         <VideoWithBlurb
           info={projectData!.videos.city}
-          contClassName="video-1-carousel-text-left"
-          className="single-video"
+          contClassName="video-1-portrait-carousel-text-left"
+          className="single-video-portrait"
         />
-        <div className="video-1-carousel-text-right">
-          <Carousel images={projectData!.images.social} />
+        <div className="video-1-portrait-carousel-text-right">
+          <div className="carousel-wrapper carousel-motion-graphics">
+            <Carousel
+              images={projectData!.images.social}
+              type="center-portrait"
+            />
+          </div>
           <h5>
             {projectData!.videos.city.desc}
           </h5>

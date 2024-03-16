@@ -5,15 +5,28 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 export default function Carousel(
-  { images }: { images: Image[] },
+  { images, type }: { images: Image[], type: string },
 ) {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  let settings;
+
+  if (type === 'single-landscape') {
+    settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    };
+  }
+
+  if (type === 'center-portrait') {
+    settings = {
+      className: 'center',
+      infinite: true,
+      slidesToShow: 3,
+      speed: 500,
+    };
+  }
 
   const displayImages = (img: Image) => (
     <div>

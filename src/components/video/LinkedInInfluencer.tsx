@@ -43,7 +43,10 @@ export default function LinkedInInfluencer(
       </div>
       {/* Company image carousel */}
       <div className="carousel-wrapper carousel-li-companies">
-        <Carousel images={projectData!.images.company} />
+        <Carousel
+          images={projectData!.images.company}
+          type="single-landscape"
+        />
       </div>
       <div className="image-2-container">
         <img
