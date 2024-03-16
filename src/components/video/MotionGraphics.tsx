@@ -74,16 +74,16 @@ export default function MotionGraphics(
         </div>
       </div>
       <div className="portrait-2-text-container">
-        <h5>{projectData!.videos.speaker.desc}</h5>
+        <h5 className="portrait-2-text-col">{projectData!.videos.speaker.desc}</h5>
         <VideoWithBlurb
           info={projectData!.videos.speaker}
           contClassName=""
-          className="single-video"
+          className="single-video-portrait-short"
         />
         <img
           className="portrait-2-text"
-          src={projectData!.images.truckMap.src}
-          alt={projectData!.images.truckMap.alt}
+          src={projectData!.images.sharon.src}
+          alt={projectData!.images.sharon.alt}
         />
       </div>
       {/* Enjoy.com graphics */}
