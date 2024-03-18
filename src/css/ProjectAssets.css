@@ -151,6 +151,7 @@
 .image-2-col {
   width: 49%;
   height: auto;
+  object-fit: contain;
 }
 
 .image-2-col-left {
@@ -271,6 +272,7 @@
 .landscape-2-text-container {
   width: 80%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 4rem;
@@ -408,7 +410,10 @@
   }
 
   .video-1-container,
-  .video-2-container {
+  .video-2-container,
+  .image-3-container,
+  .image-10-container,
+  .landscape-2-text-container {
     margin-bottom: 2rem;
   }
 
@@ -461,6 +466,10 @@
     border-radius: 0;
   }
 
+  .image-10-col {
+    width: 50%;
+  }
+
   .portrait-2-text-container {
     flex-wrap: wrap;
     margin-bottom: 2rem;
@@ -469,6 +478,11 @@
   .portrait-2-text-col {
     margin-bottom: 1rem;
     width: 50%;
+  }
+
+  .landscape-2-text-col {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   .video-1-portrait-carousel-text-container {
@@ -562,14 +576,16 @@
 
   .details-container h5 {
     line-height: 1;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
-  .video-1-container {
-    margin-bottom: 3rem;
-  }
-
-  .video-2-container {
+  .video-1-container,
+  .video-2-container,
+  .image-3-container,
+  .image-4-container,
+  .image-10-container,
+  .portrait-2-text-container,
+  .landscape-2-text-container {
     margin-bottom: 3rem;
   }
 
@@ -595,7 +611,6 @@
 
   .image-4-container {
     flex-wrap: wrap;
-    margin-bottom: 2rem;
   }
 
   .image-4-col {
@@ -611,10 +626,6 @@
 		width: 100%;
     flex-wrap: wrap;
 	}
-
-  .portrait-2-text-container {
-    margin-bottom: 3rem;
-  }
 
   .portrait-2-text-col {
     width: 30%;
