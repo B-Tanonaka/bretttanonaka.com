@@ -123,6 +123,7 @@
   width: 80%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
@@ -433,6 +434,10 @@
     width: 100%;
   }
 
+  .details-container-h5-solo {
+    margin-bottom: 0;
+  }
+
   .video-1-container,
   .video-2-container,
   .video-3-container,
@@ -541,6 +546,11 @@
     margin: 1rem 0;
   }
 
+  .video-3-col {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
   .image-wrapper {
     width: 90%;
   }
@@ -606,6 +616,7 @@
 
   .video-1-container,
   .video-2-container,
+  .video-3-container,
   .image-3-container,
   .image-4-container,
   .image-10-container,
@@ -624,6 +635,15 @@
 
   .video-1-portrait-carousel-text-right {
     width: 75%;
+  }
+
+  .video-3-container {
+    justify-content: center;
+  }
+
+  .video-3-col {
+    width: 44%;
+    margin: 0 1rem 1rem;
   }
 
   .image-3-col {

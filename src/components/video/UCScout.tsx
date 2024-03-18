@@ -43,7 +43,7 @@ export default function UCScout(
       <div className="carousel-wrapper carousel-scout">
         <Carousel
           images={projectData!.images.carousel}
-          type="center-landscape"
+          type="single-landscape"
         />
       </div>
       <div className="image-3-container">
