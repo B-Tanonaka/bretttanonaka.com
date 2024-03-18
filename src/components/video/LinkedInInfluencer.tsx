@@ -28,7 +28,7 @@ export default function LinkedInInfluencer(
           (img, key) => renderProjectImages(img, key, 'image-3-col'),
         )}
       </div>
-      {/* Main video */}
+      {/* Two episodes */}
       <div className="video-2-container">
         <VideoWithBlurb
           info={projectData!.videos.future}

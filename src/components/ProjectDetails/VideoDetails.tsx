@@ -7,6 +7,7 @@ import LinkedInInfluencer from '../video/LinkedInInfluencer';
 import ENJY from '../video/ENJY';
 import Recruiting from '../video/Recruiting';
 import MotionGraphics from '../video/MotionGraphics';
+import InternalComms from '../video/InternalComms';
 
 export default function VideoProjectDetails({
   projectName,
@@ -69,6 +70,10 @@ export default function VideoProjectDetails({
         { projectName === 'motiongraphics'
           && (
           <MotionGraphics projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+        { projectName === 'internalcomms'
+          && (
+          <InternalComms projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
       </>
     );
