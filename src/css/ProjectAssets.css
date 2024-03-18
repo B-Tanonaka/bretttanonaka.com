@@ -77,6 +77,13 @@
   padding-top: 18.75%;
 }
 
+.single-video-jeffsjacket {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 42.6%;
+}
+
 .video-1-container {
   width: 80%;
   height: 100%;
@@ -198,8 +205,8 @@
 }
 
 .image-3-col {
-  width: 30%;
-  margin: 0 2rem;
+  width: 32%;
+  margin: 0 0.5rem;
 }
 
 .image-3-quarter-container {

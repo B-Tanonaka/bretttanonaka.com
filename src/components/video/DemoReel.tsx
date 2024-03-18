@@ -7,9 +7,9 @@ export default function DemoReel(
   { projectData: VideoProject | null },
 ) {
   // Scroll to top of page upon load
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="details-container">

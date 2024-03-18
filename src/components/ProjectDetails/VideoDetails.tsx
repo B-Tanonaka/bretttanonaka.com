@@ -9,6 +9,7 @@ import Recruiting from '../video/Recruiting';
 import MotionGraphics from '../video/MotionGraphics';
 import InternalComms from '../video/InternalComms';
 import DemoReel from '../video/DemoReel';
+import JeffsJacket from '../video/JeffsJacket';
 
 export default function VideoProjectDetails({
   projectName,
@@ -79,6 +80,10 @@ export default function VideoProjectDetails({
         { projectName === 'internalcomms'
           && (
           <InternalComms projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+        { projectName === 'jeffsjacket'
+          && (
+          <JeffsJacket projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
       </>
     );
