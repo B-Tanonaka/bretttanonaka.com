@@ -111,7 +111,7 @@
 	right: 35rem;
 	border-radius: 50% 50% 50% 50%;
 	opacity: 70%;
-	background-image: radial-gradient(49% 81% at 45% 47%, #ffdb81ac 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #fafc98e3 1%, #FF000000 99%),radial-gradient(142% 91% at 86% 30%, #ffa56881 0%, #FF000000 99%),radial-gradient(142% 91% at 4% 58%, #f66fe8af 1%, #00FFE000 99%),radial-gradient(142% 96% at 94% 78%, rgba(241, 244, 171, 0.69) 0%, #00C1FFFF 98%);
+	background-image: radial-gradient(49% 81% at 45% 47%, #ffdb81ac 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #fafc98e3 1%, #FF000000 99%),radial-gradient(142% 91% at 86% 30%, #ffa56881 0%, #FF000000 99%),radial-gradient(142% 91% at 4% 58%, #f66fe8af 1%, #00FFE000 99%),radial-gradient(142% 96% at 94% 78%, rgba(241, 244, 171, 0.69) 0%, #BA00FF 98%);
 }
 
 /* Phones */

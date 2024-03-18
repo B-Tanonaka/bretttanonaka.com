@@ -84,6 +84,7 @@
   width: 80%;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 4rem;
 }
 
 .video-1-portrait-carousel-text-container h5 {

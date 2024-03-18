@@ -77,11 +77,11 @@ export default function MotionGraphics(
         <h5 className="portrait-2-text-col">{projectData!.videos.speaker.desc}</h5>
         <VideoWithBlurb
           info={projectData!.videos.speaker}
-          contClassName=""
+          contClassName="portrait-2-text-col"
           className="single-video-portrait-short"
         />
         <img
-          className="portrait-2-text"
+          className="portrait-2-text-col"
           src={projectData!.images.sharon.src}
           alt={projectData!.images.sharon.alt}
         />
