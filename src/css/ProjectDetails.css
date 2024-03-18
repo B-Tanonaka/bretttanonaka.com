@@ -1,3 +1,7 @@
+.project-details-container {
+	overflow: hidden;
+}
+
 .project-details {
 	height: 100dvh;
   max-height: 100%;

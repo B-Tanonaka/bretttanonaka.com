@@ -8,6 +8,7 @@ import ENJY from '../video/ENJY';
 import Recruiting from '../video/Recruiting';
 import MotionGraphics from '../video/MotionGraphics';
 import InternalComms from '../video/InternalComms';
+import DemoReel from '../video/DemoReel';
 
 export default function VideoProjectDetails({
   projectName,
@@ -55,6 +56,10 @@ export default function VideoProjectDetails({
         </div>
         )}
         {/* Render only the selected project */}
+        { projectName === 'demoreel'
+          && (
+          <DemoReel projectData={projectData} />
+          )}
         { projectName === 'linkedininfluencer'
           && (
           <LinkedInInfluencer projectData={projectData} renderProjectImages={renderProjectImages} />

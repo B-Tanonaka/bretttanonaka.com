@@ -63,7 +63,7 @@ export default function ProjectDetails({
   );
 
   return (
-    <div>
+    <div className="project-details-container">
       { category === 'engineer' ? (
         <EngProjectDetails
           projectName={projectName}
