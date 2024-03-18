@@ -19,11 +19,6 @@
   z-index: 1;
 }
 
-.details-container h5 {
-  line-height: 1.5;
-  font-size: 1.4rem;
-}
-
 .details-container h3 {
 	background-color: var(--gray3-color);
 	color: var(--white-color);
@@ -37,6 +32,16 @@
 	color: var(--main-text);
 	padding: 1rem;
   border-radius: 0 0 1rem 1rem;
+}
+
+.details-container h5 {
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
+
+.details-container-h5-solo {
+  width: 80%;
+  margin-bottom: 2rem
 }
 
 /**** Videos ****/
@@ -236,6 +241,17 @@
   border-radius: 0.5rem;
 }
 
+.image-10-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.image-10-col {
+  width: 20%;
+}
+
 .portrait-2-text-container {
   width: 80%;
   display: flex;
@@ -250,6 +266,18 @@
 
 .portrait-2-text-sharon {
   align-self: flex-start;
+}
+
+.landscape-2-text-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+.landscape-2-text-col {
+  width: 32%;
 }
 
 .image-wrapper {
@@ -356,6 +384,10 @@
 
 .recruiting-gifs {
   border-radius: 1rem;
+}
+
+.thewhy-video-1-container {
+  margin-bottom: 2rem;
 }
 
 /* Phones */

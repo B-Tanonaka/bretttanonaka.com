@@ -22,7 +22,9 @@ export default function InternalComms(
           className="single-video"
         />
       </div>
-      <h5>{projectData!.images.gme[0].desc}</h5>
+      <div className="details-container-h5-solo">
+        <h5>{projectData!.images.gme[0].desc}</h5>
+      </div>
       <div className="image-10-container">
         { projectData!.images.gme.map(
           (img, key) => renderProjectImages(img, key, 'image-10-col'),
@@ -42,21 +44,21 @@ export default function InternalComms(
         />
       </div>
       {/* GME covid */}
-      <div className="video-2-text-container">
+      <div className="landscape-2-text-container">
         <VideoWithBlurb
           info={projectData!.videos.gmedigital}
-          contClassName="video-2-text-col"
+          contClassName="landscape-2-text-col"
           className="single-video"
         />
+        <img
+          className="landscape-2-text-col"
+          src={projectData!.images.covid.src}
+          alt={projectData!.images.covid.alt}
+        />
+        <h5 className="landscape-2-text-col">
+          {projectData!.images.covid.desc}
+        </h5>
       </div>
-      <img
-        className="video-2-text-col"
-        src={projectData!.images.covid.src}
-        alt={projectData!.images.covid.alt}
-      />
-      <h5>
-        {projectData!.images.covid.desc}
-      </h5>
       {/* The Enjoy Way */}
       <h1>The Enjoy Way</h1>
       <div className="video-1-container">
@@ -66,12 +68,12 @@ export default function InternalComms(
           className="single-video"
         />
       </div>
-      <div className="video-2-container">
-        <h5>
+      <div className="image-2-container">
+        <h5 className="image-2-col">
           {projectData!.images.enjoyway[0].desc}
         </h5>
         <img
-          className="video-2-text-col"
+          className="image-2-col"
           src={projectData!.images.enjoyway[0].src}
           alt={projectData!.images.enjoyway[0].alt}
         />
@@ -83,14 +85,16 @@ export default function InternalComms(
       </div>
       {/* The Why */}
       <h1>The Why</h1>
-      <div className="video-1-container">
+      <div className="video-1-container thewhy-video-1-container">
         <VideoWithBlurb
           info={projectData!.videos.thewhy}
           contClassName=""
           className="single-video"
         />
       </div>
-      <h5>{projectData!.videos.thewhy.desc}</h5>
+      <div className="details-container-h5-solo">
+        <h5>{projectData!.videos.thewhy.desc}</h5>
+      </div>
     </div>
   );
 }
