@@ -11,6 +11,7 @@ import InternalComms from '../video/InternalComms';
 import DemoReel from '../video/DemoReel';
 import JeffsJacket from '../video/JeffsJacket';
 import UCScout from '../video/UCScout';
+import OtherProjects from '../video/OtherProjects';
 
 export default function VideoProjectDetails({
   projectName,
@@ -89,6 +90,10 @@ export default function VideoProjectDetails({
         { projectName === 'ucscout'
           && (
           <UCScout projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+        { projectName === 'other'
+          && (
+          <OtherProjects projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
       </>
     );

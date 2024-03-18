@@ -8,9 +8,9 @@ export default function UCScout(
   { projectData: VideoProject | null, renderProjectImages: RenderPhotoList },
 ) {
   // Scroll to top of page upon load
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="details-container">

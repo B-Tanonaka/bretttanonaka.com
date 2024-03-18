@@ -10,6 +10,14 @@
 	background-image: var(--grain-bg);
 }
 
+.details-container-small {
+  width: 80%;
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+  justify-content: center;
+}
+
 .details-container h1 {
   width: 80%;
   text-align: center;
@@ -17,6 +25,10 @@
 	color: var(--main-text);
   padding: 0.5rem 0;
   z-index: 1;
+}
+
+.details-container-small h1 {
+  width: 60%;
 }
 
 .details-container h3 {
@@ -84,8 +96,20 @@
   padding-top: 42.6%;
 }
 
+.single-video-sugihara {
+  position: relative;
+  padding-top: 75%;
+}
+
 .video-1-container {
   width: 80%;
+  height: 100%;
+  z-index: 1;
+  margin-bottom: 4rem;
+}
+
+.video-1-container-small {
+  width: 60%;
   height: 100%;
   z-index: 1;
   margin-bottom: 4rem;
@@ -419,6 +443,13 @@
 
 /* Phones */
 @media (max-width: 600px) {
+  .details-container-small {
+    width: 100%;
+  }
+
+  .details-container-small h1 {
+    width: 80%;
+  }
 
   .details-container h1 {
     font-size: 1.5rem;
@@ -515,6 +546,10 @@
     margin-bottom: 1rem;
   }
 
+  .video-1-container-small {
+    width: 80%;
+  }
+
   .video-1-portrait-carousel-text-container {
     flex-wrap: wrap;
     margin-bottom: 1rem;
@@ -596,8 +631,16 @@
 
 /* Portrait tablets and large phones */
 @media (min-width: 501px) and (max-width: 1024px) {
+  .details-container-small {
+    width: 80%;
+  }
+
   .details-container h1 {
     font-size: 2rem;
+  }
+
+  .details-container-small h1 {
+    width: 80%;
   }
 
   .details-container h2 {
@@ -623,6 +666,10 @@
   .portrait-2-text-container,
   .landscape-2-text-container {
     margin-bottom: 3rem;
+  }
+
+  .video-1-container-small {
+    width: 80%;
   }
 
   .video-1-portrait-carousel-text-container {

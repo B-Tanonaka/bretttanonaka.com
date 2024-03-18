@@ -13,6 +13,9 @@ export default function VideoWithBlurb(
         controls: true,
       },
     },
+    youtube: {
+      playerVars: { showinfo: 1 },
+    },
   };
 
   return (
