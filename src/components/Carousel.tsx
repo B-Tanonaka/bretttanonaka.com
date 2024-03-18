@@ -28,6 +28,18 @@ export default function Carousel(
     };
   }
 
+  if (type === 'center-landscape') {
+    settings = {
+      dots: true,
+      className: 'center',
+      centerMode: true,
+      infinite: true,
+      centerPadding: '100px',
+      slidesToShow: 3,
+      speed: 500,
+    };
+  }
+
   const displayImages = (img: Image) => (
     <div>
       <img src={img.src} alt={img.alt} />

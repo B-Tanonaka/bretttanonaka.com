@@ -118,7 +118,8 @@
   width: 80%;
 }
 
-.video-2-container {
+.video-2-container,
+.video-3-container {
   width: 80%;
   height: 100%;
   display: flex;
@@ -126,6 +127,10 @@
   align-items: center;
   margin-bottom: 4rem;
   z-index: 1;
+}
+
+.video-3-container {
+  justify-content: space-between;
 }
 
 .video-2-col {
@@ -139,6 +144,11 @@
 
 .video-2-col-right {
   margin-left: 1rem;
+}
+
+.video-3-col {
+  width: 31%;
+  height: auto;
 }
 
 .react-player {
@@ -330,6 +340,8 @@
 }
 
 .carousel-wrapper {
+  display: block;
+  width: 80%;
   margin-bottom: 4rem;
 }
 
@@ -347,6 +359,11 @@
   display: block;
   width: 80%;
   margin-bottom: 1rem;
+}
+
+.carousel-scout {
+  display: block;
+  width: 80%;
 }
 
 .fb-profile {
@@ -418,6 +435,7 @@
 
   .video-1-container,
   .video-2-container,
+  .video-3-container,
   .image-3-container,
   .image-10-container,
   .landscape-2-text-container {
