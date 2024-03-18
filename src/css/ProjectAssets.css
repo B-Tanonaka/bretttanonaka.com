@@ -20,7 +20,6 @@
 }
 
 .details-container h5 {
-  width: 100%;
   line-height: 1.5;
   font-size: 1.4rem;
 }
@@ -249,6 +248,10 @@
   width: 30%;
 }
 
+.portrait-2-text-sharon {
+  align-self: flex-start;
+}
+
 .image-wrapper {
 	width: 80%;
 	display: flex;
@@ -465,12 +468,42 @@
 
 /* Portrait tablets and large phones */
 @media (min-width: 501px) and (max-width: 1024px) {
-  .details-container h4 {
+  .details-container h1 {
+    font-size: 2rem;
+  }
+
+  .details-container h2 {
     font-size: 1.3rem;
+  }
+
+  .details-container h4 {
+    font-size: 1rem;
+    padding: 0.8rem;
   }
 
   .details-container h5 {
     line-height: 1;
+    font-size: 0.9rem;
+  }
+
+  .video-1-container {
+    margin-bottom: 3rem;
+  }
+
+  .video-2-container {
+    margin-bottom: 3rem;
+  }
+
+  .video-1-portrait-carousel-text-container {
+    align-items: flex-start;
+  }
+
+  .video-1-portrait-carousel-text-left {
+    width: 25%;
+  }
+
+  .video-1-portrait-carousel-text-right {
+    width: 75%;
   }
 
   .image-3-col {
@@ -481,6 +514,16 @@
     font-size: 1.5rem;
   }
 
+  .image-4-container {
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .image-4-col {
+    width: 49%;
+    margin-bottom: 0.9rem;
+  }
+
   .image-wrapper {
     width: 90%;
   }
@@ -489,6 +532,14 @@
 		width: 100%;
     flex-wrap: wrap;
 	}
+
+  .portrait-2-text-container {
+    margin-bottom: 3rem;
+  }
+
+  .portrait-2-text-col {
+    width: 30%;
+  }
 
   .nasdaq-image-wrapper {
     width: 49%;

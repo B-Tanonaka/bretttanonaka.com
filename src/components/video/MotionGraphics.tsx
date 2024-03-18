@@ -81,7 +81,7 @@ export default function MotionGraphics(
           className="single-video-portrait-short"
         />
         <img
-          className="portrait-2-text-col"
+          className="portrait-2-text-col portrait-2-sharon"
           src={projectData!.images.sharon.src}
           alt={projectData!.images.sharon.alt}
         />
