@@ -359,7 +359,7 @@
 }
 
 /* Phones */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
   .details-container h1 {
     font-size: 1.5rem;
@@ -390,7 +390,11 @@
 
   .image-2-col {
     width: 100%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-2-text {
+    padding: 1rem;
   }
 
   .image-2-col-text-wrapper {
@@ -412,6 +416,45 @@
   .image-3-col-2-row {
     width: 49%;
     margin-bottom: 0.5rem;
+  }
+
+  .image-4-container {
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .image-4-col {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0;
+  }
+
+  .portrait-2-text-container {
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .portrait-2-text-col {
+    margin-bottom: 1rem;
+    width: 50%;
+  }
+
+  .video-1-portrait-carousel-text-container {
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .video-1-portrait-carousel-text-left {
+    width: 100%;
+  }
+
+  .video-1-portrait-carousel-text-right {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .video-1-portrait-carousel-text-right h5 {
+    margin: 1rem 0;
   }
 
   .video-2-container,
@@ -459,6 +502,10 @@
 
   .recruiting-quote-text {
     margin: 1rem 0;
+  }
+
+  .carousel-motion-graphics {
+    width: 100%;
   }
 
   .phone-image {

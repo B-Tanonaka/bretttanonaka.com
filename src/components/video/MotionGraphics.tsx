@@ -25,9 +25,7 @@ export default function MotionGraphics(
       </div>
       <div className="image-2-container">
         <div className="image-2-text image-2-col">
-          <span>
-            <h2>{projectData!.images.truckMap.title}</h2>
-          </span>
+          <h2>{projectData!.images.truckMap.title}</h2>
           <h5>{projectData!.images.truckMap.desc}</h5>
         </div>
         <img
@@ -81,7 +79,7 @@ export default function MotionGraphics(
           className="single-video-portrait-short"
         />
         <img
-          className="portrait-2-text-col portrait-2-sharon"
+          className="portrait-2-text-col portrait-2-text-sharon"
           src={projectData!.images.sharon.src}
           alt={projectData!.images.sharon.alt}
         />
