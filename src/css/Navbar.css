@@ -41,13 +41,13 @@
 }
 
 .navbar-base {
+  width: 30%;
+	height: 45%;
 	display: flex;
 	justify-content: center;
 	background: var(--white-color);
 	box-shadow: 0.25em 0.25em .75em -.5em var(--shadow-color);
 	border-radius: 1.5em;
-	width: 30%;
-	height: 45%;
 	max-width: 25em;
 	min-width: 15em;
   margin: 0 5rem 0 1.5rem;
@@ -82,6 +82,10 @@
 
 .active {
 	color: var(--blue1-color);
+}
+
+.navbar-xmark {
+	display: none !important;
 }
 
 .navbar-hamburger {
@@ -144,6 +148,23 @@
 		padding: 0.5rem;
 	}
 
+  .navbar-dropdown-container {
+    position: relative;
+    width: fit-content;
+  }
+
+  .navbar-dropdown {
+    position: absolute;
+    top: 25%;
+    left: 7%;
+    direction: rtl;
+    text-align-last: left;
+  }
+
+  .navbar-dropdown:focus {
+    outline: none;
+  }
+
 	.navbar-hamburger {
 		position: fixed;
 		top: 5%;
@@ -156,9 +177,10 @@
 	.navbar-xmark {
 		position: fixed;
 		top: -1%;
-		right: 8%;
+		right: 2%;
 		font-size: 1.5rem;
 		color: var(--gray3-color);
+    display: inline !important;
 	}
 
   .navbar-icon:hover {
@@ -190,6 +212,7 @@
 		height: 2.75rem;
 		width: 45%;
     position: absolute;
+    transition: all 0.3s ease-in-out;
 	}
 
 	.navbar-sections {

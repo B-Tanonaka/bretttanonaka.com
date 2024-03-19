@@ -11,6 +11,7 @@ export default function Navbar() {
 
   const [hamOpen, setHamOpen] = useState<boolean>(false);
   const [currentSection, setCurrentSection] = useState<string>(category!);
+  const [mobileStyles, setMobileStyles] = useState({});
 
   const handleHamClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
@@ -22,6 +23,34 @@ export default function Navbar() {
     setCurrentSection(e.target.value);
   };
 
+  // Checks screen width, runs every time the screen changes sizes
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1024) {
+        if (hamOpen) {
+          setMobileStyles({
+            transform: 'translateY(-100%)',
+            transition: 'all 0.3s ease-in-out',
+          });
+        } else {
+          setMobileStyles({
+            transform: 'translateY(100%)',
+            transition: 'all 0.3s ease-in-out',
+          });
+        }
+      } else {
+        setMobileStyles({});
+      }
+    };
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  });
+
   // Navigates between categories
   useEffect(() => {
     navigate(`/${currentSection}`);
@@ -32,15 +61,15 @@ export default function Navbar() {
       <div className="navbar-container">
         <a href="/" className="navbar-name">Brett Tanonaka</a>
         <div className="navbar-right-side">
-          <select className="navbar-dropdown" value={currentSection} onChange={handleSectionChange}>
-            <option value="engineer">Engineering</option>
-            <option value="video">Video Production</option>
-          </select>
+          <div className="navbar-dropdown-container">
+            <select className="navbar-dropdown" value={currentSection} onChange={handleSectionChange}>
+              <option value="engineer">Engineering</option>
+              <option value="video">Video Production</option>
+            </select>
+          </div>
           <nav
             className="navbar-base"
-            style={hamOpen
-              ? { transform: 'translateY(-100%)', transition: 'all 0.3s ease-in-out' }
-              : { transform: 'translateY(100%)', transition: 'all 0.3s ease-in-out' }}
+            style={mobileStyles}
           >
             <ul className="navbar-sections">
               <li>
@@ -61,9 +90,7 @@ export default function Navbar() {
             className="navbar-xmark navbar-icon"
             onClick={handleHamClick}
             role="presentation"
-            style={hamOpen
-              ? { transform: 'translateY(-100%)', transition: 'all 0.3s ease-in-out' }
-              : { transform: 'translateY(100%)', transition: 'all 0.3s ease-in-out' }}
+            style={mobileStyles}
           />
           <FaBars
             className="navbar-hamburger navbar-icon"
