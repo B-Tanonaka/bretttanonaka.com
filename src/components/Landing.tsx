@@ -1,25 +1,30 @@
 import { Link } from 'react-router-dom';
+import '../css/Landing.css';
 
 export default function Landing() {
   return (
-    <div className="home-container" id="home">
-      <div className="home-wrapper">
-        <p>
-          <span className="home-main-text">I am the landing</span>
-        </p>
-        <Link
-          to="/engineer"
-          className="project-title"
-        >
-          Engineering
-        </Link>
-        <Link
-          to="/video"
-          className="project-title"
-        >
-          Video Production
-        </Link>
+    <div className="landing-container" id="landing">
+      <div className="landing-wrapper">
+        <h1>Hello, my name is Brett</h1>
+        <h2>Please select a path</h2>
+        <div className="landing-buttons">
+          <button type="button" className="button-engineer">
+            <Link
+              to="/engineer"
+            >
+              Engineering
+            </Link>
+          </button>
+          <button type="button" className="button-video">
+            <Link
+              to="/video"
+            >
+              Video Production
+            </Link>
+          </button>
+        </div>
       </div>
+      <div className="landing-background" />
     </div>
   );
 }
