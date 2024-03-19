@@ -39,8 +39,8 @@ export default function Navbar() {
           <nav
             className="navbar-base"
             style={hamOpen
-              ? { transform: 'translateX(-100%)', transition: 'all 0.3s ease-in-out' }
-              : { transform: 'translateX(100%)', transition: 'all 0.3s ease-in-out' }}
+              ? { transform: 'translateY(-100%)', transition: 'all 0.3s ease-in-out' }
+              : { transform: 'translateY(100%)', transition: 'all 0.3s ease-in-out' }}
           >
             <ul className="navbar-sections">
               <li>
@@ -62,8 +62,8 @@ export default function Navbar() {
             onClick={handleHamClick}
             role="presentation"
             style={hamOpen
-              ? { transform: 'translateX(-100%)', transition: 'all 0.3s ease-in-out' }
-              : { transform: 'translateX(100%)', transition: 'all 0.3s ease-in-out' }}
+              ? { transform: 'translateY(-100%)', transition: 'all 0.3s ease-in-out' }
+              : { transform: 'translateY(100%)', transition: 'all 0.3s ease-in-out' }}
           />
           <FaBars
             className="navbar-hamburger navbar-icon"
