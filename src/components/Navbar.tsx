@@ -40,7 +40,7 @@ export default function Navbar() {
             className="navbar-base"
             style={hamOpen
               ? { transform: 'translateX(-100%)', transition: 'all 0.3s ease-in-out' }
-              : { transform: 'rotate(0)' }}
+              : { transform: 'translateX(100%)', transition: 'all 0.3s ease-in-out' }}
           >
             <ul className="navbar-sections">
               <li>
@@ -57,14 +57,14 @@ export default function Navbar() {
               </li>
             </ul>
           </nav>
-          {hamOpen
-          && (
-            <FaXmark
-              className="navbar-xmark navbar-icon"
-              onClick={handleHamClick}
-              role="presentation"
-            />
-          )}
+          <FaXmark
+            className="navbar-xmark navbar-icon"
+            onClick={handleHamClick}
+            role="presentation"
+            style={hamOpen
+              ? { transform: 'translateX(-100%)', transition: 'all 0.3s ease-in-out' }
+              : { transform: 'translateX(100%)', transition: 'all 0.3s ease-in-out' }}
+          />
           <FaBars
             className="navbar-hamburger navbar-icon"
             onClick={handleHamClick}
