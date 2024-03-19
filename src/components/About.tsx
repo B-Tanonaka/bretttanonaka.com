@@ -22,7 +22,14 @@ export default function About({ data }: { data: AboutInfo }) {
           boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
         }}
         />
-        { data[validCategory] && <p>{data[validCategory].about}</p> }
+        { data[validCategory]
+          && (
+            <>
+              <p>{data[validCategory].about.part1}</p>
+              <br />
+              <p>{data[validCategory].about.part2}</p>
+            </>
+          )}
         <a href={Resume} target="_blank" rel="noopener noreferrer" className="resume">
           <FaCheckDouble />
           <span> resume</span>

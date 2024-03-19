@@ -13,7 +13,7 @@ export type AboutData = {
       sec: string
     }
   },
-  about: string,
+  about: { part1: string, part2?: string },
   intro: {
     main: string,
     sec: string,

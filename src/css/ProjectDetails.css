@@ -118,6 +118,77 @@
 	background-image: radial-gradient(49% 81% at 45% 47%, #ffdb81ac 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #fafc98e3 1%, #FF000000 99%),radial-gradient(142% 91% at 86% 30%, #ffa56881 0%, #FF000000 99%),radial-gradient(142% 91% at 4% 58%, #f66fe8af 1%, #00FFE000 99%),radial-gradient(142% 96% at 94% 78%, rgba(241, 244, 171, 0.69) 0%, #BA00FF 98%);
 }
 
+/* Large laptops and desktops */
+@media (min-width: 1500px) {
+}
+
+/* Medium laptops and desktops */
+@media (min-width: 1201px) and (max-width: 1500px) {
+}
+
+/* Small laptops and desktops */
+@media (width: 1024px) {
+  .project-details h5 {
+    font-size: 1.4rem;
+  }
+
+  .right-side {
+    width: 35%;
+  }
+
+  .project-background-video,
+  .project-background-eng {
+		right: 30rem;
+	}
+}
+
+/* Portrait tablets and large phones */
+@media (min-width: 601px) and (max-width: 1023px) {
+	.left-side {
+		width: 45%;
+		margin-left: 5%;
+	}
+
+	.repo-link {
+		font-size: 1.5rem;
+	}
+
+	.right-side {
+		width: 35%;
+		margin-right: 5%;
+	}
+
+	.right-side h2 {
+		font-size: 2.4rem;
+	}
+
+  .project-background-video,
+  .project-background-eng {
+		right: calc(100dvw * .45);
+	}
+
+	.project-details p {
+		font-size: 1.5rem;
+	}
+
+	.project-year {
+		font-size: 1.5rem;
+	}
+
+	.list-items {
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+	}
+
+	.image-wrapper {
+		width: 95%;
+	}
+
+  .back {
+    top: 2%;
+  }
+}
+
 /* Phones */
 @media (max-width: 600px) {
 	.left-side {
@@ -205,77 +276,4 @@
 	.left-side {
     margin: calc(100dvh * 0.2) 0 10% 0
   }
-}
-
-/* Portrait tablets and large phones */
-@media (min-width: 601px) and (max-width: 1023px) {
-	.left-side {
-		width: 45%;
-		margin-left: 5%;
-	}
-
-	.repo-link {
-		font-size: 1.5rem;
-	}
-
-	.right-side {
-		width: 35%;
-		margin-right: 5%;
-	}
-
-	.right-side h2 {
-		font-size: 2.4rem;
-	}
-
-  .project-background-video,
-  .project-background-eng {
-		right: calc(100dvw * .45);
-	}
-
-	.project-details p {
-		font-size: 1.5rem;
-	}
-
-	.project-year {
-		font-size: 1.5rem;
-	}
-
-	.list-items {
-		font-size: 1.5rem;
-		line-height: 1.5rem;
-	}
-
-	.image-wrapper {
-		width: 95%;
-	}
-
-  .back {
-    top: 2%;
-  }
-}
-
-/* Small laptops and desktops */
-@media (width: 1024px) {
-  .project-details h5 {
-    font-size: 1.4rem;
-  }
-
-  .right-side {
-    width: 35%;
-  }
-
-  .project-background-video,
-  .project-background-eng {
-		right: 30rem;
-	}
-}
-
-/* Medium laptops and desktops */
-@media (min-width: 1201px) and (max-width: 1500px) {
-
-}
-
-/* Large laptops and desktops */
-@media (min-width: 1500px) {
-
 }

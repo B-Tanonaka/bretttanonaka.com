@@ -41,7 +41,7 @@ export default function MotionGraphics(
       </div>
       {/* One million visits */}
       <h1>One Million Visits</h1>
-      <div className="video-2-container">
+      <div className="video-2-container motion-graphics-million-container">
         <h5>
           {projectData!.videos.millionVisits.desc}
         </h5>
