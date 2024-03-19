@@ -1,5 +1,4 @@
 /**** Home ****/
-
 .home-container {
 	height: 100vh;
 	max-height: 100%;
@@ -22,6 +21,7 @@
 .home-sec-text {
 	font-size: 1.3rem;
 	margin-left: 1%;
+  line-height: 1.5;
 }
 
 /* Phones */

@@ -21,6 +21,7 @@ export default function Carousel(
 
   if (type === 'center-portrait') {
     settings = {
+      dots: true,
       className: 'center',
       infinite: true,
       slidesToShow: 3,

@@ -93,7 +93,7 @@ export default function VideoProjectDetails({
           )}
         { projectName === 'other'
           && (
-          <OtherProjects projectData={projectData} renderProjectImages={renderProjectImages} />
+          <OtherProjects projectData={projectData} />
           )}
       </>
     );

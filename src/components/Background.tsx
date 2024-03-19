@@ -18,10 +18,10 @@ export default function Background({ category }: { category: string }) {
   }, []);
 
   const videoBackground = `
-  radial-gradient(49% 81% at 45% 47%, rgb(236 238 183 / 27%) 0%, rgba(7, 58, 255, 0) 100%),
+  radial-gradient(49% 81% at 45% 47%, rgb(236 238 183 / 20%) 0%, rgba(7, 58, 255, 0) 100%),
   radial-gradient(113% 91% at 17% -2%, rgb(255 232 129 / 24%) 1%, rgba(255, 0, 0, 0) 99%),
-  radial-gradient(142% 91% at 86% 30%, rgb(247 216 116 / 73%) 0%, rgba(255, 0, 0, 0) 99%),
-  radial-gradient(142% 91% at 4% 58%, rgb(240 81 223 / 43%) 1%, rgba(0, 255, 224, 0) 99%),
+  radial-gradient(142% 91% at 86% 30%, rgb(241 224 170 / 70%) 0%, rgba(255, 0, 0, 0) 99%),
+  radial-gradient(142% 91% at 4% 58%, rgb(240 81 223 / 40%) 1%, rgba(0, 255, 224, 0) 99%),
   radial-gradient(142% 96% at ${xPos}px ${yPos}px, rgba(215, 0, 255, 0.69) 0%, rgb(230 243 181) 98%)`;
 
   const engBackground = `

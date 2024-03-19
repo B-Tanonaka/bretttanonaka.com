@@ -1,8 +1,8 @@
 /**** Navbar ****/
 .navbar-border {
-	height: 15vh;
+	height: calc(100dvh * .15);
 	max-height: 100%;
-	width: 100vw;
+	width: 100dvw;
 	max-width: 100%;
 	position: fixed;
 	display: flex;
@@ -13,7 +13,7 @@
 .navbar-container {
 	display: flex;
 	height: 80%;
-	width: 100vw;
+	width: 100dvw;
 	max-width: 100%;
 	align-items: center;
 	z-index: 1;
@@ -31,10 +31,10 @@
 }
 
 .navbar-right-side {
-	display: flex;
-	height: 100%;
 	width: 100vw;
 	max-width: 100%;
+  height: 100%;
+  display: flex;
 	align-items: center;
   justify-content: flex-end;
 	z-index: 1;
@@ -91,7 +91,7 @@
 /* Phones */
 @media (max-width: 600px) {
 	h1 {
-		font-size: 3.5rem;
+		font-size: 2rem;
 	}
 	h2 {
 		font-size: 1.4rem;
@@ -99,6 +99,16 @@
 	h4 {
 		font-size: 1rem;
 	}
+
+  .navbar-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .navbar-right-side {
+    position: relative;
+  }
+
 	.navbar-border {
 		height: 25vh;
 		align-items: center;
@@ -111,17 +121,23 @@
 	.navbar-base {
 		height: 100%;
 		width: 100%;
+    position: absolute;
 		max-width: 100vw;
 		text-align: center;
 		align-items: center;
 		border-radius: 0;
 		right: -100%;
+    margin: 0;
 	}
+
+  .navbar-base a {
+    font-size: 1.5rem;
+  }
 
 	.navbar-sections {
 		font-size: 1.8rem;
 		flex-direction: column;
-		line-height: 2.3rem;
+		line-height: 1.7rem;
 	}
 
 	.navbar-sections li {
@@ -162,9 +178,18 @@
 		font-size: 1.4rem;
 	}
 
+  .navbar-container {
+    width: 100%;
+  }
+
+  .navbar-right-side {
+    position: relative;
+  }
+
 	.navbar-base {
 		height: 2.75rem;
 		width: 45%;
+    position: absolute;
 	}
 
 	.navbar-sections {

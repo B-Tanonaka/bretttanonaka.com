@@ -122,10 +122,6 @@
   margin-bottom: 4rem;
 }
 
-.video-1-portrait-carousel-text-container h5 {
-  width: 80%;
-}
-
 .video-1-portrait-carousel-text-left {
   width: 20%;
 }
@@ -147,7 +143,6 @@
   width: 80%;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
@@ -382,8 +377,8 @@
 
 .carousel-motion-graphics {
   display: block;
-  width: 80%;
-  margin-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .carousel-scout {
@@ -682,6 +677,10 @@
 
   .video-1-portrait-carousel-text-right {
     width: 75%;
+  }
+
+  .video-2-container {
+    flex-wrap: wrap;
   }
 
   .video-3-container {
