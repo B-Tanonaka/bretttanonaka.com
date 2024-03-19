@@ -23,18 +23,18 @@ export default function Navbar() {
     setCurrentSection(e.target.value);
   };
 
-  // Checks screen width, runs every time the screen changes sizes
+  // Checks screen width, runs every time hamOpen is triggered
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 1024) {
+      if (window.innerWidth <= 600) {
         if (hamOpen) {
           setMobileStyles({
-            transform: 'translateY(-100%)',
+            transform: 'translateY(100%)',
             transition: 'all 0.3s ease-in-out',
           });
         } else {
           setMobileStyles({
-            transform: 'translateY(100%)',
+            transform: 'translateY(-100%)',
             transition: 'all 0.3s ease-in-out',
           });
         }
@@ -49,7 +49,7 @@ export default function Navbar() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  });
+  }, [hamOpen]);
 
   // Navigates between categories
   useEffect(() => {
@@ -61,12 +61,10 @@ export default function Navbar() {
       <div className="navbar-container">
         <a href="/" className="navbar-name">Brett Tanonaka</a>
         <div className="navbar-right-side">
-          <div className="navbar-dropdown-container">
-            <select className="navbar-dropdown" value={currentSection} onChange={handleSectionChange}>
-              <option value="engineer">Engineering</option>
-              <option value="video">Video Production</option>
-            </select>
-          </div>
+          <select className="navbar-dropdown" value={currentSection} onChange={handleSectionChange}>
+            <option value="engineer">Engineering</option>
+            <option value="video">Video Production</option>
+          </select>
           <nav
             className="navbar-base"
             style={mobileStyles}
