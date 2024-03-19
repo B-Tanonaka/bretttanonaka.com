@@ -5,8 +5,10 @@ export default function Landing() {
   return (
     <div className="landing-container" id="landing">
       <div className="landing-wrapper">
-        <h1>Hello, my name is Brett</h1>
-        <h2>Please select a path</h2>
+        <div className="landing-text">
+          <h1>Hello, my name is Brett</h1>
+          <h2>Please select a path...</h2>
+        </div>
         <div className="landing-buttons">
           <button type="button" className="button-engineer">
             <Link
