@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "65f0d2c7d25099a8bf9900d1"
+  },
+  "engineer": {
+    "about": {
+      "part1": "Hello, my name is Brett Tanonaka and I am a full stack developer. Prior to engineering, I was a video producer for almost 10 years. When I was exploring motion design, I discovered After Effects Expressions, a JavaScript based animation language, and saw what is possible with code. Today, I use my experience with design to build end-to-end applications that are user-focused, intuitive, and scalable.",
+      "part2": ""
+    },
+    "intro": {
+      "main": "Aloha 🤙 I’m a full stack developer 🧑‍💻 with experience in UX/UI design, system design, and video production.",
+      "sec": "Yes, you read that correctly."
+    }
+  },
+  "video": {
+    "about": {
+      "part1": "Hello, my name is Brett Tanonaka and I am a video producer with over 10 years of experience, primarily focused on short form content. I have created videos for documentaries, internal communication, social media, and advertisements, for a range of industries such as retail, automotive, ed-tech, and social activist non-profits.",
+      "part2": "I specialize in video editing and motion design but have also dabbled in directing, studio management, and camera operating. In 2022 I began exploring software engineering and learned how powerful it can be to animate using algorithms."
+    },
+    "intro": {
+      "main": "Howzit 🤙 I’m a video producer 📹 with experience in editing, motion graphics, directing, and software engineering.",
+      "sec": "They have more in common than you may expect."
+    }
+  }
+}]
