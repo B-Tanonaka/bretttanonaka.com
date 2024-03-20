@@ -347,9 +347,33 @@
         "src": "https://github.com/B-Tanonaka/bretttanonaka.com/assets/118404699/7d28b592-9abe-4e89-a14f-a8f4d3df2383",
         "alt": "More information modal for plastic"
       }
-    ]
+    ],
+    "logo": {
+      "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/littersort/LitterSort-logo.png",
+      "alt": "Logo of Littersort, a leaf sticking out of a bottole"
+    }
   },
   "order": 4,
   "link": "https://littersort.ai",
-  "banner": "https://github.com/B-Tanonaka/bretttanonaka.com/assets/118404699/b8914f99-80d4-492c-b2e6-7a83f74ac537"
+  "banner": "https://github.com/B-Tanonaka/bretttanonaka.com/assets/118404699/b8914f99-80d4-492c-b2e6-7a83f74ac537",
+  "text": {
+    "camera": {
+      "part1": "Users are able to take a photo with their camera and submit it for analysis. The AI predicts what is in the image along with a confidence rating.",
+      "part2": "Since the AI is still being trained, the user can select a different category if they know the prediction is wrong."
+    },
+    "blurb": {
+      "part1": "The LitterSort team consists of five people and I lead the design and development of the front end of the web application. All work is volunteer based and the project is organized through Open Source San Jose (part of the Code for America brigade).",
+      "part2": "Recycling in California is handled at the district level and instructions for how an individual piece of trash should be disposed of can differ by city. A future goal of LitterSort is to provide granular information based on zip code.",
+      "part3": "The application is optimized for mobile but it is accessible on tablets and desktops as well."
+    },
+    "more": {
+      "part1": "Once the predicted or corrected category is confirmed, the user is provided general information on how to dispose of the item.",
+      "part2": "A modal with additional information can be provided by clicking on the ‘Learn More’ button."
+    },
+    "profile": "Users have the option but are not required to create an account where they can track the number of times they uploaded an item belonging to each category.",
+    "leaderboard": {
+      "part1": "The leaderboard can sort and display the top 10 users for each category. The default category is total uploads.",
+      "part2": "If a user is logged in, their current ranking and image count for the selected category is displayed above the leaderboard."
+    }
+  }
 }]
