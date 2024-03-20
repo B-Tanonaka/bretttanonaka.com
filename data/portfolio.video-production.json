@@ -1,0 +1,738 @@
+[{
+  "_id": {
+    "$oid": "65f08bf5d25099a8bf9900bc"
+  },
+  "name": "LinkedIn Influencer",
+  "year": "2019-2022",
+  "role": [
+    "Video Editor",
+    "Producer"
+  ],
+  "description": {
+    "partOne": "Ron Johnson is the Chief Executive Officer at Enjoy Technology. Previously, he served as a Senior Vice President at Apple, where he helped establish the Genius Bar. During his time at Target, he spearheaded the first collaboration between a designer and a retail company.",
+    "partTwo": "In 2019, he became a LinkedIn Influencer and over 24 months, we created a series of documentary and \ntalking-head style videos about the world of retail. Ron’s followers grew from zero to 15,000+ and his videos garnered over 200,000 views."
+  },
+  "techStack": [
+    "Adobe Premiere Pro",
+    "Adobe After Effects",
+    "DaVinci Resolve",
+    "Adobe Audition"
+  ],
+  "ref": "linkedininfluencer",
+  "images": {
+    "company": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/linkedin-influencer/Ron-Allbirds.png",
+        "alt": "Allbirds animation"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/linkedin-influencer/Ron-Peloton.png",
+        "alt": "Peloton animation"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/linkedin-influencer/Ron-Warby+Parker.png",
+        "alt": "Warby Parker animation"
+      }
+    ],
+    "linkedin": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/linkedin-influencer/Ron-KindessIsAChoice3.png",
+        "alt": "Kindness is a choice LinkedIn post"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/linkedin-influencer/Ron-NextNormal3.png",
+        "alt": "Next normal LinkedIn post"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/linkedin-influencer/Ron-Stanford+Mall3.png",
+        "alt": "Stanford Mall LinkedIn post"
+      }
+    ],
+    "gifs": {
+      "shopping": {
+        "alt": "Ron new shopping animation",
+        "desc": "",
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/linkedin-influencer/Ron-WhatIsEnjoy2.gif"
+      },
+      "amazon": {
+        "alt": "Amazon stock price chart",
+        "desc": "",
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/linkedin-influencer/Ron-Amazon+Stock+Price-Small.gif"
+      },
+      "attc": {
+        "alt": "Adding to the Conversation title animation",
+        "desc": "Adding to the Conversation was the name of season two of Ron’s LinkedIn series. This season was six episodes spread over two months.",
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/linkedin-influencer/ATTC+Title.gif"
+      }
+    }
+  },
+  "order": 7,
+  "videos": {
+    "future": {
+      "blurb": "Episode 1 - The Future of Retail | Role: Editor",
+      "link": "https://vimeo.com/714610181"
+    },
+    "kindness": {
+      "blurb": "Episode 4 - Kindness is a Choice | Role: Editor & Producer",
+      "link": "https://vimeo.com/714612830"
+    },
+    "office": {
+      "blurb": "Adding to the Conversation - Episode 4 - Return to Office | Role: Cinematographer, Editor, Sound Mixer",
+      "link": "https://vimeo.com/715767720"
+    },
+    "stanford": {
+      "blurb": "Episode 5 - How Stanford Shopping Center Succeeds  | Role: Editor & Sound Mixer",
+      "link": "https://vimeo.com/714608449"
+    }
+  },
+  "banner": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/linkedin-influencer/ATTC+Title-Small.png",
+  "company": "Enjoy Technology"
+},
+{
+  "_id": {
+    "$oid": "65f39070d25099a8bf9900db"
+  },
+  "name": "ENJY Public Listing",
+  "year": "2021",
+  "role": [
+    "Video Editor",
+    "Motion Graphics"
+  ],
+  "description": {
+    "partOne": "Enjoy Technology became a public company through a Special Purpose Acquisition Company (SPAC) merger in 2021. Enjoy negotiated with numerous SPACs to find a partner that aligned with Enjoy’s mission.",
+    "partTwo": "We created a series of videos that were used in proposals that provided prospective partners and investors an idea of what Enjoy is and the technology that powers it. On the day Enjoy was listed on the Nasdaq stock exchange, we were given an opportunity to play a video on the Nasdaq Tower Bell in Times Square."
+  },
+  "techStack": [
+    "Adobe Premiere Pro",
+    "Adobe After Effects",
+    "DaVinci Resolve",
+    "Adobe Audition",
+    "Adobe Illustrator"
+  ],
+  "ref": "enjy",
+  "images": {
+    "experience": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/going-public/Analyst+Day+-+Van+1.png",
+        "alt": "Van drone view"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/going-public/Analyst+Day+-+Expert+1.png",
+        "alt": "Expert placing bag on case"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/going-public/Analyst+Day+-+Digital+Badge.png",
+        "alt": "Expert badge on phone"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/going-public/Analyst+Day+-+Customer+1.png",
+        "alt": "Customer order placed"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/going-public/Analyst+Day+-+Inventory+Cart.png",
+        "alt": "Fulfillment pushing cart of products"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/going-public/Analyst+Day+-+Van+2.png",
+        "alt": "Van drone intersection"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/going-public/Analyst+Day+-+Visit+2.png",
+        "alt": "Pointing at Apple Watch"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/going-public/Analyst+Day+-+Vist+1.png",
+        "alt": "Expert and customer in a Visit"
+      }
+    ],
+    "nasdaq": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/going-public/Nasdaq+Tower+-+Doors.png",
+        "alt": "Animation on Nasdaq marquee",
+        "desc": "The Nasdaq Tower has windows within its screen and we integrated them into the animation. The windows start as a destination for the vehicles on the map, becoming windows that open and invite the viewer into the home, and finishes by showing the Enjoy experience inside."
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/going-public/NASDAQ-Red+Doors.png",
+        "alt": "Animation framework for the Nasdaq marquee"
+      }
+    ]
+  },
+  "order": 6,
+  "videos": {
+    "visit": {
+      "blurb": "Role: Editor & Animator",
+      "link": "https://vimeo.com/715791091"
+    },
+    "nasdaq": {
+      "blurb": "Role: Editor & Animator",
+      "link": "https://vimeo.com/715789847"
+    },
+    "marquee": {
+      "blurb": "Role: Editor",
+      "link": "https://vimeo.com/715803685"
+    },
+    "experience": {
+      "blurb": "Role: Producer & Editor",
+      "link": "https://vimeo.com/715791217"
+    },
+    "reviews": {
+      "blurb": "Role: Editor",
+      "link": "https://vimeo.com/715811316",
+      "desc": "Investors were interested in knowing how customers felt about Enjoy’s service so we pulled recent reviews from customer surveys and had real delivery experts read and react to them."
+    }
+  },
+  "banner": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/going-public/Nasdaq+Tower+-+Doors.png",
+  "company": "Enjoy Technology"
+},
+{
+  "_id": {
+    "$oid": "65f4d3ebd25099a8bf9900dc"
+  },
+  "name": "Recruiting",
+  "year": "2019-202",
+  "role": [
+    "Video Producer"
+  ],
+  "description": {
+    "partOne": " As a growing company, Enjoy was constantly recruiting delivery experts and for our headquarters. Throughout the year we had numerous recruiting pushes where we would target specific markets to meet demand.",
+    "partTwo": "Video and graphics were a core part of the internal and external campaigns."
+  },
+  "techStack": [
+    "Adobe Premiere Pro",
+    "Adobe After Effects",
+    "DaVinci Resolve",
+    "Adobe Audition",
+    "Adobe Illustrator"
+  ],
+  "ref": "recruiting",
+  "images": {
+    "gifs": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/recruiting/Go+Get+Great.gif",
+        "alt": "Go Get Great gif"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/recruiting/RT_9-28-MTD.gif",
+        "alt": "Recruiting thermometer showing hires and referrals",
+        "desc": "Due to a rapid surge in growth, Enjoy had a goal to hire 1000 delivery experts in two months. The Brand Creative team was tasked with establishing a program that would help achieve this goal. We produced a referral program and a set of associated assets to keep momentum high during this push."
+      }
+    ],
+    "quotes": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/recruiting/What+Brings+You+Joy+Wallpaper.jpg",
+        "alt": "What brings you joy wallpaper"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/recruiting/Digital_Zoom_Background_Template_HQ.004.jpeg",
+        "alt": "Come on in, the clay is still wet wall",
+        "desc": "We typically focused on the technology that our team built to appeal to prospective engineers. This video instead highlighted the culture and collaborative environment of Enjoy’s team where engineers of all levels have a large impact on the business."
+      }
+    ]
+  },
+  "order": 5,
+  "videos": {
+    "engineering": {
+      "blurb": "Role: Full Production",
+      "link": "https://vimeo.com/715803428"
+    },
+    "premiumdrive": {
+      "blurb": "Role: Animator",
+      "link": "https://vimeo.com/716962823"
+    }
+  },
+  "banner": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/recruiting/What+Brings+You+Joy+Wallpaper.jpg",
+  "company": "Enjoy Technology"
+},
+{
+  "_id": {
+    "$oid": "65f4e3e9d25099a8bf9900dd"
+  },
+  "name": "Motion Graphics",
+  "year": "2019-2022",
+  "role": [
+    "Animator"
+  ],
+  "description": {
+    "partOne": "Motion graphics were used throughout Enjoy’s ecosystem including internal communication, recruiting, enjoy.com, and social media. It allowed more complex ideas, such as the technology behind Enjoy’s operations, to be more easily digestible and gave video content a cohesive Enjoy branding.",
+    "partTwo": ""
+  },
+  "techStack": [
+    "Adobe After Effects",
+    "Adobe Illustrator"
+  ],
+  "ref": "motiongraphics",
+  "images": {
+    "delivery": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/motion-graphics/Engineering-API+Website_Small.gif",
+        "alt": "Animation of checkout screen"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/motion-graphics/Engineering-Inventory+Vans_Small.gif",
+        "alt": "Animation of vans with mobile inventory"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/motion-graphics/Engineering-Inventory_Small.gif",
+        "alt": "Animation of van going to a house"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/motion-graphics/Engineering-Scheduling+Website_Small.gif",
+        "alt": "Animation of scheduling and map navigation"
+      }
+    ],
+    "social": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/motion-graphics/Person-Ad.gif",
+        "alt": "Social media ad of an Enjoy expert"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/motion-graphics/PhoneCareers_1.gif",
+        "alt": "Social media phone ad of the Enjoy website"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/motion-graphics/PhoneCareers_2.gif",
+        "alt": "Social media phone ad of an Enjoy visit"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/motion-graphics/Rachel-Ad.gif",
+        "alt": "Social media ad of an Enjoy visit with text animating"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/motion-graphics/Retail-JoyBus.gif",
+        "alt": "Social media ad of Joy the Bus travelling through different backgrounds"
+      }
+    ],
+    "sharon": {
+      "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/motion-graphics/Sharon_Phone.png",
+      "alt": "Still image of guest speaker"
+    },
+    "truckMap": {
+      "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/motion-graphics/Inventory-Map+and+Phone.png",
+      "alt": "Simulated map and phone saying order is being delivered",
+      "desc": "Enjoy’s intellectual property is proprietary so we recreated them as illustrations. The designs resemble the actual tools but include just enough information for the audience to understand each of the tool’s functions.",
+      "title": "Designing for Security"
+    }
+  },
+  "order": 8,
+  "videos": {
+    "millionVisits": {
+      "blurb": "Role: Designer & Animator",
+      "link": "https://vimeo.com/716177945",
+      "desc": "When Enjoy reached one million customers we created this animation to commemorate the achievement."
+    },
+    "speaker": {
+      "blurb": "Role: Animator",
+      "link": "https://vimeo.com/716479948",
+      "desc": "We occasionally created content to post on our public channels to share what was going on at the company."
+    },
+    "website": {
+      "blurb": "Role: Animator",
+      "link": "https://vimeo.com/716184875"
+    },
+    "store": {
+      "blurb": "Role: Animator, Videographer, Editor, Producer",
+      "link": "https://vimeo.com/716119000"
+    },
+    "city": {
+      "blurb": "Role: Director & Animator",
+      "link": "https://vimeo.com/716207400",
+      "desc": "Enjoy primarily used the advertising tools on social media for recruiting purposes. We created various campaigns that targeted specific markets when we needed to hire more delivery experts. Our belief was that the people we wanted on our team are those who are interested in technology and therefore frequently use social media."
+    }
+  },
+  "banner": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/motion-graphics/Inventory-Map+and+Phone.png",
+  "company": "Enjoy Technology"
+},
+{
+  "_id": {
+    "$oid": "65f88be833754222ea393149"
+  },
+  "name": "Internal Communication",
+  "year": "2019-2022",
+  "role": [
+    "Video Producer",
+    "Video Editor"
+  ],
+  "description": {
+    "partOne": "Enjoy operated in five countries, therefore asynchronous communication was the most effective method of sharing information.",
+    "partTwo": "We used a variety of video formats to give updates from the leadership team and to bring people together from different markets including documentary, talking head, interview and narrative."
+  },
+  "techStack": [
+    "Adobe Premiere Pro",
+    "Adobe After Effects",
+    "DaVinci Resolve",
+    "Adobe Audition",
+    "Adobe Photoshop",
+    "Adobe Illustrator"
+  ],
+  "ref": "internalcomms",
+  "images": {
+    "gme": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/GME+Thumbnail.png",
+        "alt": "Thumbnail of Good Morning Enjoy",
+        "desc": "Good Morning Enjoy (GME) was a weekly video series hosted by members of Enjoy’s executive leadership team. The goal of GME was to create a company culture of openness and inclusivity and to create a connection between the 80+ markets. Topics would include company updates, celebrating markets and individuals, sharing stories about the teams, and more. Episodes were filmed in our studios or in different markets."
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/John+Kicking.gif",
+        "alt": "Man excitedly kicking"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/GME+Palo+Alto+Thumbnail.png",
+        "alt": "Thumbnail of Good Morning Enjoy at Palo Alto"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/GME+Kirstina+Talking.gif",
+        "alt": "Thumbnail of Good Morning Enjoy in upper area at Palo Alto"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/GME-Detroit+.png",
+        "alt": "Thumbnail of Good Morning Enjoy with the Detroit team"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/GME-Philly+Taco.png",
+        "alt": "Thumbnail of Good Morning Enjoy food tour with Philly"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/GME+-+The+Enjoy+Experience.gif",
+        "alt": "GIF of Jacksonville team singing The Enjoy Experience"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/GME_San+Jose+Clap.gif",
+        "alt": "San Jose team clapping"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/GMEUK+-+Thumbnail.png",
+        "alt": "Thumbnail of Good Morning Enjoy in the United Kingdom"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/GME_John+Home.png",
+        "alt": "Thumbnail of Good Morning Enjoy in John's home"
+      }
+    ],
+    "enjoyway": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/TheEnjoyWay-Title.png",
+        "alt": "Title collage of The Enjoy Way",
+        "desc": "The Enjoy Way was an internal campaign created to share the vision of what an Enjoy customer experience would feel like with our team. The words are based on a manifesto written by Enjoy co-founder, Tom Suiter. Our team reached out to 50+ individuals and we asked them to read their designated line in a location that represents their city."
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/TheEnjoyWay+-+Gracie.png",
+        "alt": "The Enjoy Way interview with Gracie in front of a fountain"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/TheEnjoyWay+-+Durrel.png",
+        "alt": "The Enjoy Way interview with Durrel and image of engineers building racks for the transport van"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/TheEnjoyWay+-+Alyssa.png",
+        "alt": "The Enjoy Way interview with Jess and image of two women hugging"
+      }
+    ],
+    "covid": {
+      "alt": "Good Morning Enjoy thumbnail during covid",
+      "desc": "When COVID-19 kept everyone in their homes, we transitioned GME to a digital program.",
+      "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/GME_07_08_20_Thumbnail.png"
+    }
+  },
+  "order": 4,
+  "videos": {
+    "gmehosts": {
+      "blurb": "Role: Editor, Director, Videographer",
+      "link": "https://vimeo.com/716130449/8e1cce93f7"
+    },
+    "gmefull": {
+      "blurb": "Role: Editor",
+      "link": "https://vimeo.com/716130966"
+    },
+    "gmequote": {
+      "blurb": "Role: Editor",
+      "link": "https://vimeo.com/716130154/35986ba6f4"
+    },
+    "gmedigital": {
+      "blurb": "Role: Editor & Producer",
+      "link": "https://vimeo.com/716930966/7c48c0c998"
+    },
+    "enjoyway": {
+      "blurb": "Role: Editor",
+      "link": "https://vimeo.com/716942858"
+    },
+    "thewhy": {
+      "blurb": "Role: Editor, Director, Videographer",
+      "link": "https://vimeo.com/716952259",
+      "desc": "The Why was a series of short informational videos where we would answer common questions from delivery experts that had complex or detailed responses. We interviewed the heads of projects and simplified the content into digestible videos that can be consumed on the go."
+    }
+  },
+  "banner": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/enjoy/internal-comms/GME+Thumbnail.png",
+  "company": "Enjoy Technology"
+},
+{
+  "_id": {
+    "$oid": "65f8a86933754222ea39314a"
+  },
+  "name": "Demo Reel",
+  "year": "2022",
+  "role": [
+    "Full Production"
+  ],
+  "description": {
+    "partOne": "My work as a video editor, motion designer, and cinematographer through 2022. You can find an in depth look and the full video of all the projects included in this reel (and more!) throughout my website. Happy exploring.",
+    "partTwo": ""
+  },
+  "techStack": [
+    "Adobe Premiere Pro",
+    "Adobe After Effects",
+    "DaVinci Resolve",
+    "Adobe Audition",
+    "Adobe Photoshop",
+    "Adobe Illustrator"
+  ],
+  "ref": "demoreel",
+  "order": 9,
+  "videos": {
+    "reel": {
+      "blurb": "Role: Full Production",
+      "link": "https://vimeo.com/718914472"
+    }
+  },
+  "banner": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/demo-reel/2022+Demo+Reel-Thumbnail.png",
+  "company": ""
+},
+{
+  "_id": {
+    "$oid": "65f8ba8733754222ea39314b"
+  },
+  "name": "Jeff's Jacket",
+  "year": "2015",
+  "role": [
+    "Video Editor"
+  ],
+  "description": {
+    "partOne": "In collaboration with Tobias Deml (cinematographer), Ash Gupta (photographer) and Gustavo Turm (musician), the Jeff's Jacket series follows the artistic and physical interpretation of a clothing piece.",
+    "partTwo": "Seven models were provided a chain vest jacket (Jeff’s Jacket) and were told to interpret and embody the fabric. Gustavo designed the music to be a mixture of electronic and metal. Tobias aimed to film moods of fantasy and avant garde.  My vision as the editor was to tell a story of hallucination."
+  },
+  "techStack": [
+    "Adobe Premiere Pro"
+  ],
+  "ref": "jeffsjacket",
+  "images": {
+    "julia": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/jeffs-jacket/Julia+-+1.gif",
+        "alt": "GIF of a model, Julia, looking at the camera"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/jeffs-jacket/Julia+-+2.gif",
+        "alt": "GIF of a model, Julia, holding her face"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/jeffs-jacket/Julia+-+3.gif",
+        "alt": "GIF of a model, Julia, close up holding her chin"
+      }
+    ],
+    "jacket": {
+      "alt": "Close up of a belt and the hands of Julia, showing the texture of the jacket",
+      "desc": "Tobias filmed shots of the jacket going in and out of focus. I utilized this as an overlay to have Julia appear between the holes of the jacket.",
+      "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/jeffs-jacket/Julia-Jacket.png"
+    },
+    "anastasia": {
+      "alt": "Half colored, and half uncolored image of the model, Anastasia",
+      "desc": "Each model was shot with a Blackmagic Pocket Cinema Camera. I doubled the saturation to produce color and manipulated the curves to give a green tint. The left of the photo is the raw footage and the right is the final color.",
+      "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/jeffs-jacket/Anastasia+-+Color.png"
+    }
+  },
+  "order": 2,
+  "videos": {
+    "briaen": {
+      "blurb": "Role: Editor",
+      "link": "https://vimeo.com/191220069",
+      "desc": "Tobias filmed a story with Briaen utilizing jewelry and water. At the beginning, he appears to be another female model due to his makeup but as the video plays through, he loses the jewelry and the water washes off his mask. The concept for his story was that everyone presents a persona in order to fit the status quo. However, as life progresses and obstacles (the water) come in the way, people begin to see who you truly are."
+    },
+    "julia": {
+      "blurb": "Warning: Slightly Provocative",
+      "link": "https://vimeo.com/716571321",
+      "desc": "Julia’s persona with the jacket was indicative of a thriller film that is building up tension. Her solemn presence had her appear to be in a trance so I attempted to add to the tension with somber tones and quick cuts. I overlaid a purple filter to create a sense of darkness. The mood I strived to present was reminiscent of Lavender Town in Pokemon, eerie but inviting."
+    },
+    "anastasia": {
+      "blurb": "Warning: Contains Nudity",
+      "link": "https://vimeo.com/716571461"
+    }
+  },
+  "banner": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/jeffs-jacket/Jeff's-Jacket-Title-Julia.png",
+  "company": ""
+},
+{
+  "_id": {
+    "$oid": "65f8c22d33754222ea39314c"
+  },
+  "name": "UC Scout",
+  "year": "2017-2019",
+  "role": [
+    "Video Editor",
+    "Cinematographer"
+  ],
+  "description": {
+    "partOne": "UC Scout is an online education program that provides access to Advanced Placement and A-G courses to underserved California high school students, providing them an equal opportunity to enroll into the University of California and California State School systems.",
+    "partTwo": "My primary role was to edit lessons (average: 40-120 total per course) based on a script and style guide. I assisted in constructing the style guide for a few courses where our goal was to make five editors appear as one. Other responsibilities include in-studio filming and tele-prompting."
+  },
+  "techStack": [
+    "Adobe Premiere Pro",
+    "Adobe After Effects"
+  ],
+  "ref": "ucscout",
+  "images": {
+    "carousel": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/uc-scout/AP+Gov+-+Battle.png",
+        "alt": "Collage of images from the American Revolution",
+        "desc": "The style guide for this course included title graphics, text boxes, character drawings and backgrounds. Due to the content being historical we tried to bring old images to life by separating their elements and adding motion, and by placing photos on animated backgrounds."
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/uc-scout/AP+Gov+-+Checks+and+Balances.png",
+        "alt": "Image animation of the United States checks and balances"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/uc-scout/AP+Gov+-+Departments.png",
+        "alt": "Badges of the United States government departments"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/uc-scout/AP+Gov+-+Preamble.png",
+        "alt": "Image of the Preample on a parchment"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/uc-scout/AP+Gov+-+President+Inner+Cabinet.png",
+        "alt": "Bullet point list of who is in the president's inner cabinet"
+      }
+    ],
+    "gifs": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/uc-scout/AP+GOV+-+American+Revolution.gif",
+        "alt": "GIF photo animation of an American Revolution painting"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/uc-scout/AP+GOV+-+Brutus.gif",
+        "alt": "GIF animation of the anonymous writer Brutus"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/uc-scout/AP+GOV+-+White+House.gif",
+        "alt": "GIF photo animation of a sketch house of the White House"
+      }
+    ],
+    "physics": [
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/uc-scout/Physics+-+Cannon+Wall.png",
+        "alt": "Image of a cannon displaying the mathametical formula that gravity has on a projectile when it hits a wall"
+      },
+      {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/uc-scout/Physics+-+Cannon.png",
+        "alt": "Image of a cannon displaying the mathametical formula of the peak time a ball has when shot as a projectile"
+      }
+    ]
+  },
+  "order": 4,
+  "videos": {
+    "gov": {
+      "blurb": "Role: Editor & Animator",
+      "link": "https://vimeo.com/313911388"
+    },
+    "publius": {
+      "blurb": "Role: Animator",
+      "link": "https://vimeo.com/328329504"
+    },
+    "presidents": {
+      "blurb": "Role: Editor",
+      "link": "https://vimeo.com/328331908"
+    },
+    "brutus": {
+      "blurb": "Role: Animator",
+      "link": "https://vimeo.com/328329486"
+    },
+    "physics": {
+      "blurb": "Role: Editor",
+      "link": "https://vimeo.com/313911943"
+    },
+    "lawandsociety": {
+      "blurb": "Role: Editor, Videographer",
+      "link": "https://vimeo.com/313912429"
+    },
+    "french": {
+      "blurb": "Role: Editor",
+      "link": "https://vimeo.com/313912562"
+    },
+    "equation": {
+      "blurb": "Role: Editor",
+      "link": "https://vimeo.com/328328283"
+    },
+    "momentum": {
+      "blurb": "Role: Editor",
+      "link": "https://vimeo.com/328331231"
+    },
+    "galaxy": {
+      "blurb": "Role: Editor",
+      "link": "https://vimeo.com/328331220"
+    }
+  },
+  "banner": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/uc-scout/UC+Scout+Logo.png",
+  "company": "University of California"
+},
+{
+  "_id": {
+    "$oid": "65f8cdd033754222ea39314d"
+  },
+  "name": "Other Projects",
+  "year": "2009-2021",
+  "role": [
+    "Various"
+  ],
+  "description": {
+    "partOne": "Collection of individual personal projects as an editor, director, and cinematographer.",
+    "partTwo": ""
+  },
+  "techStack": [
+    "Adobe Premiere Pro",
+    "Final Cut Pro",
+    ""
+  ],
+  "ref": "other",
+  "order": 1,
+  "videos": {
+    "groove": {
+      "blurb": "Role: Editor | December 2021",
+      "link": "https://vimeo.com/660545702"
+    },
+    "ministryofeye": {
+      "blurb": "School of Motion - Animation Bootcamp | Role: Animator | November 2020",
+      "link": "https://vimeo.com/717676035/87d78bb684"
+    },
+    "sculptor": {
+      "blurb": "School of Motion - Animation Bootcamp | Role: Animator | December 2020",
+      "link": "https://vimeo.com/717677644"
+    },
+    "tang": {
+      "blurb": "Role: Editor | May 2016",
+      "link": "https://vimeo.com/162336132"
+    },
+    "identityx": {
+      "blurb": "Role: Cinematographer, Producer, Editor | July 2015",
+      "link": "https://www.youtube.com/watch?v=gISpseVcxnk"
+    },
+    "hyundai": {
+      "blurb": "Role: Co-cinematographer | January 2014",
+      "link": "https://www.youtube.com/watch?v=YFtHAHARbJA"
+    },
+    "keystone": {
+      "blurb": "Role: Director & Editor | April 2014",
+      "link": "https://www.youtube.com/watch?v=DUogd6bRoCM"
+    },
+    "body": {
+      "blurb": "Role: Co-cinematographer & Editor | March 2014",
+      "link": "https://vimeo.com/89686075/d472465121"
+    },
+    "sugihara": {
+      "blurb": "Role: Full Production | 2009",
+      "link": "https://vimeo.com/716863937"
+    }
+  },
+  "banner": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/other/Identity%2BX.png",
+  "company": "",
+  "images": {}
+}]
