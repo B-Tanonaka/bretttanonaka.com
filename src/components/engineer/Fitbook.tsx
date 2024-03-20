@@ -11,7 +11,7 @@ export default function Fitbook(
   }, []);
 
   return (
-    <div className="image-details-container">
+    <div className="details-container">
       <h3>Login</h3>
       <div className="image-wrapper-phone fb-login">
         { projectData!.images.login.map(

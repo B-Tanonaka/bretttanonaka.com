@@ -11,7 +11,7 @@ export default function LitterSort(
   }, []);
 
   return (
-    <div className="image-details-container">
+    <div className="details-container">
       <h3>Home</h3>
       <div className="image-wrapper-phone ls-home">
         { projectData!.images.home.map(

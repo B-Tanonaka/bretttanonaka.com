@@ -11,7 +11,7 @@ export default function Mevify(
   }, []);
 
   return (
-    <div className="image-details-container">
+    <div className="details-container">
       <h3>Schema</h3>
       <div className="image-wrapper m-schema">
         { projectData!.images.schema.map(
