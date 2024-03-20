@@ -47,6 +47,8 @@ type Text = {
   part1: string;
   part2: string;
   part3?: string;
+  title?: string;
+  takeaway?: string;
 };
 
 export type EngineerProject = {
