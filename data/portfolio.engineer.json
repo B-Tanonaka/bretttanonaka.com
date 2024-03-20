@@ -45,11 +45,47 @@
         "src": "https://live.staticflickr.com/65535/53090186768_d7aea90608_b.jpg",
         "alt": "Nav bar"
       }
-    ]
+    ],
+    "gifs": {
+      "projects": {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/portfolio/Projects.gif",
+        "alt": "GIF showing that hovering over a project will underline it"
+      },
+      "background": {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/portfolio/Background.gif",
+        "alt": "GIF showing how the background gradient follows the mouse's position"
+      },
+      "projectDetails": {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/portfolio/ProjectDetails.gif",
+        "alt": "GIF clicking on a project that takes you to the project's details"
+      },
+      "contact": {
+        "src": "https://portfolio-bretttanonaka.s3.us-west-1.amazonaws.com/portfolio/Contact.gif",
+        "alt": "GIF showing a modal indicating a message was sent successfully"
+      }
+    }
   },
   "order": 3,
   "link": "https://bretttanonaka.com",
-  "banner": "https://github.com/B-Tanonaka/bretttanonaka.com/assets/118404699/9db95938-141d-4d85-a8fe-53359b9f5e5a"
+  "banner": "https://github.com/B-Tanonaka/bretttanonaka.com/assets/118404699/9db95938-141d-4d85-a8fe-53359b9f5e5a",
+  "text": {
+    "goal": {
+      "part1": "When I was a video producer, I used Squarespace for my portfolio and while it is a powerful tool, there are limitations to template based website generators.",
+      "part2": ""
+    },
+    "background": {
+      "part1": "I wanted the background to be able to interact with the mouse position and decided to do so with a gradient.",
+      "part2": "This is accomplished by using a window event listener and saving the clientX and clientY position to their own states. The states are then used as the focal point in a radial gradient."
+    },
+    "projectDetails": {
+      "part1": "Each project can be clicked on to take the user to a separate page that displays the project’s description, my roles, and the technology stack used. The details page also includes photos and gifs of the live application",
+      "part2": ""
+    },
+    "contact": {
+      "part1": "The contact form is connected to a MongoDB database that stores the user’s name, email, and message. When a message is successfully submitted, a modal appears with a thank you note. An error appears when the message is not able to be sent.",
+      "part2": ""
+    }
+  }
 },
 {
   "_id": {
@@ -165,7 +201,11 @@
   },
   "order": 2,
   "link": "",
-  "banner": "https://github.com/B-Tanonaka/bretttanonaka.com/assets/118404699/51ea0a30-7b8b-4e44-b46b-3ba717a45d51"
+  "banner": "https://github.com/B-Tanonaka/bretttanonaka.com/assets/118404699/51ea0a30-7b8b-4e44-b46b-3ba717a45d51",
+  "text": {
+    "contribution": "I created the individual community component and wrote seed functions to generate dummy data to use during development. As the UI Lead, I designed the application and used Figma’s prototype tool to simulate navigation prior to development.",
+    "community": "The individual community page includes a banner, name, event carousel, and post feed. Users are able to join or leave the community and have their home feed filter posts from that community."
+  }
 },
 {
   "_id": {
@@ -218,7 +258,42 @@
   },
   "order": 1,
   "link": "",
-  "banner": "https://github.com/B-Tanonaka/bretttanonaka.com/assets/118404699/89716960-5f55-47ea-b2d1-897228a992c0"
+  "banner": "https://github.com/B-Tanonaka/bretttanonaka.com/assets/118404699/89716960-5f55-47ea-b2d1-897228a992c0",
+  "text": {
+    "database": "Node.js is the server environment and PostgreSQL was selected as the database because it offers native functions to assemble data intensive queries directly from the database, such as json_build_object and json_agg.",
+    "schema": "The schema was designed to match the structure of the CSV files with some primary keys being connected to other tables as foreign keys.",
+    "metricGoals": {
+      "part1": "1. 1000 requests per second",
+      "part2": "2. Latency under 2000ms per request",
+      "part3": "3. Less than 1% average error rate",
+      "title": "Metric Goals"
+    },
+    "results": {
+      "part1": "1. Up to 7,5000 requests per second",
+      "part2": "2. Average latency under 10ms",
+      "part3": "3. 0% error rate",
+      "title": "Results",
+      "takeaway": "Creating proper queries and indexes has a significant impact on response speed. Once that has been optimized, I found it more impactful to shift my focus to horizontal scaling."
+    },
+    "data": {
+      "part1": "An ETL process was performed on approximately five million rows of data from seven CSV files.",
+      "part2": "Having a pre-existing front end, the data structure for each endpoint was defined so the queries needed to match that structure."
+    },
+    "blurb": "I created an API for a client-facing e-commerce website. All work was done independently and was reviewed by two peers.",
+    "queries": {
+      "part1": "The initial queries for the most intensive endpoint when running a single request using Postman, hovered between 7-8 seconds.",
+      "part2": "After using binary tree indexes on the primary and foreign keys in each table, latency decreased to 100ms per request on average for about 1000 requests per second. The initial tests were run on a local machine using K6."
+    },
+    "deploy": {
+      "part1": "The server and database were then deployed on separate AWS: EC2 instances.",
+      "part2": "After adding two additional servers and a load balancer using Nginx (each on their own EC2 instance), each server could handle about 800 requests per second with each request response time averaging around 60ms. Deployed testing was conducted on Loader.io."
+    },
+    "snippets": {
+      "part1": "Approximately 440 requests per second; 79ms response time",
+      "part2": "Testing with three servers and a load balancer; handling a combined 2400 r/s",
+      "part3": "Testing 5,000 and 7,500 requests per second on five deployed AWS:EC2 instances"
+    }
+  }
 },
 {
   "_id": {
