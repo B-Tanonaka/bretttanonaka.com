@@ -190,6 +190,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
+  z-index: 1;
 }
 
 .image-2-col {
@@ -598,10 +599,6 @@
   .image-4-col {
     width: 49%;
     margin-bottom: 0.9rem;
-  }
-
-  .image-wrapper {
-    width: 90%;
   }
 
 	.image-wrapper-phone {
