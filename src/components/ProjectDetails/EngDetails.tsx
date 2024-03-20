@@ -26,7 +26,7 @@ export default function EngProjectDetails({
     return (
       <>
         <Link to="/engineer">
-          <input type="button" value="Home" className="back" />
+          <input type="button" value="Back" className="back" />
         </Link>
         { projectData && (
         <div className="project-details">

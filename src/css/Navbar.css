@@ -62,6 +62,10 @@
   text-align: right;
 }
 
+.navbar-dropdown:focus {
+  outline: none;
+}
+
 .navbar-sections {
 	display: flex;
 	width: 80%;
@@ -215,10 +219,6 @@
     text-align-last: left;
     color: var(--main-text);
     font-weight: 500;
-  }
-
-  .navbar-dropdown:focus {
-    outline: none;
   }
 
 	.navbar-hamburger {
