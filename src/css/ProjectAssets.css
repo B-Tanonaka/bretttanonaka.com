@@ -682,6 +682,10 @@
     font-size: 1.5rem;
   }
 
+  .details-container h3 {
+    font-size: 1.3rem;
+  }
+
   .details-container h4,
   .details-container h5 {
     font-size: 1rem;
@@ -690,6 +694,11 @@
 
   .details-container h5 {
     width: 100%;
+  }
+
+  .details-container-h3-solo {
+    width: 80%;
+    margin-bottom: 2rem;
   }
 
   .details-container-h5-solo {
@@ -758,14 +767,40 @@
     width: 50%;
   }
 
-  .portrait-2-text-container {
+  .portrait-2-text-container,
+  .portrait-3-text-container {
     flex-wrap: wrap;
     margin-bottom: 2rem;
   }
 
+  .portrait-2-text-images-container,
+  .portrait-3-text-images-container {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .portrait-2-text-container {
+    justify-content: center;
+  }
+
+  .portrait-2-text-image-col {
+    width: 45%;
+    margin: 0 0.5rem;
+  }
+
   .portrait-2-text-col {
-    margin-bottom: 1rem;
-    width: 50%;
+    margin: 0.5rem;
+    width: 45%;
+  }
+
+  .portrait-3-text-image-col {
+    width: 45%;
+    margin: 0.5rem;
+  }
+
+  .portrait-3-text-col {
+    margin-top: 1rem;
   }
 
   .landscape-2-text-col {
@@ -853,6 +888,14 @@
   }
 
   .phone-image {
-		width: 27%;
+		max-width: calc(100vw * .3623);
 	}
+}
+
+@media (max-width: 400px) {
+  .portrait-2-text-col,
+  .portrait-2-text-image-col,
+  .portrait-3-text-image-col {
+    width: 40%;
+  }
 }

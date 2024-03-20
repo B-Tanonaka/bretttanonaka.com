@@ -19,7 +19,7 @@ export default function LitterSort(
       <div className="portrait-3-text-container ls-camera">
         <div className="portrait-3-text-images-container">
           { projectData!.images.camera.map(
-            (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'portrait-3-text-image-col'),
+            (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'portrait-3-text-image-col phone-image'),
           ) }
         </div>
         <h5 className="portrait-3-text-col">
