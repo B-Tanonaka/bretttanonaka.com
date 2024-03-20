@@ -326,6 +326,7 @@
 	align-items: center;
 	padding: 1rem;
 	z-index: 2;
+  object-fit: contain;
 }
 
 .image-wrapper-phone {
