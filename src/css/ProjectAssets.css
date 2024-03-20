@@ -539,6 +539,10 @@
     font-size: 1rem;
   }
 
+  .details-container-h3-solo {
+    width: 80%;
+  }
+
   .video-1-container,
   .video-2-container,
   .video-3-container,
@@ -607,6 +611,32 @@
 
   .portrait-2-text-col {
     width: 30%;
+  }
+
+  .portrait-2-text-image-col {
+    margin: 0;
+  }
+
+  .portrait-2-text-container,
+  .portrait-3-text-container {
+    flex-wrap: wrap;
+  }
+
+  .portrait-2-text-images-container {
+    width: 60%;
+  }
+
+  .portrait-3-text-images-container {
+    width: 100%;
+  }
+
+  .portrait-3-text-col {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .phone-image {
+    max-width: calc(100vw * .2472)
   }
 
   .motion-graphics-million-container {
