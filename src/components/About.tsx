@@ -5,7 +5,7 @@ import {
   FaVimeoV,
 } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
-import Resume from '../assets/resume-bretttanonaka.pdf';
+// import Resume from '../assets/resume-bretttanonaka.pdf';
 import type { AboutInfo } from '../../interfaces';
 import '../css/About.css';
 
@@ -30,7 +30,7 @@ export default function About({ data }: { data: AboutInfo }) {
               <p>{data[validCategory].about.part2}</p>
             </>
           )}
-        <a href={Resume} target="_blank" rel="noopener noreferrer" className="resume">
+        <a href={data[validCategory].resume} target="_blank" rel="noopener noreferrer" className="resume">
           <FaCheckDouble />
           <span> resume</span>
         </a>

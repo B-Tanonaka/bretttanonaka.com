@@ -4,20 +4,23 @@ export type AboutData = {
     intro: {
       main: string,
       sec: string
-    }
+    },
+    resume: string,
   },
   video: {
     about: string,
     intro: {
       main: string,
       sec: string
-    }
+    },
+    resume?: string,
   },
   about: { part1: string, part2?: string },
   intro: {
     main: string,
     sec: string,
-  };
+  }
+  resume: string,
 };
 
 export type AboutInfo = {
