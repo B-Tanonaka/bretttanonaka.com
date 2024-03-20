@@ -43,6 +43,12 @@ export type Image = {
   title?: string;
 };
 
+type Text = {
+  part1: string;
+  part2: string;
+  part3?: string;
+};
+
 export type EngineerProject = {
   _id: string;
   name: string;
@@ -53,9 +59,13 @@ export type EngineerProject = {
   ref: string;
   repo: string;
   banner: string;
-  images: { [key: string]: { src: string, alt: string }[] };
+  images: { [key: string]: { [key: string]: Image } }
+  & { [key: string]: Image[] }
+  & { [key: string]: Image };
   order: number;
   link: string;
+  text: { [key: string]: Text }
+  & { [key: string]: string };
 };
 
 export type VideoProject = {
@@ -69,7 +79,8 @@ export type VideoProject = {
   ref: string;
   banner: string;
   images: { [key: string]: { [key: string]: Image } }
-  & { [key: string]: Image[] } & { [key: string]: Image };
+  & { [key: string]: Image[] }
+  & { [key: string]: Image };
   videos: { [key: string]: { link: string, blurb: string, desc?: string } };
   order: number;
 };

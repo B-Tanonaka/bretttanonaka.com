@@ -32,10 +32,11 @@
 }
 
 .details-container h3 {
-	background-color: var(--gray3-color);
-	color: var(--white-color);
-	padding: 1rem 2rem;
-	z-index: 3;
+	background-color: var(--white-color);
+	color: var(--main-text);
+  border-radius: 1rem 1rem 1rem 0;
+	padding: 1.5rem 2rem;
+  font-weight: 400;
 }
 
 .details-container h4 {
@@ -51,9 +52,15 @@
   font-size: 1.4rem;
 }
 
+.details-container-h3-solo {
+  width: 60%;
+  margin-bottom: 6rem;
+  z-index: 1;
+}
+
 .details-container-h5-solo {
   width: 80%;
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
 }
 
 /**** Videos ****/
@@ -290,12 +297,29 @@
   width: 20%;
 }
 
-.portrait-2-text-container {
+.portrait-2-text-container,
+.portrait-3-text-container {
   width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
+  z-index: 1;
+}
+
+.portrait-3-text-images-container {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portrait-3-text-image-col {
+  width: 31%;
+}
+
+.portrait-3-text-col {
+  width: 35%;
 }
 
 .portrait-2-text-col {
@@ -343,10 +367,7 @@
 }
 
 .phone-image {
-	height: 20%;
-	width: 20%;
-	padding: 1rem;
-	z-index: 2;
+	max-width: 250px;
 }
 
 .large-image {

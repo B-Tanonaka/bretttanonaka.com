@@ -20,6 +20,7 @@ const engineerSchema = new mongoose.Schema<EngineerProject>({
   images: Object,
   order: Number,
   link: String,
+  text: Object,
 });
 
 const videoSchema = new mongoose.Schema<VideoProject>({
