@@ -37,9 +37,11 @@ export default function LitterSort(
           <br />
           <span>{projectData!.text.camera.part2}</span>
         </h5>
-        { projectData!.images.success.map(
-          (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'portrait-2-text-col phone-image'),
-        ) }
+        <div className="portrait-2-text-images-container">
+          { projectData!.images.success.map(
+            (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'portrait-2-text-image-col phone-image'),
+          ) }
+        </div>
       </div>
       <div className="image-2-container">
         <div className="image-2-text image-2-col">
@@ -56,28 +58,35 @@ export default function LitterSort(
         { projectData!.images.profile.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'portrait-2-text-col phone-image'),
         ) }
+        <h5 className="portrait-2-text-col">
+          <span>{projectData!.text.profile}</span>
+        </h5>
       </div>
       <h1>Leaderboard</h1>
       <div className="portrait-2-text-container ls-leaderboard">
-        <h5 className="portrait-2-text-col">{projectData!.text.leaderboard.part1}</h5>
+        <h5 className="portrait-2-text-col">
+          <span>{projectData!.text.leaderboard.part1}</span>
+        </h5>
         { projectData!.images.leaderboard.map(
-          (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'portrait-image-2-text-col phone-image'),
+          (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'portrait-2-image-1-col phone-image'),
         ) }
-        <h5 className="portrait-2-text-col">{projectData!.text.leaderboard.part2}</h5>
+        <h5 className="portrait-2-text-col">
+          <span>{projectData!.text.leaderboard.part2}</span>
+        </h5>
       </div>
       <h1>Register/Login</h1>
-      <div className="image-wrapper-phone ls-login">
+      <div className="portrait-images-only-container ls-login">
         { projectData!.images.login.map(
-          (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
+          (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'portrait-images-only-col phone-image'),
         ) }
       </div>
       <div className="details-container-h3-solo">
         <h3>{projectData!.text.blurb.part3}</h3>
       </div>
       <h1>Home</h1>
-      <div className="image-wrapper-phone ls-home">
+      <div className="portrait-images-only-container ls-home">
         { projectData!.images.home.map(
-          (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
+          (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'portrait-images-only-col phone-image'),
         ) }
       </div>
     </div>

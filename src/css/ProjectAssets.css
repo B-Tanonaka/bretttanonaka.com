@@ -298,12 +298,27 @@
 }
 
 .portrait-2-text-container,
-.portrait-3-text-container {
+.portrait-3-text-container,
+.portrait-images-only-container {
   width: 80%;
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.portrait-images-only-container {
+  justify-content: center;
+}
+
+.portrait-images-only-col {
+  width: 100%;
+  margin: 0 1rem;
+}
+
+.portrait-2-text-container,
+.portrait-3-text-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4rem;
   z-index: 1;
 }
 
@@ -322,8 +337,23 @@
   width: 35%;
 }
 
+.portrait-2-text-images-container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.portrait-2-text-image-col {
+  width: 50%;
+  margin: 0 1rem;
+}
+
 .portrait-2-text-col {
-  width: 30%;
+  width: 40%;
+}
+
+.portrait-2-image-1-col {
+  margin: 0 1.5rem;
 }
 
 .portrait-2-text-sharon {
@@ -367,7 +397,7 @@
 }
 
 .phone-image {
-	max-width: 250px;
+	max-width: calc(100vw * .175);
 }
 
 .large-image {
