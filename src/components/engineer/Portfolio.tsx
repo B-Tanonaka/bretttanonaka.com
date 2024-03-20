@@ -12,7 +12,7 @@ export default function Portfolio(
 
   return (
     <div className="details-container">
-      <h3>Original Design in Figma</h3>
+      <h1>Original Design in Figma</h1>
       <div className="image-wrapper">
         { projectData!.images.figma.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'desktop-image'),

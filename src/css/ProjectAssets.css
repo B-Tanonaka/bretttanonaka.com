@@ -354,11 +354,6 @@
 	z-index: 3;
 }
 
-.subtitle {
-	font-size: 1rem;
-	padding: 1rem;
-}
-
 .carousel-wrapper {
   display: block;
   width: 80%;
@@ -738,7 +733,7 @@
   }
 
   .image-wrapper {
-    width: 85%;
+    width: 80%;
   }
 	.image-wrapper-phone {
 		width: 100%;

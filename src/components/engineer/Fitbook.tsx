@@ -12,43 +12,43 @@ export default function Fitbook(
 
   return (
     <div className="details-container">
-      <h3>Login</h3>
+      <h1>Login</h1>
       <div className="image-wrapper-phone fb-login">
         { projectData!.images.login.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
         ) }
       </div>
-      <h3>Home feed</h3>
+      <h1>Home feed</h1>
       <div className="image-wrapper-phone fb-home">
         { projectData!.images.home.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
         ) }
       </div>
-      <h3>Comments</h3>
+      <h1>Comments</h1>
       <div className="image-wrapper-phone fb-comments">
         { projectData!.images.comments.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
         ) }
       </div>
-      <h3>Profile</h3>
+      <h1>Profile</h1>
       <div className="image-wrapper-phone fb-profile">
         { projectData!.images.profile.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
         ) }
       </div>
-      <h3>Communities</h3>
+      <h1>Communities</h1>
       <div className="image-wrapper-phone fb-communities">
         { projectData!.images.communities.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
         ) }
       </div>
-      <h3>Messages</h3>
+      <h1>Messages</h1>
       <div className="image-wrapper-phone fb-messages">
         { projectData!.images.messages.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
         ) }
       </div>
-      <h3>Create an event</h3>
+      <h1>Create an event</h1>
       <div className="image-wrapper-phone fb-create-event">
         { projectData!.images.create.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),

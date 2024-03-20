@@ -12,37 +12,37 @@ export default function LitterSort(
 
   return (
     <div className="details-container">
-      <h3>Home</h3>
+      <h1>Home</h1>
       <div className="image-wrapper-phone ls-home">
         { projectData!.images.home.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
         ) }
       </div>
-      <h3>Register/Login</h3>
+      <h1>Register/Login</h1>
       <div className="image-wrapper-phone ls-login">
         { projectData!.images.login.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
         ) }
       </div>
-      <h3>Camera</h3>
+      <h1>Camera</h1>
       <div className="image-wrapper-phone ls-camera">
         { projectData!.images.camera.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
         ) }
       </div>
-      <h3>Leaderboard</h3>
+      <h1>Leaderboard</h1>
       <div className="image-wrapper-phone ls-leaderboard">
         { projectData!.images.leaderboard.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
         ) }
       </div>
-      <h3>Profile</h3>
+      <h1>Profile</h1>
       <div className="image-wrapper-phone ls-profile">
         { projectData!.images.profile.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),
         ) }
       </div>
-      <h3>More information</h3>
+      <h1>More information</h1>
       <div className="image-wrapper-phone ls-success">
         { projectData!.images.success.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'phone-image'),

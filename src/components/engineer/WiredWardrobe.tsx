@@ -12,25 +12,25 @@ export default function WiredWardrobe(
 
   return (
     <div className="details-container">
-      <h3>Product Overview</h3>
+      <h1>Product Overview</h1>
       <div className="image-wrapper overview">
         { projectData!.images.overview.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'desktop-image'),
         )}
       </div>
-      <h3>Related Items and My Outfit</h3>
+      <h1>Related Items and My Outfit</h1>
       <div className="image-wrapper related-items">
         { projectData!.images.related.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'desktop-image'),
         ) }
       </div>
-      <h3>Questions and Answers</h3>
+      <h1>Questions and Answers</h1>
       <div className="image-wrapper qna">
         { projectData!.images.qna.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'desktop-image'),
         ) }
       </div>
-      <h3>Ratings and Reviews</h3>
+      <h1>Ratings and Reviews</h1>
       <div className="image-wrapper rnr">
         { projectData!.images.rnr.map(
           (img: { src: string, alt: string }, key: number) => renderProjectImages(img, key, 'desktop-image'),
