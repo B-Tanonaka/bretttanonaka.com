@@ -719,6 +719,7 @@
   }
 
   .video-2-container,
+  .video-3-container,
   .image-2-container,
   .image-3-quarter-container {
     flex-wrap: wrap;
