@@ -1,4 +1,49 @@
-export type Project = {
+export type AboutData = {
+  engineer: {
+    about: string,
+    intro: {
+      main: string,
+      sec: string
+    }
+  },
+  video: {
+    about: string,
+    intro: {
+      main: string,
+      sec: string
+    }
+  },
+  about: { part1: string, part2?: string },
+  intro: {
+    main: string,
+    sec: string,
+  };
+};
+
+export type AboutInfo = {
+  [key: string]: AboutData,
+};
+
+export type RenderPhotoList = (
+  img: { src: string, alt: string }, key: number, className: string
+) => JSX.Element;
+
+export type RenderList = (text: string, index: number) => JSX.Element;
+
+export type Form = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+export type Image = {
+  src: string;
+  alt: string;
+  desc?: string;
+  title?: string;
+};
+
+export type EngineerProject = {
   _id: string;
   name: string;
   role: string[];
@@ -7,53 +52,43 @@ export type Project = {
   techStack: string[];
   ref: string;
   repo: string;
-  img: string;
+  banner: string;
   images: { [key: string]: { src: string, alt: string }[] };
   order: number;
   link: string;
 };
 
-export type DataProp = {
-  data: Project[];
-};
-
-export type RenderPhotoList = (
-  img: { src: string, alt: string }, key: number
-) => JSX.Element;
-
-export type Form = {
+export type VideoProject = {
+  _id: string;
+  company: string;
   name: string;
-  email: string;
-  message: string;
+  year: string;
+  role: string[];
+  description: { partOne: string, partTwo: string };
+  techStack: string[];
+  ref: string;
+  banner: string;
+  images: { [key: string]: { [key: string]: Image } }
+  & { [key: string]: Image[] } & { [key: string]: Image };
+  videos: { [key: string]: { link: string, blurb: string, desc?: string } };
+  order: number;
 };
 
-export const BlankProject = {
-  _id: '',
-  name: '',
-  role: [],
-  year: 0,
-  description: '',
-  techStack: [],
-  ref: '',
-  repo: '',
-  img: '',
-  order: 0,
-  link: '',
-  images: {
-    login: [{ src: '', alt: '' }],
-    home: [{ src: '', alt: '' }],
-    comments: [{ src: '', alt: '' }],
-    create: [{ src: '', alt: '' }],
-    profile: [{ src: '', alt: '' }],
-    communities: [{ src: '', alt: '' }],
-    messages: [{ src: '', alt: '' }],
-    figma: [{ src: '', alt: '' }],
-    schema: [{ src: '', alt: '' }],
-    loader: [{ src: '', alt: '' }],
-    k6: [{ src: '', alt: '' }],
-    overview: [{ src: '', alt: '' }],
-    related: [{ src: '', alt: '' }],
-    qna: [{ src: '', alt: '' }],
-    rnr: [{ src: '', alt: '' }],
+export type Project = VideoProject | EngineerProject;
+
+export const BlankAboutData = {
+  engineer: {
+    about: '',
+    intro: {
+      main: '',
+      sec: '',
+    },
+  },
+  video: {
+    about: '',
+    intro: {
+      main: '',
+      sec: '',
+    },
   },
 };

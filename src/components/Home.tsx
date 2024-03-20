@@ -1,36 +1,44 @@
-import { useState, useEffect } from 'react';
+import {
+  useState, useEffect,
+} from 'react';
+import { useParams } from 'react-router-dom';
 import type { Project } from '../../interfaces';
-import Landing from './Landing';
+import Intro from './Intro';
 import Navbar from './Navbar';
 import Projects from './Projects';
 import About from './About';
 import Contact from './Contact';
 import Modal from './ContactModal';
 import Background from './Background';
-import { fetchProjectData } from '../utils/fetchData';
+import { fetchProjectData, fetchAboutData } from '../utils/fetchData';
 import '../css/Home.css';
 
 export default function Home() {
-  const [data, setData] = useState<Project[]>([]);
+  const [projectData, setProjectData] = useState<Project[]>([]);
+  const [aboutData, setAboutData] = useState({});
   const [modalOpen, setModalOpen] = useState(false);
   const [modalState, setModalState] = useState(true);
+  const { category } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetchProjectData();
-        response.sort((a: Project, b: Project) => b.order - a.order);
-        setData(response);
+        const projectResponse = await fetchProjectData(category!);
+        projectResponse.sort((a: Project, b: Project) => b.order - a.order);
+        setProjectData(projectResponse);
+
+        const aboutResponse = await fetchAboutData();
+        setAboutData(aboutResponse);
       } catch (err) {
         console.error(err);
       }
     };
     fetchData();
-  }, []);
+  }, [category]);
 
   return (
     <>
-      <Background />
+      <Background category={category!} />
       { modalOpen
         && (
           <div className="submit-overlay">
@@ -40,9 +48,9 @@ export default function Home() {
           </div>
         )}
       <Navbar />
-      <Landing />
-      <Projects data={data} />
-      <About />
+      <Intro data={aboutData} />
+      <Projects data={projectData} />
+      <About data={aboutData} />
       <Contact
         setModalOpen={setModalOpen}
         setModalState={setModalState}

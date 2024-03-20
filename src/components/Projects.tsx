@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import type { Project, DataProp } from '../../interfaces';
+import type { Project } from '../../interfaces';
 import '../css/Projects.css';
 
-export default function Projects({ data }: DataProp) {
+export default function Projects(
+  { data }: { data: Project[] | Project[] },
+) {
   const [activeImage, setActiveImage] = useState<number>(-1);
   const [showImage, setShowImage] = useState<boolean>(false);
   const renderList = (project: Project, index: number) => (
@@ -19,7 +21,7 @@ export default function Projects({ data }: DataProp) {
       }}
       />
       <Link
-        to={`/projects/${project.ref}`}
+        to={`projects/${project.ref}`}
         className="project-title"
         key={index}
       >
@@ -35,7 +37,7 @@ export default function Projects({ data }: DataProp) {
     <img
       className="project-image"
       key={index}
-      src={project.img}
+      src={project.banner}
       alt="placeholder"
       style={{ opacity: activeImage === index && showImage ? 1 : 0 }}
     />
@@ -46,11 +48,15 @@ export default function Projects({ data }: DataProp) {
       <div className="project-left-side">
         <h1>Projects</h1>
         <div className="project-list">
-          {data.map((project: Project, index: number) => renderList(project, index))}
+          {data.map(
+            (project: Project, index: number) => renderList(project, index),
+          )}
         </div>
       </div>
       <div className="image-container">
-        {data.map((project: Project, index: number) => renderImages(project, index))}
+        {data.map(
+          (project: Project, index: number) => renderImages(project, index),
+        )}
       </div>
     </div>
   );

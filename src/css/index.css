@@ -53,6 +53,10 @@ button {
 	border: none;
 }
 
+select {
+  -webkit-appearance: listbox !important;
+  }
+
 :root {
 
 	/* Text hues */

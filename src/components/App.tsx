@@ -7,21 +7,31 @@ import {
   Routes,
 } from 'react-router-dom';
 import Home from './Home';
+import Landing from './Landing';
 import Error from './Error';
 import type { Project } from '../../interfaces';
-import { BlankProject } from '../../interfaces';
-import ProjectDetails from './ProjectDetails';
 import '../css/App.css';
+import ProjectDetails from './ProjectDetails/ProjectDetails';
 
 export default function App() {
-  const [projectData, setProjectData] = useState<Project>(BlankProject);
+  const [projectData, setProjectData] = useState<Project | null>(null);
+
   return (
     <div className="app">
       <Router>
         <Routes>
-          <Route path="/" element={(<Home />)} />
           <Route
-            path="/projects/:project-name"
+            path="/"
+            element={(<Landing />)}
+          />
+          <Route
+            path="/:category"
+            element={(
+              <Home />
+            )}
+          />
+          <Route
+            path="/:category/projects/:project-name"
             element={(
               <ProjectDetails
                 projectData={projectData}

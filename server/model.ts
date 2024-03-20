@@ -1,6 +1,25 @@
-import { ProjectModel, FormModel } from './database';
+import {
+  EngineerModel, VideoModel, AboutModel, FormModel,
+} from './database';
 import { Form } from '../interfaces';
 
-export const getAllTitles = () => (ProjectModel.find({}));
-export const getProjectDetails = (id: string) => (ProjectModel.findOne({ ref: `${id}` }));
+export const getAllTitles = (category: string) => {
+  if (category === 'engineer') {
+    return EngineerModel.find({});
+  }
+  if (category === 'video') {
+    return VideoModel.find({});
+  }
+  return AboutModel.find({});
+};
+
+export const getAbout = () => (AboutModel.find({}));
+
+export const getProjectDetails = (category: string, id: string) => {
+  if (category === 'engineer') {
+    return EngineerModel.findOne({ ref: `${id}` });
+  }
+  return VideoModel.findOne({ ref: `${id}` });
+};
+
 export const saveContact = (data: Form) => (FormModel.create(data));

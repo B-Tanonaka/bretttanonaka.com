@@ -4,11 +4,15 @@ import {
   FaGithub,
   FaVimeoV,
 } from 'react-icons/fa';
+import { useParams } from 'react-router-dom';
 import Resume from '../assets/resume-bretttanonaka.pdf';
+import type { AboutInfo } from '../../interfaces';
 import '../css/About.css';
 
-export default function About() {
-  const description = 'Hello, my name is Brett Tanonaka and I am a full stack developer. Prior to engineering, I was a video producer for almost 10 years. When I was exploring motion design, I discovered After Effects Expressions, a JavaScript based animation language, and saw what is possible with code. Today, I use my experience with design to build end-to-end applications that are user-focused, intuitive, and scalable.';
+export default function About({ data }: { data: AboutInfo }) {
+  const { category } = useParams();
+  const validCategory: string = category!;
+
   return (
     <div className="about" id="about">
       <div className="about-wrapper">
@@ -18,7 +22,14 @@ export default function About() {
           boxShadow: '5px 2px 5px 0.5px hsl(0deg 0% 0% / 22%)',
         }}
         />
-        <p>{description}</p>
+        { data[validCategory]
+          && (
+            <>
+              <p>{data[validCategory].about.part1}</p>
+              <br />
+              <p>{data[validCategory].about.part2}</p>
+            </>
+          )}
         <a href={Resume} target="_blank" rel="noopener noreferrer" className="resume">
           <FaCheckDouble />
           <span> resume</span>
