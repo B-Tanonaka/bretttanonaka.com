@@ -28,12 +28,12 @@ export default function About({ data }: { data: AboutInfo }) {
               <p>{data[validCategory].about.part1}</p>
               <br />
               <p>{data[validCategory].about.part2}</p>
+              <a href={data[validCategory].resume} target="_blank" rel="noopener noreferrer" className="resume">
+                <FaCheckDouble />
+                <span> resume</span>
+              </a>
             </>
           )}
-        <a href={data[validCategory].resume} target="_blank" rel="noopener noreferrer" className="resume">
-          <FaCheckDouble />
-          <span> resume</span>
-        </a>
       </div>
       <div className="about-icon-container">
         <a
