@@ -298,6 +298,7 @@
   width: 20%;
 }
 
+.portrait-1-text-container,
 .portrait-2-text-container,
 .portrait-3-text-container,
 .portrait-images-only-container {
@@ -315,6 +316,7 @@
   margin: 0 1rem;
 }
 
+.portrait-1-text-container,
 .portrait-2-text-container,
 .portrait-3-text-container {
   display: flex;
@@ -359,6 +361,15 @@
 
 .portrait-2-text-sharon {
   align-self: flex-start;
+}
+
+.portrait-1-text-container {
+  justify-content: center;
+}
+
+.portrait-1-text-col {
+  width: 45%;
+  margin: 0 1.5rem;
 }
 
 .landscape-2-text-container {
@@ -434,6 +445,11 @@
   width: 80%;
 }
 
+.carousel-portfolio {
+  display: block;
+  width: 60%;
+}
+
 .fb-profile {
   display: flex;
   flex-wrap: wrap;
@@ -482,6 +498,10 @@
 
 .thewhy-video-1-container {
   margin-bottom: 2rem;
+}
+
+.fitbook-image {
+  margin: 0.5rem 1rem;
 }
 
 /* Large laptops and desktops */
@@ -662,6 +682,10 @@
 
   .single-video-enjoy-website {
     padding-top: 18.85%;
+  }
+
+  .carousel-portfolio {
+    width: 80%;
   }
 }
 
@@ -882,6 +906,11 @@
 
   .carousel-motion-graphics {
     width: 100%;
+  }
+
+  .carousel-portfolio {
+    display: block;
+    width: 80%;
   }
 
   .phone-image {

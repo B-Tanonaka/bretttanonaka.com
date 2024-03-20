@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import Carousel from '../Carousel';
-import type { EngineerProject, RenderPhotoList } from '../../../interfaces';
+import type { EngineerProject } from '../../../interfaces';
 
 export default function Portfolio(
-  { projectData, renderProjectImages } :
-  { projectData: EngineerProject | null, renderProjectImages: RenderPhotoList },
+  { projectData } :
+  { projectData: EngineerProject | null },
 ) {
   // Scroll to top of page upon load
   useEffect(() => {
@@ -18,9 +18,9 @@ export default function Portfolio(
       </div>
       { /* Design in Fimga */ }
       <h1>Original Design in Figma</h1>
-      <div className="carousel-wrapper carousel-li-companies">
+      <div className="carousel-wrapper carousel-portfolio">
         <Carousel
-          images={projectData!.images.figma}
+          images={projectData!.images.figma.slice(0, -1)}
           type="single-landscape"
         />
       </div>
