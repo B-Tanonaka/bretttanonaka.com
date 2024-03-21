@@ -48,9 +48,10 @@
 .resume {
 	position: absolute;
 	right: 0;
-	padding-bottom: 0.4rem;
 	text-decoration: none;
 	color: var(--main-text);
+  padding-bottom: 0.4rem;
+  margin-top: 3rem;
 }
 
 .resume span {
