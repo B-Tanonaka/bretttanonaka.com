@@ -38,7 +38,7 @@ export default function Background({ category }: { category: string }) {
   return (
     <div
       style={{
-        height: '100vh',
+        height: '100dvh',
         width: '100%',
         position: 'fixed',
         opacity: '70%',
