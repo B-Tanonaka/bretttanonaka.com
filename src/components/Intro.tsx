@@ -14,7 +14,9 @@ export default function Intro({ data }: { data: AboutInfo }) {
             <span className="home-sec-text">{data[validCategory].intro.sec}</span>
           </p>
         ) : (
-          <p>Website is current undergoing maintenance. Please try again later</p>
+          <p>
+            <span className="home-main-text">Website is currently undergoing maintenance. Please try again later.</span>
+          </p>
         )}
       </div>
     </div>
