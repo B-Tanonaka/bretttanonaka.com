@@ -8,11 +8,13 @@ export default function Intro({ data }: { data: AboutInfo }) {
   return (
     <div className="home-container" id="home">
       <div className="home-wrapper">
-        { data[validCategory] && (
+        { data[validCategory] ? (
           <p>
             <span className="home-main-text">{data[validCategory].intro.main}</span>
             <span className="home-sec-text">{data[validCategory].intro.sec}</span>
           </p>
+        ) : (
+          <p>Website is current undergoing maintenance. Please try again later</p>
         )}
       </div>
     </div>
