@@ -17,7 +17,6 @@ export default function VideoWithBlurb(
       playerVars: { showinfo: 1 },
     },
   };
-
   return (
     <div className={contClassName}>
       <div className={className}>

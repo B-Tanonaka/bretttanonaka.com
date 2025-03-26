@@ -14,11 +14,16 @@ export default function DemoReel(
   return (
     <div className="details-container">
       {/* Main video */}
-      <h1>Demo Reel</h1>
-      <div className="video-1-container">
+      <h1>Demo Reels</h1>
+      <div className="video-2-container">
         <VideoWithBlurb
-          info={projectData!.videos.reel}
-          contClassName=""
+          info={projectData!.videos.editing_reel}
+          contClassName="video-2-col video-2-col-left"
+          className="single-video"
+        />
+        <VideoWithBlurb
+          info={projectData!.videos.motion_reel}
+          contClassName="video-2-col video-2-col-right"
           className="single-video"
         />
       </div>

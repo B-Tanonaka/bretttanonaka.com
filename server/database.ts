@@ -3,6 +3,7 @@ import {
   EngineerProject, VideoProject, AboutData, Form,
 } from '../interfaces';
 
+// brew services start mongodb-community
 mongoose.connect('mongodb://localhost/portfolio');
 
 // Prevents mongoose from adding s to end of collection name and pointing to wrong collection
