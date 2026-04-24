@@ -12,6 +12,7 @@ import DemoReel from '../video/DemoReel';
 import JeffsJacket from '../video/JeffsJacket';
 import UCScout from '../video/UCScout';
 import OtherProjects from '../video/OtherProjects';
+import GoogleDeepmind from '../video/GoogleDeepmind';
 
 export default function VideoProjectDetails({
   projectName,
@@ -24,76 +25,77 @@ export default function VideoProjectDetails({
   renderList: RenderList,
   renderProjectImages: RenderPhotoList
 }) {
-  if (projectData && 'videos' in projectData!) {
+  if (projectData && 'company' in projectData) {
     return (
       <>
         <Link to="/video">
           <input type="button" value="Back" className="back" />
         </Link>
-        { projectData && (
-        <div className="project-details">
-          <div className="left-side">
-            <p>{projectData!.description.partOne}</p>
-            {/* If description needs a line break */}
-            { projectData!.description.partTwo
-            && (
-              <>
-                <br />
-                <p>{projectData!.description.partTwo}</p>
-              </>
-            )}
+        {projectData && (
+          <div className="project-details">
+            <div className="left-side">
+              <p>{projectData!.description.partOne}</p>
+              {/* If description needs a line break */}
+              {projectData!.description.partTwo
+                && (
+                  <p style={{ marginTop: '1.5rem' }}>{projectData!.description.partTwo}</p>
+                )}
+            </div>
+            <div className="right-side">
+              <h2>{projectData!.name}</h2>
+              {/* If project is for a company */}
+              {projectData!.company && <h3>{projectData!.company}</h3>}
+              <div className="project-year">{projectData!.year}</div>
+              {dividerLine}
+              {projectData!.role.map((role: string, key: number) => renderList(role, key))}
+              {dividerLine}
+              {projectData!.techStack.map(
+                (framework: string, key: number) => renderList(framework, key),
+              )}
+            </div>
+            <div className="project-background-video" />
           </div>
-          <div className="right-side">
-            <h2>{projectData!.name}</h2>
-            {/* If project is for a company */}
-            { projectData!.company && <h3>{projectData!.company}</h3>}
-            <div className="project-year">{projectData!.year}</div>
-            { dividerLine }
-            { projectData!.role.map((role: string, key: number) => renderList(role, key)) }
-            { dividerLine }
-            { projectData!.techStack.map(
-              (framework: string, key: number) => renderList(framework, key),
-            ) }
-          </div>
-          <div className="project-background-video" />
-        </div>
         )}
         {/* Render only the selected project */}
-        { projectName === 'demoreel'
+        {projectName === 'demoreel'
           && (
-          <DemoReel projectData={projectData} />
+            <DemoReel projectData={projectData} />
           )}
-        { projectName === 'linkedininfluencer'
+        {projectName === 'google'
           && (
-          <LinkedInInfluencer projectData={projectData} renderProjectImages={renderProjectImages} />
+            <GoogleDeepmind projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
-        { projectName === 'enjy'
+        {projectName === 'linkedininfluencer'
           && (
-          <ENJY projectData={projectData} renderProjectImages={renderProjectImages} />
+            <LinkedInInfluencer projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
-        { projectName === 'recruiting'
+        {projectName === 'enjy'
           && (
-          <Recruiting projectData={projectData} renderProjectImages={renderProjectImages} />
+            <ENJY projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
-        { projectName === 'motiongraphics'
+        {projectName === 'recruiting'
           && (
-          <MotionGraphics projectData={projectData} renderProjectImages={renderProjectImages} />
+            <Recruiting projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
-        { projectName === 'internalcomms'
+        {projectName === 'motiongraphics'
           && (
-          <InternalComms projectData={projectData} renderProjectImages={renderProjectImages} />
+            <MotionGraphics projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
-        { projectName === 'jeffsjacket'
+        {projectName === 'internalcomms'
           && (
-          <JeffsJacket projectData={projectData} renderProjectImages={renderProjectImages} />
+            <InternalComms projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
-        { projectName === 'ucscout'
+        {projectName === 'jeffsjacket'
           && (
-          <UCScout projectData={projectData} renderProjectImages={renderProjectImages} />
+            <JeffsJacket projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
-        { projectName === 'other'
+        {projectName === 'ucscout'
           && (
-          <OtherProjects projectData={projectData} />
+            <UCScout projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+        {projectName === 'other'
+          && (
+            <OtherProjects projectData={projectData} />
           )}
       </>
     );

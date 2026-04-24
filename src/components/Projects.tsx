@@ -49,13 +49,21 @@ export default function Projects(
         <h1>Projects</h1>
         <div className="project-list">
           {data.map(
-            (project: Project, index: number) => renderList(project, index),
+            (project: Project, index: number) => {
+              if (project.order > 0) {
+                return renderList(project, index);
+              }
+            },
           )}
         </div>
       </div>
       <div className="image-container">
         {data.map(
-          (project: Project, index: number) => renderImages(project, index),
+          (project: Project, index: number) => {
+            if (project.order > 0) {
+              return renderImages(project, index);
+            }
+          },
         )}
       </div>
     </div>
