@@ -30,6 +30,7 @@ export default function Home() {
         const aboutResponse = await fetchAboutData();
         setAboutData(aboutResponse);
       } catch (err) {
+        // eslint-disable-next-line no-console
         console.error(err);
       }
     };

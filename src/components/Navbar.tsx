@@ -13,7 +13,7 @@ export default function Navbar() {
   const [currentSection, setCurrentSection] = useState<string>(category!);
   const [mobileStyles, setMobileStyles] = useState({});
 
-  const handleHamClick = (e: React.MouseEvent<HTMLElement>) => {
+  const handleHamClick = (e: React.MouseEvent<SVGElement>) => {
     e.preventDefault();
     setHamOpen(!hamOpen);
   };

@@ -8,10 +8,10 @@ module.exports = {
     'airbnb',
     'airbnb-typescript'
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.ts'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json'
+    project: ['./tsconfig.json', './tsconfig.node.json']
   },
   plugins: ['react-refresh'],
   rules: {

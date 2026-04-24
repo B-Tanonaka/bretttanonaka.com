@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from 'react';
 
 export default function Modal(
   { success, setModalOpen }:
-  { success: boolean, setModalOpen: Dispatch<SetStateAction<any>> },
+  { success: boolean, setModalOpen: Dispatch<SetStateAction<boolean>> },
 ) {
   const icon = success ? 'fa-solid fa-circle-check' : 'fa-solid fa-circle-xmark';
   return (
@@ -17,7 +17,7 @@ export default function Modal(
           {success ? 'Thank you!' : 'Sorry!'}
         </span>
         <span style={{ fontSize: '0.7rem' }}>
-          { success
+          {success
             ? 'Your message has been received.'
             : 'An error has occurred, please try again.'}
         </span>

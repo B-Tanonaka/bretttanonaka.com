@@ -28,54 +28,54 @@ export default function EngProjectDetails({
         <Link to="/engineer">
           <input type="button" value="Back" className="back" />
         </Link>
-        { projectData && (
-        <div className="project-details">
-          <div className="left-side">
-            <p>{projectData.description}</p>
-            <a href={projectData.repo} target="_blank" rel="noopener noreferrer">
-              <span className="repo-link">repo  </span>
-              <FaArrowsTurnRight />
-            </a>
-            { projectData.link && (
-            <a href={projectData.link} target="_blank" rel="noopener noreferrer">
-              <span className="repo-link">live link  </span>
-              <FaExternalLinkAlt />
-            </a>
-            )}
+        {projectData && (
+          <div className="project-details">
+            <div className="left-side">
+              <p>{projectData.description}</p>
+              <a href={projectData.repo} target="_blank" rel="noopener noreferrer">
+                <span className="repo-link">repo  </span>
+                <FaArrowsTurnRight />
+              </a>
+              {projectData.link && (
+                <a href={projectData.link} target="_blank" rel="noopener noreferrer">
+                  <span className="repo-link">live link  </span>
+                  <FaExternalLinkAlt />
+                </a>
+              )}
+            </div>
+            <div className="right-side">
+              <h2>{projectData.name}</h2>
+              <div className="project-year">{projectData.year}</div>
+              {dividerLine}
+              {projectData.role.map((role: string, key: number) => renderList(role, key))}
+              {dividerLine}
+              {projectData.techStack.map(
+                (framework: string, key: number) => renderList(framework, key),
+              )}
+            </div>
+            <div className="project-background-eng" />
           </div>
-          <div className="right-side">
-            <h2>{projectData.name}</h2>
-            <div className="project-year">{projectData.year}</div>
-            { dividerLine }
-            { projectData.role.map((role: string, key: number) => renderList(role, key)) }
-            { dividerLine }
-            { projectData.techStack.map(
-              (framework: string, key: number) => renderList(framework, key),
-            ) }
-          </div>
-          <div className="project-background-eng" />
-        </div>
         )}
         {/* Render only the selected project */}
-        { projectName === 'littersort'
+        {projectName === 'littersort'
           && (
-          <LitterSort projectData={projectData} renderProjectImages={renderProjectImages} />
+            <LitterSort projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
-        { projectName === 'portfolio'
+        {projectName === 'portfolio'
           && (
-          <Portfolio projectData={projectData} renderProjectImages={renderProjectImages} />
+            <Portfolio projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
-        { projectName === 'fitbook'
+        {projectName === 'fitbook'
           && (
-          <Fitbook projectData={projectData} renderProjectImages={renderProjectImages} />
+            <Fitbook projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
-        { projectName === 'mevify'
+        {projectName === 'mevify'
           && (
-          <Mevify projectData={projectData} renderProjectImages={renderProjectImages} />
+            <Mevify projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
-        { projectName === 'wired-wardrobe'
+        {projectName === 'wired-wardrobe'
           && (
-          <WiredWardrobe projectData={projectData} renderProjectImages={renderProjectImages} />
+            <WiredWardrobe projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
       </>
     );

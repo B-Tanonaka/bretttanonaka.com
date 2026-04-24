@@ -21,7 +21,7 @@ export const getSingleProject: RequestHandler = async (req, res) => {
   }
 };
 
-export const getAllAbout: RequestHandler = async (req, res) => {
+export const getAllAbout: RequestHandler = async (_req, res) => {
   try {
     const response = await getAbout();
     res.status(200).send(response[0]);
