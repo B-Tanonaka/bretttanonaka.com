@@ -14,8 +14,14 @@ export default function GoogleDeepmind(
   return (
     <div className="details-container">
       {/* Main video */}
-      <h1>It's Google</h1>
-      {console.log(projectData)}
+      <h1>Launch Video</h1>
+      <div className="video-1-container">
+        <VideoWithBlurb
+          info={projectData!.videos.launch}
+          contClassName=""
+          className="single-video"
+        />
+      </div>
     </div>
   );
 }
