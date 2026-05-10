@@ -108,6 +108,19 @@
   padding-top: 75%;
 }
 
+.single-video-3by4 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 133.33%;
+  overflow: hidden;
+}
+
+.single-video-3by4 video,
+.single-video-3by4 iframe {
+  object-fit: cover;
+}
+
 .video-1-container {
   width: 80%;
   height: 100%;
@@ -219,6 +232,13 @@
   object-fit: contain;
 }
 
+.image-2-col-text {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
 .image-2-col-left {
   margin-right: 1rem;
 }
@@ -275,6 +295,43 @@
 .image-3-col {
   width: 32%;
   margin: 0 0.5rem;
+}
+
+.booth-layout-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 4rem;
+}
+
+.booth-left-col {
+  width: 44.5%;
+  display: flex;
+}
+
+.booth-left-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.booth-right-col {
+  width: 52.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.booth-right-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.booth-right-video {
+  width: 100%;
 }
 
 .image-3-cover-container {

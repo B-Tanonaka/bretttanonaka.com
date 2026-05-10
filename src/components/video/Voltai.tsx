@@ -23,26 +23,27 @@ export default function Voltai(
         />
       </div>
       {/* Booth */}
-      <div className="image-2-container">
-        <h5 className="image-2-col">
-          {projectData!.images.booth[0].src}
-          <br />
-          <br />
-          {projectData!.images.background.desc2}
-        </h5>
-        <img
-          className="image-2-col"
-          src={projectData!.images.background.src}
-          alt={projectData!.images.background.alt}
-        />
+      <h1>CadenceLIVE 2026 Booth</h1>
+      <div className="booth-layout-container">
+        <div className="booth-left-col">
+          {renderProjectImages(projectData!.images.booth[0], 0, 'booth-left-img')}
+        </div>
+        <div className="booth-right-col">
+          {renderProjectImages(projectData!.images.booth[1], 1, 'booth-right-img')}
+          <div className="booth-right-video">
+            <VideoWithBlurb
+              info={projectData!.videos.boothLine}
+              contClassName=""
+              className="single-video"
+            />
+          </div>
+        </div>
       </div>
       {/* Background */}
       <div className="image-2-container">
-        <h5 className="image-2-col">
-          {projectData!.images.background.desc1}
-          <br />
-          <br />
-          {projectData!.images.background.desc2}
+        <h5 className="image-2-col-text">
+          <span>{projectData!.images.background.desc1}</span>
+          <span>{projectData!.images.background.desc2}</span>
         </h5>
         <img
           className="image-2-col"
