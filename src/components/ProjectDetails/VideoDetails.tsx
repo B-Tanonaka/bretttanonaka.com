@@ -14,6 +14,7 @@ import UCScout from '../video/UCScout';
 import OtherProjects from '../video/OtherProjects';
 import GoogleDeepmind from '../video/GoogleDeepmind';
 import Voltai from '../video/Voltai';
+import Enjoy from '../video/Enjoy';
 
 export default function VideoProjectDetails({
   projectName,
@@ -69,6 +70,10 @@ export default function VideoProjectDetails({
         {projectName === 'voltai'
           && (
             <Voltai projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+        {projectName === 'enjoy'
+          && (
+            <Enjoy projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
         {projectName === 'linkedininfluencer'
           && (

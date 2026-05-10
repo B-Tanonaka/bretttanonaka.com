@@ -27,7 +27,7 @@ export default function Projects(
       >
         <span className="project-text">
           <h2 className="project-name">{project.name}</h2>
-          <h4 className="project-role">{project.role.join(' & ')}</h4>
+          <h4 className="project-role">{project.displayRole || project.role.join(' & ')}</h4>
         </span>
       </Link>
     </div>

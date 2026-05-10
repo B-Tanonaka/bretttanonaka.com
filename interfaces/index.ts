@@ -43,6 +43,8 @@ export type Image = {
   src: string;
   alt: string;
   desc?: string;
+  desc1?: string;
+  desc2?: string;
   title?: string;
 };
 
@@ -58,15 +60,14 @@ export type EngineerProject = {
   _id: string;
   name: string;
   role: string[];
+  displayRole?: string;
   year: number;
   description: string;
   techStack: string[];
   ref: string;
   repo: string;
   banner: string;
-  images: { [key: string]: { [key: string]: Image } }
-  & { [key: string]: Image[] }
-  & { [key: string]: Image };
+  images: any;
   order: number;
   link: string;
   text: { [key: string]: Text }
@@ -79,14 +80,13 @@ export type VideoProject = {
   name: string;
   year: string;
   role: string[];
+  displayRole?: string;
   description: { partOne: string, partTwo: string };
   techStack: string[];
   ref: string;
   banner: string;
-  images: { [key: string]: { [key: string]: Image } }
-  & { [key: string]: Image[] }
-  & { [key: string]: Image };
-  videos: { [key: string]: { link: string, blurb: string, desc?: string } };
+  images: any;
+  videos: any;
   order: number;
 };
 
