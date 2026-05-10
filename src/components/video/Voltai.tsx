@@ -39,7 +39,25 @@ export default function Voltai(
           </div>
         </div>
       </div>
+      {/* Interface Design */}
+      <h1>Interface Design</h1>
+      <div className="image-2-container">
+        <img
+          className="image-2-col"
+          src={projectData!.images.parametric.src}
+          alt={projectData!.images.parametric.alt}
+        />
+        <img
+          className="image-2-col"
+          src={projectData!.images.datasheets.src}
+          alt={projectData!.images.datasheets.alt}
+        />
+      </div>
+      <div className="details-container-h5-solo">
+        <h5>{projectData!.images.datasheets.desc}</h5>
+      </div>
       {/* Background */}
+      <h1>Background Design</h1>
       <div className="image-2-container">
         <h5 className="image-2-col-text">
           <span>{projectData!.images.background.desc1}</span>

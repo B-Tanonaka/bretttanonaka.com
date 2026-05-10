@@ -321,7 +321,7 @@
   width: 52.5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 2rem;
 }
 
 .booth-right-img {
@@ -332,6 +332,11 @@
 
 .booth-right-video {
   width: 100%;
+}
+
+.booth-right-video iframe,
+.booth-right-video video {
+  object-fit: cover;
 }
 
 .image-3-cover-container {
