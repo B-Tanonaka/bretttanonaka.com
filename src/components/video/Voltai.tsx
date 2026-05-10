@@ -22,13 +22,13 @@ export default function Voltai(
           className="single-video"
         />
       </div>
-      {/* Background */}
+      {/* Booth */}
       <div className="image-2-container">
         <h5 className="image-2-col">
-          {projectData!.videos.booth.desc}
+          {projectData!.images.booth[0].src}
           <br />
           <br />
-          {projectData!.videos.booth.desc2}
+          {projectData!.images.background.desc2}
         </h5>
         <img
           className="image-2-col"
@@ -36,9 +36,23 @@ export default function Voltai(
           alt={projectData!.images.background.alt}
         />
       </div>
-      <div className="image-3-container">
+      {/* Background */}
+      <div className="image-2-container">
+        <h5 className="image-2-col">
+          {projectData!.images.background.desc1}
+          <br />
+          <br />
+          {projectData!.images.background.desc2}
+        </h5>
+        <img
+          className="image-2-col"
+          src={projectData!.images.background.src}
+          alt={projectData!.images.background.alt}
+        />
+      </div>
+      <div className="image-3-cover-container">
         {projectData!.images.backgroundInspo.map(
-          (img, key) => renderProjectImages(img, key, 'image-3-col'),
+          (img, key) => renderProjectImages(img, key, 'image-3-cover-col'),
         )}
       </div>
       {/* Previous titles */}
