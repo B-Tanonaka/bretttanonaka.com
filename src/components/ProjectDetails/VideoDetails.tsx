@@ -13,6 +13,7 @@ import JeffsJacket from '../video/JeffsJacket';
 import UCScout from '../video/UCScout';
 import OtherProjects from '../video/OtherProjects';
 import GoogleDeepmind from '../video/GoogleDeepmind';
+import Voltai from '../video/Voltai';
 
 export default function VideoProjectDetails({
   projectName,
@@ -64,6 +65,10 @@ export default function VideoProjectDetails({
         {projectName === 'google'
           && (
             <GoogleDeepmind projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+        {projectName === 'voltai'
+          && (
+            <Voltai projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
         {projectName === 'linkedininfluencer'
           && (
