@@ -4,8 +4,8 @@ import Carousel from '../Carousel';
 import type { VideoProject, RenderPhotoList } from '../../../interfaces';
 
 export default function LinkedInInfluencer(
-  { projectData, renderProjectImages } :
-  { projectData: VideoProject | null, renderProjectImages: RenderPhotoList },
+  { projectData, renderProjectImages }:
+    { projectData: VideoProject | null, renderProjectImages: RenderPhotoList },
 ) {
   // Scroll to top of page upon load
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function LinkedInInfluencer(
       </div>
       {/* LinkedIn posts */}
       <div className="image-3-container">
-        { projectData!.images.linkedin.map(
+        {projectData!.images.linkedin.map(
           (img, key) => renderProjectImages(img, key, 'image-3-col'),
         )}
       </div>
@@ -60,7 +60,7 @@ export default function LinkedInInfluencer(
           alt={projectData!.images.gifs.amazon.alt}
         />
       </div>
-      { /* Gifs */ }
+      { /* Gifs */}
       <div className="image-3-quarter-container">
         <img
           className="image-3-quarter-col"

@@ -50,7 +50,7 @@ export default function Projects(
         <div className="project-list">
           {data.map(
             (project: Project, index: number) => {
-              if (project.order > 0) {
+              if (project.order > 0 && project.visible === true) {
                 return renderList(project, index);
               }
             },

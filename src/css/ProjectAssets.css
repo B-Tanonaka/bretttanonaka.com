@@ -165,6 +165,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   margin-bottom: 4rem;
   z-index: 1;
 }
@@ -179,11 +180,9 @@
 }
 
 .video-2-col-left {
-  margin-right: 1rem;
 }
 
 .video-2-col-right {
-  margin-left: 1rem;
 }
 
 .video-3-col {
@@ -594,6 +593,10 @@
 
 .nasdaq-board {
   width: 100%;
+  height: auto;
+}
+
+.nasdaq-board .single-video {
   height: auto;
 }
 

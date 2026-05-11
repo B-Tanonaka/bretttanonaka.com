@@ -70,6 +70,7 @@ export type EngineerProject = {
   images: any;
   order: number;
   link: string;
+  visible?: boolean;
   text: { [key: string]: Text }
   & { [key: string]: string };
 };
@@ -88,6 +89,7 @@ export type VideoProject = {
   images: any;
   videos: any;
   order: number;
+  visible?: boolean;
 };
 
 export type Project = VideoProject | EngineerProject;

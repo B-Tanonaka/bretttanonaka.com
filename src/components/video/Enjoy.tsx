@@ -39,6 +39,45 @@ export default function Enjoy(
           (img: Image, key: number) => renderProjectImages(img, key, 'image-4-col'),
         )}
       </div>
+      {/* Public listing */}
+      <h1>ENJY Public Listing</h1>
+      <div className="video-2-container">
+        <VideoWithBlurb
+          info={projectData!.videos.enjy.visit}
+          contClassName="video-2-col video-2-col-right"
+          className="single-video"
+        />
+        <h5 className="image-2-col-text">
+          <span>{projectData!.videos.enjy.visit.desc1}</span>
+          <span>{projectData!.videos.enjy.visit.desc2}</span>
+        </h5>
+      </div>
+      <div className="image-2-container">
+        {projectData!.images.enjy.experience.slice(0, 2).map(
+          (img: Image, key: number) => renderProjectImages(img, key, 'image-2-col'),
+        )}
+      </div>
+      <div className="image-3-col-2-row-container">
+        {projectData!.images.enjy.experience.slice(2).map(
+          (img: Image, key: number) => renderProjectImages(img, key, 'image-3-col-2-row'),
+        )}
+      </div>
+      {/* Nasdaq tower images */}
+      <div className="nasdaq-image-container">
+        <img
+          className="nasdaq-framework"
+          src={projectData!.images.enjy.nasdaq[1].src}
+          alt={projectData!.images.enjy.nasdaq[1].alt}
+        />
+        <div className="nasdaq-image-wrapper">
+          <h5>{projectData!.images.enjy.nasdaq[0].desc}</h5>
+          <VideoWithBlurb
+            info={projectData!.videos.enjy.nasdaq}
+            contClassName="nasdaq-board"
+            className="single-video"
+          />
+        </div>
+      </div>
       {/* LinkedIn Influencer */}
       <h1>LinkedIn Influencer</h1>
       <div className="video-2-container">
@@ -52,13 +91,13 @@ export default function Enjoy(
           className="single-video"
         />
       </div>
-      {/* LinkedIn posts */}
+      {/* LinkedIn - posts */}
       <div className="image-3-container">
         {projectData!.images.linkedin.profile.map(
           (img: Image, key: number) => renderProjectImages(img, key, 'image-3-col'),
         )}
       </div>
-      {/* Two episodes */}
+      {/* LinkedIn - Two episodes */}
       <div className="video-2-container">
         <VideoWithBlurb
           info={projectData!.videos.linkedin.future}

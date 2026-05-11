@@ -64,22 +64,24 @@ export default function ProjectDetails({
 
   return (
     <div className="project-details-container">
-      { category === 'engineer' ? (
-        <EngProjectDetails
-          projectName={projectName}
-          projectData={projectData}
-          renderList={renderList}
-          renderProjectImages={renderProjectImages}
-        />
-      )
-        : (
-          <VideoProjectDetails
+      {projectData?.visible === true && (
+        category === 'engineer' ? (
+          <EngProjectDetails
             projectName={projectName}
-            projectData={projectData}
+            projectData={projectData as EngineerProject}
             renderList={renderList}
             renderProjectImages={renderProjectImages}
           />
-        )}
+        )
+          : (
+            <VideoProjectDetails
+              projectName={projectName}
+              projectData={projectData as VideoProject}
+              renderList={renderList}
+              renderProjectImages={renderProjectImages}
+            />
+          )
+      )}
     </div>
   );
 }
