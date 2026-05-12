@@ -35,18 +35,10 @@ export default function ENJY(
       {/* Nasdaq tower images */}
       <h1>Nasdaq Tower</h1>
       <div className="nasdaq-image-container">
-        <img
-          className="nasdaq-framework"
-          src={projectData!.images.nasdaq[1].src}
-          alt={projectData!.images.nasdaq[1].alt}
-        />
+        {renderProjectImages(projectData!.images.nasdaq[1], 1, 'nasdaq-framework')}
         <div className="nasdaq-image-wrapper">
           <h5>{projectData!.images.nasdaq[0].desc}</h5>
-          <img
-            className="nasdaq-board"
-            src={projectData!.images.nasdaq[0].src}
-            alt={projectData!.images.nasdaq[0].alt}
-          />
+          {renderProjectImages(projectData!.images.nasdaq[0], 0, 'nasdaq-board')}
         </div>
       </div>
       {/* Nasdaq tower video */}

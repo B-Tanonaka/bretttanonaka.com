@@ -9,6 +9,7 @@ import type { EngineerProject, VideoProject } from '../../../interfaces';
 import { fetchProjectData } from '../../utils/fetchData';
 import EngProjectDetails from './EngDetails';
 import VideoProjectDetails from './VideoDetails';
+import ImageModal from '../ImageModal';
 import '../../css/ProjectDetails.css';
 import '../../css/ProjectAssets.css';
 
@@ -20,6 +21,7 @@ export default function ProjectDetails({
   setProjectData: Dispatch<SetStateAction<EngineerProject | VideoProject | null>>
 }) {
   const [projectName, setProjectName] = useState<string>('');
+  const [selectedImage, setSelectedImage] = useState<{ src: string, alt: string } | null>(null);
 
   const navigate = useNavigate();
   const { category } = useParams();
@@ -59,6 +61,8 @@ export default function ProjectDetails({
       alt={img.alt}
       key={key}
       className={className}
+      onClick={() => setSelectedImage(img)}
+      style={{ cursor: 'pointer' }}
     />
   );
 
@@ -80,6 +84,7 @@ export default function ProjectDetails({
             renderProjectImages={renderProjectImages}
           />
         )}
+      <ImageModal img={selectedImage} setSelectedImage={setSelectedImage} />
     </div>
   );
 }

@@ -37,11 +37,7 @@ export default function Enjoy(
         <h5 className="image-2-col">
           {projectData!.videos.lunch.desc2}
         </h5>
-        <img
-          className="image-2-col"
-          src={projectData!.images.lunch.mood.src}
-          alt={projectData!.images.lunch.mood.alt}
-        />
+        {renderProjectImages(projectData!.images.lunch.mood, 0, 'image-2-col')}
       </div>
       {/* Appointments App */}
       <h1>Appointments App</h1>

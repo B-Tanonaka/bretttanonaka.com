@@ -22,19 +22,11 @@ export default function GoogleDeepmind(
           className="single-video"
         />
       </div>
-      {/* What brings you joy images */}
+      {/* Interface */}
       <div className="image-2-container">
-        <img
-          className="image-2-col-wide"
-          src={projectData!.images.interface.src}
-          alt={projectData!.images.interface.alt}
-        />
+        {renderProjectImages(projectData!.images.interface, 0, 'image-2-col-wide')}
         <div className="image-2-col-text-wrapper">
-          <img
-            className="image-2-col-text"
-            src={projectData!.images.speaker.src}
-            alt={projectData!.images.speaker.alt}
-          />
+          {renderProjectImages(projectData!.images.speaker, 0, 'img-fill')}
           <h5 className="recruiting-quote-text">{projectData!.images.interface.desc}</h5>
         </div>
       </div>

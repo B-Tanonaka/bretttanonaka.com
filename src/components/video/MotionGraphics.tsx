@@ -28,11 +28,7 @@ export default function MotionGraphics(
           <h2>{projectData!.images.truckMap.title}</h2>
           <h5>{projectData!.images.truckMap.desc}</h5>
         </div>
-        <img
-          className="image-2-col"
-          src={projectData!.images.truckMap.src}
-          alt={projectData!.images.truckMap.alt}
-        />
+        {renderProjectImages(projectData!.images.truckMap, 0, 'image-2-col')}
       </div>
       <div className="image-4-container">
         { projectData!.images.delivery.map(
@@ -78,11 +74,7 @@ export default function MotionGraphics(
           contClassName="portrait-2-text-col"
           className="single-video-portrait-short"
         />
-        <img
-          className="portrait-2-text-col portrait-2-text-sharon"
-          src={projectData!.images.sharon.src}
-          alt={projectData!.images.sharon.alt}
-        />
+        {renderProjectImages(projectData!.images.sharon, 0, 'portrait-2-text-col portrait-2-text-sharon')}
       </div>
       {/* Enjoy.com graphics */}
       <h1>Enjoy.com Graphics</h1>

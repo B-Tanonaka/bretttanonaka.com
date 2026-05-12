@@ -28,11 +28,7 @@ export default function Enjoy(
           <h2>{projectData!.images.motiongraphics.truckMap.title}</h2>
           <h5>{projectData!.images.motiongraphics.truckMap.desc}</h5>
         </div>
-        <img
-          className="image-2-col"
-          src={projectData!.images.motiongraphics.truckMap.src}
-          alt={projectData!.images.motiongraphics.truckMap.alt}
-        />
+        {renderProjectImages(projectData!.images.motiongraphics.truckMap, 0, 'image-2-col')}
       </div>
       <div className="image-4-container">
         {projectData!.images.motiongraphics.delivery.map(
@@ -64,11 +60,7 @@ export default function Enjoy(
       </div>
       {/* Nasdaq tower images */}
       <div className="nasdaq-image-container">
-        <img
-          className="nasdaq-framework"
-          src={projectData!.images.enjy.nasdaq[1].src}
-          alt={projectData!.images.enjy.nasdaq[1].alt}
-        />
+        {renderProjectImages(projectData!.images.enjy.nasdaq[1], 1, 'nasdaq-framework')}
         <div className="nasdaq-image-wrapper">
           <h5>{projectData!.images.enjy.nasdaq[0].desc}</h5>
           <VideoWithBlurb
