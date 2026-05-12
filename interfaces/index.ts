@@ -60,7 +60,7 @@ export type EngineerProject = {
   _id: string;
   name: string;
   role: string[];
-  displayRole?: string;
+  displayRole?: string[];
   year: number;
   description: string;
   techStack: string[];
@@ -81,7 +81,7 @@ export type VideoProject = {
   name: string;
   year: string;
   role: string[];
-  displayRole?: string;
+  displayRole?: string[];
   description: { partOne: string, partTwo: string };
   techStack: string[];
   ref: string;

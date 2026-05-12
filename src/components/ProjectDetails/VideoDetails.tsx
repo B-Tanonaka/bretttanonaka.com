@@ -15,6 +15,7 @@ import OtherProjects from '../video/OtherProjects';
 import GoogleDeepmind from '../video/GoogleDeepmind';
 import Voltai from '../video/Voltai';
 import Enjoy from '../video/Enjoy';
+import Odoo from '../video/Odoo';
 
 export default function VideoProjectDetails({
   projectName,
@@ -70,6 +71,10 @@ export default function VideoProjectDetails({
         {projectName === 'voltai'
           && (
             <Voltai projectData={projectData} renderProjectImages={renderProjectImages} />
+          )}
+        {projectName === 'odoo'
+          && (
+            <Odoo projectData={projectData} renderProjectImages={renderProjectImages} />
           )}
         {projectName === 'enjoy'
           && (
