@@ -32,7 +32,7 @@ export default function Enjoy(
       </div>
       <div className="image-4-container">
         {projectData!.images.motiongraphics.delivery.map(
-          (img: Image, key: number) => renderProjectImages(img, key, 'image-4-col'),
+          (img: Image, key: number) => renderProjectImages(img, key, 'image-4-col', projectData!.images.motiongraphics.delivery),
         )}
       </div>
       {/* Public listing */}
@@ -50,12 +50,12 @@ export default function Enjoy(
       </div>
       <div className="image-2-container">
         {projectData!.images.enjy.experience.slice(0, 2).map(
-          (img: Image, key: number) => renderProjectImages(img, key, 'image-2-col'),
+          (img: Image, key: number) => renderProjectImages(img, key, 'image-2-col', projectData!.images.enjy.experience.slice(0, 2)),
         )}
       </div>
       <div className="image-3-col-2-row-container">
         {projectData!.images.enjy.experience.slice(2).map(
-          (img: Image, key: number) => renderProjectImages(img, key, 'image-3-col-2-row'),
+          (img: Image, key: number) => renderProjectImages(img, key, 'image-3-col-2-row', projectData!.images.enjy.experience.slice(2)),
         )}
       </div>
       {/* Nasdaq tower images */}
@@ -86,7 +86,7 @@ export default function Enjoy(
       {/* LinkedIn - posts */}
       <div className="image-3-container">
         {projectData!.images.linkedin.profile.map(
-          (img: Image, key: number) => renderProjectImages(img, key, 'image-3-col'),
+          (img: Image, key: number) => renderProjectImages(img, key, 'image-3-col', projectData!.images.linkedin.profile),
         )}
       </div>
       {/* LinkedIn - Two episodes */}
@@ -115,6 +115,7 @@ export default function Enjoy(
             <Carousel
               images={projectData!.images.motiongraphics.social}
               type="center-portrait"
+              renderProjectImages={renderProjectImages}
             />
           </div>
           <h5>

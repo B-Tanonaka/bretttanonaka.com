@@ -24,9 +24,9 @@ export default function GoogleDeepmind(
       </div>
       {/* Interface */}
       <div className="image-2-container">
-        {renderProjectImages(projectData!.images.interface, 0, 'image-2-col-wide')}
+        {renderProjectImages(projectData!.images.interface, 0, 'image-2-col-wide', [projectData!.images.interface, projectData!.images.speaker])}
         <div className="image-2-col-text-wrapper">
-          {renderProjectImages(projectData!.images.speaker, 0, 'img-fill')}
+          {renderProjectImages(projectData!.images.speaker, 1, 'img-fill', [projectData!.images.interface, projectData!.images.speaker])}
           <h5 className="recruiting-quote-text">{projectData!.images.interface.desc}</h5>
         </div>
       </div>

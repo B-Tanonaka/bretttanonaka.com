@@ -24,12 +24,12 @@ export default function ENJY(
       </div>
       <div className="image-2-container">
         { projectData!.images.experience.slice(0, 2).map(
-          (img, key) => renderProjectImages(img, key, 'image-2-col'),
+          (img, key) => renderProjectImages(img, key, 'image-2-col', projectData!.images.experience.slice(0, 2)),
         )}
       </div>
       <div className="image-3-col-2-row-container">
         { projectData!.images.experience.slice(2).map(
-          (img, key) => renderProjectImages(img, key, 'image-3-col-2-row'),
+          (img, key) => renderProjectImages(img, key, 'image-3-col-2-row', projectData!.images.experience.slice(2)),
         )}
       </div>
       {/* Nasdaq tower images */}

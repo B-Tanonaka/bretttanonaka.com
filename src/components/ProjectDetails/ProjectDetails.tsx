@@ -5,7 +5,7 @@ import {
   SetStateAction,
 } from 'react';
 import { useMatch, useNavigate, useParams } from 'react-router-dom';
-import type { EngineerProject, VideoProject } from '../../../interfaces';
+import type { EngineerProject, VideoProject, Image } from '../../../interfaces';
 import { fetchProjectData } from '../../utils/fetchData';
 import EngProjectDetails from './EngDetails';
 import VideoProjectDetails from './VideoDetails';
@@ -21,7 +21,8 @@ export default function ProjectDetails({
   setProjectData: Dispatch<SetStateAction<EngineerProject | VideoProject | null>>
 }) {
   const [projectName, setProjectName] = useState<string>('');
-  const [selectedImage, setSelectedImage] = useState<{ src: string, alt: string } | null>(null);
+  const [imageGroup, setImageGroup] = useState<Image[]>([]);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
   const navigate = useNavigate();
   const { category } = useParams();
@@ -53,15 +54,21 @@ export default function ProjectDetails({
   );
 
   // Child component function to render each of the images
-  const renderProjectImages = (img: {
-    src: string, alt: string,
-  }, key: number, className: string) => (
+  const renderProjectImages = (
+    img: Image,
+    key: number,
+    className: string,
+    group?: Image[],
+  ) => (
     <img
       src={img.src}
       alt={img.alt}
       key={key}
       className={className}
-      onClick={() => setSelectedImage(img)}
+      onClick={() => {
+        setImageGroup(group || [img]);
+        setSelectedImageIndex(group ? key : 0);
+      }}
       style={{ cursor: 'pointer' }}
     />
   );
@@ -84,7 +91,11 @@ export default function ProjectDetails({
             renderProjectImages={renderProjectImages}
           />
         )}
-      <ImageModal img={selectedImage} setSelectedImage={setSelectedImage} />
+      <ImageModal
+        images={imageGroup}
+        index={selectedImageIndex}
+        setIndex={setSelectedImageIndex}
+      />
     </div>
   );
 }

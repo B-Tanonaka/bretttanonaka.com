@@ -32,7 +32,7 @@ export default function MotionGraphics(
       </div>
       <div className="image-4-container">
         { projectData!.images.delivery.map(
-          (img, key) => renderProjectImages(img, key, 'image-4-col'),
+          (img, key) => renderProjectImages(img, key, 'image-4-col', projectData!.images.delivery),
         )}
       </div>
       {/* One million visits */}
@@ -60,6 +60,7 @@ export default function MotionGraphics(
             <Carousel
               images={projectData!.images.social}
               type="center-portrait"
+              renderProjectImages={renderProjectImages}
             />
           </div>
           <h5>
