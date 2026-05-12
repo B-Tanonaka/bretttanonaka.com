@@ -20,8 +20,43 @@
 
 .home-sec-text {
 	font-size: 1.3rem;
-	margin-left: 1%;
   line-height: 1.5;
+  display: block;
+}
+
+.skeleton-box {
+	display: block;
+	background: var(--gray1-color);
+	background-image: linear-gradient(
+		90deg,
+		var(--gray1-color) 0%,
+		var(--white-color) 50%,
+		var(--gray1-color) 100%
+	);
+	background-size: 200px 100%;
+	background-repeat: no-repeat;
+	animation: skeleton-shine 1.5s infinite linear;
+	border-radius: 8px;
+}
+
+@keyframes skeleton-shine {
+	0% {
+		background-position: -200px 0;
+	}
+	100% {
+		background-position: calc(100% + 200px) 0;
+	}
+}
+
+.skeleton-main {
+	height: 3.2rem;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.skeleton-sec {
+	height: 1.8rem;
+	width: 80%;
 }
 
 /* Large laptops and desktops */

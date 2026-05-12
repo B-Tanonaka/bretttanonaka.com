@@ -30,7 +30,7 @@ export default function Enjoy(
       </div>
       <div className="image-3-container">
         {projectData!.images.lunch.gifs.map(
-          (img, key) => renderProjectImages(img, key, 'image-3-col'),
+          (img: Image, key: number) => renderProjectImages(img, key, 'image-3-col'),
         )}
       </div>
       <div className="image-2-container">
@@ -58,7 +58,7 @@ export default function Enjoy(
       </div>
       <div className="image-3-container">
         {projectData!.images.appointments.gifs.map(
-          (img, key) => renderProjectImages(img, key, 'image-3-col'),
+          (img: Image, key: number) => renderProjectImages(img, key, 'image-3-col'),
         )}
       </div>
       {/* Customer Stories */}
