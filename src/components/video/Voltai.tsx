@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import VideoWithBlurb from '../VideoWithBlurb';
-import type { VideoProject, RenderPhotoList } from '../../../interfaces';
+import type { VideoProject, RenderPhotoList, Image } from '../../../interfaces';
 
 export default function Voltai(
   { projectData, renderProjectImages }:
@@ -42,16 +42,8 @@ export default function Voltai(
       {/* Interface Design */}
       <h1>Interface Design</h1>
       <div className="image-2-container">
-        <img
-          className="image-2-col"
-          src={projectData!.images.parametric.src}
-          alt={projectData!.images.parametric.alt}
-        />
-        <img
-          className="image-2-col"
-          src={projectData!.images.datasheets.src}
-          alt={projectData!.images.datasheets.alt}
-        />
+        {renderProjectImages(projectData!.images.parametric, 0, 'image-2-col', [projectData!.images.parametric, projectData!.images.datasheets])}
+        {renderProjectImages(projectData!.images.datasheets, 1, 'image-2-col', [projectData!.images.parametric, projectData!.images.datasheets])}
       </div>
       <div className="details-container-h5-solo">
         <h5>{projectData!.images.datasheets.desc}</h5>
@@ -63,22 +55,18 @@ export default function Voltai(
           <span>{projectData!.images.background.desc1}</span>
           <span>{projectData!.images.background.desc2}</span>
         </h5>
-        <img
-          className="image-2-col"
-          src={projectData!.images.background.src}
-          alt={projectData!.images.background.alt}
-        />
+        {renderProjectImages(projectData!.images.background, 0, 'image-2-col')}
       </div>
       <div className="image-3-cover-container">
         {projectData!.images.backgroundInspo.map(
-          (img, key) => renderProjectImages(img, key, 'image-3-cover-col'),
+          (img: Image, key: number) => renderProjectImages(img, key, 'image-3-cover-col', projectData!.images.backgroundInspo),
         )}
       </div>
       {/* Previous titles */}
       <h1>Previous versions of title design</h1>
       <div className="image-3-container">
         {projectData!.images.titles.map(
-          (img, key) => renderProjectImages(img, key, 'image-3-col'),
+          (img: Image, key: number) => renderProjectImages(img, key, 'image-3-col', projectData!.images.titles),
         )}
       </div>
     </div>

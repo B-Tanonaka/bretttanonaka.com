@@ -13,17 +13,23 @@ export default function ImageModal({
 }) {
   const handlePrev = useCallback((e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
-    setIndex((prev) => (prev !== null && images.length > 0
-      ? (prev - 1 + images.length) % images.length
-      : null));
-  }, [images.length, setIndex]);
+    const len = images?.length || 0;
+    if (len <= 1) return;
+    setIndex((prev) => {
+      if (prev === null) return null;
+      return (prev - 1 + len) % len;
+    });
+  }, [images?.length, setIndex]);
 
   const handleNext = useCallback((e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
-    setIndex((prev) => (prev !== null && images.length > 0
-      ? (prev + 1) % images.length
-      : null));
-  }, [images.length, setIndex]);
+    const len = images?.length || 0;
+    if (len <= 1) return;
+    setIndex((prev) => {
+      if (prev === null) return null;
+      return (prev + 1) % len;
+    });
+  }, [images?.length, setIndex]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -36,21 +42,50 @@ export default function ImageModal({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleNext, handlePrev, index, setIndex]);
 
-  if (index === null || !images[index]) return null;
+  if (index === null || !images || images.length === 0) return null;
+
+  // Use a fallback if the specific image at this index is missing
+  const currentImage = images[index] || images[0];
+  if (!currentImage) return null;
 
   return (
     <div className="image-modal-overlay" onClick={() => setIndex(null)}>
       <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
         {images.length > 1 && (
-          <button type="button" className="modal-arrow left" onClick={handlePrev}>
+          <button
+            type="button"
+            className="modal-arrow left"
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrev(e);
+            }}
+          >
             <FaChevronLeft />
           </button>
         )}
 
-        <img src={images[index].src} alt={images[index].alt} />
+        <img
+          key={`${currentImage.src}-${index}`}
+          src={currentImage.src}
+          alt={currentImage.alt}
+          onClick={(e) => {
+            if (images.length > 1) {
+              e.stopPropagation();
+              handleNext(e);
+            }
+          }}
+          style={{ cursor: images.length > 1 ? 'pointer' : 'default' }}
+        />
 
         {images.length > 1 && (
-          <button type="button" className="modal-arrow right" onClick={handleNext}>
+          <button
+            type="button"
+            className="modal-arrow right"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNext(e);
+            }}
+          >
             <FaChevronRight />
           </button>
         )}

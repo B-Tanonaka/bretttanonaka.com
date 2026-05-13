@@ -66,8 +66,11 @@ export default function ProjectDetails({
       key={key}
       className={className}
       onClick={() => {
-        setImageGroup(group || [img]);
-        setSelectedImageIndex(group ? key : 0);
+        const filteredGroup = (group || [img]).filter((i) => i && typeof i === 'object' && i.src);
+        setImageGroup(filteredGroup);
+        // Find the index of the current image in the filtered group
+        const newIndex = group ? filteredGroup.findIndex((i) => i.src === img.src) : 0;
+        setSelectedImageIndex(newIndex !== -1 ? newIndex : 0);
       }}
       style={{ cursor: 'pointer' }}
     />

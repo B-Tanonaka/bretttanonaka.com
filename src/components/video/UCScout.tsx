@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Carousel from '../Carousel';
 import VideoWithBlurb from '../VideoWithBlurb';
-import type { VideoProject, RenderPhotoList } from '../../../interfaces';
+import type { VideoProject, RenderPhotoList, Image } from '../../../interfaces';
 
 export default function UCScout(
   { projectData, renderProjectImages } :
@@ -48,7 +48,7 @@ export default function UCScout(
       </div>
       <div className="image-3-container">
         { projectData!.images.gifs.map(
-          (img, key) => renderProjectImages(img, key, 'image-3-col'),
+          (img: Image, key: number) => renderProjectImages(img, key, 'image-3-col', projectData!.images.gifs),
         )}
       </div>
       <div className="details-container-h5-solo">
@@ -81,16 +81,8 @@ export default function UCScout(
         />
       </div>
       <div className="image-2-container">
-        <img
-          className="image-2-col image-2-col-left"
-          src={projectData!.images.physics[0].src}
-          alt={projectData!.images.physics[0].alt}
-        />
-        <img
-          className="image-2-col image-2-col-right"
-          src={projectData!.images.physics[1].src}
-          alt={projectData!.images.physics[1].alt}
-        />
+        {renderProjectImages(projectData!.images.physics[0], 0, 'image-2-col image-2-col-left', projectData!.images.physics)}
+        {renderProjectImages(projectData!.images.physics[1], 1, 'image-2-col image-2-col-right', projectData!.images.physics)}
       </div>
       {/* Law and Society */}
       <h1>Law and Society</h1>
