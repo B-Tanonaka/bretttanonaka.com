@@ -25,8 +25,7 @@ export default function Intro({ data }: { data: AboutInfo }) {
       <div className="home-wrapper">
         { data[validCategory] ? (
           <p>
-            <span className="home-main-text">{data[validCategory].intro.main}</span>
-            <span className="home-sec-text">{data[validCategory].intro.sec}</span>
+            <span className="home-main-text">{data[validCategory].intro.main}</span> <span className="home-sec-text">{data[validCategory].intro.sec}</span>
           </p>
         ) : showMaintenance ? (
           <p>
