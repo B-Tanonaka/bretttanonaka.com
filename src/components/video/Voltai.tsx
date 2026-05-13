@@ -58,14 +58,14 @@ export default function Voltai(
         {renderProjectImages(projectData!.images.background, 0, 'image-2-col')}
       </div>
       <div className="image-3-cover-container">
-        {projectData!.images.backgroundInspo.map(
+        {projectData!.images.backgroundInspo.filter((img: Image) => img && typeof img === 'object' && img.src).map(
           (img: Image, key: number) => renderProjectImages(img, key, 'image-3-cover-col', projectData!.images.backgroundInspo),
         )}
       </div>
       {/* Previous titles */}
       <h1>Previous versions of title design</h1>
       <div className="image-3-container">
-        {projectData!.images.titles.map(
+        {projectData!.images.titles.filter((img: Image) => img && typeof img === 'object' && img.src).map(
           (img: Image, key: number) => renderProjectImages(img, key, 'image-3-col', projectData!.images.titles),
         )}
       </div>
